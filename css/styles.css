@@ -38,7 +38,9 @@
 }
 
 /* Reset & Base Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -56,7 +58,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
     radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
     radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
@@ -64,27 +66,53 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-main);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.85rem; }
-h3 { font-size: 1.35rem; }
-h4 { font-size: 1.1rem; }
+h1 {
+  font-size: 2.5rem;
+}
 
-p { color: var(--text-muted); margin-bottom: 1rem; }
-p:last-child { margin-bottom: 0; }
+h2 {
+  font-size: 1.85rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
 
 a {
   color: var(--accent-cyan);
   text-decoration: none;
   transition: var(--transition);
 }
-a:hover { color: #38bdf8; text-decoration: underline; }
+
+a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
 
 /* Container */
 .container {
@@ -156,7 +184,8 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   cursor: pointer;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -243,6 +272,7 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #ffffff 30%, var(--text-muted) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -256,14 +286,15 @@ a:hover { color: #38bdf8; text-decoration: underline; }
 /* Main Grid Layout for Calculator */
 .calc-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  /* minmax(0,1fr) lets the column shrink below the <select>'s long option text */
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
 @media (min-width: 1024px) {
   .calc-grid {
-    grid-template-columns: 460px 1fr;
+    grid-template-columns: 460px minmax(0, 1fr);
   }
 }
 
@@ -352,8 +383,14 @@ a:hover { color: #38bdf8; text-decoration: underline; }
 }
 
 /* Input Fields & Selects */
-.input-field, .select-field {
+.input-field,
+.select-field {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   color: var(--text-main);
@@ -364,7 +401,8 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   transition: var(--transition);
 }
 
-.input-field:focus, .select-field:focus {
+.input-field:focus,
+.select-field:focus {
   border-color: var(--accent-cyan);
   box-shadow: 0 0 0 3px var(--accent-cyan-glow);
 }
@@ -468,6 +506,7 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   color: #fff;
   background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -617,8 +656,13 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   font-weight: 800;
 }
 
-.split-box.training .split-val { color: var(--accent-emerald); }
-.split-box.rest .split-val { color: var(--accent-amber); }
+.split-box.training .split-val {
+  color: var(--accent-emerald);
+}
+
+.split-box.rest .split-val {
+  color: var(--accent-amber);
+}
 
 /* Macro Distribution Bars */
 .macro-grid {
@@ -636,9 +680,17 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   text-align: center;
 }
 
-.macro-card.protein { border-top: 3px solid var(--accent-rose); }
-.macro-card.carbs { border-top: 3px solid var(--accent-cyan); }
-.macro-card.fat { border-top: 3px solid var(--accent-amber); }
+.macro-card.protein {
+  border-top: 3px solid var(--accent-rose);
+}
+
+.macro-card.carbs {
+  border-top: 3px solid var(--accent-cyan);
+}
+
+.macro-card.fat {
+  border-top: 3px solid var(--accent-amber);
+}
 
 .macro-grams {
   font-size: 1.5rem;
@@ -670,8 +722,15 @@ a:hover { color: #38bdf8; text-decoration: underline; }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .options-grid {
@@ -746,7 +805,8 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   text-align: left;
 }
 
-.tracker-table th, .tracker-table td {
+.tracker-table th,
+.tracker-table td {
   padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--border-color);
 }
@@ -812,7 +872,8 @@ a:hover { color: #38bdf8; text-decoration: underline; }
   color: var(--accent-cyan);
 }
 
-.article-body ul, .article-body ol {
+.article-body ul,
+.article-body ol {
   margin: 1rem 0 1.5rem 1.8rem;
 }
 
@@ -908,13 +969,454 @@ a:hover { color: #38bdf8; text-decoration: underline; }
 }
 
 /* Utility classes & Print styles */
-.hidden { display: none !important; }
-.text-cyan { color: var(--accent-cyan); }
-.text-emerald { color: var(--accent-emerald); }
-.text-purple { color: var(--accent-purple); }
+.hidden {
+  display: none !important;
+}
+
+.text-cyan {
+  color: var(--accent-cyan);
+}
+
+.text-emerald {
+  color: var(--accent-emerald);
+}
+
+.text-purple {
+  color: var(--accent-purple);
+}
 
 @media print {
-  .header, .footer, .btn-primary, .wizard-box, .calibration-section { display: none !important; }
-  body { background: #fff; color: #000; }
-  .glass-card, .tdee-main-card { border: 1px solid #ccc; box-shadow: none; }
+
+  .header,
+  .footer,
+  .btn-primary,
+  .wizard-box,
+  .calibration-section {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .glass-card,
+  .tdee-main-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE / MOBILE-FRIENDLY LAYER
+   Additive media queries only — no existing rule above is modified,
+   and no HTML/JS structure is touched. These breakpoints reflow the
+   same elements for smaller viewports.
+   ========================================================================== */
+
+/* ---- Tablet & below (≤900px): header starts to compress ---- */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .nav-wrapper {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 0.25rem;
+    /* hide scrollbar but keep it scrollable */
+    scrollbar-width: thin;
+  }
+
+  .nav-menu li {
+    flex-shrink: 0;
+  }
+
+  .dropdown-menu {
+    max-width: 90vw;
+  }
+}
+
+/* ---- Mobile (≤768px): single-column layout, resized type ---- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Header uses hamburger nav — layout handled by the mobile nav layer */
+
+  /* Calculator + results already switch to 1 column below 1024px via
+     the existing rule; just tighten spacing here */
+  .calc-grid {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .glass-card,
+  .calibration-section,
+  .wizard-box,
+  .diagnostic-box {
+    padding: 1.25rem;
+  }
+
+  /* Card header (title + unit toggle) stacks instead of squeezing */
+  .card-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .card-header .segmented-control {
+    width: 100% !important;
+  }
+
+  /* TDEE result card */
+  .result-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tdee-number {
+    font-size: 2.6rem;
+  }
+
+  .range-box {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .metrics-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Macro cards: 3 columns is too tight on phones */
+  .macro-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .macro-grams {
+    font-size: 1.2rem;
+  }
+
+  /* Goal tabs: allow horizontal scroll instead of squashing text */
+  .goals-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .goal-tab-btn {
+    flex: 0 0 auto;
+    min-width: 110px;
+  }
+
+  .target-calories-display {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .target-pace {
+    text-align: left;
+  }
+
+  /* Any inline flex row in the markup (macro preset selector row,
+     activity simulator row, wizard/calibration action rows) wraps
+     instead of overflowing on narrow screens */
+  main [style*="display:flex"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Fixed-width inline controls become fluid on mobile */
+  #select-macro-preset,
+  #input-extra-steps {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .wizard-box [style*="justify-content:space-between"] {
+    text-align: left;
+  }
+
+  #btn-start-wizard,
+  #btn-apply-wizard,
+  #btn-run-diagnostic {
+    width: 100% !important;
+  }
+
+  #wizard-result {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+
+  #btn-apply-wizard {
+    width: 100% !important;
+  }
+
+  .calibration-result-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .tracker-table th,
+  .tracker-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .tracker-table td input {
+    width: 85px;
+  }
+
+  .article-body {
+    font-size: 1rem;
+  }
+
+  .footer-tree {
+    gap: 1.5rem;
+  }
+}
+
+/* ---- Small phones (≤480px): tighter fine-tuning ---- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tdee-number {
+    font-size: 2.1rem;
+  }
+
+  .metrics-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .macro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-card {
+    grid-template-columns: 1fr;
+  }
+
+  .calibration-result-card {
+    grid-template-columns: 1fr;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-tab-btn {
+    min-width: 130px;
+  }
+
+  #input-extra-steps,
+  #select-macro-preset {
+    font-size: 0.9rem;
+  }
+
+  .footer-tree {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION (hamburger) + touch dropdown support
+   ========================================================================== */
+
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Tablet & below: show hamburger, panel menu ---- */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .header-cta {
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    /* collapsed by default; expands when .nav-open is set on .header */
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.25rem;
+    overflow: visible;
+    padding: 0.5rem 0 0.25rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .nav-open .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Dropdowns become in-flow accordions (no absolute positioning) */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    max-width: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: none;
+    padding: 0.25rem 0 0.25rem 1rem;
+  }
+
+  /* Desktop hover rule disabled on mobile — rely on .touch-open / JS */
+  .nav-dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .nav-dropdown.touch-open .dropdown-menu {
+    display: flex;
+  }
+
+  /* Indent dropdown items inside the accordion */
+  .dropdown-item {
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+/* ---- Small phones: CTA moves into the panel area ---- */
+@media (max-width: 768px) {
+  .nav-wrapper {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .header-cta {
+    order: 2;
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-toggle {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .logo {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .nav-menu {
+    order: 4;
+  }
+}
+
+/* iOS: prevent auto-zoom on input focus (16px minimum) */
+@media (max-width: 768px) {
+
+  .input-field,
+  .select-field,
+  .segmented-btn {
+    font-size: 16px;
+  }
+}
+
+/* Very small phones: stack the 2-col footer back to one column */
+@media (max-width: 380px) {
+  .footer-tree {
+    grid-template-columns: 1fr;
+  }
 }

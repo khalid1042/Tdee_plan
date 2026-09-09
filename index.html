@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator</title>
-  <meta name="description" content="Calculate your Total Daily Energy Expenditure (TDEE), BMR, maintenance calories, and macros. Calibrate your static TDEE estimate with real-world body weight trends.">
+  <meta name="description"
+    content="Calculate your Total Daily Energy Expenditure (TDEE), BMR, maintenance calories, and macros. Calibrate your static TDEE estimate with real-world body weight trends.">
   <link rel="canonical" href="https://tdeecalculator.com/">
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Application Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -56,6 +59,7 @@
   }
   </script>
 </head>
+
 <body>
 
   <!-- Header Navigation -->
@@ -65,6 +69,9 @@
         <div class="logo-icon">T</div>
         <div class="logo-text">TDEE<span>Calculator</span></div>
       </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-menu">
         <li><a href="/" class="nav-link active">Homepage</a></li>
         <li class="nav-dropdown">
@@ -111,14 +118,15 @@
       <div class="container">
         <div class="hero-badge">⚡ Next-Generation Adaptive Expenditure Engine</div>
         <h1 class="hero-title">Calculate Your TDEE.<br>Calibrate It to Your Body.</h1>
-        <p class="hero-subtitle">Don't rely only on static formula estimates. Calculate your baseline Total Daily Energy Expenditure, then calibrate it using real-world weight trends.</p>
+        <p class="hero-subtitle">Don't rely only on static formula estimates. Calculate your baseline Total Daily Energy
+          Expenditure, then calibrate it using real-world weight trends.</p>
       </div>
     </section>
 
     <!-- Main Calculator Workspace Grid -->
     <main class="container">
       <div class="calc-grid">
-        
+
         <!-- Left Panel: Quick Calculator Form -->
         <div class="glass-card">
           <div class="card-header">
@@ -132,7 +140,7 @@
           </div>
 
           <form id="tdee-form" onsubmit="return false;">
-            
+
             <!-- Gender Selection -->
             <div class="form-group">
               <label class="form-label">Sex</label>
@@ -150,7 +158,8 @@
 
             <!-- Height Input -->
             <div class="form-group">
-              <label class="form-label" for="input-height">Height <span id="height-unit-label" class="label-hint">cm</span></label>
+              <label class="form-label" for="input-height">Height <span id="height-unit-label"
+                  class="label-hint">cm</span></label>
               <div class="input-with-unit">
                 <input type="number" id="input-height" class="input-field" value="175" min="50" max="250">
               </div>
@@ -158,7 +167,8 @@
 
             <!-- Weight Input -->
             <div class="form-group">
-              <label class="form-label" for="input-weight">Weight <span id="weight-unit-label" class="label-hint">kg</span></label>
+              <label class="form-label" for="input-weight">Weight <span id="weight-unit-label"
+                  class="label-hint">kg</span></label>
               <div class="input-with-unit">
                 <input type="number" id="input-weight" class="input-field" value="75" min="30" max="300">
               </div>
@@ -166,7 +176,8 @@
 
             <!-- Body Fat % (Optional) -->
             <div class="form-group">
-              <label class="form-label" for="input-bodyfat">Body Fat % <span class="label-hint">(Optional — activates Katch-McArdle)</span></label>
+              <label class="form-label" for="input-bodyfat">Body Fat % <span class="label-hint">(Optional — activates
+                  Katch-McArdle)</span></label>
               <input type="number" id="input-bodyfat" class="input-field" placeholder="e.g. 18" min="3" max="60">
             </div>
 
@@ -187,12 +198,14 @@
 
         <!-- Right Panel: Results Display & Tools -->
         <div class="results-panel">
-          
+
           <!-- TDEE Main Gauge Card -->
           <div class="tdee-main-card">
             <div class="result-header">
               <div>
-                <span style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted);">Estimated Daily Expenditure</span>
+                <span
+                  style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted);">Estimated
+                  Daily Expenditure</span>
                 <div id="display-tdee" class="tdee-number">2,450</div>
                 <div class="tdee-unit">calories / day</div>
               </div>
@@ -203,7 +216,8 @@
 
             <div class="range-box">
               <span class="range-label">Likely TDEE Range:</span>
-              <span id="display-min-range" class="range-value">2,230 kcal</span> — <span id="display-max-range" class="range-value">2,670 kcal</span>
+              <span id="display-min-range" class="range-value">2,230 kcal</span> — <span id="display-max-range"
+                class="range-value">2,670 kcal</span>
             </div>
 
             <div class="metrics-mini-grid" style="margin-top:1.25rem;">
@@ -212,7 +226,8 @@
                 <div class="metric-mini-label">BMR (Resting Cals)</div>
               </div>
               <div class="metric-mini-card">
-                <div id="display-formula" class="metric-mini-val" style="font-size:1.1rem; color:var(--accent-cyan);">Mifflin-St Jeor</div>
+                <div id="display-formula" class="metric-mini-val" style="font-size:1.1rem; color:var(--accent-cyan);">
+                  Mifflin-St Jeor</div>
                 <div class="metric-mini-label">Formula Used</div>
               </div>
             </div>
@@ -227,7 +242,7 @@
               <button class="goal-tab-btn" data-goal="moderateDeficit">Optimal Deficit</button>
               <button class="goal-tab-btn" data-goal="leanBulk">Lean Surplus</button>
             </div>
-            
+
             <div class="target-calories-display">
               <div>
                 <div style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">Daily Target</div>
@@ -253,7 +268,8 @@
           <div class="glass-card">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
               <h3 style="font-size:1.15rem;">Macronutrient Allocation</h3>
-              <select id="select-macro-preset" class="select-field" style="width:160px; padding:0.4rem 0.6rem; font-size:0.85rem;">
+              <select id="select-macro-preset" class="select-field"
+                style="width:160px; padding:0.4rem 0.6rem; font-size:0.85rem;">
                 <option value="balanced" selected>Balanced (30/40/30)</option>
                 <option value="high_protein">High Protein (2.2g/kg)</option>
                 <option value="low_carb">Low Carb</option>
@@ -280,12 +296,16 @@
           <!-- "What If" Activity Scenario Simulator -->
           <div class="glass-card" style="border-color: rgba(6, 182, 212, 0.25);">
             <h3 style="font-size:1.1rem; margin-bottom:0.75rem;">⚡ Activity Scenario Simulator</h3>
-            <p style="font-size:0.88rem; margin-bottom:1rem;">What happens if I increase my daily non-exercise steps?</p>
+            <p style="font-size:0.88rem; margin-bottom:1rem;">What happens if I increase my daily non-exercise steps?
+            </p>
             <div style="display:flex; gap:1rem; align-items:center;">
-              <input type="number" id="input-extra-steps" class="input-field" value="3000" step="500" style="width:140px;">
+              <input type="number" id="input-extra-steps" class="input-field" value="3000" step="500"
+                style="width:140px;">
               <div style="flex:1;">
-                <div id="display-sim-extra-burn" style="font-size:1.2rem; font-weight:800; color:var(--accent-emerald);">+120 kcal/day</div>
-                <div style="font-size:0.8rem; color:var(--text-muted);">New Estimated TDEE: <span id="display-sim-new-tdee" style="color:#fff; font-weight:700;">2,570 kcal/day</span></div>
+                <div id="display-sim-extra-burn"
+                  style="font-size:1.2rem; font-weight:800; color:var(--accent-emerald);">+120 kcal/day</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">New Estimated TDEE: <span
+                    id="display-sim-new-tdee" style="color:#fff; font-weight:700;">2,570 kcal/day</span></div>
               </div>
             </div>
           </div>
@@ -300,9 +320,11 @@
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
           <div>
             <h2 style="font-size:1.5rem; margin-bottom:0.25rem;">Unsure Which Activity Level You Are?</h2>
-            <p style="font-size:0.95rem; margin:0;">Take our 60-second Movement Questionnaire to calculate your custom multiplier.</p>
+            <p style="font-size:0.95rem; margin:0;">Take our 60-second Movement Questionnaire to calculate your custom
+              multiplier.</p>
           </div>
-          <button id="btn-start-wizard" class="btn-primary" style="width:auto; padding:0.6rem 1.5rem;">Start Activity Wizard</button>
+          <button id="btn-start-wizard" class="btn-primary" style="width:auto; padding:0.6rem 1.5rem;">Start Activity
+            Wizard</button>
         </div>
 
         <div id="wizard-step-1" class="quiz-step" style="margin-top:1.5rem;">
@@ -327,12 +349,15 @@
           </div>
         </div>
 
-        <div id="wizard-result" class="hidden" style="margin-top:1.5rem; padding:1.25rem; background:rgba(6,182,212,0.1); border:1px solid var(--accent-cyan); border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
+        <div id="wizard-result" class="hidden"
+          style="margin-top:1.5rem; padding:1.25rem; background:rgba(6,182,212,0.1); border:1px solid var(--accent-cyan); border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
           <div>
-            <div style="font-weight:700; color:#fff;">Calculated Activity Factor: <span id="display-wizard-mult" style="color:var(--accent-cyan); font-size:1.3rem;">1.48</span></div>
+            <div style="font-weight:700; color:#fff;">Calculated Activity Factor: <span id="display-wizard-mult"
+                style="color:var(--accent-cyan); font-size:1.3rem;">1.48</span></div>
             <div style="font-size:0.85rem; color:var(--text-muted);">Matches Moderately Active baseline</div>
           </div>
-          <button id="btn-apply-wizard" class="btn-primary" style="width:auto; padding:0.5rem 1rem; font-size:0.9rem;">Apply to Calculator</button>
+          <button id="btn-apply-wizard" class="btn-primary"
+            style="width:auto; padding:0.5rem 1rem; font-size:0.9rem;">Apply to Calculator</button>
         </div>
       </div>
     </section>
@@ -342,10 +367,14 @@
       <div class="calibration-section">
         <span class="calibration-badge">🔬 Signature Differentiator</span>
         <h2 style="font-size:2rem; margin-bottom:0.5rem;">Adaptive TDEE Calibration Lab</h2>
-        <p style="font-size:1.05rem; max-width:780px;">Formula calculators are only starting points. Log your actual daily calories and morning body weight to calculate your <strong>Observed Real-World TDEE</strong> based on your weight trend.</p>
+        <p style="font-size:1.05rem; max-width:780px;">Formula calculators are only starting points. Log your actual
+          daily calories and morning body weight to calculate your <strong>Observed Real-World TDEE</strong> based on
+          your weight trend.</p>
 
         <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
-          <button id="btn-load-sample-data" class="btn-primary" style="width:auto; background:linear-gradient(135deg, var(--accent-purple), var(--accent-indigo));">⚡ Fill 14-Day Sample Data (Instant Demo)</button>
+          <button id="btn-load-sample-data" class="btn-primary"
+            style="width:auto; background:linear-gradient(135deg, var(--accent-purple), var(--accent-indigo));">⚡ Fill
+            14-Day Sample Data (Instant Demo)</button>
           <button id="btn-run-calibration" class="btn-secondary" style="width:auto;">Calculate Adaptive TDEE</button>
         </div>
 
@@ -359,15 +388,20 @@
               </tr>
             </thead>
             <tbody id="tracker-table-body">
-              <tr><td colspan="3" style="text-align:center; color:var(--text-dim);">Click "Fill 14-Day Sample Data" above to test adaptive expenditure calibration instantly!</td></tr>
+              <tr>
+                <td colspan="3" style="text-align:center; color:var(--text-dim);">Click "Fill 14-Day Sample Data" above
+                  to test adaptive expenditure calibration instantly!</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         <div id="calibration-output" class="calibration-result-card hidden">
           <div>
-            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Observed Real-World TDEE</div>
-            <div id="calib-observed-tdee" style="font-size:2.2rem; font-weight:900; color:var(--accent-purple);">2,545 kcal/day</div>
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Observed Real-World TDEE
+            </div>
+            <div id="calib-observed-tdee" style="font-size:2.2rem; font-weight:900; color:var(--accent-purple);">2,545
+              kcal/day</div>
           </div>
           <div>
             <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Average Daily Intake</div>
@@ -375,11 +409,14 @@
           </div>
           <div>
             <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Weight Change Rate</div>
-            <div id="calib-weight-delta" style="font-size:1.4rem; font-weight:700; color:var(--accent-emerald);">-0.22 kg/week</div>
+            <div id="calib-weight-delta" style="font-size:1.4rem; font-weight:700; color:var(--accent-emerald);">-0.22
+              kg/week</div>
           </div>
           <div>
-            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Calibration Confidence</div>
-            <div id="calib-confidence" style="font-size:0.95rem; font-weight:600; color:var(--text-main);">High (14 Days)</div>
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Calibration Confidence
+            </div>
+            <div id="calib-confidence" style="font-size:0.95rem; font-weight:600; color:var(--text-main);">High (14
+              Days)</div>
           </div>
         </div>
       </div>
@@ -389,9 +426,12 @@
     <section class="container">
       <div class="diagnostic-box">
         <h2 style="font-size:1.8rem; color:#fff; margin-bottom:0.5rem;">🩺 "Why Am I Not Losing Weight?" Diagnostic</h2>
-        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Eating below your estimated TDEE but scale isn't moving? Answer 6 quick questions to diagnose potential tracking errors, hidden calories, or water retention.</p>
+        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Eating below your estimated TDEE but scale isn't
+          moving? Answer 6 quick questions to diagnose potential tracking errors, hidden calories, or water retention.
+        </p>
 
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+        <div
+          style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
           <div>
             <label class="form-label">Tracking Duration</label>
             <select id="diag-duration" class="select-field">
@@ -448,7 +488,8 @@
           </div>
         </div>
 
-        <button id="btn-run-diagnostic" class="btn-primary" style="width:auto; background:var(--accent-rose);">Run Diagnostic Assessment</button>
+        <button id="btn-run-diagnostic" class="btn-primary" style="width:auto; background:var(--accent-rose);">Run
+          Diagnostic Assessment</button>
 
         <div id="diagnostic-result" class="hidden" style="margin-top:1.5rem;"></div>
       </div>
@@ -458,14 +499,19 @@
     <section class="container content-section">
       <div class="article-body">
         <h2>What Is Total Daily Energy Expenditure (TDEE)?</h2>
-        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> is an estimation of the total caloric energy your body consumes over 24 hours. TDEE is determined by combining your resting metabolism with physical movement and digestion costs.</p>
+        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> is an estimation of the total caloric energy your
+          body consumes over 24 hours. TDEE is determined by combining your resting metabolism with physical movement
+          and digestion costs.</p>
 
         <h2>The Formulas Behind TDEE Calculation</h2>
         <p>Our baseline engine leverages three scientifically validated equations:</p>
         <ul>
-          <li><strong>Mifflin-St Jeor Equation:</strong> Considered the clinical standard for healthy adults without known body fat percentage.</li>
-          <li><strong>Katch-McArdle Equation:</strong> Leverages Lean Body Mass (LBM) to deliver heightened accuracy for athletic individuals with known body fat percentage.</li>
-          <li><strong>Revised Harris-Benedict Equation:</strong> Historical benchmark formula used for cross-comparison.</li>
+          <li><strong>Mifflin-St Jeor Equation:</strong> Considered the clinical standard for healthy adults without
+            known body fat percentage.</li>
+          <li><strong>Katch-McArdle Equation:</strong> Leverages Lean Body Mass (LBM) to deliver heightened accuracy for
+            athletic individuals with known body fat percentage.</li>
+          <li><strong>Revised Harris-Benedict Equation:</strong> Historical benchmark formula used for cross-comparison.
+          </li>
         </ul>
 
         <h2>Frequently Asked Questions (FAQ)</h2>
@@ -476,7 +522,8 @@
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>BMR (Basal Metabolic Rate) is the baseline calories required to survive at rest. TDEE includes your BMR plus all calories burned walking, working, exercising, and digesting food.</p>
+              <p>BMR (Basal Metabolic Rate) is the baseline calories required to survive at rest. TDEE includes your BMR
+                plus all calories burned walking, working, exercising, and digesting food.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -485,7 +532,8 @@
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>Recalculate your TDEE whenever your body weight changes by more than 3–5 kg, or when your job activity/workout routine changes significantly.</p>
+              <p>Recalculate your TDEE whenever your body weight changes by more than 3–5 kg, or when your job
+                activity/workout routine changes significantly.</p>
             </div>
           </div>
         </div>
@@ -548,4 +596,5 @@
   <script src="js/content.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>

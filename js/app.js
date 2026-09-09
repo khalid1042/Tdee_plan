@@ -442,3 +442,52 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCalculation();
   renderRoute(window.location.pathname);
 });
+
+/* ==========================================================================
+   Mobile Navigation: hamburger toggle + touch-friendly dropdowns
+   ========================================================================== */
+(function() {
+  var toggle = document.getElementById('nav-toggle');
+  var header = document.querySelector('.header');
+
+  if (toggle && header) {
+    toggle.addEventListener('click', function() {
+      var open = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close the menu when a nav link is tapped
+    header.querySelectorAll('.nav-link, .dropdown-item').forEach(function(link) {
+      link.addEventListener('click', function() {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Touch devices can't hover: first tap opens the dropdown, second tap follows
+  var isTouch = window.matchMedia('(hover: none)').matches;
+  if (isTouch) {
+    document.querySelectorAll('.nav-dropdown > .nav-link').forEach(function(trigger) {
+      trigger.addEventListener('click', function(e) {
+        var dropdown = trigger.parentElement;
+        if (!dropdown.classList.contains('touch-open')) {
+          e.preventDefault();
+          e.stopPropagation();
+          // close others
+          document.querySelectorAll('.nav-dropdown.touch-open').forEach(function(d) {
+            if (d !== dropdown) d.classList.remove('touch-open');
+          });
+          dropdown.classList.add('touch-open');
+        }
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown.touch-open').forEach(function(d) {
+          d.classList.remove('touch-open');
+        });
+      }
+    });
+  }
+})();
