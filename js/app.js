@@ -95,6 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Update meta description
       var metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', routeData.metaDescription || '');
+
+      // Mount interactive calculator on silo pages that have one
+      var calcMount = document.getElementById('silo-calculator-mount');
+      if (calcMount && window.TDEEExtras) {
+        window.TDEEExtras.mount(path, calcMount);
+      }
     }
   }
 
@@ -112,13 +118,16 @@ document.addEventListener('DOMContentLoaded', function() {
     renderRoute(window.location.pathname);
   });
 
+  // Exposed for deep-link rendering in environments where pushState is blocked (file://)
+  window.TDEERenderRoute = renderRoute;
+
   /* ==========================================================================
      2. CORE RECALCULATION & UI UPDATE
      ========================================================================== */
   function updateCalculation() {
     // Read Inputs
     state.age = parseFloat(inputAge.value) || 28;
-    
+
     var heightVal = parseFloat(inputHeight.value) || 175;
     var weightVal = parseFloat(inputWeight.value) || 75;
 
@@ -413,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
       diagnosticResult.classList.remove('hidden');
 
       var html = '<h3 style="margin-bottom:1rem;">Diagnostic Analysis (' + report.totalIssues + ' Potential Drivers Identified)</h3>';
-      
+
       report.issues.forEach(function(iss) {
         html += '<div style="background:var(--bg-tertiary); border-left:4px solid var(--accent-rose); padding:1rem; border-radius:8px; margin-bottom:1rem;">' +
           '<h4 style="color:var(--text-main);">' + iss.title + '</h4>' +
