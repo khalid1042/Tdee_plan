@@ -240,6 +240,17 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ==========================================================================
      3. FORM CONTROLS & EVENT LISTENERS
      ========================================================================== */
+  // Theme Toggle (Light / Dark)
+  var themeToggleBtn = document.getElementById('theme-toggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function() {
+      var currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('tdee_theme', newTheme);
+    });
+  }
+
   // Unit Toggle
   unitBtnMetric.addEventListener('click', function() {
     if (state.unit === 'imperial') {
