@@ -613,12 +613,54 @@
     </div>
   </footer>
 
+  <!-- AI Fitness & TDEE Assistant Chatbot Widget -->
+  <button id="chat-trigger" class="chat-trigger-btn" aria-label="Open AI Fitness Assistant">
+    <span class="chat-trigger-icon">🤖</span>
+    <span class="chat-trigger-text">AI Assistant</span>
+    <span class="chat-online-dot"></span>
+  </button>
+
+  <div id="chat-window" class="chat-window-card">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <div class="chat-title">Metabolic AI Assistant</div>
+          <div class="chat-status"><span class="status-dot"></span> Online · Evidence-based</div>
+        </div>
+      </div>
+      <button id="chat-close-btn" class="chat-close-btn" aria-label="Close Chat">&times;</button>
+    </div>
+
+    <div id="chat-messages" class="chat-messages-container">
+      <div class="chat-msg bot-msg">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble">
+          👋 Hello! I am your <strong>Metabolic AI Assistant</strong>. Ask me anything about TDEE, BMR, fat loss deficits, macros, or share your age, height, and weight for an instant estimate!
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-chips-row">
+      <button class="chat-chip" data-prompt="What is TDEE?">What is TDEE?</button>
+      <button class="chat-chip" data-prompt="TDEE vs BMR">TDEE vs BMR</button>
+      <button class="chat-chip" data-prompt="How to lose fat?">Fat Loss Deficit</button>
+      <button class="chat-chip" data-prompt="How much protein?">Protein & Macros</button>
+    </div>
+
+    <div class="chat-input-bar">
+      <input type="text" id="chat-input" class="chat-input-field" placeholder="Ask a question or enter age/weight/height..." autocomplete="off">
+      <button id="chat-send-btn" class="chat-send-btn" aria-label="Send message">➔</button>
+    </div>
+  </div>
+
   <!-- Application Logic Modules -->
   <script src="js/calculator.js"></script>
   <script src="js/extras.js"></script>
   <script src="js/calibration.js"></script>
   <script src="js/diagnostic.js"></script>
   <script src="js/content.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="js/app.js"></script>
 </body>
 
