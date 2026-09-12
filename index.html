@@ -80,6 +80,7 @@
             <a href="/bmr-calculator/" class="dropdown-item">BMR Calculator</a>
             <a href="/maintenance-calorie-calculator/" class="dropdown-item">Maintenance Calorie Calculator</a>
             <a href="/calorie-deficit-calculator/" class="dropdown-item">Calorie Deficit Calculator</a>
+            <a href="/calorie-surplus-calculator/" class="dropdown-item">Calorie Surplus Calculator</a>
             <a href="/macro-calculator/" class="dropdown-item">Macro Calculator</a>
             <a href="/calories-burned-calculator/" class="dropdown-item">Calories Burned Calculator</a>
           </div>
@@ -241,6 +242,7 @@
               <button class="goal-tab-btn" data-goal="mildDeficit">Slow Deficit</button>
               <button class="goal-tab-btn active" data-goal="maintain">Maintain</button>
               <button class="goal-tab-btn" data-goal="moderateDeficit">Optimal Deficit</button>
+              <button class="goal-tab-btn" data-goal="aggressiveDeficit">Aggressive Deficit</button>
               <button class="goal-tab-btn" data-goal="leanBulk">Lean Surplus</button>
             </div>
 
@@ -372,11 +374,13 @@
           daily calories and morning body weight to calculate your <strong>Observed Real-World TDEE</strong> based on
           your weight trend.</p>
 
-        <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap;">
+        <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap; align-items:center;">
           <button id="btn-load-sample-data" class="btn-primary"
-            style="width:auto; background:linear-gradient(135deg, var(--accent-purple), var(--accent-indigo));">⚡ Fill
+            style="width:auto; background:linear-gradient(135deg, var(--accent-purple), var(--accent-indigo)); margin-top:0;">⚡ Fill
             14-Day Sample Data (Instant Demo)</button>
           <button id="btn-run-calibration" class="btn-secondary" style="width:auto;">Calculate Adaptive TDEE</button>
+          <button id="btn-add-day" class="btn-secondary" style="width:auto;">+ Add Day</button>
+          <button id="btn-clear-table" class="btn-secondary" style="width:auto; color:var(--accent-rose); border-color:rgba(244,63,94,0.3);">Clear Data</button>
         </div>
 
         <div class="tracker-table-wrapper">
@@ -552,6 +556,7 @@
             <li><a href="/bmr-calculator/">BMR Calculator</a></li>
             <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a></li>
             <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+            <li><a href="/calorie-surplus-calculator/">Calorie Surplus Calculator</a></li>
             <li><a href="/macro-calculator/">Macro Calculator</a></li>
             <li><a href="/calories-burned-calculator/">Calories Burned Calculator</a></li>
           </ul>

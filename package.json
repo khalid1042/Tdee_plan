@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "TDEE calculator and calorie plan (static HTML/CSS/JS site)",
   "scripts": {
-    "start": "npx --yes serve .",
-    "dev": "npx --yes serve ."
+    "start": "npx --yes serve -s .",
+    "dev": "npx --yes serve -s ."
   },
   "private": true
 }

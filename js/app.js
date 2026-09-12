@@ -75,42 +75,94 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderRoute(path) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    var routeData = window.TDEEContent.routes[path];
-
-    if (path === '/' || !routeData) {
+    if (path === '/') {
       // Show Homepage Calculator Workspace
       heroWorkspace.classList.remove('hidden');
       siloContainer.classList.add('hidden');
       document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
-    } else {
-      // Show Silo Content Article
+      return;
+    }
+
+    var routeData = window.TDEEContent.routes[path];
+
+    if (!routeData) {
+      // Show Custom 404 Error Page
       heroWorkspace.classList.add('hidden');
       siloContainer.classList.remove('hidden');
 
-      siloCategory.textContent = routeData.category || 'Guide';
-      siloTitle.textContent = routeData.h1 || routeData.title;
-      siloBody.innerHTML = routeData.content;
-      document.title = routeData.title;
+      siloCategory.textContent = '404 Error';
+      siloTitle.textContent = '404 - Page Not Found';
+      siloBody.innerHTML = `
+        <div style="text-align: center; padding: 2.5rem 1rem;">
+          <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🔎</div>
+          <h3 style="margin-bottom: 0.75rem; color: var(--accent-rose);">Requested Page Not Found</h3>
+          <p style="font-size: 1rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 1.5rem;">
+            The page you are trying to reach does not exist or may have moved.
+          </p>
+          <a href="/" class="btn-primary" style="display: inline-flex; width: auto; padding: 0.75rem 2rem;">
+            ← Return to Main Calculator
+          </a>
+        </div>
+      `;
+      document.title = '404 Page Not Found — TDEE Calculator';
 
-      // Update meta description
-      var metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', routeData.metaDescription || '');
-
-      // Mount interactive calculator on silo pages that have one
       var calcMount = document.getElementById('silo-calculator-mount');
-      if (calcMount && window.TDEEExtras) {
+      if (calcMount) calcMount.innerHTML = '';
+      return;
+    }
+
+    // Show Silo Content Article
+    heroWorkspace.classList.add('hidden');
+    siloContainer.classList.remove('hidden');
+
+    siloCategory.textContent = routeData.category || 'Guide';
+    siloTitle.textContent = routeData.h1 || routeData.title;
+    siloBody.innerHTML = routeData.content;
+    document.title = routeData.title;
+
+    // Update meta description
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', routeData.metaDescription || '');
+
+    // Mount interactive calculator on silo pages that have one
+    var calcMount = document.getElementById('silo-calculator-mount');
+    if (calcMount) {
+      calcMount.innerHTML = '';
+      if (window.TDEEExtras) {
         window.TDEEExtras.mount(path, calcMount);
       }
     }
   }
 
-  // Intercept click on internal links for smooth SPA navigation
+  // Intercept click on internal links for smooth SPA navigation and hash jumping
   document.addEventListener('click', function(e) {
     var target = e.target.closest('a');
-    if (target && target.getAttribute('href') && target.getAttribute('href').startsWith('/')) {
+    if (!target) return;
+    var href = target.getAttribute('href');
+    if (!href) return;
+
+    if (href.startsWith('/')) {
       e.preventDefault();
-      var href = target.getAttribute('href');
       navigateTo(href);
+    } else if (href.startsWith('#')) {
+      e.preventDefault();
+      var targetId = href.substring(1);
+      if (state.currentRoute !== '/') {
+        // Return to homepage first if currently on a silo page
+        state.currentRoute = '/';
+        window.history.pushState({}, '', '/');
+        heroWorkspace.classList.remove('hidden');
+        siloContainer.classList.add('hidden');
+        document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
+      }
+      if (targetId) {
+        var elem = document.getElementById(targetId);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   });
 
@@ -303,7 +355,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (btnApplyWizard) {
     btnApplyWizard.addEventListener('click', function() {
       updateCalculation();
-      alert('Custom activity multiplier of ' + state.customMultiplier + ' applied to your TDEE!');
+      var originalText = btnApplyWizard.textContent;
+      btnApplyWizard.textContent = '✓ Applied (' + state.customMultiplier.toFixed(2) + '×)';
+      btnApplyWizard.style.background = 'var(--accent-emerald)';
+      setTimeout(function() {
+        btnApplyWizard.textContent = originalText;
+        btnApplyWizard.style.background = '';
+      }, 2500);
+
+      var calcCard = document.querySelector('.tdee-main-card');
+      if (calcCard) calcCard.scrollIntoView({ behavior: 'smooth' });
     });
   }
 
@@ -312,10 +373,16 @@ document.addEventListener('DOMContentLoaded', function() {
      ========================================================================== */
   var btnLoadSampleData = document.getElementById('btn-load-sample-data');
   var btnRunCalibration = document.getElementById('btn-run-calibration');
+  var btnAddDay = document.getElementById('btn-add-day');
+  var btnClearTable = document.getElementById('btn-clear-table');
   var tableBody = document.getElementById('tracker-table-body');
   var calibrationOutput = document.getElementById('calibration-output');
 
   function renderTrackerTable(entries) {
+    if (!entries || entries.length === 0) {
+      tableBody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:var(--text-dim); padding: 1.5rem;">Click "+ Add Day" or "Fill 14-Day Sample Data" to start logging!</td></tr>';
+      return;
+    }
     tableBody.innerHTML = '';
     entries.forEach(function(row, idx) {
       var tr = document.createElement('tr');
@@ -327,16 +394,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Wire input edits
     tableBody.querySelectorAll('.cal-input').forEach(function(inp) {
-      inp.addEventListener('change', function() {
+      inp.addEventListener('input', function() {
         var idx = parseInt(inp.getAttribute('data-idx'));
-        state.calibrationEntries[idx].cals = parseFloat(inp.value) || 0;
+        if (state.calibrationEntries[idx]) state.calibrationEntries[idx].cals = parseFloat(inp.value) || 0;
       });
     });
     tableBody.querySelectorAll('.weight-input').forEach(function(inp) {
-      inp.addEventListener('change', function() {
+      inp.addEventListener('input', function() {
         var idx = parseInt(inp.getAttribute('data-idx'));
-        state.calibrationEntries[idx].weight = parseFloat(inp.value) || 0;
+        if (state.calibrationEntries[idx]) state.calibrationEntries[idx].weight = parseFloat(inp.value) || 0;
       });
+    });
+  }
+
+  if (btnAddDay) {
+    btnAddDay.addEventListener('click', function() {
+      if (!state.calibrationEntries) state.calibrationEntries = [];
+      var nextDay = state.calibrationEntries.length + 1;
+      var lastWeight = state.calibrationEntries.length > 0 ? state.calibrationEntries[state.calibrationEntries.length - 1].weight : 75.0;
+      var lastCals = state.calibrationEntries.length > 0 ? state.calibrationEntries[state.calibrationEntries.length - 1].cals : 2350;
+      state.calibrationEntries.push({ day: nextDay, cals: lastCals, weight: lastWeight });
+      renderTrackerTable(state.calibrationEntries);
+    });
+  }
+
+  if (btnClearTable) {
+    btnClearTable.addEventListener('click', function() {
+      state.calibrationEntries = [];
+      renderTrackerTable(state.calibrationEntries);
+      if (calibrationOutput) calibrationOutput.classList.add('hidden');
     });
   }
 

@@ -39,72 +39,209 @@ window.TDEEContent = {
     },
 
     '/blog/how-to-calculate-tdee/': {
-      title: 'How to Calculate TDEE: Step-by-Step Guide & Methods',
-      metaDescription: 'Learn step-by-step how to calculate your Total Daily Energy Expenditure using Mifflin-St Jeor, body fat multipliers, and real-world calibration.',
+      title: 'How to Calculate TDEE: Step-by-Step Formulas & Guide (2026)',
+      metaDescription: 'Learn how to calculate your Total Daily Energy Expenditure (TDEE) step-by-step using Mifflin-St Jeor, activity multipliers, and real-world tracking.',
       category: 'TDEE Guides',
-      readTime: '7 min read',
-      h1: 'How to Calculate Your TDEE (Formula & Step-by-Step)',
+      readTime: '8 min read',
+      h1: 'How to Calculate Your TDEE (Formulas & Step-by-Step Guide)',
       content: `
-        <p>Calculating your Total Daily Energy Expenditure requires two main steps: determining your Basal Metabolic Rate (BMR) and applying an Activity Factor multiplier.</p>
+        <p>Calculating your Total Daily Energy Expenditure (TDEE) is the fundamental first step in taking control of your body composition. Whether your goal is to lose fat, maintain your current weight, or build lean muscle, knowing how many calories your body burns in 24 hours gives you the precise baseline you need.</p>
         
-        <h2>Step 1: Calculate Your BMR</h2>
-        <p>The standard benchmark for BMR estimation is the <strong>Mifflin-St Jeor Equation</strong>:</p>
-        <ul>
-          <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) + 5</li>
-          <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) - 161</li>
-        </ul>
+        <p>While an automated <a href="/">main TDEE calculator</a> makes this fast, understanding the underlying mathematical formulas empowers you to tailor your nutrition with confidence. This guide explains how to calculate your TDEE step-by-step using validated scientific equations.</p>
+
+        <h2>Step 1: Calculate Your Basal Metabolic Rate (BMR)</h2>
+        <p>Your Basal Metabolic Rate (BMR) represents the calories your body consumes simply staying alive at rest. It powers essential physiological functions such as breathing, blood circulation, cell repair, and brain activity. BMR accounts for approximately 60% to 70% of your total daily burn.</p>
+        
+        <p>The clinical benchmark formula for estimating BMR in healthy adults is the <strong>Mifflin-St Jeor Equation</strong>. Introduced in 1990, peer-reviewed <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">Mifflin-St Jeor equation validation study</a> research demonstrates that it provides the highest accuracy rate across diverse population groups.</p>
+
+        <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:8px; border-left:4px solid var(--accent-cyan); margin:1.5rem 0;">
+          <p style="margin-bottom:0.5rem; font-weight:700; color:#fff;">Mifflin-St Jeor Formula:</p>
+          <ul style="margin-bottom:0;">
+            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) + 5</li>
+            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) - 161</li>
+          </ul>
+        </div>
+
+        <h3>Example Calculation:</h3>
+        <p>For a 30-year-old male weighing 80 kg and measuring 180 cm tall:</p>
+        <ol>
+          <li>(10 × 80) = 800</li>
+          <li>(6.25 × 180) = 1,125</li>
+          <li>(5 × 30) = 150</li>
+          <li><strong>BMR</strong> = 800 + 1,125 - 150 + 5 = <strong>1,780 kcal/day</strong></li>
+        </ol>
+
+        <p>If you know your exact body fat percentage, you can alternatively use our <a href="/bmr-calculator/">BMR calculator tool</a> powered by the <strong>Katch-McArdle Equation</strong>, which calculates BMR based on Lean Body Mass (LBM):</p>
+        <p style="font-style:italic; background:rgba(255,255,255,0.04); padding:0.75rem; border-radius:6px;">BMR = 370 + (21.6 × LBM in kg)</p>
 
         <h2>Step 2: Apply Your Activity Level Multiplier</h2>
-        <p>Multiply your BMR by your corresponding lifestyle activity factor:</p>
-        <ul>
-          <li><strong>Sedentary (1.20):</strong> Desk job, little to no exercise.</li>
-          <li><strong>Lightly Active (1.375):</strong> Light exercise 1–3 days/week or ~6,000 daily steps.</li>
-          <li><strong>Moderately Active (1.55):</strong> Moderate workouts 3–5 days/week or ~9,000 daily steps.</li>
-          <li><strong>Very Active (1.725):</strong> Heavy workouts 6–7 days/week or ~12,000 daily steps.</li>
-          <li><strong>Extra Active (1.90):</strong> Physical job plus daily strenuous training.</li>
-        </ul>
+        <p>BMR only measures resting expenditure. To find your complete daily energy burn, you must multiply your BMR by an <strong>Activity Factor</strong> that accounts for job movement, lifestyle steps, and intentional exercise.</p>
 
-        <h2>Step 3: Calibrate with Real-World Data</h2>
-        <p>Formula estimates can vary by ±10%. To find your true personal TDEE, track your daily caloric intake and morning scale weight over 14 to 21 days using our <a href="#calibration-lab">Adaptive Calibration Lab</a>.</p>
+        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
+              <th style="padding:0.75rem;">Activity Category</th>
+              <th style="padding:0.75rem;">Physical Lifestyle Description</th>
+              <th style="padding:0.75rem;">Multiplier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Sedentary</strong></td>
+              <td style="padding:0.75rem;">Desk job, minimal walking, no formal exercise</td>
+              <td style="padding:0.75rem;"><strong>1.200</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Lightly Active</strong></td>
+              <td style="padding:0.75rem;">Light exercise 1–3 days/week or ~6,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.375</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Moderately Active</strong></td>
+              <td style="padding:0.75rem;">Moderate exercise 3–5 days/week or ~9,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.550</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Very Active</strong></td>
+              <td style="padding:0.75rem;">Heavy exercise 6–7 days/week or ~12,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.725</strong></td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;"><strong>Extra Active</strong></td>
+              <td style="padding:0.75rem;">Physical labor job plus strenuous daily training</td>
+              <td style="padding:0.75rem;"><strong>1.900</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Final TDEE Equation:</h3>
+        <p style="font-size:1.1rem; font-weight:700; color:var(--accent-emerald);">TDEE = BMR × Activity Multiplier</p>
+        <p>Using our previous example of a male with a BMR of 1,780 kcal who is <strong>Moderately Active</strong> (1.55 multiplier):</p>
+        <p style="font-size:1.1rem; font-weight:700;">TDEE = 1,780 × 1.55 = 2,759 kcal/day</p>
+        <p>This individual requires approximately 2,760 calories per day to maintain his current body weight.</p>
+
+        <h2>Step 3: Calibrate Your Estimate with Real-World Tracking</h2>
+        <p>Static mathematical formulas are evidence-based starting points, but individual variations in Non-Exercise Activity Thermogenesis (NEAT) and metabolic efficiency mean formula estimates carry a typical variance of ±10%.</p>
+
+        <p>To find your true observed TDEE:</p>
+        <ol>
+          <li>Log your daily caloric intake using a digital food scale for 14 consecutive days.</li>
+          <li>Record your morning scale weight daily after waking up and using the bathroom.</li>
+          <li>Compare the average weight of Week 1 against Week 2.</li>
+        </ol>
+        <p>If your average weight remains unchanged over 14 days, your average daily caloric intake is your true maintenance TDEE. If you are looking to lose weight, plug your baseline into our <a href="/calorie-deficit-calculator/">calorie deficit calculator</a> to establish a safe deficit target.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How often should I recalculate my TDEE?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>Recalculate your TDEE whenever your body weight changes by more than 3 to 5 kg (7 to 11 lbs), or when your daily occupation or workout routine changes significantly.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is TDEE the same as BMR?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>No. BMR measures calories burned at complete rest, while TDEE includes BMR plus all physical movement, daily steps, workouts, and food digestion.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Why am I not losing weight eating at my calculated TDEE deficit?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>Formula estimates can overestimate activity levels. Inaccuracies in food logging (such as untracked cooking oils or visual portion estimates) are also common. Track daily calories strictly for 14 days and adjust your multiplier if needed.</p>
+            </div>
+          </div>
+        </div>
       `
     },
 
     '/blog/tdee-vs-bmr/': {
       title: 'TDEE vs BMR: What Is the Difference & Which Should You Use?',
-      metaDescription: 'Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), and why eating below BMR can harm progress.',
+      metaDescription: 'Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), and why eating below BMR can harm fat loss progress.',
       category: 'Comparisons',
-      readTime: '5 min read',
+      readTime: '6 min read',
       h1: 'TDEE vs BMR: Key Differences Explained',
       content: `
-        <p>While both <strong>BMR</strong> and <strong>TDEE</strong> are key metrics in clinical nutrition, they represent fundamentally different figures.</p>
+        <p>While both <strong>BMR (Basal Metabolic Rate)</strong> and <strong>TDEE (Total Daily Energy Expenditure)</strong> are foundational numbers in clinical nutrition, confusing the two is one of the most common mistakes people make when planning a diet.</p>
         
         <h2>Key Differences at a Glance</h2>
+        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
+              <th style="padding:0.75rem;">Metric</th>
+              <th style="padding:0.75rem;">Definition</th>
+              <th style="padding:0.75rem;">Includes Activity?</th>
+              <th style="padding:0.75rem;">Primary Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>BMR</strong></td>
+              <td style="padding:0.75rem;">Calories burned at complete 24-hour rest</td>
+              <td style="padding:0.75rem;">❌ No movement included</td>
+              <td style="padding:0.75rem;">Clinical baseline energy floor</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;"><strong>TDEE</strong></td>
+              <td style="padding:0.75rem;">Total calories burned including movement & exercise</td>
+              <td style="padding:0.75rem;">✓ Full daily activity included</td>
+              <td style="padding:0.75rem;">Setting maintenance, fat loss, or bulk targets</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Understanding Basal Metabolic Rate (BMR)</h2>
+        <p>Your BMR is the exact caloric energy your organs (brain, heart, lungs, liver, and kidneys) consume to maintain vital functions while in a neutral environment without physical movement. BMR accounts for roughly 60% to 70% of total daily energy output.</p>
+
+        <h2>Understanding Total Daily Energy Expenditure (TDEE)</h2>
+        <p>TDEE builds upon your BMR by adding three active expenditure components:</p>
         <ul>
-          <li><strong>BMR (Basal Metabolic Rate):</strong> The minimum energy your body burns in a state of complete rest to keep organs functioning.</li>
-          <li><strong>TDEE (Total Daily Energy Expenditure):</strong> BMR <em>plus</em> all movement, daily tasks, workouts, and food digestion.</li>
+          <li><strong>NEAT (Non-Exercise Movement):</strong> Walking around the house, standing, fidgeting, working at a desk.</li>
+          <li><strong>EEE (Exercise Expenditure):</strong> Dedicated physical training like weightlifting, running, or cycling.</li>
+          <li><strong>TEF (Thermic Effect of Food):</strong> The energy required to digest, break down, and assimilate food.</li>
         </ul>
 
-        <h2>Why You Should Never Starve Below Your BMR</h2>
-        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When fuel intake drops below baseline organ requirements, the body downregulates thyroid hormones, decreases non-exercise activity, and breaks down muscle tissue for energy.</p>
-        <p>To safely lose fat, base your deficit on your <strong>TDEE</strong>, not your BMR!</p>
+        <h2>Why You Should Never Eat Below Your BMR</h2>
+        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When energy intake drops below baseline cellular requirements, the body responds defensively by downregulating thyroid hormones, lowering spontaneous physical movement, increasing hunger signals, and breaking down lean muscle tissue for fuel.</p>
+
+        <p>To safely lose body fat, always calculate your caloric deficit as a percentage below your <strong>TDEE</strong>, keeping your target calories at or above your baseline BMR. Use our <a href="/bmr-calculator/">standalone BMR calculator</a> to determine your personal floor.</p>
       `
     },
 
     '/blog/tdee-for-weight-loss/': {
       title: 'TDEE for Weight Loss: Setting the Perfect Calorie Deficit',
-      metaDescription: 'Learn how to use your TDEE to set a sustainable calorie deficit for fat loss without losing muscle or ruining your metabolism.',
+      metaDescription: 'Learn how to use your TDEE to set a sustainable calorie deficit for fat loss without losing muscle or harming metabolic health.',
       category: 'Weight Loss',
-      readTime: '6 min read',
+      readTime: '7 min read',
       h1: 'How to Use TDEE for Sustainable Fat Loss',
       content: `
-        <p>To lose body fat, you must create an energy deficit where daily energy intake is less than your TDEE. However, bigger deficits are not always better.</p>
+        <p>To lose body fat, you must create a sustained energy deficit where total caloric intake is lower than your Total Daily Energy Expenditure (TDEE). However, creating an overly aggressive deficit can backfire by triggering muscle loss and intense hunger.</p>
         
-        <h2>Selecting Your Caloric Deficit Rate</h2>
+        <h2>Selecting the Right Deficit Rate for Your Body</h2>
+        <p>Different body composition goals and starting fat percentages require different deficit rates:</p>
         <ul>
-          <li><strong>Slow & Steady (-15% TDEE):</strong> Ideal for lean individuals preserving maximum muscle mass. Lose ~0.25 kg/week.</li>
-          <li><strong>Moderate Deficit (-20% to -25% TDEE):</strong> The sweet spot for most adults. Combines reliable fat loss with high energy levels. Lose ~0.5 kg/week.</li>
-          <li><strong>Aggressive Deficit (-30% TDEE):</strong> Suitable for short periods or individuals with higher body fat percentages.</li>
+          <li><strong>Mild Deficit (-15% TDEE):</strong> Recommended for lean individuals or athletes looking to preserve maximum muscle mass and workout performance. Rate of loss: ~0.25 kg (0.5 lbs) per week.</li>
+          <li><strong>Moderate Deficit (-20% to -25% TDEE):</strong> The optimal sweet spot for most adults. Combines predictable fat loss with stable energy levels and manageable appetite. Rate of loss: ~0.5 kg (1.1 lbs) per week.</li>
+          <li><strong>Aggressive Deficit (-30% TDEE):</strong> Reserved for short durations or individuals with higher initial body fat levels. Rate of loss: ~0.8 kg (1.7 lbs) per week.</li>
         </ul>
+
+        <h2>3 Rules for Successful TDEE Fat Loss</h2>
+        <ol>
+          <li><strong>Keep Protein Intake High:</strong> Aim for 1.6 to 2.2 grams of protein per kilogram of body weight to safeguard lean muscle mass while in a deficit.</li>
+          <li><strong>Maintain Resistance Training:</strong> Lifting weights signals your body to retain muscle tissue and prioritize body fat breakdown for energy.</li>
+          <li><strong>Monitor Weekly Scale Averages:</strong> Evaluate weight loss using 7-day rolling averages rather than daily fluctuations to account for water weight noise.</li>
+        </ol>
+
+        <p>Ready to calculate your customized deficit target? Use our <a href="/calorie-deficit-calculator/">interactive calorie deficit calculator</a>.</p>
       `
     },
 
@@ -113,12 +250,21 @@ window.TDEEContent = {
     // ==========================================
     '/bmr-calculator/': {
       title: 'BMR Calculator: Calculate Basal Metabolic Rate Accurately',
-      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Find out your baseline calorie consumption.',
+      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Discover your baseline resting calorie burn.',
       category: 'Calculator',
       h1: 'BMR Calculator (Basal Metabolic Rate)',
       content: `
-        <p>Your <strong>Basal Metabolic Rate (BMR)</strong> is the number of calories your body burns while at complete rest to keep your brain, heart, lungs, and liver functioning.</p>
-        <p>Use the main calculator above to get your instant BMR readout alongside your total daily energy burn!</p>
+        <p>Your <strong>Basal Metabolic Rate (BMR)</strong> is the total number of calories your body burns while at complete rest to keep your brain, heart, lungs, liver, and cellular processes functioning over 24 hours.</p>
+        
+        <h2>How BMR Is Calculated</h2>
+        <p>Our tool utilizes the two most clinical formulas validated in metabolic research:</p>
+        <ul>
+          <li><strong>Mifflin-St Jeor Formula:</strong> The gold standard equation for healthy adults based on age, sex, height, and body weight.</li>
+          <li><strong>Katch-McArdle Formula:</strong> Activated when body fat percentage is supplied, calculating resting expenditure directly from Lean Body Mass (LBM).</li>
+        </ul>
+
+        <h2>Why BMR Matters for Your TDEE</h2>
+        <p>BMR forms the baseline layer of your Total Daily Energy Expenditure (TDEE). Once your BMR is established, applying your lifestyle activity factor provides your total daily energy requirement.</p>
       `
     },
 
@@ -128,7 +274,14 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Maintenance Calorie Calculator',
       content: `
-        <p>Your <strong>maintenance calories</strong> are the exact amount of energy required to maintain your current body weight. Eating at maintenance preserves body composition, energy, and athletic performance.</p>
+        <p>Your <strong>maintenance calories</strong> represent the exact energy intake where caloric consumption equals total daily energy expenditure (TDEE). Eating at maintenance preserves body weight, hormonal balance, athletic performance, and metabolic health.</p>
+
+        <h2>When Should You Eat at Maintenance?</h2>
+        <ul>
+          <li><strong>Diet Breaks & Refeeds:</strong> Taking 1 to 2 weeks at maintenance after prolonged fat loss restores thyroid hormones and leptin.</li>
+          <li><strong>Body Recomposition:</strong> Beginners and returning lifters can build muscle while losing fat simultaneously by eating at maintenance with high protein.</li>
+          <li><strong>Long-Term Weight Stabilization:</strong> Maintaining your achieved goal weight after completing a fat loss phase.</li>
+        </ul>
       `
     },
 
@@ -138,7 +291,32 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Calorie Deficit Calculator',
       content: `
-        <p>Calculate your custom fat-loss targets. Choose between mild (-15%), moderate (-22%), and aggressive (-30%) deficits with automatic weekly calorie budgets.</p>
+        <p>A <strong>calorie deficit</strong> occurs when you consume fewer calories than your TDEE burns. Your body makes up the energy gap by burning stored body tissue, primarily adipose fat.</p>
+
+        <h2>Choosing Your Calorie Deficit Strategy</h2>
+        <p>Use the interactive calculator above to select your target deficit pace:</p>
+        <ul>
+          <li><strong>Mild (-15%):</strong> Slow, sustainable fat loss preserving high training energy.</li>
+          <li><strong>Optimal (-22%):</strong> Balanced fat loss rate of approximately 0.5 kg (1 lb) per week.</li>
+          <li><strong>Aggressive (-30%):</strong> Faster fat loss for short-term phases.</li>
+        </ul>
+      `
+    },
+
+    '/calorie-surplus-calculator/': {
+      title: 'Calorie Surplus Calculator: Lean Bulk & Muscle Gain Intake',
+      metaDescription: 'Calculate your optimal calorie surplus for muscle growth and weight gain without excessive fat accretion.',
+      category: 'Calculator',
+      h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
+      content: `
+        <p>Building new muscle tissue is an energy-intensive process requiring a caloric surplus above your TDEE. Consuming a controlled surplus provides the extra energy required for protein synthesis and muscular recovery.</p>
+
+        <h2>Optimizing Your Calorie Surplus Rate</h2>
+        <ul>
+          <li><strong>Lean Surplus (+10% TDEE):</strong> Adds ~0.2 kg/week, minimizing fat gain while maximizing lean muscle accretion.</li>
+          <li><strong>Moderate Surplus (+15% TDEE):</strong> Recommended for intermediate lifters seeking steady strength gains.</li>
+          <li><strong>Aggressive Surplus (+20% TDEE):</strong> Suitable for hardgainers or athletes undergoing intense double-session training.</li>
+        </ul>
       `
     },
 
@@ -148,7 +326,14 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Macro Calculator (Flexible Macronutrients)',
       content: `
-        <p>Macronutrients (Protein, Carbohydrates, and Fats) dictate body composition. Use our macro engine to tailor your nutrition for optimal performance.</p>
+        <p>While total calories determine whether you gain or lose weight, your <strong>macronutrient breakdown (Protein, Carbohydrates, and Fats)</strong> dictates body composition and energy levels.</p>
+
+        <h2>The Roles of Each Macronutrient</h2>
+        <ul>
+          <li><strong>Protein (4 kcal/g):</strong> Essential for muscle tissue repair, enzyme production, and satiety during fat loss.</li>
+          <li><strong>Carbohydrates (4 kcal/g):</strong> The primary high-intensity fuel source for workout performance and glycogen replenishment.</li>
+          <li><strong>Fats (9 kcal/g):</strong> Required for hormone production (testosterone, estrogen), joint health, and nutrient absorption.</li>
+        </ul>
       `
     },
 
@@ -158,7 +343,10 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Calories Burned Calculator',
       content: `
-        <p>Discover your total daily caloric burn across resting metabolic rate, lifestyle steps, occupation movement, and gym workouts.</p>
+        <p>Your daily caloric burn is dynamic. The <strong>Calories Burned Calculator</strong> calculates your total expenditure by combining baseline resting metabolic rate with step counts, daily lifestyle movement, and workout duration.</p>
+
+        <h2>Understanding Daily Step Burn</h2>
+        <p>Walking is one of the most effective ways to boost Non-Exercise Activity Thermogenesis (NEAT). On average, every 1,000 steps burn approximately 35 to 45 additional calories depending on body weight.</p>
       `
     },
 

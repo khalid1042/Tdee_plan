@@ -131,10 +131,33 @@ window.TDEEExtras = (function() {
     };
   }
 
+  function surplusCalc(inputs, unit) {
+    var m = toMetric(inputs, unit);
+    var res = window.TDEECalculator.calculateTDEE({
+      age: inputs.age, gender: inputs.gender, heightCm: m.heightCm,
+      weightKg: m.weightKg, bodyFat: inputs.bodyFat, activityKey: inputs.activity
+    });
+    var leanBulkCals = Math.round(res.tdee * 1.10);
+    var moderateSurplusCals = Math.round(res.tdee * 1.15);
+    var aggressiveSurplusCals = Math.round(res.tdee * 1.20);
+    return {
+      primary: leanBulkCals,
+      unitLabel: 'kcal/day target for lean muscle gain',
+      formulaName: 'Based on ' + res.formula,
+      rows: [
+        { label: 'Maintenance (TDEE)', value: res.tdee + ' kcal', show: true },
+        { label: 'Lean Surplus (+10%) · +0.2 kg/wk', value: leanBulkCals + ' kcal', show: true },
+        { label: 'Moderate Surplus (+15%) · +0.35 kg/wk', value: moderateSurplusCals + ' kcal', show: true },
+        { label: 'Aggressive Surplus (+20%) · +0.5 kg/wk', value: aggressiveSurplusCals + ' kcal', show: true }
+      ]
+    };
+  }
+
   var ENGINES = {
     bmr: bmrCalc,
     maintenance: maintenanceCalc,
     deficit: deficitCalc,
+    surplus: surplusCalc,
     macro: macroCalc,
     burned: burnedCalc
   };
@@ -332,6 +355,7 @@ window.TDEEExtras = (function() {
     '/bmr-calculator/': 'bmr',
     '/maintenance-calorie-calculator/': 'maintenance',
     '/calorie-deficit-calculator/': 'deficit',
+    '/calorie-surplus-calculator/': 'surplus',
     '/macro-calculator/': 'macro',
     '/calories-burned-calculator/': 'burned'
   };
