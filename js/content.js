@@ -1,40 +1,71 @@
 /**
- * Content Engine providing comprehensive topical guides, specialized calculator pages,
- * trust/authority documents, and legal pages for all Silo routes.
+ * Comprehensive SEO Content Engine
+ * Provides unique, non-duplicative, rank-optimized content for all Silo routes.
+ * Every route owns a distinct focus keyword and search intent.
  */
 
 window.TDEEContent = {
   routes: {
     // ==========================================
-    // BLOG & KNOWLEDGE SILO
+    // SILO 1: TDEE CORE & KNOWLEDGE GUIDES
     // ==========================================
+
     '/blog/what-is-tdee/': {
-      title: 'What Is TDEE? Meaning, Formula & Complete Guide (2026)',
-      metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, how energy burn is calculated, and how to use your TDEE to burn fat or build muscle effectively.',
+      title: 'What Is TDEE? Meaning, 4 Components & Complete Guide (2026)',
+      metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, the 4 components of daily calorie burn, and how your metabolism uses energy.',
       category: 'TDEE Guides',
-      readTime: '6 min read',
-      h1: 'What Is TDEE? Meaning, Formula & How It Works',
+      readTime: '7 min read',
+      h1: 'What Is TDEE? Meaning, Physiology & Energy Components',
       content: `
-        <p><strong>Total Daily Energy Expenditure (TDEE)</strong> represents the total number of calories your body burns in a 24-hour period. It combines your Basal Metabolic Rate (BMR) with your physical activity levels, exercise, and the energy required to digest food.</p>
+        <p><strong>Total Daily Energy Expenditure (TDEE)</strong> is the cumulative measure of energy, expressed in kilocalories (kcal), that your body expends over a 24-hour period. It combines your baseline metabolic survival cost with physical movement, intentional workout training, and the energy consumed digesting food.</p>
         
-        <h2>The 4 Components of TDEE</h2>
-        <p>Your daily energy burn is divided into four distinct physiological components:</p>
+        <p>Understanding your TDEE allows you to replace dietary guesswork with mathematical precision. Rather than following generic calorie budgets, knowing your TDEE gives you your exact personal baseline for weight loss, maintenance, or muscle gain.</p>
+
+        <h2>The 4 Physiological Components of TDEE</h2>
+        <p>Human energy expenditure is divided into four distinct biological categories:</p>
+
+        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
+              <th style="padding:0.75rem;">Component</th>
+              <th style="padding:0.75rem;">Share of TDEE</th>
+              <th style="padding:0.75rem;">Biological Function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>BMR (Basal Metabolic Rate)</strong></td>
+              <td style="padding:0.75rem;">60% – 70%</td>
+              <td style="padding:0.75rem;">Cellular repair, respiration, brain function, heart rhythm at rest.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>NEAT (Non-Exercise Thermogenesis)</strong></td>
+              <td style="padding:0.75rem;">15% – 20%</td>
+              <td style="padding:0.75rem;">Spontaneous walking, posture, fidgeting, daily occupational tasks.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>EEE (Exercise Energy Expenditure)</strong></td>
+              <td style="padding:0.75rem;">5% – 15%</td>
+              <td style="padding:0.75rem;">Structured workouts, weight lifting, running, or cardio training.</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;"><strong>TEF (Thermic Effect of Food)</strong></td>
+              <td style="padding:0.75rem;">~10%</td>
+              <td style="padding:0.75rem;">Energy expended breaking down, digesting, and absorbing food.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Detailed Breakdown of TEF by Macronutrient</h2>
+        <p>Not all calories burn equal energy during digestion. Protein has by far the highest thermic cost:</p>
         <ul>
-          <li><strong>Basal Metabolic Rate (BMR) ~60–70%:</strong> The baseline calories your body consumes simply staying alive (brain function, heart beating, lung respiration, cell repair).</li>
-          <li><strong>Non-Exercise Activity Thermogenesis (NEAT) ~15%:</strong> Energy expended through daily non-exercise movement such as walking, fidgeting, carrying groceries, and cleaning.</li>
-          <li><strong>Exercise Energy Expenditure (EEE) ~5–15%:</strong> Calories burned during intentional physical workouts like lifting weights, running, swimming, or sports.</li>
-          <li><strong>Thermic Effect of Food (TEF) ~10%:</strong> The metabolic cost of breaking down and absorbing macronutrients (protein requires ~20-30% of its energy to digest!).</li>
+          <li><strong>Protein TEF (20% – 30%):</strong> Out of 100 calories of protein, 20 to 30 calories are consumed simply digesting and processing it!</li>
+          <li><strong>Carbohydrate TEF (5% – 10%):</strong> Moderate metabolic digestion cost.</li>
+          <li><strong>Fat TEF (0% – 3%):</strong> Very low metabolic cost; easily stored or utilized.</li>
         </ul>
 
-        <h2>Why TDEE Matters More Than Simple BMR</h2>
-        <p>Many individuals confuse BMR with TDEE. Eating only your BMR calories while maintaining an active lifestyle can lead to severe caloric deficits, lethargy, muscle loss, and hormonal down-regulation. Calculating your TDEE provides your true <em>maintenance calories</em> — the exact baseline needed to maintain your body weight.</p>
-
-        <h2>How to Use Your TDEE for Your Goals</h2>
-        <ul>
-          <li><strong>Fat Loss:</strong> Consume 15% to 25% below your TDEE (creating a calorie deficit).</li>
-          <li><strong>Weight Maintenance:</strong> Eat equal to your estimated TDEE.</li>
-          <li><strong>Muscle Growth (Lean Bulk):</strong> Consume 5% to 10% above your TDEE (creating a controlled caloric surplus).</li>
-        </ul>
+        <h2>Why TDEE Is Superior to Generic Calorie Guidelines</h2>
+        <p>Standard dietary guidelines often suggest a blanket "2,000 calorie diet." However, a 90 kg male athlete may have a TDEE of 3,200 calories, while a 55 kg sedentary office worker may have a TDEE of 1,600 calories. Following generic advice causes severe under-eating or accidental weight gain. Calculating your TDEE using our <a href="/">homepage TDEE calculator engine</a> provides an individualized target tailored to your height, weight, age, and lifestyle.</p>
       `
     },
 
@@ -130,46 +161,15 @@ window.TDEEContent = {
           <li>Compare the average weight of Week 1 against Week 2.</li>
         </ol>
         <p>If your average weight remains unchanged over 14 days, your average daily caloric intake is your true maintenance TDEE. If you are looking to lose weight, plug your baseline into our <a href="/calorie-deficit-calculator/">calorie deficit calculator</a> to establish a safe deficit target.</p>
-
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <div class="faq-grid">
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>How often should I recalculate my TDEE?</span>
-              <span class="faq-icon">▼</span>
-            </div>
-            <div class="faq-answer">
-              <p>Recalculate your TDEE whenever your body weight changes by more than 3 to 5 kg (7 to 11 lbs), or when your daily occupation or workout routine changes significantly.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Is TDEE the same as BMR?</span>
-              <span class="faq-icon">▼</span>
-            </div>
-            <div class="faq-answer">
-              <p>No. BMR measures calories burned at complete rest, while TDEE includes BMR plus all physical movement, daily steps, workouts, and food digestion.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Why am I not losing weight eating at my calculated TDEE deficit?</span>
-              <span class="faq-icon">▼</span>
-            </div>
-            <div class="faq-answer">
-              <p>Formula estimates can overestimate activity levels. Inaccuracies in food logging (such as untracked cooking oils or visual portion estimates) are also common. Track daily calories strictly for 14 days and adjust your multiplier if needed.</p>
-            </div>
-          </div>
-        </div>
       `
     },
 
     '/blog/tdee-vs-bmr/': {
       title: 'TDEE vs BMR: What Is the Difference & Which Should You Use?',
-      metaDescription: 'Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), and why eating below BMR can harm fat loss progress.',
+      metaDescription: 'Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy breakdown, and avoiding starvation deficits.',
       category: 'Comparisons',
       readTime: '6 min read',
-      h1: 'TDEE vs BMR: Key Differences Explained',
+      h1: 'TDEE vs BMR: Key Differences & Organ Energy Breakdown',
       content: `
         <p>While both <strong>BMR (Basal Metabolic Rate)</strong> and <strong>TDEE (Total Daily Energy Expenditure)</strong> are foundational numbers in clinical nutrition, confusing the two is one of the most common mistakes people make when planning a diet.</p>
         
@@ -199,19 +199,19 @@ window.TDEEContent = {
           </tbody>
         </table>
 
-        <h2>Understanding Basal Metabolic Rate (BMR)</h2>
-        <p>Your BMR is the exact caloric energy your organs (brain, heart, lungs, liver, and kidneys) consume to maintain vital functions while in a neutral environment without physical movement. BMR accounts for roughly 60% to 70% of total daily energy output.</p>
-
-        <h2>Understanding Total Daily Energy Expenditure (TDEE)</h2>
-        <p>TDEE builds upon your BMR by adding three active expenditure components:</p>
+        <h2>Organ Baseline Energy Breakdown at Rest (BMR)</h2>
+        <p>Your BMR represents the energy demanded by vital biological organs. According to clinical physiological data, BMR energy is consumed as follows:</p>
         <ul>
-          <li><strong>NEAT (Non-Exercise Movement):</strong> Walking around the house, standing, fidgeting, working at a desk.</li>
-          <li><strong>EEE (Exercise Expenditure):</strong> Dedicated physical training like weightlifting, running, or cycling.</li>
-          <li><strong>TEF (Thermic Effect of Food):</strong> The energy required to digest, break down, and assimilate food.</li>
+          <li><strong>Liver (~27%):</strong> High metabolic conversion and protein synthesis.</li>
+          <li><strong>Brain (~19%):</strong> Continuous electrical signaling and glucose usage.</li>
+          <li><strong>Skeletal Muscle (~18%):</strong> Baseline muscle tone and cellular ion pumping at rest.</li>
+          <li><strong>Kidneys (~10%):</strong> Continuous blood filtration and fluid balance.</li>
+          <li><strong>Heart (~7%):</strong> Incessant mechanical pumping.</li>
+          <li><strong>Other Organs (~19%):</strong> Gastrointestinal lining, skin repair, lungs.</li>
         </ul>
 
         <h2>Why You Should Never Eat Below Your BMR</h2>
-        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When energy intake drops below baseline cellular requirements, the body responds defensively by downregulating thyroid hormones, lowering spontaneous physical movement, increasing hunger signals, and breaking down lean muscle tissue for fuel.</p>
+        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When energy intake drops below baseline cellular requirements, the body responds defensively by downregulating thyroid hormones (T3), lowering spontaneous physical movement, increasing hunger signals, and breaking down lean muscle tissue for fuel.</p>
 
         <p>To safely lose body fat, always calculate your caloric deficit as a percentage below your <strong>TDEE</strong>, keeping your target calories at or above your baseline BMR. Use our <a href="/bmr-calculator/">standalone BMR calculator</a> to determine your personal floor.</p>
       `
@@ -245,9 +245,34 @@ window.TDEEContent = {
       `
     },
 
+    '/blog/mifflin-st-jeor-equation/': {
+      title: 'Mifflin-St Jeor Equation: BMR Formula Accuracy & Science (2026)',
+      metaDescription: 'In-depth guide to the Mifflin-St Jeor BMR equation. Learn why clinical studies validate it as the most accurate resting metabolic rate formula.',
+      category: 'Scientific Formulas',
+      readTime: '6 min read',
+      h1: 'Mifflin-St Jeor Equation: History, Accuracy & Science',
+      content: `
+        <p>The <strong>Mifflin-St Jeor Equation</strong> was published in 1990 by Dr. MD Mifflin and ST St Jeor in the <em>American Journal of Clinical Nutrition</em>. It remains the gold-standard formula used by clinical dietitians and sports nutritionists worldwide to predict Basal Metabolic Rate (BMR).</p>
+
+        <h2>The Mathematical Equations</h2>
+        <p>The formula calculates daily resting caloric expenditure based on body mass, height, age, and biological sex:</p>
+        <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:8px; border-left:4px solid var(--accent-cyan); margin:1.5rem 0;">
+          <ul>
+            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5</li>
+            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161</li>
+          </ul>
+        </div>
+
+        <h2>Why Mifflin-St Jeor Outperformed Harris-Benedict</h2>
+        <p>Prior to 1990, the <strong>Revised Harris-Benedict equation (1984)</strong> was the primary BMR formula. However, clinical validation studies by the Academy of Nutrition and Dietetics demonstrated that Harris-Benedict systematically overestimates BMR in modern adults by 5% to 15% due to changes in population body composition over time.</p>
+        <p>Mifflin-St Jeor was proven accurate within ±10% for over 82% of healthy non-obese and obese adults, establishing it as the most reliable standard.</p>
+      `
+    },
+
     // ==========================================
-    // CORE CALCULATORS SILO PAGES
+    // SILO 2-7: CORE CALCULATOR TOOL PAGES
     // ==========================================
+
     '/bmr-calculator/': {
       title: 'BMR Calculator: Calculate Basal Metabolic Rate Accurately',
       metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Discover your baseline resting calorie burn.',
@@ -353,8 +378,9 @@ window.TDEEContent = {
     // ==========================================
     // TRUST & AUTHORITY PAGES
     // ==========================================
+
     '/about/': {
-      title: 'About Us: Our Mission & Science-Backed Approach',
+      title: 'About Us: Science-Backed Energy Expenditure Platform',
       metaDescription: 'Learn about our team, scientific calculation methodology, and commitment to evidence-based nutrition tools.',
       category: 'Company',
       h1: 'About Our TDEE Platform',
@@ -413,6 +439,7 @@ window.TDEEContent = {
     // ==========================================
     // LEGAL PAGES
     // ==========================================
+
     '/privacy-policy/': {
       title: 'Privacy Policy: Data Protection & Privacy Commitment',
       metaDescription: 'Our commitment to user privacy. We do not store or sell your private body metrics.',
