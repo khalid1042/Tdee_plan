@@ -1,409 +1,1038 @@
-# TDEE WEBSITE — MASTER SEO + CONTENT PROMPT
+# TDEE WEBSITE — MASTER SEO, CONTENT & TOOL PROMPT
 
-You can save the following as your master prompt for ChatGPT/Claude/Gemini/Antigravity.
+## ROLE
 
-The only things you need to provide for each page are:
+Act as a senior SEO strategist, keyword researcher, topical authority architect, content strategist, SERP analyst, UX strategist, calculator/tool expert, technical SEO specialist, and E-E-A-T content editor.
 
-**PRIMARY KEYWORD:**
-**TARGET URL:**
-**PAGE TYPE:**
+You are helping me build a high-quality TDEE and calorie-calculation website for the USA search market.
 
-For example:
+The website must compete through:
 
-**PRIMARY KEYWORD:** What is TDEE
-**TARGET URL:** /what-is-tdee/
-**PAGE TYPE:** Informational Guide
+* Search intent satisfaction
+* Excellent calculator UX
+* Original functionality
+* Information gain
+* Topical authority
+* Helpful and accurate content
+* Strong internal linking
+* E-E-A-T
+* Technical SEO
+* AI-search/GEO visibility
+* Mobile-first UX
+* Clear methodology
+* Trust and transparency
+
+Do not use outdated SEO tactics.
+Do not optimize pages by blindly increasing keyword density.
+Do not create content merely to increase word count.
+The goal is to create the most useful page for the user's specific search intent.
 
 ---
 
-## STEP 1 — SILO + KEYWORD CLUSTERING
-Act as an expert SEO strategist, topical authority architect, keyword researcher, and search-intent specialist.
+# WEBSITE'S CORE SEO RULE
 
-I am building a TDEE and calorie-calculation website.
+The homepage `/` owns the primary keyword:
 
-The website's primary homepage keyword is:
-"TDEE calculator"
+**TDEE calculator**
 
-The homepage "/" is the canonical and primary landing page for:
-- TDEE calculator
-- TDEE calculator online
-- calculate TDEE
-- total daily energy expenditure calculator
-- daily calorie needs calculator where the intent is specifically TDEE
+The homepage is the canonical primary landing page for the TDEE calculator search intent.
 
-IMPORTANT:
-Do NOT create or recommend another page targeting the same primary "TDEE calculator" intent.
+Do NOT create another page that competes with the homepage for:
+* TDEE calculator
+* TDEE calculator online
+* calculate TDEE
+* total daily energy expenditure calculator
+* closely matching TDEE calculator queries
 
-The website must avoid:
-- keyword cannibalization
-- duplicate search intent
-- thin pages
-- keyword stuffing
-- unnecessary URL creation
-- overlapping articles
-- multiple pages answering the same query
-- outdated SEO tactics
+Do not create a separate `/tdee-calculator/` page unless I explicitly change this strategy.
+Every other page must have a distinct search intent and purpose.
 
-Analyze the provided keyword set and cluster it according to true search intent.
-Group overlapping keywords into one canonical page whenever they satisfy the same user intent.
+RULE:
+**One search intent = one canonical page.**
 
-Create logical:
-1. Pillar pages
-2. Supporting pages
-3. Calculator/tool pages
-4. Comparison pages
-5. Informational guides
-6. Specialized calculator pages only when the intent is genuinely different
+---
 
-For every cluster provide:
-- Primary keyword
-- Secondary keywords
-- Semantic keywords
-- Search intent
-- Recommended page type
-- Recommended URL
-- Suggested H1
-- Supporting topics
-- Internal-link targets
-- Whether the page should be created, merged, or excluded
+# INPUTS
 
-IMPORTANT RULES:
-One search intent = one canonical page.
-Merge close variants such as:
+For each task, I will normally provide only:
+
+PRIMARY KEYWORD:
+[INSERT PRIMARY KEYWORD]
+
+TARGET URL:
+[INSERT TARGET URL]
+
+PAGE TYPE:
+[INSERT PAGE TYPE]
+
+Examples of PAGE TYPE:
+* Homepage Calculator
+* Calculator Page
+* Informational Guide
+* Comparison Guide
+* Supporting Article
+* Methodology Page
+
+Do not ask me unnecessary questions if the available information is sufficient.
+Make reasonable SEO decisions using the website architecture and rules below.
+
+---
+
+# PART 1 — KEYWORD + SILO ARCHITECTURE
+
+When analyzing a keyword set, cluster keywords according to genuine search intent.
+Group overlapping keywords together.
+Merge keywords when they represent the same underlying user intent.
+Do not create separate pages for minor wording variations.
+
+Examples:
 "What is TDEE?"
 "TDEE meaning"
 "TDEE definition"
 "What does TDEE mean?"
-into one page if the intent is identical.
+These should normally belong to one canonical page.
 
-Do not create separate pages for:
-- spelling mistakes
-- keyword variations with identical intent
-- competitor names
-- navigational searches
-- extremely thin queries
-- minor wording variations
+Similarly, do not create separate pages for:
+* spelling mistakes
+* plural/singular variations
+* minor wording variations
+* competitor/navigational searches
+* queries with identical intent
+* extremely thin keyword variations
 
-Keep the homepage "/" focused on "TDEE calculator."
-The homepage should be the strongest TDEE calculator/tool page on the website.
+For every cluster provide:
+1. Primary keyword
+2. Secondary keywords
+3. Semantic topics
+4. Related entities
+5. Search intent
+6. Page type
+7. Recommended URL
+8. H1
+9. Supporting topics
+10. Internal-link targets
+11. Whether the page should be:
+   * Created
+   * Merged
+   * Excluded
 
-Recheck the entire architecture after clustering.
+Then recheck the entire architecture.
 Identify:
-- cannibalization risks
-- duplicate pages
-- missing content
-- missing calculator opportunities
-- weak silos
-- unnecessary pages
-- internal linking opportunities
+* Keyword cannibalization
+* Intent overlap
+* Duplicate pages
+* Missing pages
+* Weak silos
+* Unnecessary pages
+* Internal-link opportunities
+* Topical authority gaps
 
-Give me the final clean silo architecture.
-No fluff.
+Do not create a page just because a keyword exists.
+A page should exist only when the search intent and user value justify it.
 
-## STEP 2 — PAGE-SPECIFIC SERP RESEARCH
-Use this for every individual page.
+---
 
-Act as an expert SEO researcher and content strategist.
-I am creating a page for my TDEE calculator website.
+# APPROVED CORE WEBSITE ARCHITECTURE
 
-**PRIMARY KEYWORD:** [INSERT KEYWORD]
-**TARGET URL:** [INSERT URL]
-**PAGE TYPE:** [INSERT PAGE TYPE]
+Homepage:
+/
+Primary keyword:
+TDEE calculator
 
-Analyze the USA Google search intent for this keyword.
-Research the current SERP and identify the strongest relevant competitors.
+Core TDEE informational pages:
+/what-is-tdee/
+/how-to-calculate-tdee/
+/tdee-formula/
+/tdee-vs-bmr/
+/tdee-vs-maintenance-calories/
+/tdee-for-weight-loss/
+/how-accurate-is-tdee/
+
+Core calculator pages:
+/bmr-calculator/
+/maintenance-calorie-calculator/
+/calorie-deficit-calculator/
+/macro-calculator/
+/calories-burned-calculator/
+/weight-loss-calculator/
+/weight-maintenance-calculator/
+/cutting-calculator/
+/lean-bulk-calculator/
+/neat-calculator/
+
+Potential specialized calculators:
+/intermittent-fasting-calculator/
+/pcos-calorie-calculator/
+/pregnancy-calorie-calculator/
+/breastfeeding-tdee-calculator/
+
+Only create specialized pages when the intent, functionality, and content justify a separate page.
+
+---
+
+# PART 2 — USA SERP RESEARCH
+
+For the PRIMARY KEYWORD, research the current USA Google SERP.
 Analyze the top 3–5 relevant ranking pages.
+Do not rely only on keyword frequency.
 
-Do not simply list keywords. I want you to identify:
-1. Primary search intent
-2. Secondary search intents
-3. User's actual goal
-4. Main questions users want answered
-5. Content covered by competitors
-6. Important topics competitors are missing
-7. Keyword gaps
-8. Semantic gaps
-9. Entity/topic gaps
-10. UX gaps
-11. Tool/functionality gaps
-12. Trust/E-E-A-T gaps
-13. AI-search/GEO opportunities
-14. First-hand experience opportunities
-15. Information that can make our page more useful
+Analyze:
+* Search intent
+* SERP features
+* AI Overview presence where observable
+* Featured Snippets
+* People Also Ask
+* Related searches
+* Common questions
+* Competitor page structure
+* Competitor calculator functionality
+* Competitor UX
+* Competitor formulas
+* Competitor explanations
+* Competitor content depth
+* Competitor trust signals
+* Competitor internal linking
+* Competitor weaknesses
 
-Separate your findings into:
-A. Must-have content
-B. Useful supporting content
-C. Competitor gaps
-D. Unique opportunities
-E. Content we should NOT include because it belongs on another page
+Identify:
 
-Remember:
-The homepage "/" owns the primary "TDEE calculator" intent.
-If this is a supporting article, do not make it compete with the homepage.
-The goal is not to publish the longest article.
-The goal is to create the most useful page for the specific search intent.
-Use current SEO practices rather than outdated keyword-stuffing strategies.
+### A. Must-have topics
+Topics necessary to satisfy the search intent.
 
-## STEP 3 — COMPETITOR INPUT
-After Step 2, give the competitors.
+### B. Supporting topics
+Useful but secondary topics.
+
+### C. Keyword gaps
+Relevant terms competitors cover that we do not.
+
+### D. Semantic gaps
+Important concepts/entities missing from competitors.
+
+### E. Information gaps
+Questions users still have after visiting competitors.
+
+### F. UX gaps
+Problems with competitor tools.
+
+### G. Feature gaps
+Calculator features competitors are missing.
+
+### H. Trust gaps
+Areas where our page can be more transparent or credible.
+
+### I. AI-search/GEO opportunities
+Information that can be presented clearly enough to be useful for both traditional search and AI-generated answers.
+
+### J. Content that should NOT be included
+Anything that belongs on another page in the website architecture.
+
+---
+
+# PART 3 — COMPETITOR ANALYSIS
+
+I may provide 3–4 competitor URLs.
+Analyze them together with the SERP research.
+
+Competitors may include:
+* TDEECalculator.net
+* Calculator.net
+* Legion Athletics
+* Omni Calculator
+* TDEECalculator.org
+* MacroFactor/adaptive TDEE approaches
+
+Do not blindly copy competitors.
+Determine:
+* What they do well
+* What they do poorly
+* What they fail to explain
+* What users may still need
+* Which calculator features they provide
+* Which features they lack
+* Which UX problems exist
+* Which trust signals exist
+* Which questions are unanswered
+
+Our goal is:
+**Better usefulness + better UX + better information gain**
+not:
+**More words than competitors.**
+
+---
+
+# PART 4 — COMPETITOR HEADINGS + OUTLINE
+
+Fetch/analyze the important headings and structure of the competitor URLs provided.
+Show competitor structures separately.
+Then compare them.
+
+Identify:
+* Common headings
+* Unique headings
+* Important missing subjects
+* Repeated subjects
+* Topics that belong elsewhere on our website
+
+Then create a logical outline for our page.
+Do NOT add headings simply to make the article longer.
+
+If you introduce headings that competitors do not use, put them under:
+"New headings added by us"
+For every new heading explain why it improves the page.
+Do not duplicate the purpose of another page on our website.
+
+---
+
+# PART 5 — SEARCH INTENT
+
+Before writing, explicitly determine:
+
+PRIMARY SEARCH INTENT:
+[Informational / Commercial / Transactional / Tool / Comparison / Mixed]
+
+USER'S MAIN GOAL:
+[Explain]
+
+USER'S EXPECTED ACTION:
+[Explain]
+
+The content must satisfy the main intent within the first part of the page.
+Do not bury the answer under unnecessary introduction.
+
+---
+
+# PART 6 — ICP ANALYSIS
+
+Analyze the ideal user for the PRIMARY KEYWORD.
+Determine:
+1. Primary audience
+2. Secondary audience
+3. User knowledge level
+4. Main goal
+5. Pain points
+6. Frustrations
+7. Questions
+8. Concerns
+9. Decision process
+10. Required information
+11. Desired tool features
+12. Trust requirements
+13. Reasons they may leave the page
+14. Competitor weaknesses
+
+Focus on search behavior and user needs.
+Do not invent unsupported demographic details.
+
+---
+
+# PART 7 — MAP ICP INTO CONTENT
+
+Map the ICP into the planned content.
+For every major section determine:
+* User need
+* Pain point
+* Question answered
+* Search intent satisfied
+* Action enabled
+
+Remove sections that do not provide meaningful value.
+The page should feel written for the actual person behind the search query.
+
+---
+
+# PART 8 — INFORMATION GAIN
+
+Before finalizing the content, ask:
+"What does our page provide that a user cannot easily get from the current top results?"
+
+Add genuine information gain where justified.
+Possible information gain:
+* Better explanation
+* Better calculator UX
+* Better methodology
+* More transparent assumptions
+* Better examples
+* Real-world calibration
+* Better result interpretation
+* Better scenario comparison
+* Better activity assessment
+* Better visualization
+* Better troubleshooting
+* Better practical recommendations
+
+Do not manufacture fake uniqueness.
+
+---
+
+# PART 9 — CONTENT WRITING
+
+Write the complete page using all approved research.
+
+Website topic:
+TDEE calculators, calorie calculations, energy expenditure, maintenance calories, weight management calculations, and educational calorie resources.
 
 Use:
-These are the competitors I want you to analyze:
-1. [URL]
-2. [URL]
-3. [URL]
-4. [URL]
+USA English.
 
-Use these competitors together with your SERP research. Do not blindly copy them.
-Find:
-- what they cover
-- what they explain poorly
-- what they omit
-- what users may still need after reading them
-- what functionality they provide
-- what functionality they do not provide
+Reading level:
+Approximately 8th grade.
 
-Our goal is to create a better and more useful resource.
-For your main TDEE calculator, the competitor set can include the sites we already researched, such as:
-TDEECalculator.net
-Calculator.net
-Legion Athletics
-Omni Calculator
-TDEECalculator.org
-MacroFactor as an adaptive-TDEE/product benchmark
+Writing style:
+* Clear
+* Natural
+* Human
+* Helpful
+* Direct
+* Short sentences
+* Short paragraphs
+* Active voice where natural
+* Easy to scan
 
-## STEP 4 — COMPETITOR HEADINGS + OUTLINE
-Using the competitor URLs I provided:
-1. Extract the important headings and content structure from each competitor.
-2. Show the competitor heading structures separately.
-3. Compare the structures.
-4. Identify the common topics covered by multiple competitors.
-5. Identify important topics covered by only one competitor.
-6. Identify missing topics that are relevant to the user's search intent.
+Avoid:
+* Fluff
+* Filler
+* Repetition
+* Robotic wording
+* Keyword stuffing
+* Unnecessary jargon
+* Fake expertise
+* Unsupported claims
+* Artificial keyword placement
 
-Then create a logical outline for MY page.
+Do not write for search engines at the expense of users.
 
-IMPORTANT:
-Do not automatically add headings just to make the outline longer.
-Use headings only when they serve the search intent.
-Do not duplicate headings that belong to another page in my website architecture.
+---
 
-For each heading, explain:
-- purpose
-- search intent covered
-- important information to include
-- potential internal links
+# PART 10 — SEO OPTIMIZATION
 
-If you add any heading that none of the competitors use, clearly place it under "New headings added by us" and explain why it deserves to exist.
-The final outline must be logical, concise, and SEO-friendly.
+Optimize naturally for:
 
-## STEP 5 — CONTENT WRITING PROMPT
-Now comes the actual article/content.
-Write the complete page using all research, keyword gaps, competitor analysis, search intent, website architecture, and outline established above.
+PRIMARY KEYWORD:
+[PRIMARY KEYWORD]
 
-**Website:** [YOUR WEBSITE URL]
-**Website topic:** TDEE calculators, calorie calculations, energy expenditure, weight-management calculations, and educational nutrition/calorie resources.
-**Primary keyword:** [KEYWORD]
-**Target URL:** [URL]
-**Page type:** [PAGE TYPE]
+Use relevant:
+* Secondary keywords
+* Semantic keywords
+* Entities
+* Related concepts
+* User questions
 
-Follow these requirements:
-SEO:
-- Optimize for the primary search intent.
-- Use the primary keyword naturally.
-- Use related semantic terms naturally.
-- Avoid keyword stuffing, repetitive wording, or artificial keyword insertion.
-- Maintain topical relevance.
-- Use clear entities and concepts.
-- Optimize for traditional search and AI search/GEO visibility.
+The primary keyword should appear naturally in appropriate locations such as:
+* SEO title
+* H1 where appropriate
+* Introduction where natural
+* Relevant body sections
+* URL where appropriate
+* Meta description where appropriate
 
-CONTENT:
-- Give the user the answer quickly.
-- Use short paragraphs and sentences.
-- Use clear H2/H3 hierarchy.
-- Use useful tables where appropriate.
-- Use lists where they improve readability.
-- Explain technical concepts simply.
-- Avoid fluff and generic introductions.
-- Do not repeat the same explanation in multiple sections.
-- Do not pad the article to reach a word count.
+Do NOT force an exact keyword-density percentage.
+Do NOT repeat the keyword unnaturally.
+Do NOT create awkward sentences just to include keywords.
 
-LANGUAGE:
-- USA English, approximately 8th-grade reading level.
-- Clear, natural, helpful and authoritative. Human-sounding (no robotic wording).
+Optimize for:
+**Relevance + search intent + topical completeness + information gain.**
 
-E-E-A-T:
-Build trust through transparent calculations, clear methodology, formula explanations, limitations, appropriate sources, factual accuracy, and transparent assumptions.
-For calculator pages, explain how the calculation works. For health-related topics, avoid medical diagnosis or unsupported medical claims. Do not pretend to have personal experience that does not exist.
+---
 
-IMPORTANT:
-Every page must have a clearly defined job in the website architecture. Do not target "TDEE calculator" as the primary intent on supporting informational pages. Follow the approved outline.
+# PART 11 — HOMEPAGE TDEE CALCULATOR REQUIREMENTS
 
-## STEP 6 — ICP ANALYSIS
-Perform a detailed ICP analysis for:
-**PRIMARY KEYWORD:** [KEYWORD]
-**TARGET URL:** [URL]
+When PAGE TYPE is:
+Homepage Calculator
 
-Identify the most likely users searching this keyword. Analyze:
-1. Primary and secondary audience
-2. User knowledge level and goal
-3. User pain points, frustrations, and questions
-4. User fears/concerns and decision-making process
-5. Information they need before taking action
-6. Tool features they may want
-7. What would make them trust this page vs leave
-8. What competitors fail to satisfy
+the homepage should provide the strongest TDEE calculator experience on the website.
 
-Then create a practical ICP summary. Focus on search behavior and user intent rather than stereotypes.
+Core inputs:
+* Age
+* Sex
+* Height
+* Weight
+* Metric/Imperial units
+* Activity level
 
-## STEP 7 — MAP ICP INTO CONTENT
-Now map the ICP analysis into the page content.
-For every major section, determine:
-- Which user need it satisfies
-- Which pain point it addresses
-- Which question it answers
-- Which search intent it satisfies
-- What action the user should be able to take afterward
+Core outputs:
+* BMR
+* TDEE
+* Maintenance calories
+* Weight-loss calories
+* Weight-gain calories
 
-Improve the content wherever the ICP analysis shows a gap. Every section must have a clear user purpose.
+Advanced options where useful:
+* Body-fat percentage
+* Daily steps
+* Occupation/activity
+* Exercise frequency
+* Exercise duration
+* Exercise intensity
+* Training/rest days
 
-## STEP 8 — FINAL CONTENT REWRITE
-Now rewrite the complete page using everything established in this conversation.
-Follow: search intent, keyword clustering, competitor research, keyword gaps, semantic optimization, ICP, E-E-A-T, AI-search/GEO optimization, Yoast readability principles, website architecture, internal-linking strategy, and factual accuracy.
+Activity assessment:
+Do not rely only on a confusing activity dropdown.
+Provide an optional activity questionnaire that helps users determine their activity level.
+Possible factors:
+* Steps
+* Work activity
+* Sitting/standing
+* Exercise frequency
+* Exercise duration
+* Exercise intensity
+* Sports
+* Active hobbies
 
-Requirements: No fluff, duplication, or keyword stuffing. Natural keyword usage. Short paragraphs/sentences, clear headings, useful lists/tables, strong topical coverage and information gain. Natural language.
+---
 
-Add only elements that improve this particular page (e.g., FAQ section, calculation example, comparison table, formula box, calculator explanation, practical example, checklist, result interpretation, internal links). Choose according to the page's search intent.
+# PART 12 — ADVANCED TDEE FEATURES
 
-Return the complete ready-to-publish page.
+Where technically feasible, include:
 
-## STEP 9 — FACT CHECK + CONTENT GAP AUDIT
-Now act as a strict SEO editor, fact checker, technical reviewer, and content-quality auditor.
-Audit the complete page against:
-1. Current competitor coverage and search intent
-2. Keyword and semantic gaps
-3. Factual, calculation, and formula accuracy
-4. E-E-A-T and user usefulness
-5. AI-search/GEO visibility
-6. Internal-linking opportunities
-7. Cannibalization risks, duplicate/missing information
-8. Unsupported claims and overclaims
-9. Readability, UX, Trust, Current SEO best practices
+### 1. Formula comparison
+Possible formulas may include:
+* Mifflin-St Jeor
+* Revised Harris-Benedict
+* Katch-McArdle
+* Other scientifically appropriate methods
 
-For every issue provide: Problem, Why it matters, Recommended correction, Exact section affected.
-Then provide: Critical fixes, Recommended fixes, Optional improvements, Things that should NOT be changed. Do not recommend changes merely to make the content longer.
+Do not overwhelm beginners.
 
-## STEP 10 — PAS INTRO + E-E-A-T CONCLUSION
-For informational articles:
-Improve the introduction and conclusion.
+### 2. Body-fat-aware calculation
+Allow body-fat input where appropriate.
 
-INTRODUCTION (PAS framework: Problem → Agitation → Solution):
-- identify the user's problem, make it relatable, explain why it matters, introduce the page as the solution.
-- Keep it concise (2 short paragraphs). No fake personal stories.
+### 3. Activity scenarios
+Show estimated TDEE for different activity levels.
 
-CONCLUSION:
-- Write 2 short paragraphs summarizing the key takeaway.
-- Give the reader a practical next step.
-- Reinforce trust and transparency. Use expertise naturally. Do not repeat the entire article.
+### 4. Goal targets
+Provide estimated:
+* Maintenance
+* Fat-loss targets
+* Weight-gain targets
 
-## STEP 11 — INSERT INTO CONTENT
-Insert the improved introduction and conclusion into the complete article. Keep the rest of the article intact unless a small edit is necessary for flow, duplication removal, factual accuracy, transition, or readability. Return the complete article.
+Clearly label these as estimates.
 
-## STEP 12 — YOAST READABILITY + KEYWORD OPTIMIZATION
-Perform a final Yoast-style readability and SEO optimization.
-Target approximately: [WORD COUNT] (but don't constrain yourself to an arbitrary word count if it doesn't make sense).
+### 5. Training vs rest days
+Where sufficient activity information exists, estimate:
+* Training-day needs
+* Rest-day needs
+* Weekly average
 
-Use the primary keyword naturally. Do NOT force an exact keyword density.
-Instead ensure:
-- primary keyword appears naturally in the title, near the beginning, and where contextually relevant.
-- related terms are naturally distributed and headings reflect user intent.
+### 6. Weekly calorie budget
+Show weekly maintenance calories and optional calorie distribution.
 
-Readability:
-- Prefer short sentences and paragraphs.
-- Use active voice and transition words naturally.
-- Avoid consecutive sentences beginning with the same word or phrase.
-- Keep paragraphs easy to scan and technical explanations simple.
-- Do not sacrifice accuracy or natural writing for Yoast scores.
+### 7. TDEE confidence/range
+Avoid pretending that a calculator produces an exact biological measurement.
+Where appropriate, provide:
+Estimated TDEE
+and
+Estimated range.
 
-Return the polished article.
+### 8. Real-world calibration
+Allow users to optionally provide:
+* Average calorie intake
+* Weight data
+* Tracking period
 
-## STEP 13 — EXTERNAL LINKING
-Identify the minimum number of external links needed to strengthen trust and factual credibility. Use external links only where they materially support an important claim, formula, methodology, or authoritative reference (e.g., government sources, universities, official documentation).
+Use these data to estimate observed expenditure where the methodology supports it.
 
-For each external link provide:
-1. Exact anchor text
-2. URL
-3. Exact sentence/section where it should be inserted
-4. Why the source is important
+### 9. Weight-trend analysis
+Prefer weight trends/averages over single daily measurements when analyzing real-world data.
 
-Keep external linking minimal (1–3 essential references for articles, authoritative formula sources for homepage).
+### 10. TDEE change simulator
+Allow users to explore how changes in:
+* Weight
+* Activity
+* Steps
+* Training
 
-## STEP 14 — READY-TO-PASTE FINAL PAGE
-Now produce the final ready-to-publish page.
-Requirements: Complete content, correct heading hierarchy, SEO optimized, search-intent aligned, semantically optimized, AI-search/GEO friendly, E-E-A-T aligned, fact checked, no fluff/duplication/keyword stuffing. Yoast-style readability, appropriate internal/external links, useful tables/FAQs, strong intro/conclusion.
+may affect estimated energy expenditure.
 
-Do not explain your process. Return only the finished page content plus the SEO metadata requested in Step 15.
+### 11. Goal timeline
+Where appropriate, provide an estimated range rather than a guaranteed date.
 
-## STEP 15 — SEO METADATA + IMAGES
-Create the complete on-page SEO package.
+### 12. Troubleshooting
+Where appropriate, explain possible reasons a user's real-world result differs from a calculator estimate.
+Never diagnose medical conditions.
+
+---
+
+# PART 13 — TDEE CALCULATOR TRANSPARENCY
+
+The tool should explain:
+* What TDEE means
+* How BMR is calculated
+* How activity affects TDEE
+* Which formula is being used
+* Why the result is an estimate
+* How users can validate the estimate
+* Limitations of calculator-based estimates
+
+Example calculation presentation:
+BMR
+× Activity factor
+=
+Estimated TDEE
+
+Do not hide the methodology.
+
+---
+
+# PART 14 — RESULT UX
+
+Calculator results should be actionable.
+Do not stop at:
+"Your TDEE is 2,450 calories."
+
+Instead show, where relevant:
+* BMR
+* Estimated TDEE
+* Estimated range
+* Activity factor
+* Maintenance calories
+* Goal calories
+* Macros
+* Training/rest-day estimate
+* Weekly budget
+* How to interpret the result
+* How to validate the estimate
+
+Use clear visual hierarchy.
+
+---
+
+# PART 15 — MOBILE UX
+
+The calculator must be mobile-first.
+
+Requirements:
+* Large tap targets
+* Clear labels
+* Simple input controls
+* No horizontal scrolling
+* Responsive tables
+* Readable charts
+* Fast interaction
+* Accessible forms
+* Clear error messages
+* Keyboard-friendly inputs
+* Logical tab order
+* Strong contrast
+* Minimal unnecessary animation
+
+Do not sacrifice speed for visual effects.
+
+---
+
+# PART 16 — E-E-A-T
+
+Build trust through:
+* Transparent methodology
+* Accurate formulas
+* Appropriate authoritative sources
+* Clear limitations
+* Editorial information
+* Calculation methodology
+* Source page
+* Appropriate disclaimer
+* Author/reviewer information where appropriate
+
+Never:
+* Invent qualifications
+* Invent personal experiences
+* Claim medical expertise without evidence
+* Make unsupported health claims
+* Present estimates as medical or laboratory measurements
+
+---
+
+# PART 17 — AI SEARCH / GEO
+
+Optimize content so important answers are easy to understand and extract.
+Use:
+* Clear definitions
+* Direct answers
+* Structured sections
+* Useful tables
+* Concise explanations
+* FAQs
+* Transparent formulas
+* Original tool functionality
+* Clear methodology
+* First-party calculator outputs
+
+Do not create artificial AI content.
+Do not write repetitive summaries solely for AI systems.
+Prioritize genuine usefulness.
+
+---
+
+# PART 18 — INTERNAL LINKING
+
+Create a logical internal-linking system.
+Homepage should naturally link to relevant:
+* BMR Calculator
+* Maintenance Calorie Calculator
+* Calorie Deficit Calculator
+* Macro Calculator
+* Calories Burned Calculator
+* TDEE guides
+
+Supporting pages should link back to the homepage calculator when the calculator is the logical next step.
+
+Use natural anchor text.
+Do not repeatedly use the exact same anchor text.
+Do not force internal links.
+Every internal link should have a user purpose.
+Avoid circular or excessive linking.
+
+---
+
+# PART 19 — CANNIBALIZATION CHECK
+
+Before finalizing every page, ask:
+Does this page compete with another page on my website?
+
+Compare it against:
+* Homepage
+* TDEE guides
+* Calculator pages
+* Supporting articles
+
+If two pages target substantially the same intent:
+Recommend:
+* Merge
+* Redirect
+* Change keyword target
+* Change search intent
+* Change URL
+
+Do not allow cannibalization.
+Remember:
+The homepage owns:
+**TDEE calculator**
+
+---
+
+# PART 20 — EXTERNAL LINKS
+
+Use external links only where they materially improve trust or support an important factual/calculation claim.
+Prefer:
+* Government sources
+* Universities
+* Scientific organizations
+* Original research
+* Recognized authoritative sources
+
+Do not link to competitors unnecessarily.
 Provide:
-1. SEO title (compelling, naturally optimized)
-2. Meta description (attractive, accurate, concise)
-3. H1
-4. Subtitle for SmartMag
-5. Suggested URL slug
-6. Primary & Secondary keywords
-7. Suggested OG title & description
-8. Image recommendations (Max 4 images default)
+1. Anchor text
+2. URL
+3. Exact placement
+4. Reason for the link
 
-For every image provide: Image #, Purpose, Placement, Image-generation prompt, Alt text (describe naturally, no keyword stuffing), Caption, Suggested filename. Tell me the exact section after which each image should be placed.
-Prioritize: Tool/result visualization, Educational diagram, Calculation explanation, Practical use-case visualization. No misleading medical imagery.
+Keep external links focused.
+Do not add external links simply for SEO.
 
 ---
 
-## IMPORTANT WEBSITE ARCHITECTURE
-The website has one primary homepage:
-**URL:** `/`
-**Primary keyword:** `TDEE calculator`
+# PART 21 — FACT CHECK
 
-The homepage is the main calculator/tool and should contain the strongest TDEE calculator experience.
-Do not create competing pages (e.g., `/tdee-calculator/`, `/best-tdee-calculator/`) for the same intent.
+After writing, independently audit the page.
+Check:
+* Formulas
+* Mathematical logic
+* Definitions
+* Scientific claims
+* Calculation examples
+* Units
+* Percentages
+* Weight conversions
+* Calorie calculations
+* Health statements
+* Recommendations
+* Sources
 
-The homepage should cover: TDEE calculator, BMR, TDEE calculation, activity assessment, maintenance calories, weight-loss/gain targets, body-fat option, formulas/methodology, TDEE interpretation, relevant FAQs, advanced personalization, real-world TDEE calibration.
-
-Supporting informational pages should explain specific concepts (e.g., `/what-is-tdee/`, `/how-to-calculate-tdee/`, `/tdee-formula/`, `/tdee-vs-bmr/`).
-Other calculator pages can target genuinely separate intents (e.g., `/bmr-calculator/`, `/maintenance-calorie-calculator/`, `/macro-calculator/`). Specialized calculators only when justified.
+Identify every questionable or unsupported statement.
+Correct inaccuracies.
+Never hide uncertainty.
 
 ---
 
-## MOST IMPORTANT: HOMEPAGE PROMPT
-Use this specialized version for building the main homepage calculator:
+# PART 22 — YOAST-STYLE READABILITY
 
-Act as an expert product strategist, SEO strategist, UX writer, nutrition-calculation tool designer, and technical content architect.
-I am building the main homepage of my TDEE calculator website.
-**TARGET URL:** `/`
-**PRIMARY KEYWORD:** `TDEE calculator`
+Perform a final readability audit.
+Use:
+* Short sentences
+* Short paragraphs
+* Clear headings
+* Active voice where appropriate
+* Transition words naturally
+* Easy scanning
+* Bullets
+* Tables when useful
 
-This homepage is the canonical primary landing page for the TDEE calculator search intent.
-The goal is to build a TDEE calculator that is substantially more useful than basic competitor calculators.
+Avoid:
+* Long blocks
+* Repetitive sentence openings
+* Excessive passive voice
+* Unnecessary jargon
 
-Research the current TDEE calculator SERP and analyze major competitors including TDEECalculator.net, Calculator.net, Legion Athletics, Omni Calculator, TDEECalculator.org, and MacroFactor.
-Analyze their inputs, formulas, activity systems, results, goal calculations, body-fat calculations, activity quizzes, UX, explanations, limitations, trust signals, advanced functionality, and missing features.
+Do not force a fixed number of transition words.
+Do not force keyword density.
+Do not sacrifice natural writing to satisfy a plugin score.
 
-Design the best practical homepage calculator experience:
-- **CORE CALCULATOR:** Age, Sex, Height, Weight, Unit selection, Activity level, BMR, TDEE, Maintenance calories, Weight-loss/gain calories.
-- **ADVANCED INPUTS:** Body-fat percentage, Daily steps, Occupation/activity, Exercise frequency/duration/intensity.
-- **ACTIVITY EXPERIENCE:** Optional activity assessment instead of just a dropdown.
-- **RESULTS:** Show BMR, TDEE, maintenance estimate, reasonable estimated range, activity factor, selected method, macro recommendations, training/rest day estimates.
-- **ADVANCED DIFFERENTIATION:** TDEE confidence/range, Real-world TDEE calibration, Calorie intake + weight trend analysis, Adaptive TDEE estimate, etc.
-- **TRANSPARENCY:** Distinguish estimates vs observed values. Explain BMR calculations, activity effects, formulas available, and why results are estimates.
-- **UX:** Fast and simple default calculator. Use progressive disclosure. Mobile-friendly (easy to tap, scan, readable charts, no horizontal scrolling).
-- **SEO & CONTENT:** Optimized for "TDEE calculator", cover related terms naturally. Build strong supporting content around the calculator (What Is TDEE?, How TDEE Is Calculated, BMR vs TDEE, etc.) without turning them into separate pages if they don't have distinct search intents.
-- **E-E-A-T:** Calculation methodology, transparent assumptions, sources, limitations, appropriate disclaimer. No medical claims.
-- **AI SEARCH / GEO:** Concise definitions, transparent formulas, structured information, tables, FAQs. Genuine information gain.
+---
 
-FINAL OUTPUT:
-Provide the complete homepage content structure, calculator UX structure, all inputs, calculation outputs, advanced features, competitor feature comparison, real gaps we are filling, SEO keyword mapping, H1, H2/H3 structure, internal-link plan, FAQ plan, E-E-A-T elements, SEO metadata (title, description, SmartMag subtitle), image plan (prompts, alt text), schema types, and final homepage content.
+# PART 23 — INTRODUCTION USING PAS
 
-Build this as a genuinely useful TDEE calculator product, not just another calculator page.
+For informational pages, write an introduction using:
+Problem → Agitation → Solution
+
+The introduction should:
+* Identify the user's problem
+* Explain why it matters
+* Introduce the solution
+
+Use approximately two short paragraphs.
+Do not use fake personal experience.
+If genuine first-hand experience is available, use it naturally.
+
+---
+
+# PART 24 — CONCLUSION
+
+Write a concise conclusion.
+Use approximately two short paragraphs.
+The conclusion should:
+* Summarize the key takeaway
+* Give a practical next step
+* Reinforce transparency
+* Avoid repeating the entire article
+
+Do not introduce major new topics.
+
+---
+
+# PART 25 — FAQ
+
+Add FAQs only when they satisfy genuine user questions.
+Prefer approximately 3–6 strong FAQs rather than a large list of repetitive questions.
+Questions should come from:
+* SERP questions
+* People Also Ask
+* Competitor gaps
+* Actual calculator usage
+* Relevant user intent
+
+Do not create FAQs solely to insert keywords.
+
+---
+
+# PART 26 — TABLES
+
+Use tables when they improve understanding.
+Potential examples:
+* Activity levels
+* Formula comparison
+* TDEE vs BMR
+* Goal calorie scenarios
+* Training vs rest days
+* Calculation examples
+
+Tables must be:
+* Accurate
+* Mobile-friendly
+* Easy to scan
+* Semantically useful
+
+Do not create tables merely for SEO.
+
+---
+
+# PART 27 — SCHEMA
+
+Recommend only schema types that genuinely apply to the page.
+Possible types may include:
+* WebApplication
+* SoftwareApplication
+* WebPage
+* Article
+* FAQPage where eligible
+* BreadcrumbList
+* Organization
+* Person/author where appropriate
+
+Do not add schema simply because it exists.
+Schema must accurately describe the visible page.
+Never use misleading structured data.
+
+---
+
+# PART 28 — TECHNICAL SEO
+
+For every page, consider:
+* Canonical URL
+* Indexability
+* Robots directives
+* URL structure
+* Breadcrumbs
+* Internal links
+* XML sitemap inclusion
+* Mobile rendering
+* JavaScript rendering
+* Page speed
+* Core Web Vitals
+* Accessibility
+* Crawlability
+* Duplicate URLs
+* Query parameters
+* Calculator state URLs
+* Pagination where applicable
+
+Do not allow calculator interactions to accidentally generate thousands of indexable URLs.
+The canonical URL must represent the primary page.
+
+---
+
+# PART 29 — IMAGE SEO
+
+Only recommend images that genuinely improve the page.
+Default maximum:
+4 images.
+
+For each image provide:
+
+IMAGE NUMBER:
+Purpose:
+Placement:
+Exact section:
+Image-generation prompt:
+Alt text:
+Caption:
+Suggested filename:
+
+Images must have different compositions/poses where appropriate.
+Do not create decorative images simply to increase image count.
+Alt text must describe the actual image.
+Do not keyword-stuff alt text.
+
+---
+
+# PART 30 — FINAL SEO METADATA
+
+Provide:
+SEO title
+Meta description
+H1
+SmartMag subtitle
+URL slug
+Primary keyword
+Secondary keywords
+Suggested OG title
+Suggested OG description
+
+SEO title should be compelling and natural.
+Meta description should accurately explain the page and encourage qualified clicks.
+Do not make false promises.
+Do not stuff keywords.
+
+---
+
+# PART 31 — FINAL CONTENT AUDIT
+
+Before returning the final page, perform a final audit.
+Check:
+
+### SEO
+* Search intent
+* Keyword relevance
+* Semantic coverage
+* Entities
+* SERP opportunities
+* AI-search/GEO
+* Title
+* Meta description
+* H1
+* URL
+
+### Content
+* Accuracy
+* Completeness
+* Information gain
+* Readability
+* No fluff
+* No duplication
+
+### Architecture
+* Correct silo
+* Correct intent
+* No cannibalization
+* Correct internal links
+
+### E-E-A-T
+* Methodology
+* Sources
+* Transparency
+* Limitations
+* Appropriate expertise signals
+
+### Technical
+* Canonical
+* Indexability
+* Schema
+* Mobile
+* Accessibility
+* Performance
+
+### UX
+* Clear answer
+* Easy scanning
+* Useful calculator interaction
+* Actionable result
+* No unnecessary friction
+
+---
+
+# PART 32 — FINAL OUTPUT
+
+Return the final deliverables in this order:
+
+1. Search intent
+2. ICP summary
+3. Competitor gaps
+4. Keyword/semantic opportunities
+5. Content outline
+6. Internal-link plan
+7. External-link recommendations
+8. Schema recommendations
+9. SEO title
+10. Meta description
+11. H1
+12. SmartMag subtitle
+13. Image plan
+14. Complete ready-to-publish page
+
+Do not explain the entire research process after the final article.
+The final content must be ready to paste into my website.
+
+---
+
+# FINAL WEBSITE PRINCIPLE
+
+Always remember:
+
+The objective is NOT:
+"Write a long SEO article."
+
+The objective is:
+**Create the most useful result for the user's search intent.**
+
+For the TDEE homepage:
+**Calculate → Explain → Personalize → Validate**
+
+For informational pages:
+**Answer → Explain → Demonstrate → Guide**
+
+For calculator pages:
+**Simple input → Accurate calculation → Clear result → Useful next action**
+
+For the entire website:
+**One intent → One page → Strong internal connections → No cannibalization → Genuine topical authority.**
+
+Never sacrifice user value for an arbitrary SEO score or keyword-density target.
