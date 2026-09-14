@@ -395,6 +395,19 @@ window.TDEEContent = {
       `
     },
 
+    '/contact/': {
+      title: 'Contact Us: Support & Questions',
+      metaDescription: 'Get in touch with our team for questions about our TDEE calculator, partnership opportunities, or support.',
+      category: 'Company',
+      h1: 'Contact Us',
+      content: `
+        <p>If you have questions about how our calculators work, feedback on our tools, or business inquiries, please reach out.</p>
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> support@tdeecalculator.com</p>
+        <p><em>Please note that we cannot provide personal medical or dietary advice. All information is for general educational purposes.</em></p>
+      `
+    },
+
     '/editorial-policy/': {
       title: 'Editorial Policy: Research Integrity & Scientific Standards',
       metaDescription: 'Our editorial principles, peer-review standards, and commitment to evidence-based nutrition science.',

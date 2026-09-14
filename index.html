@@ -4,10 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator</title>
+  <title>TDEE Calculator – Calculate Your Total Daily Energy Expenditure</title>
   <meta name="description"
-    content="Calculate your Total Daily Energy Expenditure (TDEE), BMR, maintenance calories, and macros. Calibrate your static TDEE estimate with real-world body weight trends.">
+    content="Calculate your TDEE using your age, sex, height, weight, and activity level. Get an estimate of your daily calorie needs and understand your maintenance calories.">
   <link rel="canonical" href="https://tdeecalculator.com/">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="TDEE Calculator – Calculate Your Total Daily Energy Expenditure">
+  <meta property="og:description" content="Calculate your TDEE using your age, sex, height, weight, and activity level. Get an estimate of your daily calorie needs and understand your maintenance calories.">
+  <meta property="og:url" content="https://tdeecalculator.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,10 +145,9 @@
   <div id="hero-workspace">
     <section class="hero-section">
       <div class="container">
-        <div class="hero-badge">⚡ Next-Generation Adaptive Expenditure Engine</div>
-        <h1 class="hero-title">Calculate Your TDEE.<br>Calibrate It to Your Body.</h1>
-        <p class="hero-subtitle">Don't rely only on static formula estimates. Calculate your baseline Total Daily Energy
-          Expenditure, then calibrate it using real-world weight trends.</p>
+        <div class="hero-badge">⚡ Accurate & Adaptive Expenditure Engine</div>
+        <h1 class="hero-title">TDEE Calculator</h1>
+        <p class="hero-subtitle">Calculate your Total Daily Energy Expenditure (TDEE) and estimate how many calories you burn each day based on your body information and activity level.</p>
       </div>
     </section>
 
@@ -522,42 +529,121 @@
     <!-- Topical SEO Content Hub -->
     <section class="container content-section">
       <div class="article-body">
-        <h2>What Is Total Daily Energy Expenditure (TDEE)?</h2>
-        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> is an estimation of the total caloric energy your
-          body consumes over 24 hours. TDEE is determined by combining your resting metabolism with physical movement
-          and digestion costs.</p>
+        <h2>What Is TDEE?</h2>
+        <p>TDEE stands for <strong>Total Daily Energy Expenditure</strong>. It represents an estimate of the total calories a person uses during a typical day.</p>
+        <p>TDEE is influenced by several key factors, including your basal metabolic rate (BMR), physical activity, structured exercise, the thermic effect of food (digestion), and other daily energy expenditure like fidgeting and non-exercise movement.</p>
 
-        <h2>The Formulas Behind TDEE Calculation</h2>
+        <h2>How Does the TDEE Calculator Work?</h2>
+        <p>Using the calculator is simple and takes just a few steps:</p>
+        <ol>
+          <li><strong>User enters body information:</strong> You provide your age, sex, height, and weight.</li>
+          <li><strong>The calculator estimates BMR:</strong> Using this information, the calculator determines your resting metabolic rate.</li>
+          <li><strong>An activity level is applied:</strong> Based on the lifestyle option you select, a specific multiplier is applied to your baseline.</li>
+          <li><strong>The result:</strong> The final output provides your estimated TDEE.</li>
+        </ol>
+
+        <h2>TDEE Formula</h2>
         <p>Our baseline engine leverages three scientifically validated equations:</p>
         <ul>
-          <li><strong>Mifflin-St Jeor Equation:</strong> Considered the clinical standard for healthy adults without
-            known body fat percentage.</li>
-          <li><strong>Katch-McArdle Equation:</strong> Leverages Lean Body Mass (LBM) to deliver heightened accuracy for
-            athletic individuals with known body fat percentage.</li>
-          <li><strong>Revised Harris-Benedict Equation:</strong> Historical benchmark formula used for cross-comparison.
-          </li>
+          <li><strong>Mifflin-St Jeor Equation:</strong> Considered the clinical standard for healthy adults without known body fat percentage.</li>
+          <li><strong>Katch-McArdle Equation:</strong> Activated if you input your Body Fat %, this formula leverages Lean Body Mass (LBM) to deliver heightened accuracy for athletic individuals.</li>
+          <li><strong>Revised Harris-Benedict Equation:</strong> A historical benchmark formula used for cross-comparison.</li>
         </ul>
+        <p>The calculation is essentially your BMR multiplied by an activity factor.</p>
 
-        <h2>Frequently Asked Questions (FAQ)</h2>
+        <h2>Understanding Your TDEE Result</h2>
+        <p>Your TDEE is an estimate of the calories your body uses in a typical day. Actual energy needs can vary based on individual factors and changes in activity.</p>
+        
+        <h2>TDEE, BMR, and Maintenance Calories</h2>
+        <table class="simple-table" style="width:100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 2rem;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border-color); text-align: left;">
+              <th style="padding: 10px;">Term</th>
+              <th style="padding: 10px;">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 10px;"><strong>BMR</strong></td>
+              <td style="padding: 10px;">Basal energy needs to support basic functions at rest.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 10px;"><strong>TDEE</strong></td>
+              <td style="padding: 10px;">Estimated total daily energy expenditure after normal activity.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 10px;"><strong>Maintenance calories</strong></td>
+              <td style="padding: 10px;">Calories roughly needed to maintain current weight (typically your TDEE).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>TDEE for Weight Loss</h2>
+        <p>TDEE is often used as a starting point when planning a calorie intake for weight loss. Since your TDEE represents your estimated maintenance calories, eating in a <strong>calorie deficit</strong> means consuming fewer calories than this number.</p>
+        <p>Individual needs vary, but a moderate deficit is usually recommended for sustainable weight loss. Avoid overly aggressive calorie restriction, and always treat the number as an estimate.</p>
+
+        <h2>TDEE for Weight Gain</h2>
+        <p>If your goal is to build muscle or increase your body weight, your TDEE can be used as a starting estimate when planning a <strong>calorie surplus</strong>.</p>
+        <p>Eating slightly above your estimated maintenance calories provides the extra energy needed for weight gain. Monitor real-world changes over time to ensure you are gaining at your desired rate.</p>
+
+        <h2>How Accurate Is a TDEE Estimate?</h2>
+        <p>TDEE calculators provide estimates, not exact medical measurements. Actual energy expenditure can differ due to individual metabolism, variations in daily activity, exercise intensity, body composition, and even changes in body weight over time.</p>
+        <p><strong>Treat your calculated TDEE as a starting estimate, then compare it with real-world changes over time using our calibration tool.</strong></p>
+
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What does TDEE mean?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>TDEE stands for Total Daily Energy Expenditure. It is an estimate of how many calories your body uses in a typical day, including energy used at rest and through daily activity.</p>
+            </div>
+          </div>
           <div class="faq-item">
             <div class="faq-question">
               <span>What is the difference between BMR and TDEE?</span>
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>BMR (Basal Metabolic Rate) is the baseline calories required to survive at rest. TDEE includes your BMR
-                plus all calories burned walking, working, exercising, and digesting food.</p>
+              <p>BMR (Basal Metabolic Rate) is the baseline calories required to survive at rest. TDEE includes your BMR plus all calories burned through walking, working, exercising, and digestion.</p>
             </div>
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <span>How often should I recalculate my TDEE?</span>
+              <span>Does TDEE change with activity level?</span>
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>Recalculate your TDEE whenever your body weight changes by more than 3–5 kg, or when your job
-                activity/workout routine changes significantly.</p>
+              <p>Yes. If you become more active by exercising more or increasing your daily steps, your TDEE will increase because your body requires more energy.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I use TDEE for weight loss?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, finding your TDEE is often the first step in weight loss. By eating fewer calories than your estimated TDEE, you create a calorie deficit.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Should I use my TDEE as my maintenance calories?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>Generally, yes. Your TDEE is an estimate of your maintenance calories. Eating exactly your TDEE should ideally result in your weight remaining the same.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How accurate are TDEE calculators?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>They provide solid estimates, but individual metabolisms vary. Static formulas are accurate for most adults, but real-world calorie tracking and weight trend monitoring will provide the most precise number for your specific body.</p>
             </div>
           </div>
         </div>
@@ -610,6 +696,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;"><strong>Disclaimer:</strong> This calculator provides estimates for general informational purposes. Individual calorie needs can vary. If you have a medical condition, are pregnant, have specific dietary needs, or are unsure about your calorie requirements, consider speaking with a qualified healthcare professional.</p>
         <p>© 2026 TDEECalculator. All rights reserved. Evidence-based energy expenditure tools.</p>
       </div>
     </div>
