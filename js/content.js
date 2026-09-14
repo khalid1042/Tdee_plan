@@ -287,12 +287,23 @@ window.TDEEContent = {
         <h2>How BMR Is Calculated</h2>
         <p>Our tool utilizes the two most clinical formulas validated in metabolic research:</p>
         <ul>
-          <li><strong>Mifflin-St Jeor Formula:</strong> The gold standard equation for healthy adults based on age, sex, height, and body weight.</li>
-          <li><strong>Katch-McArdle Formula:</strong> Activated when body fat percentage is supplied, calculating resting expenditure directly from Lean Body Mass (LBM).</li>
+          <li><strong>Mifflin-St Jeor Formula:</strong> The gold standard equation for healthy adults based on age, sex, height, and body weight. It is widely considered the most accurate resting metabolic rate predictor in modern clinical settings.</li>
+          <li><strong>Katch-McArdle Formula:</strong> Activated when body fat percentage is supplied, calculating resting expenditure directly from Lean Body Mass (LBM). This is exceptionally useful for athletes and bodybuilders with high muscle mass.</li>
+        </ul>
+
+        <h2>BMR vs. Resting Metabolic Rate (RMR)</h2>
+        <p>While often used interchangeably, BMR and RMR are slightly different. BMR is measured under strict laboratory conditions (typically after 8 hours of sleep and a 12-hour fast). RMR is measured under less strict conditions and is usually about 10% higher than BMR because it includes the energy of low-effort daily activities like eating and shivering. Our calculator focuses on your true biological baseline (BMR).</p>
+
+        <h2>Factors That Influence Your BMR</h2>
+        <p>Your basal metabolic rate is not static. Several physiological factors can increase or decrease it:</p>
+        <ul>
+          <li><strong>Lean Muscle Mass:</strong> Muscle tissue is highly metabolically active compared to adipose (fat) tissue. <a href="/blog/tdee-for-weight-loss/">Building muscle</a> is the most effective way to permanently raise your BMR.</li>
+          <li><strong>Age:</strong> As humans age, BMR naturally declines, largely due to sarcopenia (the loss of muscle mass) and hormonal shifts.</li>
+          <li><strong>Genetics and Thyroid Function:</strong> Hormones like thyroxine (T4) and triiodothyronine (T3) play massive roles in regulating cellular energy.</li>
         </ul>
 
         <h2>Why BMR Matters for Your TDEE</h2>
-        <p>BMR forms the baseline layer of your Total Daily Energy Expenditure (TDEE). Once your BMR is established, applying your lifestyle activity factor provides your total daily energy requirement.</p>
+        <p>BMR forms the absolute baseline layer of your <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure (TDEE)</a>. It represents roughly 60% to 70% of the calories you burn every day. Once your BMR is established, applying your lifestyle activity factor provides your total daily energy requirement.</p>
       `
     },
 
@@ -304,12 +315,18 @@ window.TDEEContent = {
       content: `
         <p>Your <strong>maintenance calories</strong> represent the exact energy intake where caloric consumption equals total daily energy expenditure (TDEE). Eating at maintenance preserves body weight, hormonal balance, athletic performance, and metabolic health.</p>
 
+        <h2>The Physiology of Energy Balance</h2>
+        <p>The human body is an adaptation machine. When you consistently eat in a <a href="/calorie-deficit-calculator/">calorie deficit</a>, the body attempts to fight back by lowering your <a href="/bmr-calculator/">Basal Metabolic Rate</a> and spontaneously reducing your unconscious movement (NEAT). By eating at maintenance, you signal to your central nervous system that you are not in a starvation environment, which keeps your metabolic rate elevated and healthy.</p>
+
         <h2>When Should You Eat at Maintenance?</h2>
         <ul>
-          <li><strong>Diet Breaks & Refeeds:</strong> Taking 1 to 2 weeks at maintenance after prolonged fat loss restores thyroid hormones and leptin.</li>
-          <li><strong>Body Recomposition:</strong> Beginners and returning lifters can build muscle while losing fat simultaneously by eating at maintenance with high protein.</li>
-          <li><strong>Long-Term Weight Stabilization:</strong> Maintaining your achieved goal weight after completing a fat loss phase.</li>
+          <li><strong>Diet Breaks & Refeeds:</strong> Taking 1 to 2 weeks at maintenance after prolonged fat loss restores thyroid hormones, leptin levels, and psychological stamina. Evidence shows that structured diet breaks can prevent muscle loss and make the next fat-loss phase more efficient.</li>
+          <li><strong>Body Recomposition:</strong> Beginners and returning lifters can actually build muscle while losing fat simultaneously by eating at maintenance while following a high-protein <a href="/macro-calculator/">macronutrient breakdown</a> and lifting heavy weights.</li>
+          <li><strong>Long-Term Weight Stabilization:</strong> The hardest part of a diet isn't losing the weight—it's keeping it off. Spending several months at your newly acquired maintenance calories allows your body's "set point" to adjust to its new baseline.</li>
         </ul>
+
+        <h2>How to Find Your True Maintenance</h2>
+        <p>Our calculator provides a clinical estimate based on the Mifflin-St Jeor equation. However, true maintenance can only be verified through real-world tracking. If you consume your estimated maintenance calories for 14 days and your average weekly weight remains completely stable, you have successfully found your exact maintenance.</p>
       `
     },
 
@@ -319,15 +336,21 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Calorie Deficit Calculator',
       content: `
-        <p>A <strong>calorie deficit</strong> occurs when you consume fewer calories than your TDEE burns. Your body makes up the energy gap by burning stored body tissue, primarily adipose fat.</p>
+        <p>A <strong>calorie deficit</strong> occurs when you consume fewer calories than your body expends in a 24-hour period. Because energy cannot be destroyed (First Law of Thermodynamics), your body is forced to make up the energy gap by burning stored biological tissue—primarily adipose fat.</p>
 
-        <h2>Choosing Your Calorie Deficit Strategy</h2>
-        <p>Use the interactive calculator above to select your target deficit pace:</p>
+        <h2>How Fast Should You Actually Lose Fat?</h2>
+        <p>While massive deficits yield faster immediate scale weight drops, they almost always result in aggressive muscle loss, severe metabolic adaptation, and eventual weight regain. Use our calculator to select a sustainable target:</p>
         <ul>
-          <li><strong>Mild (-15%):</strong> Slow, sustainable fat loss preserving high training energy.</li>
-          <li><strong>Optimal (-22%):</strong> Balanced fat loss rate of approximately 0.5 kg (1 lb) per week.</li>
-          <li><strong>Aggressive (-30%):</strong> Faster fat loss for short-term phases.</li>
+          <li><strong>Mild Deficit (-15%):</strong> Slow, highly sustainable fat loss. This is the optimal range for athletes looking to drop fat while preserving maximum strength and training energy.</li>
+          <li><strong>Optimal Deficit (-22%):</strong> The clinical sweet spot. This yields a fat loss rate of approximately 0.5 kg (1 lb) per week for most individuals, balancing noticeable progress with minimal muscle loss.</li>
+          <li><strong>Aggressive Deficit (-30%):</strong> Fast fat loss meant only for short-term "mini-cuts" (4-6 weeks) or medically supervised interventions. Risk of muscle loss and hormonal disruption is high.</li>
         </ul>
+
+        <h2>Understanding Metabolic Adaptation</h2>
+        <p>As you lose weight, your body shrinks, which means your <a href="/bmr-calculator/">Basal Metabolic Rate</a> drops. Furthermore, your brain responds to a prolonged calorie deficit by subconsciously reducing your Non-Exercise Activity Thermogenesis (NEAT)—meaning you will fidget less and feel more lethargic. Therefore, a deficit that worked on Day 1 will eventually become your new <a href="/maintenance-calorie-calculator/">maintenance</a>. You must periodically recalculate your TDEE as you lose weight.</p>
+
+        <h2>Macronutrients During a Deficit</h2>
+        <p>During a calorie deficit, protein becomes the most critical macronutrient. Consuming high protein (often 2.2g per kg of body weight) protects your lean muscle tissue from being burned for fuel. You can calculate your specific targets using our <a href="/macro-calculator/">Macro Calculator</a>.</p>
       `
     },
 
@@ -337,14 +360,20 @@ window.TDEEContent = {
       category: 'Calculator',
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
       content: `
-        <p>Building new muscle tissue is an energy-intensive process requiring a caloric surplus above your TDEE. Consuming a controlled surplus provides the extra energy required for protein synthesis and muscular recovery.</p>
+        <p>Building new muscle tissue is a metabolically expensive process. It requires a sustained caloric surplus above your <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a> to provide the necessary energy for Muscle Protein Synthesis (MPS) and tissue recovery.</p>
+
+        <h2>Lean Bulking vs. Dirty Bulking</h2>
+        <p>A common misconception in bodybuilding is the "dirty bulk"—eating thousands of excess calories to gain weight as fast as possible. Research shows there is a biological limit to how fast the human body can synthesize new muscle tissue (typically 1-2 lbs of muscle per month for natural trainees). Any caloric surplus beyond what is needed to maximize MPS is simply stored as adipose fat. A <strong>lean bulk</strong> utilizes a controlled, slight surplus to maximize muscle gain while minimizing fat accretion.</p>
 
         <h2>Optimizing Your Calorie Surplus Rate</h2>
         <ul>
-          <li><strong>Lean Surplus (+10% TDEE):</strong> Adds ~0.2 kg/week, minimizing fat gain while maximizing lean muscle accretion.</li>
-          <li><strong>Moderate Surplus (+15% TDEE):</strong> Recommended for intermediate lifters seeking steady strength gains.</li>
-          <li><strong>Aggressive Surplus (+20% TDEE):</strong> Suitable for hardgainers or athletes undergoing intense double-session training.</li>
+          <li><strong>Lean Surplus (+10% TDEE):</strong> Adds roughly 0.2 kg/week. This is the optimal range for minimizing fat gain while providing enough energy for progressive overload in the gym.</li>
+          <li><strong>Moderate Surplus (+15% TDEE):</strong> Recommended for intermediate lifters and athletes in rigorous training programs who need extra recovery fuel.</li>
+          <li><strong>Aggressive Surplus (+20% TDEE):</strong> Suitable primarily for underweight beginners ("hardgainers") or enhanced bodybuilders who can synthesize muscle at supra-physiological rates.</li>
         </ul>
+
+        <h2>Tracking Your Weight Gain Averages</h2>
+        <p>Because daily weight fluctuates wildly due to glycogen, sodium, and water retention, you should weigh yourself daily but only adjust your surplus based on your <strong>weekly average weight</strong>. If your weekly average is increasing by 0.2kg to 0.4kg per week, you are in a perfect lean bulk. If it stalls, slightly increase your surplus. Always ensure you are hitting your protein targets using our <a href="/macro-calculator/">Macro Calculator</a>.</p>
       `
     },
 
@@ -358,9 +387,17 @@ window.TDEEContent = {
 
         <h2>The Roles of Each Macronutrient</h2>
         <ul>
-          <li><strong>Protein (4 kcal/g):</strong> Essential for muscle tissue repair, enzyme production, and satiety during fat loss.</li>
+          <li><strong>Protein (4 kcal/g):</strong> Essential for muscle tissue repair, enzyme production, and satiety during fat loss. It also has the highest Thermic Effect of Food (TEF).</li>
           <li><strong>Carbohydrates (4 kcal/g):</strong> The primary high-intensity fuel source for workout performance and glycogen replenishment.</li>
           <li><strong>Fats (9 kcal/g):</strong> Required for hormone production (testosterone, estrogen), joint health, and nutrient absorption.</li>
+        </ul>
+
+        <h2>Choosing a Macro Split</h2>
+        <p>There is no "magic" ratio, but depending on your goals (from <a href="/calorie-deficit-calculator/">cutting</a> to <a href="/calorie-surplus-calculator/">bulking</a>), certain presets work best:</p>
+        <ul>
+          <li><strong>Balanced (30/40/30):</strong> The ideal starting point for most active adults.</li>
+          <li><strong>High Protein:</strong> Essential during aggressive fat loss to preserve lean body mass.</li>
+          <li><strong>Low Carb / Keto:</strong> Useful for sedentary individuals or those managing insulin resistance, though not optimal for high-intensity athletes.</li>
         </ul>
       `
     },
