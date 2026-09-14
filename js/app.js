@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
       siloContainer = document.createElement('div');
       siloContainer.id = 'silo-container';
       siloContainer.className = 'container content-section hidden';
-      siloContainer.innerHTML = '<div class="article-body"><span id="silo-category" class="hero-badge">Category</span><h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1><div id="silo-calculator-mount"></div><div id="silo-body"></div><div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);"><a href="/" class="btn-secondary" data-link>← Back to Main TDEE Calculator</a></div></div>';
+      siloContainer.innerHTML = '<div class="article-body"><span id="silo-category" class="hero-badge">Category</span><h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1><div id="silo-trust-meta"></div><div id="silo-calculator-mount"></div><div id="silo-body"></div><div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);"><a href="/" class="btn-secondary" data-link>← Back to Main TDEE Calculator</a></div></div>';
       heroWorkspace.parentNode.insertBefore(siloContainer, heroWorkspace);
     }
     siloCategory = document.getElementById('silo-category');
@@ -133,6 +133,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     siloCategory.textContent = routeData.category || 'Guide';
     siloTitle.textContent = routeData.h1 || routeData.title;
+    
+    var trustMeta = document.getElementById('silo-trust-meta');
+    if (trustMeta) {
+      var author = window.TDEEContent.author || '';
+      var reviewer = window.TDEEContent.reviewer || '';
+      var lastUpdated = window.TDEEContent.lastUpdated || '';
+      trustMeta.innerHTML = `
+        <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-rose);">
+          <div style="margin-bottom: 0.5rem;"><strong>✍️ Written by:</strong> ${author}</div>
+          <div style="margin-bottom: 0.5rem;"><strong>🩺 Medically Reviewed by:</strong> ${reviewer}</div>
+          <div><strong>📅 Last Updated:</strong> ${lastUpdated}</div>
+        </div>
+      `;
+    }
+
     siloBody.innerHTML = routeData.content;
     document.title = routeData.title;
 

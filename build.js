@@ -46,6 +46,18 @@ function updateHtmlForRoute(html, route, routeData) {
   // Hide Hero workspace
   updatedHtml = updatedHtml.replace(/<div id="hero-workspace">/, '<div id="hero-workspace" class="hidden">');
 
+  const author = window.TDEEContent.author;
+  const reviewer = window.TDEEContent.reviewer;
+  const lastUpdated = window.TDEEContent.lastUpdated;
+
+  const trustMetaHTML = `
+      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-rose);">
+        <div style="margin-bottom: 0.5rem;"><strong>✍️ Written by:</strong> ${author}</div>
+        <div style="margin-bottom: 0.5rem;"><strong>🩺 Medically Reviewed by:</strong> ${reviewer}</div>
+        <div><strong>📅 Last Updated:</strong> ${lastUpdated}</div>
+      </div>
+  `;
+
   // Inject the entire Silo container HTML before the hero workspace
   const siloContainerHTML = `
   <!-- Dynamic Container for SPA Silo Pages -->
@@ -53,6 +65,7 @@ function updateHtmlForRoute(html, route, routeData) {
     <div class="article-body">
       <span id="silo-category" class="hero-badge">${routeData.category || 'Guide'}</span>
       <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">${routeData.h1 || routeData.title}</h1>
+      ${trustMetaHTML}
       <div id="silo-calculator-mount"></div>
       <div id="silo-body" class="article-body">
 ${routeData.content}

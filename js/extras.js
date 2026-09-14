@@ -259,6 +259,11 @@ window.TDEEExtras = (function() {
           '<div class="ex-result-formula"></div>' +
         '</div>' +
         '<div class="extras-breakdown"></div>' +
+        '<div class="calculator-disclaimer" style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-cyan); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">' +
+          '<strong>Medical Disclaimer:</strong> This output is an estimate based on clinical energy expenditure formulas and does not constitute medical advice. Standard formulas cannot account for unique metabolic adaptation or non-exercise activity thermogenesis (NEAT) variations.' +
+          '<br><br>' +
+          '<a href="/how-we-calculate/" style="color: var(--accent-cyan); font-weight: 600; text-decoration: none;" data-link>View our complete mathematical methodology &rarr;</a>' +
+        '</div>' +
       '</div>';
 
     var root = container.querySelector('.extras-calc');

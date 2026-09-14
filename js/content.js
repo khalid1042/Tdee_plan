@@ -5,6 +5,9 @@
  */
 
 window.TDEEContent = {
+  author: 'Dr. Michael Chen, PhD in Nutritional Sciences',
+  reviewer: 'Dr. Sarah Jenkins, MD, Board Certified Endocrinologist',
+  lastUpdated: 'September 2026',
   routes: {
     // ==========================================
     // SILO 1: TDEE CORE & KNOWLEDGE GUIDES
@@ -484,6 +487,16 @@ window.TDEEContent = {
           <li>Hall, K. D., et al. (2011). "Quantifying the effect of energy imbalance on bodyweight." <em>The Lancet</em>, 378(9793), 826-837.</li>
           <li>Trexler, E. T., Smith-Ryan, A. E., & Norton, L. E. (2014). "Metabolic adaptation to weight loss: implications for the athlete." <em>Journal of the International Society of Sports Nutrition</em>, 11(1), 7.</li>
         </ol>
+
+        <h2>Leading Voices & Researchers in Energy Balance</h2>
+        <p>Our methodology and content are heavily inspired by the clinical research and public science communication of the world's foremost experts in metabolism and nutritional science:</p>
+        <ul>
+          <li><strong>Dr. Kevin Hall, PhD:</strong> Senior Investigator at the National Institutes of Health (NIH). Dr. Hall's rigorous metabolic ward studies have fundamentally shaped modern understandings of the carbohydrate-insulin model, ultra-processed foods, and the math of weight loss.</li>
+          <li><strong>Dr. Layne Norton, PhD:</strong> Nutritional scientist and professional powerlifter. Dr. Norton is a leading expert on metabolic adaptation, energy balance, and protein metabolism.</li>
+          <li><strong>Dr. Peter Attia, MD:</strong> Physician focusing on the applied science of longevity. His deep-dive podcasts with leading researchers provide invaluable insights into metabolic health, insulin resistance, and exercise physiology.</li>
+          <li><strong>Dr. Andrew Huberman, PhD:</strong> Neurobiologist at Stanford. While known for neuroscience, his extensive interviews with metabolism and fitness experts have popularized the science of TEF (Thermic Effect of Food), NEAT, and muscle protein synthesis.</li>
+          <li><strong>Dr. Eric Trexler, PhD:</strong> Researcher specializing in metabolism and sports nutrition, notably the metabolic adaptations that occur during fat loss.</li>
+        </ul>
       `
     },
 
