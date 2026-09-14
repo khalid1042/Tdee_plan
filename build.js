@@ -23,7 +23,7 @@ if (!window.TDEEContent || !window.TDEEContent.routes) {
 const routes = window.TDEEContent.routes;
 
 // 3. Helper to replace metadata in HTML string
-function updateHtmlForRoute(html, routeData) {
+function updateHtmlForRoute(html, route, routeData) {
   let updatedHtml = html;
   
   // Update Title
@@ -39,6 +39,9 @@ function updateHtmlForRoute(html, routeData) {
   // Update Twitter Title and Description
   updatedHtml = updatedHtml.replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${routeData.title}">`);
   updatedHtml = updatedHtml.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${routeData.metaDescription}">`);
+
+  // Update Canonical URL
+  updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculator.com${route}">`);
 
   // Show Silo container, hide Hero workspace
   updatedHtml = updatedHtml.replace(/<div id="hero-workspace">/, '<div id="hero-workspace" class="hidden">');
@@ -70,7 +73,7 @@ for (const [route, routeData] of Object.entries(routes)) {
   fs.mkdirSync(dirPath, { recursive: true });
 
   // Generate HTML
-  const routeHtml = updateHtmlForRoute(indexHtml, routeData);
+  const routeHtml = updateHtmlForRoute(indexHtml, route, routeData);
 
   // Write to index.html in the created directory
   const filePath = path.join(dirPath, 'index.html');
