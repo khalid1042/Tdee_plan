@@ -385,13 +385,23 @@ window.TDEEContent = {
       category: 'Company',
       h1: 'About Our TDEE Platform',
       content: `
-        <p>Our platform was built to bridge the gap between static mathematical energy formulas and real-world human metabolic adaptation. Standard calculators provide static estimates; our tool empowers users with adaptive calibration based on real weight trends.</p>
-        <h2>Our Commitment</h2>
+        <p>Welcome to <strong>TDEE Calculator</strong>, a platform dedicated to providing science-backed, accurate, and actionable energy expenditure tools.</p>
+        
+        <h2>Our Mission</h2>
+        <p>Our mission is to bridge the gap between static mathematical energy formulas and real-world human metabolic adaptation. Standard calculators often provide a single, static estimate that can be frustratingly inaccurate for individuals with unique metabolisms, changing activity levels, or extended dieting histories. Our tool empowers users not just with a baseline starting point, but with an <strong>adaptive calibration engine</strong> that aligns the math with your body's real-world weight trends.</p>
+        
+        <h2>Who We Are</h2>
+        <p>We are a team of data-driven fitness enthusiasts, developers, and nutrition science researchers. We noticed that while there are many TDEE calculators on the internet, most rely on outdated formulas or fail to explain the massive error margins inherent in estimating metabolism. We built this platform to provide a transparent, clinical-grade tool that anyone can use for free.</p>
+        
+        <h2>Our Core Values</h2>
         <ul>
-          <li><strong>Scientific Rigor:</strong> We utilize peer-reviewed clinical formulas (Mifflin-St Jeor, Katch-McArdle, Harris-Benedict).</li>
-          <li><strong>Transparency:</strong> We explicitly communicate formula error margins and confidence intervals.</li>
-          <li><strong>Privacy First:</strong> Your body measurements and tracking logs remain 100% local to your device browser.</li>
+          <li><strong>Scientific Rigor:</strong> We only utilize peer-reviewed, clinically validated formulas (such as Mifflin-St Jeor and Katch-McArdle) rather than arbitrary math.</li>
+          <li><strong>Radical Transparency:</strong> We explicitly communicate the error margins, confidence intervals, and biological variance that affect energy expenditure. We never pretend our calculator is magic—it is an estimate that requires your real-world data to perfect.</li>
+          <li><strong>Privacy First:</strong> Your body measurements, weight logs, and daily caloric entries remain 100% local to your device's browser. We do not transmit, store, or sell your personal health metrics to third-party servers. Your data belongs to you.</li>
+          <li><strong>No Fads, Just Math:</strong> We do not promote fad diets, rapid weight loss schemes, or unsustainable fitness practices. Energy balance is a biological mechanism, and we aim to explain it clearly.</li>
         </ul>
+        
+        <p>Whether you are a competitive athlete, a fitness beginner, or someone looking to maintain a healthy lifestyle, our platform is designed to give you the precise data you need to reach your goals.</p>
       `
     },
 
@@ -414,7 +424,25 @@ window.TDEEContent = {
       category: 'Trust',
       h1: 'Editorial & Research Policy',
       content: `
-        <p>Every article, guide, and calculator formula on our site is audited against published clinical nutrition research and peer-reviewed studies from institutions such as the NIH and American College of Sports Medicine (ACSM).</p>
+        <p>At TDEE Calculator, our content is governed by a strict commitment to scientific accuracy, clinical validity, and objective reporting. We understand that health and nutrition information directly impacts our users' well-being, which is why we hold our editorial process to the highest standards.</p>
+        
+        <h2>Evidence-Based Guidelines</h2>
+        <p>Every article, guide, and calculator formula published on our site is strictly audited against published clinical nutrition research and peer-reviewed studies. We source our data from reputable institutions, including:</p>
+        <ul>
+          <li>The National Institutes of Health (NIH)</li>
+          <li>The American College of Sports Medicine (ACSM)</li>
+          <li>The American Journal of Clinical Nutrition</li>
+          <li>The Journal of the International Society of Sports Nutrition (JISSN)</li>
+        </ul>
+        
+        <h2>Review and Update Process</h2>
+        <p>Nutrition science is constantly evolving. Our editorial team conducts periodic reviews of all core guides (such as our explanations of BMR, TEF, and metabolic adaptation) to ensure they reflect current clinical consensus. When new, validated methodologies emerge, we update our calculators and methodologies accordingly, and transparently log these changes.</p>
+        
+        <h2>Independence and Objectivity</h2>
+        <p>TDEE Calculator maintains strict editorial independence. We do not accept sponsored content that conflicts with our scientific values, nor do we alter our formulas or recommendations to favor commercial partners. Any affiliate links or advertisements are clearly separated from our editorial content and have zero influence over our scientific reporting.</p>
+        
+        <h2>Error Correction</h2>
+        <p>If an error in our content or calculation formulas is identified, we are committed to correcting it immediately. We encourage feedback from registered dietitians, clinical researchers, and our user base. Corrections are implemented swiftly with transparency regarding the update.</p>
       `
     },
 
@@ -424,13 +452,23 @@ window.TDEEContent = {
       category: 'Methodology',
       h1: 'How We Calculate: Scientific Formulas & Methodology',
       content: `
-        <p>Transparency is our highest priority. Here is the mathematical framework behind our tools:</p>
-        <h2>1. Mifflin-St Jeor BMR Equation</h2>
-        <p>Published in 1990, the Mifflin-St Jeor equation is validated as the most accurate formula for modern adults within ±10% precision.</p>
-        <h2>2. Katch-McArdle Lean Body Mass Equation</h2>
-        <p>When body fat percentage is supplied, we calculate Lean Body Mass (LBM = Weight × (1 - BodyFat%)) and apply BMR = 370 + (21.6 × LBM).</p>
-        <h2>3. Adaptive Real-World Calibration Model</h2>
-        <p>Observed TDEE is computed via linear regression of 7-21 day calorie logs against scale weight changes using the 7,700 kcal/kg tissue energy equivalent constant.</p>
+        <p>Transparency is our highest priority. We believe you should understand exactly how your body's energy needs are being calculated. Here is the comprehensive mathematical framework and methodology powering our tools:</p>
+        
+        <h2>1. The Baseline: Mifflin-St Jeor Equation</h2>
+        <p>For users who do not know their body fat percentage, we calculate Basal Metabolic Rate (BMR) using the <strong>Mifflin-St Jeor equation</strong>. Published in 1990, this formula has been repeatedly validated by clinical dietitians as the most accurate predictive equation for modern adults, offering a precision rate within ±10% for the majority of the population.</p>
+        <p><em>Men: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5</em><br>
+        <em>Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161</em></p>
+        
+        <h2>2. Advanced Precision: Katch-McArdle Equation</h2>
+        <p>When a user supplies their body fat percentage, our engine automatically switches to the <strong>Katch-McArdle equation</strong>. This formula ignores total body weight and instead calculates resting expenditure directly from Lean Body Mass (LBM). This prevents the calculator from overestimating the calorie needs of individuals with higher body fat, and underestimating the needs of heavily muscled athletes.</p>
+        <p><em>BMR = 370 + (21.6 × Lean Body Mass in kg)</em></p>
+        
+        <h2>3. Activity Multipliers (TDEE)</h2>
+        <p>To convert BMR into Total Daily Energy Expenditure (TDEE), we apply standard physical activity level (PAL) multipliers ranging from 1.2 (Sedentary) to 1.9 (Extra Active). For users who utilize our Smart Wizard, we dynamically adjust these multipliers based on reported step counts and workout intensity to generate a custom fractional multiplier (e.g., 1.42).</p>
+        
+        <h2>4. The Adaptive Calibration Engine</h2>
+        <p>Static formulas can only estimate. Our signature <strong>Adaptive Calibration Engine</strong> looks at what actually happens in the real world. By analyzing your daily caloric intake against your daily scale weight over a 14 to 28 day period, we use linear regression to find your true observed TDEE.</p>
+        <p>The engine utilizes the established clinical constant that a change in body tissue of 1 kilogram roughly equates to an energy imbalance of 7,700 kilocalories (or 3,500 kcals per pound). By calculating the daily energy delta required to produce your specific rate of weight change, we output a calibrated TDEE that is customized to your unique metabolic rate and NEAT (Non-Exercise Activity Thermogenesis) levels.</p>
       `
     },
 
