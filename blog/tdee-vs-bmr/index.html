@@ -14,6 +14,7 @@
   <meta property="og:description" content="Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy breakdown, and avoiding starvation deficits.">
   <meta property="og:url" content="https://tdeecalculator.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tdeecalculator.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="TDEE vs BMR: What Is the Difference & Which Should You Use?">
@@ -78,7 +79,7 @@
         "name": "How accurate are standard TDEE formulas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor are accurate within ±10% for most adults. However, individual non-exercise activity (NEAT) and metabolic adaptation cause variances. Using a real-world calibration tool provides higher precision."
+          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
         }
       }
     ]
@@ -134,20 +135,67 @@
     </div>
   </header>
 
+  <!-- Hero & Main Homepage Workspace -->
+  
   <!-- Dynamic Container for SPA Silo Pages -->
-  <div id="silo-container" class="container content-section hidden">
+  <div id="silo-container" class="container content-section">
     <div class="article-body">
-      <span id="silo-category" class="hero-badge">Category</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1>
+      <span id="silo-category" class="hero-badge">Comparisons</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">TDEE vs BMR: Key Differences & Organ Energy Breakdown</h1>
       <div id="silo-calculator-mount"></div>
-      <div id="silo-body"></div>
+      <div id="silo-body" class="article-body">
+
+        <p>While both <strong>BMR (Basal Metabolic Rate)</strong> and <strong>TDEE (Total Daily Energy Expenditure)</strong> are foundational numbers in clinical nutrition, confusing the two is one of the most common mistakes people make when planning a diet.</p>
+        
+        <h2>Key Differences at a Glance</h2>
+        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
+              <th style="padding:0.75rem;">Metric</th>
+              <th style="padding:0.75rem;">Definition</th>
+              <th style="padding:0.75rem;">Includes Activity?</th>
+              <th style="padding:0.75rem;">Primary Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>BMR</strong></td>
+              <td style="padding:0.75rem;">Calories burned at complete 24-hour rest</td>
+              <td style="padding:0.75rem;">❌ No movement included</td>
+              <td style="padding:0.75rem;">Clinical baseline energy floor</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;"><strong>TDEE</strong></td>
+              <td style="padding:0.75rem;">Total calories burned including movement & exercise</td>
+              <td style="padding:0.75rem;">✓ Full daily activity included</td>
+              <td style="padding:0.75rem;">Setting maintenance, fat loss, or bulk targets</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Organ Baseline Energy Breakdown at Rest (BMR)</h2>
+        <p>Your BMR represents the energy demanded by vital biological organs. According to clinical physiological data, BMR energy is consumed as follows:</p>
+        <ul>
+          <li><strong>Liver (~27%):</strong> High metabolic conversion and protein synthesis.</li>
+          <li><strong>Brain (~19%):</strong> Continuous electrical signaling and glucose usage.</li>
+          <li><strong>Skeletal Muscle (~18%):</strong> Baseline muscle tone and cellular ion pumping at rest.</li>
+          <li><strong>Kidneys (~10%):</strong> Continuous blood filtration and fluid balance.</li>
+          <li><strong>Heart (~7%):</strong> Incessant mechanical pumping.</li>
+          <li><strong>Other Organs (~19%):</strong> Gastrointestinal lining, skin repair, lungs.</li>
+        </ul>
+
+        <h2>Why You Should Never Eat Below Your BMR</h2>
+        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When energy intake drops below baseline cellular requirements, the body responds defensively by downregulating thyroid hormones (T3), lowering spontaneous physical movement, increasing hunger signals, and breaking down lean muscle tissue for fuel.</p>
+
+        <p>To safely lose body fat, always calculate your caloric deficit as a percentage below your <strong>TDEE</strong>, keeping your target calories at or above your baseline BMR. Use our <a href="/bmr-calculator/">standalone BMR calculator</a> to determine your personal floor.</p>
+      
+      </div>
       <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
         <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
       </div>
     </div>
   </div>
-
-  <!-- Hero & Main Homepage Workspace -->
+  
   <div id="hero-workspace" class="hidden">
     <section class="hero-section">
       <div class="container">

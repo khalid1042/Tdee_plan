@@ -14,6 +14,7 @@
   <meta property="og:description" content="Comprehensive breakdown of our mathematical formulas, activity score algorithms, and adaptive calibration models.">
   <meta property="og:url" content="https://tdeecalculator.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tdeecalculator.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="How We Calculate TDEE, BMR & Adaptive Expenditure">
@@ -78,7 +79,7 @@
         "name": "How accurate are standard TDEE formulas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor are accurate within ±10% for most adults. However, individual non-exercise activity (NEAT) and metabolic adaptation cause variances. Using a real-world calibration tool provides higher precision."
+          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
         }
       }
     ]
@@ -134,20 +135,41 @@
     </div>
   </header>
 
+  <!-- Hero & Main Homepage Workspace -->
+  
   <!-- Dynamic Container for SPA Silo Pages -->
-  <div id="silo-container" class="container content-section hidden">
+  <div id="silo-container" class="container content-section">
     <div class="article-body">
-      <span id="silo-category" class="hero-badge">Category</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1>
+      <span id="silo-category" class="hero-badge">Methodology</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">How We Calculate: Scientific Formulas & Methodology</h1>
       <div id="silo-calculator-mount"></div>
-      <div id="silo-body"></div>
+      <div id="silo-body" class="article-body">
+
+        <p>Transparency is our highest priority. We believe you should understand exactly how your body's energy needs are being calculated. Here is the comprehensive mathematical framework and methodology powering our tools:</p>
+        
+        <h2>1. The Baseline: Mifflin-St Jeor Equation</h2>
+        <p>For users who do not know their body fat percentage, we calculate Basal Metabolic Rate (BMR) using the <strong>Mifflin-St Jeor equation</strong>. Published in 1990, this formula has been repeatedly validated by clinical dietitians as the most accurate predictive equation for modern adults, offering a precision rate within ±10% for the majority of the population.</p>
+        <p><em>Men: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5</em><br>
+        <em>Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161</em></p>
+        
+        <h2>2. Advanced Precision: Katch-McArdle Equation</h2>
+        <p>When a user supplies their body fat percentage, our engine automatically switches to the <strong>Katch-McArdle equation</strong>. This formula ignores total body weight and instead calculates resting expenditure directly from Lean Body Mass (LBM). This prevents the calculator from overestimating the calorie needs of individuals with higher body fat, and underestimating the needs of heavily muscled athletes.</p>
+        <p><em>BMR = 370 + (21.6 × Lean Body Mass in kg)</em></p>
+        
+        <h2>3. Activity Multipliers (TDEE)</h2>
+        <p>To convert BMR into Total Daily Energy Expenditure (TDEE), we apply standard physical activity level (PAL) multipliers ranging from 1.2 (Sedentary) to 1.9 (Extra Active). For users who utilize our Smart Wizard, we dynamically adjust these multipliers based on reported step counts and workout intensity to generate a custom fractional multiplier (e.g., 1.42).</p>
+        
+        <h2>4. The Adaptive Calibration Engine</h2>
+        <p>Static formulas can only estimate. Our signature <strong>Adaptive Calibration Engine</strong> looks at what actually happens in the real world. By analyzing your daily caloric intake against your daily scale weight over a 14 to 28 day period, we use linear regression to find your true observed TDEE.</p>
+        <p>The engine utilizes the established clinical constant that a change in body tissue of 1 kilogram roughly equates to an energy imbalance of 7,700 kilocalories (or 3,500 kcals per pound). By calculating the daily energy delta required to produce your specific rate of weight change, we output a calibrated TDEE that is customized to your unique metabolic rate and NEAT (Non-Exercise Activity Thermogenesis) levels.</p>
+      
+      </div>
       <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
         <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
       </div>
     </div>
   </div>
-
-  <!-- Hero & Main Homepage Workspace -->
+  
   <div id="hero-workspace" class="hidden">
     <section class="hero-section">
       <div class="container">

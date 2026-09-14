@@ -63,6 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var siloTitle = document.getElementById('silo-title');
   var siloBody = document.getElementById('silo-body');
 
+  function ensureSiloContainer() {
+    siloContainer = document.getElementById('silo-container');
+    if (!siloContainer) {
+      siloContainer = document.createElement('div');
+      siloContainer.id = 'silo-container';
+      siloContainer.className = 'container content-section hidden';
+      siloContainer.innerHTML = '<div class="article-body"><span id="silo-category" class="hero-badge">Category</span><h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1><div id="silo-calculator-mount"></div><div id="silo-body"></div><div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);"><a href="/" class="btn-secondary" data-link>← Back to Main TDEE Calculator</a></div></div>';
+      heroWorkspace.parentNode.insertBefore(siloContainer, heroWorkspace);
+    }
+    siloCategory = document.getElementById('silo-category');
+    siloTitle = document.getElementById('silo-title');
+    siloBody = document.getElementById('silo-body');
+  }
+
   /* ==========================================================================
      1. ROUTING & NAVIGATION SYSTEM
      ========================================================================== */
@@ -78,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (path === '/') {
       // Show Homepage Calculator Workspace
       heroWorkspace.classList.remove('hidden');
-      siloContainer.classList.add('hidden');
+      if (siloContainer) siloContainer.classList.add('hidden');
       document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
       return;
     }
@@ -86,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var routeData = window.TDEEContent.routes[path];
 
     if (!routeData) {
+      ensureSiloContainer();
       // Show Custom 404 Error Page
       heroWorkspace.classList.add('hidden');
       siloContainer.classList.remove('hidden');
@@ -112,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Show Silo Content Article
+    ensureSiloContainer();
     heroWorkspace.classList.add('hidden');
     siloContainer.classList.remove('hidden');
 
@@ -149,11 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var targetId = href.substring(1);
       if (state.currentRoute !== '/') {
         // Return to homepage first if currently on a silo page
-        state.currentRoute = '/';
-        window.history.pushState({}, '', '/');
-        heroWorkspace.classList.remove('hidden');
-        siloContainer.classList.add('hidden');
-        document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
+        navigateTo('/');
+        if (siloContainer) siloContainer.classList.add('hidden');
       }
       if (targetId) {
         var elem = document.getElementById(targetId);

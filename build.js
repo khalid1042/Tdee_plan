@@ -43,21 +43,28 @@ function updateHtmlForRoute(html, route, routeData) {
   // Update Canonical URL
   updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculator.com${route}">`);
 
-  // Show Silo container, hide Hero workspace
+  // Hide Hero workspace
   updatedHtml = updatedHtml.replace(/<div id="hero-workspace">/, '<div id="hero-workspace" class="hidden">');
-  updatedHtml = updatedHtml.replace(/<div id="silo-container" class="hidden">/, '<div id="silo-container">');
 
-  // Inject Silo Content
-  const categoryStr = `<h2 id="silo-category" class="silo-category">Guide</h2>`;
-  updatedHtml = updatedHtml.replace(categoryStr, `<h2 id="silo-category" class="silo-category">${routeData.category || 'Guide'}</h2>`);
-  
-  const titleStr = `<h1 id="silo-title" class="silo-title">Topic Title</h1>`;
-  updatedHtml = updatedHtml.replace(titleStr, `<h1 id="silo-title" class="silo-title">${routeData.h1 || routeData.title}</h1>`);
-  
-  // Replace the empty silo-body with the actual content
-  const bodyStart = '<div id="silo-body" class="article-body">';
-  const bodyRegex = new RegExp(`(<div id="silo-body" class="article-body">)[\\s\\S]*?(</div>\\s*<!-- \\/silo-body -->)`);
-  updatedHtml = updatedHtml.replace(bodyRegex, `$1\n${routeData.content}\n$2`);
+  // Inject the entire Silo container HTML before the hero workspace
+  const siloContainerHTML = `
+  <!-- Dynamic Container for SPA Silo Pages -->
+  <div id="silo-container" class="container content-section">
+    <div class="article-body">
+      <span id="silo-category" class="hero-badge">${routeData.category || 'Guide'}</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">${routeData.h1 || routeData.title}</h1>
+      <div id="silo-calculator-mount"></div>
+      <div id="silo-body" class="article-body">
+${routeData.content}
+      </div>
+      <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
+        <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
+      </div>
+    </div>
+  </div>
+  `;
+
+  updatedHtml = updatedHtml.replace('<div id="hero-workspace" class="hidden">', siloContainerHTML + '\n  <div id="hero-workspace" class="hidden">');
 
   return updatedHtml;
 }

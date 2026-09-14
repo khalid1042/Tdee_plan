@@ -14,6 +14,7 @@
   <meta property="og:description" content="In-depth guide to the Mifflin-St Jeor BMR equation. Learn why clinical studies validate it as the most accurate resting metabolic rate formula.">
   <meta property="og:url" content="https://tdeecalculator.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tdeecalculator.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="Mifflin-St Jeor Equation: BMR Formula Accuracy & Science (2026)">
@@ -78,7 +79,7 @@
         "name": "How accurate are standard TDEE formulas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor are accurate within ±10% for most adults. However, individual non-exercise activity (NEAT) and metabolic adaptation cause variances. Using a real-world calibration tool provides higher precision."
+          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
         }
       }
     ]
@@ -134,20 +135,38 @@
     </div>
   </header>
 
+  <!-- Hero & Main Homepage Workspace -->
+  
   <!-- Dynamic Container for SPA Silo Pages -->
-  <div id="silo-container" class="container content-section hidden">
+  <div id="silo-container" class="container content-section">
     <div class="article-body">
-      <span id="silo-category" class="hero-badge">Category</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1>
+      <span id="silo-category" class="hero-badge">Scientific Formulas</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Mifflin-St Jeor Equation: History, Accuracy & Science</h1>
       <div id="silo-calculator-mount"></div>
-      <div id="silo-body"></div>
+      <div id="silo-body" class="article-body">
+
+        <p>The <strong>Mifflin-St Jeor Equation</strong> was published in 1990 by Dr. MD Mifflin and ST St Jeor in the <em>American Journal of Clinical Nutrition</em>. It remains the gold-standard formula used by clinical dietitians and sports nutritionists worldwide to predict Basal Metabolic Rate (BMR).</p>
+
+        <h2>The Mathematical Equations</h2>
+        <p>The formula calculates daily resting caloric expenditure based on body mass, height, age, and biological sex:</p>
+        <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:8px; border-left:4px solid var(--accent-cyan); margin:1.5rem 0;">
+          <ul>
+            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5</li>
+            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161</li>
+          </ul>
+        </div>
+
+        <h2>Why Mifflin-St Jeor Outperformed Harris-Benedict</h2>
+        <p>Prior to 1990, the <strong>Revised Harris-Benedict equation (1984)</strong> was the primary BMR formula. However, clinical validation studies by the Academy of Nutrition and Dietetics demonstrated that Harris-Benedict systematically overestimates BMR in modern adults by 5% to 15% due to changes in population body composition over time.</p>
+        <p>Mifflin-St Jeor was proven accurate within ±10% for over 82% of healthy non-obese and obese adults, establishing it as the most reliable standard.</p>
+      
+      </div>
       <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
         <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
       </div>
     </div>
   </div>
-
-  <!-- Hero & Main Homepage Workspace -->
+  
   <div id="hero-workspace" class="hidden">
     <section class="hero-section">
       <div class="container">

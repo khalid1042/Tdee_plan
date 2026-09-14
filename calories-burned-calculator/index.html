@@ -14,6 +14,7 @@
   <meta property="og:description" content="Calculate total calories burned per day based on non-exercise movement, daily steps, and workout sessions.">
   <meta property="og:url" content="https://tdeecalculator.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tdeecalculator.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="Calories Burned Calculator: Daily Energy Expenditure Burn">
@@ -78,7 +79,7 @@
         "name": "How accurate are standard TDEE formulas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor are accurate within ±10% for most adults. However, individual non-exercise activity (NEAT) and metabolic adaptation cause variances. Using a real-world calibration tool provides higher precision."
+          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
         }
       }
     ]
@@ -134,20 +135,28 @@
     </div>
   </header>
 
+  <!-- Hero & Main Homepage Workspace -->
+  
   <!-- Dynamic Container for SPA Silo Pages -->
-  <div id="silo-container" class="container content-section hidden">
+  <div id="silo-container" class="container content-section">
     <div class="article-body">
-      <span id="silo-category" class="hero-badge">Category</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1>
+      <span id="silo-category" class="hero-badge">Calculator</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Calories Burned Calculator</h1>
       <div id="silo-calculator-mount"></div>
-      <div id="silo-body"></div>
+      <div id="silo-body" class="article-body">
+
+        <p>Your daily caloric burn is dynamic. The <strong>Calories Burned Calculator</strong> calculates your total expenditure by combining baseline resting metabolic rate with step counts, daily lifestyle movement, and workout duration.</p>
+
+        <h2>Understanding Daily Step Burn</h2>
+        <p>Walking is one of the most effective ways to boost Non-Exercise Activity Thermogenesis (NEAT). On average, every 1,000 steps burn approximately 35 to 45 additional calories depending on body weight.</p>
+      
+      </div>
       <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
         <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
       </div>
     </div>
   </div>
-
-  <!-- Hero & Main Homepage Workspace -->
+  
   <div id="hero-workspace" class="hidden">
     <section class="hero-section">
       <div class="container">

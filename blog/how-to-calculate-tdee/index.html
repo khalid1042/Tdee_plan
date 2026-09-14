@@ -14,6 +14,7 @@
   <meta property="og:description" content="Learn how to calculate your Total Daily Energy Expenditure (TDEE) step-by-step using Mifflin-St Jeor, activity multipliers, and real-world tracking.">
   <meta property="og:url" content="https://tdeecalculator.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tdeecalculator.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="How to Calculate TDEE: Step-by-Step Formulas & Guide (2026)">
@@ -78,7 +79,7 @@
         "name": "How accurate are standard TDEE formulas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor are accurate within ±10% for most adults. However, individual non-exercise activity (NEAT) and metabolic adaptation cause variances. Using a real-world calibration tool provides higher precision."
+          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
         }
       }
     ]
@@ -134,20 +135,109 @@
     </div>
   </header>
 
+  <!-- Hero & Main Homepage Workspace -->
+  
   <!-- Dynamic Container for SPA Silo Pages -->
-  <div id="silo-container" class="container content-section hidden">
+  <div id="silo-container" class="container content-section">
     <div class="article-body">
-      <span id="silo-category" class="hero-badge">Category</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Article Title</h1>
+      <span id="silo-category" class="hero-badge">TDEE Guides</span>
+      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">How to Calculate Your TDEE (Formulas & Step-by-Step Guide)</h1>
       <div id="silo-calculator-mount"></div>
-      <div id="silo-body"></div>
+      <div id="silo-body" class="article-body">
+
+        <p>Calculating your Total Daily Energy Expenditure (TDEE) is the fundamental first step in taking control of your body composition. Whether your goal is to lose fat, maintain your current weight, or build lean muscle, knowing how many calories your body burns in 24 hours gives you the precise baseline you need.</p>
+        
+        <p>While an automated <a href="/">main TDEE calculator</a> makes this fast, understanding the underlying mathematical formulas empowers you to tailor your nutrition with confidence. This guide explains how to calculate your TDEE step-by-step using validated scientific equations.</p>
+
+        <h2>Step 1: Calculate Your Basal Metabolic Rate (BMR)</h2>
+        <p>Your Basal Metabolic Rate (BMR) represents the calories your body consumes simply staying alive at rest. It powers essential physiological functions such as breathing, blood circulation, cell repair, and brain activity. BMR accounts for approximately 60% to 70% of your total daily burn.</p>
+        
+        <p>The clinical benchmark formula for estimating BMR in healthy adults is the <strong>Mifflin-St Jeor Equation</strong>. Introduced in 1990, peer-reviewed <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">Mifflin-St Jeor equation validation study</a> research demonstrates that it provides the highest accuracy rate across diverse population groups.</p>
+
+        <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:8px; border-left:4px solid var(--accent-cyan); margin:1.5rem 0;">
+          <p style="margin-bottom:0.5rem; font-weight:700; color:#fff;">Mifflin-St Jeor Formula:</p>
+          <ul style="margin-bottom:0;">
+            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) + 5</li>
+            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in yrs) - 161</li>
+          </ul>
+        </div>
+
+        <h3>Example Calculation:</h3>
+        <p>For a 30-year-old male weighing 80 kg and measuring 180 cm tall:</p>
+        <ol>
+          <li>(10 × 80) = 800</li>
+          <li>(6.25 × 180) = 1,125</li>
+          <li>(5 × 30) = 150</li>
+          <li><strong>BMR</strong> = 800 + 1,125 - 150 + 5 = <strong>1,780 kcal/day</strong></li>
+        </ol>
+
+        <p>If you know your exact body fat percentage, you can alternatively use our <a href="/bmr-calculator/">BMR calculator tool</a> powered by the <strong>Katch-McArdle Equation</strong>, which calculates BMR based on Lean Body Mass (LBM):</p>
+        <p style="font-style:italic; background:rgba(255,255,255,0.04); padding:0.75rem; border-radius:6px;">BMR = 370 + (21.6 × LBM in kg)</p>
+
+        <h2>Step 2: Apply Your Activity Level Multiplier</h2>
+        <p>BMR only measures resting expenditure. To find your complete daily energy burn, you must multiply your BMR by an <strong>Activity Factor</strong> that accounts for job movement, lifestyle steps, and intentional exercise.</p>
+
+        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
+              <th style="padding:0.75rem;">Activity Category</th>
+              <th style="padding:0.75rem;">Physical Lifestyle Description</th>
+              <th style="padding:0.75rem;">Multiplier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Sedentary</strong></td>
+              <td style="padding:0.75rem;">Desk job, minimal walking, no formal exercise</td>
+              <td style="padding:0.75rem;"><strong>1.200</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Lightly Active</strong></td>
+              <td style="padding:0.75rem;">Light exercise 1–3 days/week or ~6,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.375</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Moderately Active</strong></td>
+              <td style="padding:0.75rem;">Moderate exercise 3–5 days/week or ~9,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.550</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;"><strong>Very Active</strong></td>
+              <td style="padding:0.75rem;">Heavy exercise 6–7 days/week or ~12,000 daily steps</td>
+              <td style="padding:0.75rem;"><strong>1.725</strong></td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;"><strong>Extra Active</strong></td>
+              <td style="padding:0.75rem;">Physical labor job plus strenuous daily training</td>
+              <td style="padding:0.75rem;"><strong>1.900</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Final TDEE Equation:</h3>
+        <p style="font-size:1.1rem; font-weight:700; color:var(--accent-emerald);">TDEE = BMR × Activity Multiplier</p>
+        <p>Using our previous example of a male with a BMR of 1,780 kcal who is <strong>Moderately Active</strong> (1.55 multiplier):</p>
+        <p style="font-size:1.1rem; font-weight:700;">TDEE = 1,780 × 1.55 = 2,759 kcal/day</p>
+        <p>This individual requires approximately 2,760 calories per day to maintain his current body weight.</p>
+
+        <h2>Step 3: Calibrate Your Estimate with Real-World Tracking</h2>
+        <p>Static mathematical formulas are evidence-based starting points, but individual variations in Non-Exercise Activity Thermogenesis (NEAT) and metabolic efficiency mean formula estimates carry a typical variance of ±10%.</p>
+
+        <p>To find your true observed TDEE:</p>
+        <ol>
+          <li>Log your daily caloric intake using a digital food scale for 14 consecutive days.</li>
+          <li>Record your morning scale weight daily after waking up and using the bathroom.</li>
+          <li>Compare the average weight of Week 1 against Week 2.</li>
+        </ol>
+        <p>If your average weight remains unchanged over 14 days, your average daily caloric intake is your true maintenance TDEE. If you are looking to lose weight, plug your baseline into our <a href="/calorie-deficit-calculator/">calorie deficit calculator</a> to establish a safe deficit target.</p>
+      
+      </div>
       <div style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
         <a href="/" class="btn-secondary">← Back to Main TDEE Calculator</a>
       </div>
     </div>
   </div>
-
-  <!-- Hero & Main Homepage Workspace -->
+  
   <div id="hero-workspace" class="hidden">
     <section class="hero-section">
       <div class="container">
