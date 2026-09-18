@@ -1178,26 +1178,234 @@ window.TDEEContent = {
     },
 
     '/calorie-surplus-calculator/': {
-      title: 'Calorie Surplus Calculator: Lean Bulk & Muscle Gain Intake',
-      metaDescription: 'Calculate your optimal calorie surplus for muscle growth and weight gain without excessive fat accretion.',
+      title: 'Calorie Surplus Calculator: Calculate Calories for Weight Gain and Muscle Gain',
+      metaDescription: 'Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training experience. Learn BMR to surplus formulas.',
       category: 'Calculator',
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
-      content: `
-        <p>Building new muscle tissue is a metabolically expensive process. It requires a sustained caloric surplus above your <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a> to provide the necessary energy for Muscle Protein Synthesis (MPS) and tissue recovery.</p>
+      content: `<p class="lead-paragraph">Trying to gain weight can become frustrating when you do not know how many calories you actually need. Perhaps you eat more but see little change, or you increase food too quickly and gain more fat than expected. The real problem is not simply eating more. Instead, you need a sensible calorie target and a way to check whether that target is working.</p>
 
-        <h2>Lean Bulking vs. Dirty Bulking</h2>
-        <p>A common misconception in bodybuilding is the "dirty bulk"—eating thousands of excess calories to gain weight as fast as possible. Research shows there is a biological limit to how fast the human body can synthesize new muscle tissue (typically 1-2 lbs of muscle per month for natural trainees). Any caloric surplus beyond what is needed to maximize MPS is simply stored as adipose fat. A <strong>lean bulk</strong> utilizes a controlled, slight surplus to maximize muscle gain while minimizing fat accretion.</p>
+        <p>A <strong>calorie surplus calculator</strong> provides a practical starting estimate using factors such as your estimated energy needs, activity level, and chosen surplus. However, the result is not a guarantee of muscle or weight gain. Research shows that the exact energy surplus needed to maximize muscle growth is still uncertain. Therefore, the best approach is to calculate a starting target, eat consistently, train properly, track your progress, and adjust when necessary. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training - PubMed">PubMed [1]</a>)</p>
 
-        <h2>Optimizing Your Calorie Surplus Rate</h2>
+        <h2>What Is a Calorie Surplus and How Does It Build Muscle?</h2>
+        <p>A calorie surplus means consuming more energy than your body uses over time. Your estimated maintenance calories represent the intake that would generally maintain your body weight under similar conditions.</p>
+
+        <div class="worked-example-card">
+          <p><strong>Basic Surplus Calculation Example:</strong></p>
+          <p>If your estimated maintenance is 2,500 calories and you add a 300-calorie surplus:</p>
+          <p class="calc-step-line"><strong>Starting Calorie Target = 2,500 + 300 = 2,800 calories/day</strong></p>
+        </div>
+
+        <p>Consequently, a surplus can support weight gain, although the amount and type of weight gained (lean muscle vs. fat tissue) vary between people.</p>
+        <p>Muscle growth also depends on progressive resistance training, sufficient protein, recovery, sleep quality, training experience, and other individual biological factors. In fact, research has not established one universal surplus that maximizes muscle growth while minimizing fat gain. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h2>How to Use It</h2>
+        <p>Start by entering your basic information into our tool, such as age, sex, height, current weight, and activity level. Depending on your specific goals, you may also enter your target weight, resistance training experience, or desired rate of gain.</p>
+        <p>Next, the tool estimates your baseline energy needs and adds your selected surplus. As a result, you receive a customized daily calorie target that serves as your structured starting point.</p>
+
+        <div class="formula-callout-box">
+          <p><strong>Surplus Target Formula:</strong></p>
+          <p><strong>Daily Calorie Target = Estimated TDEE + Selected Calorie Surplus</strong></p>
+          <p style="margin-top:0.5rem; font-size:0.95rem;">For example: 2,400 kcal (TDEE) + 250 kcal (Surplus) = <strong>2,650 calories/day</strong></p>
+        </div>
+
+        <p>Keep in mind that this number is an estimate. Therefore, your actual scale weight trend remains important when deciding whether your calorie target needs adjustment over time.</p>
+
+        <h2>How It's Calculated</h2>
+        <p>Most calculations begin with an estimate of <strong>BMR (Basal Metabolic Rate)</strong>. This represents the energy your body requires for basic physiological functions at complete rest. Learn more about your baseline floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+        <p>Next, daily physical activity is used to estimate <strong>TDEE (Total Daily Energy Expenditure)</strong>. Calculate your baseline expenditure with our <a href="/">homepage TDEE Calculator</a>. Finally, the selected surplus is added to establish your target intake.</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>Step-by-Step Calculation Sequence:</strong></p>
+          <p><strong>BMR &rarr; Physical Activity &rarr; TDEE &rarr; Calorie Surplus &rarr; Daily Calorie Target</strong></p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Calculation Step</th>
+                <th style="text-align: right;">Estimated Calories</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Estimated BMR</strong></td>
+                <td style="text-align: right;">1,650 kcal/day</td>
+              </tr>
+              <tr>
+                <td><strong>Estimated TDEE</strong> (Activity Applied)</td>
+                <td style="text-align: right;">2,400 kcal/day</td>
+              </tr>
+              <tr>
+                <td><strong>Selected Daily Surplus</strong></td>
+                <td style="text-align: right;">+250 kcal/day</td>
+              </tr>
+              <tr>
+                <td><strong>Final Target Intake</strong></td>
+                <td style="text-align: right;"><strong>2,650 kcal/day</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Because TDEE is a population-based estimate, the final number should be treated as a starting point rather than an exact prescription.</p>
+
+        <h2>Worked Example</h2>
+        <div class="worked-example-card">
+          <p>Suppose your estimated maintenance intake is <strong>2,500 calories per day</strong>. You want gradual, controlled weight gain, so you start with a 300-calorie surplus.</p>
+          <p class="calc-step-line"><strong>2,500 + 300 = 2,800 calories per day</strong></p>
+          <p>Your starting target would therefore be about <strong>2,800 calories per day</strong>.</p>
+        </div>
+
+        <p>Afterward, track your food intake and body-weight trend consistently. Rather than reacting to one individual weigh-in, look for a weekly average pattern over several weeks.</p>
+
+        <h2>How Big Should a Surplus Be for a Lean Bulk?</h2>
+        <p>There is no single surplus that works identically for everyone. However, practical starting examples often include:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Daily Calorie Surplus</th>
+                <th>General Bulking Approach & Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>+200 calories/day</strong></td>
+                <td>Smaller, gradual increase (optimal for lean bulking and fat gain minimization)</td>
+              </tr>
+              <tr>
+                <td><strong>+300 calories/day</strong></td>
+                <td>Moderate increase (balanced approach for steady weight gain)</td>
+              </tr>
+              <tr>
+                <td><strong>+500 calories/day</strong></td>
+                <td>Larger, faster-gain approach (higher rate of weight gain, higher risk of fat accumulation)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These numbers should not be treated as fixed scientific rules. For example, the same 300-calorie surplus represents a different percentage increase for different body sizes.</p>
+        <p>Research in resistance-trained individuals found that larger surpluses can increase total body mass and skinfold fat thickness without consistently producing greater muscle mass or strength gains. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals - PubMed">PubMed [2]</a>) Therefore, a controlled, moderate approach is often more appropriate when limiting unnecessary fat gain is important.</p>
+
+        <h2>Calories to Gain Weight Per Week</h2>
+        <p>A daily surplus can be multiplied by seven to estimate the weekly energy difference. Thus, a 300-calorie daily surplus equals:</p>
+        <p class="calc-step-line"><strong>300 × 7 = 2,100 extra calories per week</strong></p>
+        <p>Nevertheless, this does not predict exact weekly weight gain. Changes in scale weight also reflect water retention, muscle glycogen storage, food volume in digestion, activity fluctuations, and changes in energy expenditure.</p>
+        <p>For that reason, use calorie calculations as planning tools rather than promises. A review of energy-surplus research notes that simple mathematical estimates cannot fully capture the complex biological processes involved in gaining skeletal muscle. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h2>Surplus Scenarios Compared</h2>
+        <p>A smaller surplus (+150 to +250 kcal) may suit someone who wants slower, more controlled weight gain while keeping body fat levels low. Conversely, a larger surplus (+400 to +500 kcal) may be useful when faster weight gain is the priority (e.g. underweight individuals or hardgainers), although it can also increase the potential for additional fat gain.</p>
+        <p>The better question is therefore not simply, “Which surplus is biggest?” Instead, ask whether your current intake is producing the rate and quality of progress you want.</p>
+
+        <h2>Macros in a Surplus</h2>
+        <p>Calories provide the overall energy target, while <strong>protein, carbohydrates, and dietary fat</strong> determine how those calories are distributed across your daily nutrition.</p>
+
+        <div class="about-calculator-card">
+          <p><strong>Macronutrient Distribution Guidelines:</strong></p>
+          <ul>
+            <li><strong>Protein:</strong> Especially important during resistance training. The International Society of Sports Nutrition (ISSN) position stand states that approximately <strong>1.4–2.0 grams of protein per kilogram of body weight per day</strong> is sufficient for most exercising individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="ISSN Position Stand: protein and exercise - PubMed">PubMed [3]</a>)</li>
+            <li><strong>Carbohydrates:</strong> Provide high-intensity workout energy and replenish muscle glycogen stores for progressive overload.</li>
+            <li><strong>Dietary Fats:</strong> Support hormone production (testosterone, growth factors) and overall physiological health.</li>
+          </ul>
+        </div>
+
+        <p>Therefore, a calorie surplus should not mean simply eating large amounts of low-nutrient "junk" food. A balanced, nutrient-dense diet remains essential for supporting workout performance and overall recovery. Customize your macros with our <a href="/macro-calculator/">Macro Calculator</a>.</p>
+
+        <h2>Bulking for Beginners</h2>
+        <p>Beginners commonly make two opposite mistakes when bulking:</p>
+        <div class="question-callout-box">
+          <ul>
+            <li><strong>Eating Too Little:</strong> Fearing any fat gain, which prevents them from providing enough energy to build new muscle tissue.</li>
+            <li><strong>Eating Aggressively ("Dirty Bulking"):</strong> Consuming excessive calories under the false assumption that more food guarantees faster muscle growth.</li>
+          </ul>
+        </div>
+
+        <p>A better approach is to establish a reasonable starting target, consume adequate protein (1.6–2.2 g/kg), follow consistent progressive resistance training, and monitor progress over time. In addition, sleep and recovery matter because muscle tissue adaptation depends on more than calorie intake alone.</p>
+        <p>Most importantly, a calorie surplus does not replace hard training. Resistance exercise provides the mechanical stimulus for muscle adaptation, while adequate nutrition helps support that biological process. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+
+        <h2>Why Bigger Surpluses Aren't Better for Muscle</h2>
+        <p>More calories do not automatically translate into more muscle synthesis. Once energy intake is sufficient to support maximum Muscle Protein Synthesis (MPS), substantially increasing the surplus primarily increases body weight and adipose fat gain without producing proportional muscle gains.</p>
+        <p>A controlled study of resistance-trained individuals compared maintenance, moderate-surplus, and high-surplus groups. Faster body-weight gain in the high-surplus group was associated primarily with greater increases in skinfold thickness, while muscle thickness and strength outcomes did not clearly favor the larger surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+        <p>However, that study was relatively small and lasted eight weeks. Therefore, its results should inform—not dictate—individual training and nutrition decisions.</p>
+
+        <h2>Tracking Your Intake Accurately</h2>
+        <p>The calculator gives you a starting number; tracking tells you whether that number is working in the real world.</p>
+
+        <div class="disclaimer-callout-card">
+          <p><strong>Tracking Best Practices:</strong> Record calories as consistently as practical, including cooking oils, snacks, drinks, sauces, and calorie-dense items. Weigh yourself under similar conditions (morning after waking and using the bathroom).</p>
+        </div>
+
+        <p>Daily scale weight can fluctuate considerably due to sodium, water, and digestive food volume. Therefore, compare <strong>weekly average weights</strong> over 2 to 4 weeks instead of focusing on one individual weigh-in.</p>
+        <p>If your weight is not moving toward your goal for a sustained period, review your tracking accuracy and activity first. Then, if necessary, make a modest adjustment (+150 to +200 calories) to your target.</p>
+
+        <h2>Key Terms Explained</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>TDEE:</strong> Total Daily Energy Expenditure, or an estimate of total calories burned in 24 hours.</li>
+            <li><strong>BMR:</strong> Basal Metabolic Rate, or an estimate of resting energy required for baseline physiological survival.</li>
+            <li><strong>Maintenance Calories:</strong> The average calorie intake that maintains body weight over time. See our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a>.</li>
+            <li><strong>Calorie Surplus:</strong> Consuming more energy than your body expends.</li>
+            <li><strong>Lean Bulk:</strong> A controlled surplus designed to maximize muscle gain while minimizing body fat accumulation.</li>
+            <li><strong>Dirty Bulk:</strong> An aggressive surplus with minimal attention to calorie quality or fat accumulation.</li>
+            <li><strong>Glycogen:</strong> Stored carbohydrate in muscle and liver tissue. Each gram of glycogen binds 3 to 4 grams of water, affecting short-term scale weight.</li>
+          </ul>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>How big should a calorie surplus be to build muscle?</h3>
+          <p>There is no single universally proven surplus for everyone. A smaller or moderate surplus (+200 to +300 kcal/day) is an excellent starting point for lean bulking, followed by real-world progress tracking. Research continues to show uncertainty around the exact optimal surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+          <h3>Will I gain fat in a calorie surplus?</h3>
+          <p>Some minor fat gain can occur during a bulking phase, but the amount varies. Generally, larger surpluses increase the proportion of fat gained. Monitoring your weight trend and keeping the rate of gain controlled helps limit fat accretion. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+
+          <h3>How much protein do I need in a calorie surplus?</h3>
+          <p>For most exercising individuals, approximately <strong>1.4–2.0 g/kg of body weight per day</strong> (or up to 2.2 g/kg for intense lifters) is a well-supported range for supporting muscle recovery and growth. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+
+          <h3>Why am I not gaining weight even though I am eating more?</h3>
+          <p>Your estimated maintenance may be higher than expected, your actual intake may be lower than tracked, or your daily movement (NEAT) may have spontaneously increased. Check portion sizes, sauces, and tracking consistency before increasing your target.</p>
+
+          <h3>How often should I adjust my calorie target?</h3>
+          <p>Avoid changing your target based on one single weigh-in. Instead, compare your weekly average weight trend over 3 to 4 weeks. If your weight stalls, increase daily intake by 150 to 200 calories.</p>
+
+          <h3>Is the 3,500-calorie rule exact?</h3>
+          <p>No. The 3,500-calorie rule is a simplified energy model and should not be treated as a guarantee of exact body mass gain. Real-world weight change is affected by metabolic adaptation, muscle tissue synthesis costs, water retention, and glycogen storage.</p>
+        </div>
+
+        <h2>Related Calculators and Guides</h2>
+        <p>A <strong>calorie surplus calculator</strong> can turn a general goal like gaining muscle into a structured daily calorie target. Calculate your estimated needs, choose a realistic target, track your progress, and adjust as your body adapts over time. Explore our complete calculator suite:</p>
+
         <ul>
-          <li><strong>Lean Surplus (+10% TDEE):</strong> Adds roughly 0.2 kg/week. This is the optimal range for minimizing fat gain while providing enough energy for progressive overload in the gym.</li>
-          <li><strong>Moderate Surplus (+15% TDEE):</strong> Recommended for intermediate lifters and athletes in rigorous training programs who need extra recovery fuel.</li>
-          <li><strong>Aggressive Surplus (+20% TDEE):</strong> Suitable primarily for underweight beginners ("hardgainers") or enhanced bodybuilders who can synthesize muscle at supra-physiological rates.</li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a> — Estimate your baseline resting metabolic floor.</li>
+          <li><a href="/">TDEE Calculator</a> — Estimate total daily energy expenditure across all activity levels.</li>
+          <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> — Determine your zero-gain weight maintenance intake.</li>
+          <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> — Calculate optimal calorie targets and timelines for fat loss.</li>
+          <li><a href="/macro-calculator/">Macro Calculator</a> — Customize your daily protein, carb, and fat distributions.</li>
+          <li><a href="/calories-burned-calculator/">Calories Burned Calculator</a> — Estimate energy expended during specific workouts and activities.</li>
+          <li><a href="/how-we-calculate/">Methodology & Scientific References</a> — Learn about our mathematical equations and research foundation.</li>
         </ul>
 
-        <h2>Tracking Your Weight Gain Averages</h2>
-        <p>Because daily weight fluctuates wildly due to glycogen, sodium, and water retention, you should weigh yourself daily but only adjust your surplus based on your <strong>weekly average weight</strong>. If your weekly average is increasing by 0.2kg to 0.4kg per week, you are in a perfect lean bulk. If it stalls, slightly increase your surplus. Always ensure you are hitting your protein targets using our <a href="/macro-calculator/">Macro Calculator</a>.</p>
-      `
+        <div class="takeaway-callout-box">
+          <p><strong>Complete Energy Planning Framework:</strong></p>
+          <p><strong>BMR &rarr; TDEE &rarr; Maintenance Baseline &rarr; Calorie Surplus Target &rarr; Macro Distribution</strong></p>
+        </div>
+
+        <h2>Sources & Scientific References</h2>
+        <ul>
+          <li>Slater GJ, Dieter BP, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training. <em>Front Nutr</em>. 2019;6:131. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Garthe I, et al. Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals. <em>Int J Sport Nutr Exerc Metab</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>A calorie surplus calculator turns a general goal such as gaining weight or building muscle into a practical starting calorie target. However, evidence does not support treating one fixed surplus as perfect for everyone. A better method is to estimate your TDEE, select a reasonable surplus (+200 to +300 kcal), consume adequate protein, train consistently with progressive resistance, and evaluate your real-world progress over time.</p>
+          <p>The most useful framework is simple: <strong>Calculate, Eat, Track, Evaluate, and Adjust</strong>. Use our calculator as an evidence-informed starting baseline rather than a permanent prescription.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This calculator is intended for informational and educational purposes. It does not diagnose medical conditions or provide individualized medical or nutrition treatment.</p>
+        </div>`
     },
 
     '/macro-calculator/': {
