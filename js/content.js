@@ -277,34 +277,404 @@ window.TDEEContent = {
     // ==========================================
 
     '/bmr-calculator/': {
-      title: 'BMR Calculator: Calculate Basal Metabolic Rate Accurately',
-      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Discover your baseline resting calorie burn.',
+      title: 'BMR Calculator: Calculate Your Basal Metabolic Rate Accurately',
+      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Understand BMR vs RMR, energy expenditure, and calorie requirements.',
       category: 'Calculator',
-      h1: 'BMR Calculator (Basal Metabolic Rate)',
-      content: `
-        <p>Your <strong>Basal Metabolic Rate (BMR)</strong> is the total number of calories your body burns while at complete rest to keep your brain, heart, lungs, liver, and cellular processes functioning over 24 hours.</p>
-        
-        <h2>How BMR Is Calculated</h2>
-        <p>Our tool utilizes the two most clinical formulas validated in metabolic research:</p>
+      h1: 'BMR Calculator: Calculate Your Basal Metabolic Rate',
+      content: `<p class="lead-paragraph">You enter your age, height, weight, and sex into a BMR calculator and get a calorie number. But then the confusion starts. Is that number how many calories you should eat? Why does another calculator give you a different result? And does a higher or lower BMR mean your metabolism is better or worse?</p>
+
+        <p>These questions can make calorie planning harder than it needs to be. Our BMR Calculator gives you a clear starting estimate using the Mifflin-St Jeor equation and explains what the result means, how it is calculated, and where its limits are. The goal is not to present one number as a perfect measurement. It is to give you a transparent estimate that you can understand and use as part of a broader calorie-planning process.</p>
+
+        <h2>What Is BMR?</h2>
+        <p><strong>BMR stands for Basal Metabolic Rate.</strong></p>
+        <p>It describes the energy your body uses to support basic physiological functions while at rest under strict laboratory conditions. These functions include breathing, circulation, maintaining body temperature, supporting brain function, and normal cellular activity.</p>
+        <p>Your BMR does not represent all the energy you use during a normal day.</p>
+        <p>Walking, exercising, working, cooking, cleaning, and digesting food all require additional energy. This is why your total daily energy expenditure is generally higher than your BMR.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>A simple way to understand the core distinction:</strong></p>
+          <ul>
+            <li><strong>BMR</strong> = estimated resting energy expenditure (cellular baseline at 100% rest)</li>
+            <li><strong>TDEE</strong> = estimated total daily energy expenditure (resting expenditure + movement + exercise + digestion)</li>
+          </ul>
+        </div>
+
+        <p>Online calculators do not directly measure your BMR. They use prediction equations based on information such as age, sex, height, and weight.</p>
+
+        <div class="disclaimer-callout-card">
+          <p><strong>Important:</strong> Your BMR result is an estimate of resting energy expenditure. It is not automatically the number of calories you should eat each day.</p>
+        </div>
+
+        <h2>How Does the BMR Calculator Work?</h2>
+        <p>Our BMR Calculator uses the <strong>Mifflin-St Jeor equation</strong> to estimate resting energy expenditure.</p>
+        <p>You enter:</p>
         <ul>
-          <li><strong>Mifflin-St Jeor Formula:</strong> The gold standard equation for healthy adults based on age, sex, height, and body weight. It is widely considered the most accurate resting metabolic rate predictor in modern clinical settings.</li>
-          <li><strong>Katch-McArdle Formula:</strong> Activated when body fat percentage is supplied, calculating resting expenditure directly from Lean Body Mass (LBM). This is exceptionally useful for athletes and bodybuilders with high muscle mass.</li>
+          <li>Age</li>
+          <li>Sex</li>
+          <li>Height</li>
+          <li>Weight</li>
+        </ul>
+        <p>The calculator applies the equation to these values and returns an estimated number of calories per day.</p>
+        <p>The original Mifflin-St Jeor research developed predictive equations for resting energy expenditure using data from <strong>498 healthy adults</strong>. Their resting energy expenditure was measured using indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Technically, the Mifflin-St Jeor equation estimates <strong>resting energy expenditure (REE)</strong>. Consumer calculators commonly use the result as a BMR estimate because BMR and resting metabolic rate are closely related concepts.</p>
+
+        <div class="about-calculator-card">
+          <h3>Calculation Method Overview</h3>
+          <ul>
+            <li><strong>Primary Equation:</strong> Mifflin-St Jeor (1990 clinical standard)</li>
+            <li><strong>Required Inputs:</strong> Age, biological sex, height, and body weight</li>
+            <li><strong>Output Result:</strong> Estimated resting energy expenditure (REE) in calories/day</li>
+            <li><strong>Important Limitation:</strong> The result is a population-based prediction, not a direct laboratory measurement of your personal metabolism.</li>
+          </ul>
+        </div>
+
+        <p>Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+
+        <h2>How to Use the BMR Calculator</h2>
+        <p>Using the calculator requires only a few basic details.</p>
+
+        <h3>Step 1: Enter Your Age</h3>
+        <p>Enter your age in years. Age is one of the primary independent variables used by the Mifflin-St Jeor equation, as baseline metabolic expenditure tends to change predictably across adulthood.</p>
+
+        <h3>Step 2: Select Your Sex</h3>
+        <p>Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <h3>Step 3: Enter Your Height</h3>
+        <p>Enter your height using the available unit options (Centimeters or Feet & Inches). Height reflects body surface area and structural organ scale.</p>
+
+        <h3>Step 4: Enter Your Weight</h3>
+        <p>Enter your current body weight in Kilograms or Pounds. Body mass is the single strongest driver of total resting metabolic output.</p>
+
+        <h3>Step 5: Calculate Your BMR</h3>
+        <p>The calculator applies the selected equation and gives you an estimated resting calorie expenditure. Remember that this number is a starting estimate, not a direct measurement of your metabolism.</p>
+
+        <h2>What Does Your BMR Result Mean?</h2>
+        <p>Your BMR result estimates how much energy your body may use at rest based on the equation and the information you entered. It does <strong>not</strong> tell you exactly how many calories you should eat.</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Definition & Practical Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BMR</strong></td>
+                <td>Estimated energy expenditure at complete physiological rest under strict fasting/post-absorptive conditions.</td>
+              </tr>
+              <tr>
+                <td><strong>RMR / REE</strong></td>
+                <td>Resting metabolic or energy expenditure measured or estimated under less strict conditions than laboratory BMR.</td>
+              </tr>
+              <tr>
+                <td><strong>TDEE</strong></td>
+                <td>Estimated total energy expenditure across 24 hours including resting expenditure, movement, exercise, and digestion.</td>
+              </tr>
+              <tr>
+                <td><strong>Maintenance Calories</strong></td>
+                <td>An estimated daily calorie intake associated with maintaining stable body weight over time.</td>
+              </tr>
+              <tr>
+                <td><strong>Calorie Deficit</strong></td>
+                <td>A daily calorie intake below estimated total daily energy expenditure, required for fat loss.</td>
+              </tr>
+              <tr>
+                <td><strong>Calorie Surplus</strong></td>
+                <td>A daily calorie intake above estimated total daily energy expenditure, required for mass/muscle gain.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>For example, if your estimated BMR is 1,500 calories per day, that does not mean 1,500 calories is your daily calorie requirement. Your total energy expenditure is higher because you move, walk, exercise, digest food, and perform other routine daily activities.</p>
+
+        <h2>How to Calculate BMR</h2>
+        <p>The Mifflin-St Jeor equation is widely used to estimate resting energy expenditure. It utilizes four main body parameters: Weight, Height, Age, and Sex.</p>
+
+        <h3>Mifflin-St Jeor Equation Breakdown</h3>
+        <div class="equation-box">
+          <p><strong>For Men:</strong> BMR estimate = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5</p>
+          <p style="margin-top: 0.5rem;"><strong>For Women:</strong> BMR estimate = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161</p>
+        </div>
+
+        <p>These equations are simplified versions of the predictive equations published in the original Mifflin-St Jeor study. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Because the original research describes these as resting energy expenditure equations, it is more precise to call the calculator result an <strong>estimated resting energy expenditure</strong> even though consumer calculators commonly label it BMR.</p>
+
+        <h3>BMR Calculation Worked Example</h3>
+        <div class="worked-example-card">
+          <p>Suppose a 30-year-old woman weighs <strong>65 kg</strong> and is <strong>165 cm</strong> tall.</p>
+          <p>Applying the female Mifflin-St Jeor formula step-by-step:</p>
+          <p class="calc-step-line"><strong>Step 1 (Weight):</strong> 10 × 65 kg = 650</p>
+          <p class="calc-step-line"><strong>Step 2 (Height):</strong> 6.25 × 165 cm = 1,031.25</p>
+          <p class="calc-step-line"><strong>Step 3 (Age penalty):</strong> 5 × 30 years = 150</p>
+          <p class="calc-step-line"><strong>Step 4 (Female Constant):</strong> -161</p>
+          <p class="calc-step-line"><strong>BMR Estimate = 650 + 1,031.25 − 150 − 161 = 1,370.25 kcal/day</strong></p>
+          <p>The estimated resting energy expenditure is therefore about <strong>1,370 calories per day</strong>.</p>
+        </div>
+        <p>This does not mean she should automatically eat 1,370 calories per day. Her actual daily energy needs depend on activity and other components of energy expenditure.</p>
+
+        <h2>Other BMR Formulas</h2>
+        <p>Mifflin-St Jeor is not the only equation used to estimate resting energy expenditure. Other commonly encountered formulas include the <strong>Revised Harris-Benedict equation</strong> and <strong>Katch-McArdle equation</strong>. Different formulas can produce different results because they were developed using different sample populations and variables.</p>
+
+        <h3>Revised Harris-Benedict Equation</h3>
+        <p>The original Harris-Benedict equation was developed in 1919 and revised in 1984. It uses variables such as age, sex, height, and weight. Different versions of the Harris-Benedict equation exist, so the exact formula matters when comparing results.</p>
+
+        <h3>Katch-McArdle Formula</h3>
+        <p>The Katch-McArdle approach uses lean body mass rather than biological sex as a direct variable.</p>
+        <div class="formula-callout-box">
+          <p><strong>Katch-McArdle Equation: RDEE = 370 + (21.6 × Lean Body Mass in kg)</strong></p>
+        </div>
+        <p>Because the formula depends on lean body mass, its result also depends on the accuracy of your body-composition estimate. Home bioelectrical impedance scales and calipers can produce imperfect body-fat estimates, so the result should still be treated as an estimate.</p>
+
+        <h2>BMR vs RMR</h2>
+        <p>BMR and RMR stand for:</p>
+        <ul>
+          <li><strong>BMR:</strong> Basal Metabolic Rate</li>
+          <li><strong>RMR:</strong> Resting Metabolic Rate</li>
+        </ul>
+        <p>The terms are closely related but are not technically identical. BMR has stricter laboratory measurement conditions (measured immediately upon waking after 8 hours of sleep and a 12-hour overnight fast in a temperature-controlled room). RMR is measured under less restrictive resting conditions and is often used as a practical estimate of resting energy expenditure. In consumer health and fitness content, BMR, RMR, and REE are sometimes used interchangeably. For a calculator, the important point is that these values describe resting energy expenditure rather than your complete daily calorie expenditure. (<a href="https://www.healthline.com/health/how-to-calculate-your-basal-metabolic-rate?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Basal Metabolic Rate Calculator - Healthline">Healthline [3]</a>)</p>
+
+        <h2>BMR vs TDEE</h2>
+        <p>BMR and TDEE describe different parts of your overall energy expenditure energy balance.</p>
+        <ul>
+          <li><strong>BMR</strong> estimates energy used at 100% rest.</li>
+          <li><strong>TDEE</strong> estimates your total energy expenditure across the entire day.</li>
+        </ul>
+        <p>TDEE includes resting energy expenditure, physical activity, structured exercise, non-exercise daily movement (NEAT), and the thermic effect of food (TEF). This means your TDEE is generally higher than your BMR.</p>
+        <div class="comparison-summary-box">
+          <p><strong>Physiological Pipeline Model:</strong></p>
+          <p><strong>BMR → Daily Movement & Physical Activity → Thermic Effect of Food → TDEE</strong></p>
+        </div>
+        <p>If you want to estimate your daily calorie needs, calculating BMR alone is not enough.</p>
+
+        <h2>How BMR Is Used to Estimate TDEE</h2>
+        <p>A common practical approach in clinical dietetics is to multiply estimated resting energy expenditure by an activity factor:</p>
+        <div class="formula-callout-box">
+          <p><strong>Estimated TDEE = BMR × Activity Factor</strong></p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level Category</th>
+                <th style="text-align: right;">Example Factor</th>
+                <th>Typical Routine Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+                <td>Little to no regular exercise, desk-bound job</td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+                <td>Light exercise 1–3 days/week or light daily movement</td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+                <td>Moderate exercise 3–5 days/week and active routine</td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+                <td>Hard exercise 6–7 days/week or active physical job</td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong></td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+                <td>Very heavy physical job combined with daily intense training</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These factors are estimation tools. They are not direct measurements of how many calories you burn. For example, if your estimated BMR is 1,500 calories and you use an activity factor of 1.55:</p>
+        <p class="calc-step-line"><strong>Estimated TDEE = 1,500 × 1.55 = 2,325 calories/day</strong></p>
+        <p>This gives you a starting estimate of total daily energy expenditure. For a more detailed calculation, use our <a href="/">homepage TDEE Calculator</a>.</p>
+
+        <h2>How to Choose Your Activity Level</h2>
+        <p>Choosing the right activity level can be difficult because people often overestimate or underestimate their daily movement. Consider your normal routine over a full typical week rather than one unusually active day.</p>
+
+        <h3>Sedentary</h3>
+        <p>You spend most of the day sitting at a desk or driving, and perform little to no structured exercise.</p>
+
+        <h3>Lightly Active</h3>
+        <p>You have a desk job but walk regularly or perform 1 to 3 light exercise sessions per week.</p>
+
+        <h3>Moderately Active</h3>
+        <p>You exercise 3 to 5 times per week and maintain an active daily schedule (e.g. 8,000–10,000 daily steps).</p>
+
+        <h3>Very Active</h3>
+        <p>You perform frequent or intense workout sessions 6 to 7 days per week and have a physically active lifestyle.</p>
+
+        <h3>Extra Active</h3>
+        <p>You have an intensely demanding physical job (construction, farming, athletics) combined with rigorous daily training.</p>
+
+        <p>Activity factors are approximate. If your calculated TDEE does not match your real-world weight trend over time, that does not necessarily mean the calculator is wrong. It may mean that your actual activity or energy expenditure differs from the general estimate.</p>
+
+        <h2>What Factors Affect BMR?</h2>
+        <p>There is no single BMR that applies to everyone. Several physiological factors directly affect resting energy expenditure:</p>
+
+        <h3>Body Size</h3>
+        <p>Larger bodies generally require more total energy to support their organ systems and metabolic processes at rest.</p>
+
+        <h3>Height</h3>
+        <p>Height is included in the Mifflin-St Jeor equation and several other prediction equations to account for body surface area.</p>
+
+        <h3>Age</h3>
+        <p>Age is another variable used by common resting-energy equations. Resting energy expenditure tends to decline gradually across adulthood, primarily due to changes in muscle mass and endocrine regulation.</p>
+
+        <h3>Sex</h3>
+        <p>Mifflin-St Jeor uses different baseline constants for biological men and women to account for average population differences in fat-free mass.</p>
+
+        <h3>Body Composition</h3>
+        <p>Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <h3>Individual Biological Differences</h3>
+        <p>Prediction equations cannot capture every biological difference between individuals, such as thyroid hormone levels, genetics, or mitochondrial efficiency. This is one reason why a BMR calculator should be treated as an estimate rather than an exact measurement.</p>
+
+        <h2>Why Does BMR Matter?</h2>
+        <p>BMR gives you a useful starting point for understanding your energy needs. It helps explain why your total daily calorie needs are higher than the calories your body uses at rest. It can also be used as one part of a broader calorie-planning process:</p>
+        <div class="takeaway-callout-box">
+          <p><strong>Calorie Planning Flow:</strong> BMR → TDEE → Calorie Target</p>
+        </div>
+        <p>This is far more practical and healthy than treating your resting BMR as your daily calorie ceiling.</p>
+
+        <h2>What Is a Good BMR?</h2>
+        <p>There is no single "good" BMR. A BMR estimate of 1,300 calories is not automatically better or worse than an estimate of 1,700 calories. Your estimated resting energy expenditure depends on height, weight, age, sex, and body composition. Comparing your BMR with another person's BMR can therefore be misleading. A higher BMR does not automatically mean better health, and a lower BMR does not automatically mean something is wrong.</p>
+
+        <h3>What Is a Normal BMR by Age?</h3>
+        <p>There is no single normal BMR value for each age group. Two people of the same age can have very different BMR estimates because their height, weight, sex, and body composition may differ. For this reason, an age-only BMR chart cannot accurately tell you what your personal BMR should be.</p>
+
+        <h2>How to Use BMR for Weight Loss</h2>
+        <p>BMR can help you understand your baseline energy needs, but it should not be used alone to set a weight-loss calorie target. A practical process involves three steps:</p>
+        <ol>
+          <li><strong>Estimate BMR:</strong> Calculate your baseline resting energy expenditure.</li>
+          <li><strong>Estimate TDEE:</strong> Account for daily movement, step counts, and workouts.</li>
+          <li><strong>Set a Suitable Calorie Target:</strong> Subtract a moderate percentage (e.g. 15%–25%) from TDEE.</li>
+        </ol>
+        <p>The key rule to remember: <strong>BMR is not your weight-loss calorie target.</strong> Your calorie needs depend on your complete daily energy expenditure and individual goals.</p>
+
+        <h3>Should You Eat Your BMR to Lose Weight?</h3>
+        <p>There is no general rule that says you should eat exactly your BMR. BMR estimates resting energy expenditure. It does not represent your complete daily calorie needs. Eating at or near BMR for extended periods without medical supervision can cause fatigue, nutritional deficiencies, and extreme hunger. For individualized nutrition advice, consult a qualified healthcare professional or registered dietitian.</p>
+
+        <h2>Can You Increase BMR?</h2>
+        <p>Be careful with claims that a specific food, supplement, or exercise can dramatically increase BMR. There is no simple method that guarantees a massive surge in resting energy expenditure for everyone. Lean body mass is associated with resting energy expenditure, so increasing your muscle mass through resistance training can support higher resting energy needs over time. Regular exercise also increases overall daily energy expenditure, but increasing your workout calories (EEE) is not the same as directly altering your baseline BMR. A better goal is to support overall health, strength, physical activity, and healthy body composition rather than chase a specific BMR number.</p>
+
+        <h2>How Accurate Is a BMR Calculator?</h2>
+        <p>A BMR calculator can provide a useful baseline estimate, but it cannot tell you your exact metabolic rate. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. Later validation research found that it can be a useful prediction equation, while also showing that prediction accuracy varies between individuals and populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <p>Accuracy can vary because:</p>
+        <ul>
+          <li>Your actual resting energy expenditure may differ from population averages.</li>
+          <li>Your body composition (muscle-to-fat ratio) may differ from sample populations.</li>
+          <li>Input measurements (height, weight) may contain slight inaccuracies.</li>
+          <li>Different mathematical equations yield slightly different estimates.</li>
+          <li>Measurement conditions and stress levels affect resting expenditure.</li>
+        </ul>
+        <p>A calculator should therefore present its result as an estimate rather than an exact measurement.</p>
+
+        <h3>Why Do BMR Calculators Give Different Results?</h3>
+        <p>Different calculators may use different underlying equations. One may use <strong>Mifflin-St Jeor</strong>, while another may use <strong>Harris-Benedict</strong> or <strong>Katch-McArdle</strong>. Different input assumptions, rounding rules, and body-composition algorithms can also produce different results. A difference between two calculators does not mean one is broken; compare the methodology before deciding why the numbers differ.</p>
+
+        <h2>Can BMR Be Measured?</h2>
+        <p>Yes. Resting energy expenditure can be measured rather than estimated. One established clinical method is <strong>indirect calorimetry</strong>. Indirect calorimetry measures oxygen consumption (VO2) and carbon dioxide production (VCO2) to calculate real-time metabolic heat production. This is fundamentally different from an online calculator. An online calculator uses a prediction equation based on statistical averages, whereas indirect calorimetry measures your actual physiological data under controlled laboratory conditions. Research shows that prediction equations can have meaningful individual errors compared with measured resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+
+        <h2>Why Does BMR Change When You Lose Weight?</h2>
+        <p>Your estimated BMR changes as your body mass changes. For example, if your weight decreases by 10 kg, entering your new weight into the same equation will produce a lower estimated resting energy expenditure. This does not automatically mean that your metabolism is "damaged." It simply reflects the physical reality that a smaller body requires fewer calories to support its tissues at rest. For this reason, calorie targets should be periodically reassessed as your body weight changes instead of treating one initial BMR number as permanent.</p>
+
+        <h2>Special Populations and BMR Calculators</h2>
+        <p>Standard BMR equations are designed as general prediction tools for healthy adults and may not be appropriate for every situation. Extra caution is needed for:</p>
+        <ul>
+          <li>Children and growing adolescents</li>
+          <li>Pregnant or breastfeeding women</li>
+          <li>Individuals with thyroid disorders or metabolic conditions</li>
+          <li>Clinical nutrition or medical recovery situations</li>
+          <li>Elite athletes with extreme lean body mass percentages</li>
+        </ul>
+        <p>Research has found that prediction accuracy can vary across populations and individual characteristics. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [4]</a>) If you need individualized calorie or nutrition guidance, speak with a qualified healthcare professional.</p>
+
+        <h2>Common BMR Calculation Mistakes</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li><strong>Using BMR as Your Daily Calorie Target:</strong> BMR only estimates resting burn, not total daily needs.</li>
+            <li><strong>Confusing BMR With TDEE:</strong> TDEE includes activity, movement, and food digestion.</li>
+            <li><strong>Comparing Your BMR With Someone Else's:</strong> Different body sizes and compositions yield different baseline numbers.</li>
+            <li><strong>Treating the Calculator as an Exact Measurement:</strong> Prediction equations provide statistical estimates, not laboratory data.</li>
+            <li><strong>Entering Incorrect Information:</strong> Minor errors in height, weight, or age distort formula outputs.</li>
+            <li><strong>Assuming Every Formula Gives the Same Result:</strong> Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle apply different variables.</li>
+            <li><strong>Believing One BMR Number Defines Your Metabolism:</strong> Human metabolism is dynamic and responds to lifestyle, sleep, and training.</li>
+          </ul>
+        </div>
+
+        <h2>BMR and Macros</h2>
+        <p>BMR alone is not enough to determine your complete macronutrient needs. Macronutrients refer to <strong>Protein</strong>, <strong>Carbohydrates</strong>, and <strong>Fat</strong>. Your macro targets depend on your total calorie intake, activity level, fitness goals, and preferences. A logical planning sequence is:</p>
+        <div class="takeaway-callout-box">
+          <p><strong>BMR → TDEE → Calorie Target → Macro Distribution</strong></p>
+        </div>
+        <p>This keeps resting energy expenditure separate from total daily calorie needs. You can calculate customized protein, carb, and fat targets with our <a href="/macro-calculator/">Macro Calculator</a>.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>What is BMR?</h3>
+          <p>BMR stands for Basal Metabolic Rate. It describes the energy your body uses under strict resting conditions to support basic physiological functions like breathing and circulation. Online calculators estimate it using predictive equations.</p>
+
+          <h3>How do I calculate my BMR?</h3>
+          <p>A common clinical method is the Mifflin-St Jeor equation, which uses age, sex, height, and body weight to estimate resting energy expenditure.</p>
+
+          <h3>What is the difference between BMR and TDEE?</h3>
+          <p>BMR estimates energy expenditure at rest. TDEE estimates your total energy expenditure across 24 hours, including daily movement, exercise, and food digestion.</p>
+
+          <h3>Do I burn calories while sleeping?</h3>
+          <p>Yes. Your body continues burning calories during sleep to power baseline physiological functions such as respiration, brain activity, and tissue repair.</p>
+
+          <h3>What is a good BMR for my age?</h3>
+          <p>There is no single "good" BMR for an age group. Your BMR depends on height, weight, sex, and body composition. A higher or lower number simply reflects body size and tissue mass.</p>
+
+          <h3>Should I eat my BMR to lose weight?</h3>
+          <p>Not as a general rule. BMR represents resting energy expenditure, not your total energy intake requirement. Weight loss targets should be calculated based on TDEE and individual health needs.</p>
+
+          <h3>How accurate is a BMR calculator?</h3>
+          <p>A BMR calculator provides a statistical estimate, not a direct measurement. Accuracy varies by individual. Laboratory indirect calorimetry provides direct physiological measurement.</p>
+
+          <h3>Why is my BMR different from another calculator?</h3>
+          <p>Calculators may use different underlying formulas (Mifflin-St Jeor vs. Harris-Benedict vs. Katch-McArdle), rounding methods, or unit inputs. Check the methodology of each tool.</p>
+
+          <h3>Should my BMR go down when I lose weight?</h3>
+          <p>Yes, your estimated BMR will naturally decrease as body weight decreases because smaller body mass requires less energy to maintain at rest.</p>
+        </div>
+
+        <h2>Related Calculators and Guides</h2>
+        <p>Once you know your estimated BMR, continue your calorie planning with our dedicated suite of tools:</p>
+        <ul>
+          <li><a href="/">TDEE Calculator</a> — Estimate your total daily energy expenditure based on BMR and activity level.</li>
+          <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> — Find your exact zero-gain calorie target.</li>
+          <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> — Calculate optimal calorie targets and timelines for fat loss.</li>
+          <li><a href="/macro-calculator/">Macro Calculator</a> — Customize your daily protein, carb, and fat distributions.</li>
+          <li><a href="/how-we-calculate/">Methodology & Scientific References</a> — Explore our mathematical engine and clinical studies.</li>
         </ul>
 
-        <h2>BMR vs. Resting Metabolic Rate (RMR)</h2>
-        <p>While often used interchangeably, BMR and RMR are slightly different. BMR is measured under strict laboratory conditions (typically after 8 hours of sleep and a 12-hour fast). RMR is measured under less strict conditions and is usually about 10% higher than BMR because it includes the energy of low-effort daily activities like eating and shivering. Our calculator focuses on your true biological baseline (BMR).</p>
-
-        <h2>Factors That Influence Your BMR</h2>
-        <p>Your basal metabolic rate is not static. Several physiological factors can increase or decrease it:</p>
+        <h2>Sources & Scientific References</h2>
         <ul>
-          <li><strong>Lean Muscle Mass:</strong> Muscle tissue is highly metabolically active compared to adipose (fat) tissue. <a href="/blog/tdee-for-weight-loss/">Building muscle</a> is the most effective way to permanently raise your BMR.</li>
-          <li><strong>Age:</strong> As humans age, BMR naturally declines, largely due to sarcopenia (the loss of muscle mass) and hormonal shifts.</li>
-          <li><strong>Genetics and Thyroid Function:</strong> Hormones like thyroxine (T4) and triiodothyronine (T3) play massive roles in regulating cellular energy.</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005;105(5):775-789. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Healthline Editorial Team. Basal Metabolic Rate Calculator & Overview. (<a href="https://www.healthline.com/health/how-to-calculate-your-basal-metabolic-rate?utm_source=chatgpt.com" target="_blank" rel="noopener">Healthline [3]</a>)</li>
+          <li>Weijs PJ. Validity of predictive equations for resting energy expenditure in US and European overweight and obese adults. <em>Public Health Nutr</em>. 2008;11(1):85-94. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
+          <li>Sabounchi NS, et al. Predicting resting energy expenditure: a critical appraisal and validation review. <em>Int J Obes</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37391582/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [5]</a>)</li>
         </ul>
 
-        <h2>Why BMR Matters for Your TDEE</h2>
-        <p>BMR forms the absolute baseline layer of your <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure (TDEE)</a>. It represents roughly 60% to 70% of the calories you burn every day. Once your BMR is established, applying your lifestyle activity factor provides your total daily energy requirement.</p>
-      `
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>When developing a BMR calculator, the goal should not be to simply display a single calorie number. A useful tool must explain how that number was estimated, what the calculation represents biologically, and why the result can differ from a measured metabolic rate. That is why our calculator uses a documented equation and clearly separates estimated resting energy expenditure from total daily calorie needs.</p>
+          <p>Your BMR is a useful starting point, but it is only one part of your overall energy expenditure. Your physical activity, daily movement, body composition, food intake, and sleep quality also matter. Once you understand your estimated BMR, you can use our TDEE Calculator to estimate your total daily energy expenditure and continue your calorie-planning process. For personalized health or nutrition guidance, calculator estimates should always be considered alongside advice from a qualified healthcare professional.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This calculator is intended for informational and educational purposes. It does not diagnose medical conditions or provide individualized medical or nutrition treatment.</p>
+        </div>`
     },
 
     '/maintenance-calorie-calculator/': {
