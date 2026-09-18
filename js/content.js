@@ -459,55 +459,267 @@ window.TDEEContent = {
 
     '/blog/tdee-vs-bmr/': {
       title: 'TDEE vs BMR: What Is the Difference & Which Should You Use?',
-      metaDescription: 'Understand the difference between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy breakdown, and avoiding starvation deficits.',
+      metaDescription: 'Understand the key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy breakdown, RMR vs BMR, and calorie planning.',
       category: 'Comparisons',
       readTime: '6 min read',
-      h1: 'TDEE vs BMR: Key Differences & Organ Energy Breakdown',
-      content: `
-        <p>While both <strong>BMR (Basal Metabolic Rate)</strong> and <strong>TDEE (Total Daily Energy Expenditure)</strong> are foundational numbers in clinical nutrition, confusing the two is one of the most common mistakes people make when planning a diet.</p>
-        
-        <h2>Key Differences at a Glance</h2>
-        <table style="width:100%; border-collapse:collapse; margin:1.5rem 0; text-align:left;">
-          <thead>
-            <tr style="border-bottom:2px solid var(--border-color); color:var(--accent-cyan);">
-              <th style="padding:0.75rem;">Metric</th>
-              <th style="padding:0.75rem;">Definition</th>
-              <th style="padding:0.75rem;">Includes Activity?</th>
-              <th style="padding:0.75rem;">Primary Use Case</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border-color);">
-              <td style="padding:0.75rem;"><strong>BMR</strong></td>
-              <td style="padding:0.75rem;">Calories burned at complete 24-hour rest</td>
-              <td style="padding:0.75rem;">❌ No movement included</td>
-              <td style="padding:0.75rem;">Clinical baseline energy floor</td>
-            </tr>
-            <tr>
-              <td style="padding:0.75rem;"><strong>TDEE</strong></td>
-              <td style="padding:0.75rem;">Total calories burned including movement & exercise</td>
-              <td style="padding:0.75rem;">✓ Full daily activity included</td>
-              <td style="padding:0.75rem;">Setting maintenance, fat loss, or bulk targets</td>
-            </tr>
-          </tbody>
-        </table>
+      h1: 'TDEE vs BMR: What’s the Difference and Which One Should You Use?',
+      content: `<p class="lead-paragraph">You enter your age, height, weight, and activity level into a calorie calculator. Then two numbers appear: BMR and TDEE. One may show 1,600 calories while the other shows 2,400, leaving you unsure which number represents your actual calorie needs.</p>
 
-        <h2>Organ Baseline Energy Breakdown at Rest (BMR)</h2>
-        <p>Your BMR represents the energy demanded by vital biological organs. According to clinical physiological data, BMR energy is consumed as follows:</p>
+        <p>That confusion is understandable. <strong>TDEE vs BMR</strong> becomes much easier to understand once you know what each number measures. BMR estimates your resting energy needs, whereas TDEE estimates your total daily energy expenditure, including resting energy, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [1]</a>)</p>
+
+        <h2>TDEE vs BMR: Quick Comparison</h2>
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Feature / Metric</th>
+                <th>BMR (Basal Metabolic Rate)</th>
+                <th>TDEE (Total Daily Energy Expenditure)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Full Name</strong></td>
+                <td>Basal Metabolic Rate</td>
+                <td>Total Daily Energy Expenditure</td>
+              </tr>
+              <tr>
+                <td><strong>Measures</strong></td>
+                <td>Energy used at 100% rest (cellular baseline)</td>
+                <td>Total daily energy expenditure (24-hour burn)</td>
+              </tr>
+              <tr>
+                <td><strong>Activity Included?</strong></td>
+                <td>❌ No movement or steps included</td>
+                <td>✓ All daily activity & steps included</td>
+              </tr>
+              <tr>
+                <td><strong>Exercise Included?</strong></td>
+                <td>❌ No workout calories included</td>
+                <td>✓ Structured exercise (EAT) included</td>
+              </tr>
+              <tr>
+                <td><strong>Food Digestion Included?</strong></td>
+                <td>❌ Fasting state (no digestion)</td>
+                <td>✓ Thermic effect of food (TEF) included</td>
+              </tr>
+              <tr>
+                <td><strong>Primary Use Case</strong></td>
+                <td>Establishes biological floor / baseline floor</td>
+                <td>Setting maintenance, deficit, or surplus targets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="takeaway-callout-box">
+          <p><strong>In Short:</strong> BMR is your resting baseline (calories burned sleeping in bed), while TDEE estimates your complete energy use across your entire active day.</p>
+        </div>
+
+        <h2>What Is BMR?</h2>
+        <p>BMR stands for <strong>Basal Metabolic Rate</strong>. It refers to the energy your body uses to maintain essential physiological functions under strict laboratory resting conditions.</p>
+        <p>For example, your body continues to use energy for respiration, blood circulation, brain signaling, cellular repair, and organ activity even when you are completely at rest. However, BMR should not be confused with the total calories you use during a normal active day. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Energy - Recommended Dietary Allowances - NCBI Bookshelf">NCBI [2]</a>)</p>
+
+        <h3>How Is BMR Calculated?</h3>
+        <p>Many online calculators estimate resting energy expenditure with predictive equations. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed to predict resting energy expenditure in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [3]</a>)</p>
+
+        <div class="equation-box">
+          <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
+          <p style="margin-top:0.5rem;"><strong>For Women:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) − 161</p>
+        </div>
+
+        <p>Technically, Mifflin-St Jeor predicts resting energy expenditure (REE) rather than laboratory-measured BMR. Nevertheless, consumer online calculators commonly label this estimate as BMR. Calculate your resting floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+
+        <h2>What Is TDEE?</h2>
+        <p>TDEE means <strong>Total Daily Energy Expenditure</strong>. It estimates the total energy your body uses during a typical 24-hour period.</p>
+        <p>Unlike BMR, TDEE includes resting energy, physical activity, non-exercise daily movement (NEAT), and the thermic effect of food (TEF). Therefore, it is far more useful when your goal is to estimate daily calorie expenditure for weight loss, maintenance, or muscle gain. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>Physical activity includes more than formal gym workouts. For instance, walking, standing, cleaning, working at a desk, and other everyday movements also require energy.</p>
+
+        <h2>What Makes Up TDEE?</h2>
+        <p>A simple formula to understand TDEE is:</p>
+
+        <div class="formula-callout-box">
+          <p><strong>TDEE Formula Breakdown:</strong></p>
+          <p><strong>TDEE = Resting Energy (BMR) + Non-Exercise Movement (NEAT) + Exercise (EAT) + Digestion (TEF)</strong></p>
+        </div>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Resting Energy (BMR/REE):</strong> Energy required for baseline biological survival.</li>
+            <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> Energy used through non-exercise movement like walking, standing, and fidgeting.</li>
+            <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Energy burned during intentional physical workouts and sports.</li>
+            <li><strong>TEF (Thermic Effect of Food):</strong> Energy used to digest, absorb, and process macronutrients.</li>
+          </ul>
+        </div>
+
+        <p>Moreover, physical activity is one of the most variable parts of total daily energy expenditure. NEAT can also differ considerably (by up to 800+ kcal/day) between people with similar exercise routines. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?report=reader&utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [4]</a>)</p>
+
+        <h2>How Are BMR and TDEE Related?</h2>
+        <p>BMR is the single largest component of your total daily energy expenditure (accounting for 60%–70% of total burn). Meanwhile, physical activity and food digestion add to the daily total.</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>Calculator Multiplier Method:</strong></p>
+          <p><strong>Estimated TDEE = Estimated BMR &times; Activity Multiplier</strong></p>
+        </div>
+
+        <p>For example, if an estimated BMR is 1,600 calories and the selected activity factor is 1.55 (Moderately Active):</p>
+        <p class="calc-step-line"><strong>TDEE = 1,600 &times; 1.55 = 2,480 calories/day</strong></p>
+        <p>Thus, the estimated TDEE would be about 2,480 calories per day. However, this is a prediction based on an activity assumption, not a direct laboratory measurement of your personal metabolism.</p>
+
+        <h2>TDEE Activity Levels and Multipliers</h2>
+        <p>Many calculators use activity factors to estimate daily energy expenditure:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level Category</th>
+                <th>General Routine Description</th>
+                <th style="text-align: right;">Common Factor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td>Little exercise and mostly sitting (desk job)</td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td>Light exercise or regular movement 1–3 days/week</td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td>Moderate exercise 3–5 days/week with active routine</td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td>Hard training or active physical lifestyle 6–7 days/week</td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Extremely Active</strong></td>
+                <td>Very demanding physical labor work + heavy daily training</td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>However, these categories are estimates. Your activity level should reflect your overall daily movement, not only your gym sessions.</p>
+        <p>For example, someone who exercises three times a week but sits at a desk for most of the day may have a different total activity level from someone who walks frequently and has a physically demanding job.</p>
+
+        <h2>Worked Calculation Example</h2>
+        <div class="worked-example-card">
+          <p>Consider a 30-year-old man who weighs <strong>70 kg</strong> and is <strong>175 cm</strong> tall.</p>
+          <p>Using the male Mifflin-St Jeor formula:</p>
+          <p class="calc-step-line"><strong>BMR = (10 &times; 70) + (6.25 &times; 175) − (5 &times; 30) + 5</strong></p>
+          <p class="calc-step-line"><strong>BMR = 700 + 1,093.75 − 150 + 5 &approx; 1,649 calories/day</strong></p>
+          <p>Now suppose a moderately active factor of 1.55 is appropriate:</p>
+          <p class="calc-step-line"><strong>TDEE = 1,649 &times; 1.55 &approx; 2,556 calories/day</strong></p>
+        </div>
+
+        <p>Therefore, the two numbers answer different questions. BMR estimates resting energy expenditure (~1,650 kcal), while TDEE estimates total daily expenditure (~2,550 kcal) based on the selected activity level.</p>
+
+        <h2>Why Is TDEE Higher Than BMR?</h2>
+        <p>Your body uses energy for far more than basic resting functions. During the day, you walk, stand, exercise, work, clean, cook, and digest food.</p>
+        <p>As a result, total daily expenditure is normally greater than resting expenditure. The exact difference varies because physical activity, body size, body composition, food intake, and other factors differ between people. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+
+        <h2>TDEE vs BMR for Weight Loss</h2>
+        <p>For calorie planning, TDEE is generally the far more useful starting point because it estimates your total daily expenditure.</p>
+        <p>Suppose your estimated TDEE is 2,400 calories. A calorie intake below that estimate represents a theoretical energy deficit. By contrast, BMR describes resting energy needs and does not include your normal daily activity.</p>
+
+        <div class="disclaimer-callout-card">
+          <p><strong>Warning Against Extreme Deficits:</strong> Never use BMR as your calorie target for weight loss. Eating at or below your BMR for extended periods can cause muscle loss, metabolic slowing, and extreme fatigue.</p>
+        </div>
+
+        <p>Still, a calculator result is only an estimate. Your actual energy expenditure may differ from the prediction, so it should not be treated as an exact calorie requirement. Calculate safe fat loss targets on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</p>
+
+        <h2>TDEE vs BMR vs Maintenance Calories</h2>
+        <p>These three concepts are connected but distinct:</p>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>BMR:</strong> Estimated resting energy expenditure (cellular baseline).</li>
+            <li><strong>TDEE:</strong> Estimated total daily energy expenditure (24-hour total burn).</li>
+            <li><strong>Maintenance Calories:</strong> An approximate daily calorie intake associated with maintaining stable body weight over time. Explore zero-gain targets on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a>.</li>
+          </ul>
+        </div>
+
+        <p>Consequently, TDEE can be used as a starting estimate for maintenance calories. Real-world weight trends can then help determine whether that estimate needs adjustment over time.</p>
+
+        <h2>BMR vs RMR</h2>
+        <p>BMR and <strong>RMR (Resting Metabolic Rate)</strong> are closely related but technically different.</p>
+        <p>BMR is measured under stricter laboratory basal conditions (immediately upon waking after 8 hours of sleep and 12 hours of fasting). RMR is measured under less restrictive resting conditions. In everyday calculator use, however, the terms are often used interchangeably because their practical values can be relatively close. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [2]</a>)</p>
+        <p>This distinction matters when discussing scientific laboratory measurements, although it usually does not change the basic explanation needed by someone comparing BMR with TDEE.</p>
+
+        <h2>Why Do TDEE Calculators Give Different Results?</h2>
+        <p>Different calculators can produce different estimates for several reasons:</p>
         <ul>
-          <li><strong>Liver (~27%):</strong> High metabolic conversion and protein synthesis.</li>
-          <li><strong>Brain (~19%):</strong> Continuous electrical signaling and glucose usage.</li>
-          <li><strong>Skeletal Muscle (~18%):</strong> Baseline muscle tone and cellular ion pumping at rest.</li>
-          <li><strong>Kidneys (~10%):</strong> Continuous blood filtration and fluid balance.</li>
-          <li><strong>Heart (~7%):</strong> Incessant mechanical pumping.</li>
-          <li><strong>Other Organs (~19%):</strong> Gastrointestinal lining, skin repair, lungs.</li>
+          <li>Calculators may use different underlying equations (Mifflin-St Jeor vs. Harris-Benedict vs. Katch-McArdle).</li>
+          <li>Calculators may assign different activity multiplier factors.</li>
+          <li>Your actual daily activity may not fit neatly into one fixed category.</li>
+          <li>Predictive equations cannot perfectly measure an individual's unique metabolism.</li>
         </ul>
 
-        <h2>Why You Should Never Eat Below Your BMR</h2>
-        <p>Eating significantly below your BMR causes adaptive thermogenesis (metabolic adaptation). When energy intake drops below baseline cellular requirements, the body responds defensively by downregulating thyroid hormones (T3), lowering spontaneous physical movement, increasing hunger signals, and breaking down lean muscle tissue for fuel.</p>
+        <p>Research on Mifflin-St Jeor supports its usefulness as a resting-energy prediction equation, but individual prediction errors still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>) Therefore, a calculator should provide a <strong>starting estimate</strong>, not a guaranteed measurement.</p>
 
-        <p>To safely lose body fat, always calculate your caloric deficit as a percentage below your <strong>TDEE</strong>, keeping your target calories at or above your baseline BMR. Use our <a href="/bmr-calculator/">standalone BMR calculator</a> to determine your personal floor.</p>
-      `
+        <h2>How to Check Your Estimated TDEE</h2>
+        <p>Start with your estimated TDEE from our <a href="/">homepage TDEE Calculator</a> and use it as a practical reference. Then keep your calorie intake and daily routine reasonably consistent while monitoring your weight trend over several weeks.</p>
+        <p>Afterward, compare the real-world trend with your expectations. If your results consistently differ, your estimated calorie needs may need adjustment.</p>
+        <p>This empirical approach is useful because real-life energy expenditure changes with activity, body composition, food intake, and other factors. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+
+        <h2>Common BMR and TDEE Mistakes</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li>Treating BMR as your normal daily calorie requirement.</li>
+            <li>Choosing an activity level based only on gym workout sessions.</li>
+            <li>Assuming a calculator gives an exact laboratory measurement.</li>
+            <li>Treating TDEE as guaranteed maintenance calories without tracking real-world scale trends.</li>
+            <li>Using the same estimate after major changes in weight (&plusmn;5 kg) or occupation.</li>
+            <li>Assuming every calculator uses the same equation or activity assumptions.</li>
+          </ul>
+        </div>
+
+        <p>Instead, use the calculation as a starting point and reassess when your circumstances change.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>Is TDEE higher than BMR?</h3>
+          <p>Usually, yes. TDEE includes resting energy expenditure (BMR) plus additional expenditure from physical activity, daily movement, and the thermic effect of food digestion.</p>
+
+          <h3>Is BMR included in TDEE?</h3>
+          <p>Yes. Resting energy expenditure (BMR) is the single largest component (60%–70%) of total daily energy expenditure. TDEE also includes physical activity and food digestion. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+
+          <h3>Should I use BMR or TDEE for weight loss?</h3>
+          <p>TDEE is generally the more relevant starting estimate because weight-loss calorie planning considers total daily expenditure rather than resting expenditure alone.</p>
+
+          <h3>How do I calculate TDEE from BMR?</h3>
+          <p>A common calculator method is to multiply your estimated BMR by an activity factor (e.g. TDEE = BMR &times; 1.55). Remember, though, that the result remains an estimate based on your selected activity level.</p>
+        </div>
+
+        <h2>Final Takeaway</h2>
+        <p>The key to understanding <strong>TDEE vs BMR</strong> is simple: BMR estimates resting energy expenditure, whereas TDEE estimates total daily energy expenditure. Therefore, BMR helps explain your resting baseline, while TDEE provides a more practical starting point for estimating daily calorie needs. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+
+        <p>From an evidence-based perspective, calculator results should be treated as estimates rather than exact measurements. Mifflin-St Jeor provides a practical method for estimating resting energy expenditure, but individual results can vary. For that reason, understand the formula, choose your activity level carefully, and compare the estimate with your real-world trend over time. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+
+        <h2>Methodology and Sources</h2>
+        <p>This article uses established energy-expenditure concepts from the <strong>National Academies of Sciences, Engineering, and Medicine</strong> and NCBI resources. The Mifflin-St Jeor equation is identified as a predictive equation for resting energy expenditure, while TDEE is explained through resting energy expenditure, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+
+        <p>Because predictive equations have individual limitations, this article does not present a calculator result as a laboratory measurement or guaranteed maintenance intake. The goal is to provide a transparent, practical explanation that helps readers understand what their BMR and TDEE estimates mean and how to use them responsibly.</p>
+
+        <ul>
+          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>Understanding the difference between resting energy (BMR) and total daily energy burn (TDEE) is essential for effective nutrition planning. Our tools utilize validated clinical formulas to give you clear, transparent data so you can manage your body composition with confidence.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for general educational purposes only and does not constitute medical advice.</p>
+        </div>`
     },
 
     '/blog/tdee-for-weight-loss/': {
