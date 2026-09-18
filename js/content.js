@@ -1409,28 +1409,268 @@ window.TDEEContent = {
     },
 
     '/macro-calculator/': {
-      title: 'Macro Calculator: Calculate Protein, Carbs & Fat Targets',
-      metaDescription: 'Calculate your macronutrient breakdown for fat loss, muscle gain, or maintenance. Customized protein, carb, and fat distributions.',
+      title: 'Macro Calculator: Calculate Daily Protein, Carbs & Fat Targets',
+      metaDescription: 'Calculate your daily macronutrient breakdown (protein, carbs, fat) for weight loss, maintenance, or muscle gain based on TDEE, BMR, and body composition.',
       category: 'Calculator',
       h1: 'Macro Calculator (Flexible Macronutrients)',
-      content: `
-        <p>While total calories determine whether you gain or lose weight, your <strong>macronutrient breakdown (Protein, Carbohydrates, and Fats)</strong> dictates body composition and energy levels.</p>
+      content: `<p class="lead-paragraph">Planning your diet can become confusing fast. You may know your calorie goal but still wonder how much protein, carbohydrates, and fat you should eat. Different calculators can also show different results, making it difficult to know which numbers to use.</p>
 
-        <h2>The Roles of Each Macronutrient</h2>
+        <p>A <strong>Macro Calculator</strong> makes this process easier by turning estimated calorie needs into daily protein, carbohydrate, and fat targets. Therefore, you can use the results as a practical starting point for weight loss, maintenance, muscle gain, or body recomposition. However, these numbers are estimates, so understanding the method behind them matters.</p>
+
+        <h2>What Are Macros and Why Do They Matter?</h2>
+        <p>Macros, short for macronutrients, are the three main nutrients that provide dietary energy:</p>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Protein:</strong> Helps maintain and build body tissues, including skeletal muscle. For many exercising adults, a commonly supported protein range is about 1.4–2.0 grams per kilogram of body weight per day. However, individual needs can vary based on training, body size, and goals.</li>
+            <li><strong>Carbohydrates:</strong> Provide energy, especially during higher-intensity physical activity. Consequently, active people may need more carbohydrates than people with lower activity levels.</li>
+            <li><strong>Fat:</strong> Provides concentrated energy (9 kcal/g) and supports several important body functions. Furthermore, dietary fat helps the body absorb fat-soluble vitamins (A, D, E, K). The quality of fat matters too, so a balanced diet should include nutritious fat sources.</li>
+          </ul>
+        </div>
+
+        <h2>What a Macro Calculator Is Actually Doing</h2>
+        <p>A common macro-planning process follows this logical sequence:</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>Macro Planning Sequence:</strong></p>
+          <p><strong>BMR &rarr; TDEE &rarr; Goal Calories &rarr; Protein Target &rarr; Fat Target &rarr; Carbohydrates</strong></p>
+        </div>
+
+        <p>First, BMR estimates how much energy your body uses at rest. Next, TDEE estimates your total daily energy expenditure by considering physical activity and other energy demands.</p>
+        <p>After that, your goal is used to establish a calorie target. For example, weight loss generally requires an energy deficit, while intentional weight gain may require an energy surplus.</p>
+        <p>Finally, the calorie target is distributed between protein, carbohydrates, and fat. Thus, the result gives you practical daily macro targets.</p>
+        <p>Keep in mind that this is a planning framework rather than one universal formula. Different calculators may use different equations and assumptions.</p>
+
+        <h2>Number of Calories Per Macronutrient</h2>
+        <p>Protein, carbohydrates, and fat provide different amounts of energy per gram:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Macronutrient</th>
+                <th style="text-align: right;">Energy Density (Calories Per Gram)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Protein</strong></td>
+                <td style="text-align: right;"><strong>4 kcal / gram</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Carbohydrates</strong></td>
+                <td style="text-align: right;"><strong>4 kcal / gram</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Fat</strong></td>
+                <td style="text-align: right;"><strong>9 kcal / gram</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Practical Macro Calculation Worked Example</h3>
+        <div class="worked-example-card">
+          <p>Imagine a daily calorie target of <strong>2,400 calories</strong>.</p>
+          <p class="calc-step-line"><strong>Step 1 (Protein):</strong> 150 grams of protein &times; 4 kcal = <strong>600 calories</strong></p>
+          <p class="calc-step-line"><strong>Step 2 (Fat):</strong> 70 grams of fat &times; 9 kcal = <strong>630 calories</strong></p>
+          <p class="calc-step-line"><strong>Step 3 (Remaining Calories for Carbs):</strong> 2,400 − 600 − 630 = <strong>1,170 calories</strong></p>
+          <p class="calc-step-line"><strong>Step 4 (Carbohydrate Grams):</strong> 1,170 &divide; 4 kcal = <strong>292.5 grams</strong></p>
+        </div>
+
+        <div class="table-responsive" style="margin-top:1.5rem;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Macronutrient</th>
+                <th style="text-align: right;">Gram Target</th>
+                <th style="text-align: right;">Calorie Contribution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Protein</strong></td>
+                <td style="text-align: right;">150 g</td>
+                <td style="text-align: right;">600 kcal (25%)</td>
+              </tr>
+              <tr>
+                <td><strong>Carbohydrates</strong></td>
+                <td style="text-align: right;">293 g</td>
+                <td style="text-align: right;">1,170 kcal (49%)</td>
+              </tr>
+              <tr>
+                <td><strong>Fat</strong></td>
+                <td style="text-align: right;">70 g</td>
+                <td style="text-align: right;">630 kcal (26%)</td>
+              </tr>
+              <tr>
+                <td><strong>Total Intake</strong></td>
+                <td style="text-align: right;">—</td>
+                <td style="text-align: right;"><strong>2,400 kcal (100%)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>This example shows how total calorie targets can be converted into practical daily gram targets.</p>
+
+        <h2>How Macro Calories Turn Into Gram Targets</h2>
+        <p>The calculation itself is simple. The harder part is deciding how many calories should come from each macro.</p>
+        <p>Protein is often established first because adequate protein is important for people who train or want to preserve lean mass during weight loss.</p>
+        <p>Next, a fat target can be selected based on dietary needs and health preferences. The remaining calories can then be assigned to carbohydrates.</p>
+        <p>Alternatively, some plans use percentage-based macro ratios. Nevertheless, percentages do not automatically work equally well for every person.</p>
+        <p>For that reason, a useful calculator should explain its assumptions rather than present its numbers as exact requirements.</p>
+
+        <h2>Macronutrient Ratios</h2>
+        <p>Macro ratios describe how total calories are divided between protein, carbohydrates, and fat.</p>
+        <p>For example, a plan could use a certain percentage of calories from protein, another percentage from carbohydrates, and the remainder from fat.</p>
+        <p>However, there is no single macro ratio that is ideal for everyone. Your body size, activity, training, food preferences, and goal can all affect the appropriate starting point.</p>
+        <p>Therefore, percentages should be treated as a planning tool rather than a universal rule.</p>
+
+        <h2>How the Macro Calculator Works: BMR, TDEE, and Activity</h2>
+        <p>Several energy concepts are involved in scientific macro planning:</p>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>BMR (Basal Metabolic Rate):</strong> BMR estimates the baseline energy your body needs to support basic physiological functions while at rest. Calculate your floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</li>
+            <li><strong>TDEE (Total Daily Energy Expenditure):</strong> TDEE estimates the total energy you use throughout the day, accounting for resting needs plus activity. Calculate baseline expenditure on our <a href="/">homepage TDEE Calculator</a>.</li>
+            <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> Includes energy used for everyday movement that is not structured exercise (walking around, standing, household chores).</li>
+            <li><strong>TEF (Thermic Effect of Food):</strong> Refers to the energy your body uses to digest, absorb, and process food. Protein has the highest TEF (20%–30%).</li>
+            <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Refers to energy burned during planned physical exercise.</li>
+          </ul>
+        </div>
+
+        <p>Together, these concepts help explain why calorie and macronutrient needs differ from person to person.</p>
+
+        <h2>How Does the Nutrition Calculator Determine My Calorie and Macro Needs?</h2>
+        <p>Most calculators start with personal information such as age, sex, height, weight, activity level, and primary goal.</p>
+        <p>A BMR equation may then estimate resting energy expenditure. One commonly used equation is the <strong>Mifflin-St Jeor equation</strong>.</p>
+        <p>The estimated BMR is combined with an activity factor to estimate TDEE. Afterward, the calculator may adjust calories according to the selected goal (deficit for weight loss, surplus for muscle gain).</p>
+        <p>Finally, those calories are distributed across protein, carbohydrates, and fat.</p>
+        <p>Research shows that predictive energy equations can be useful but are not perfectly accurate for every individual. Therefore, calculator results should be viewed as estimates rather than direct measurements of your metabolism.</p>
+
+        <h2>Why Do Macro Calculators Give Different Results?</h2>
+        <p>It is normal for two calculators to produce different macro targets.</p>
+        <p>One reason is that calculators may use different BMR equations. Another is that activity multipliers can vary. In addition, each tool may apply different calorie adjustments for weight loss, maintenance, or muscle gain.</p>
+        <p>Some calculators also use different methods for setting protein and fat targets (e.g. g/kg body weight vs. fixed percentages).</p>
+        <p>As a result, a different number does not automatically mean that one calculator is wrong. Instead, compare the methodology, assumptions, and purpose behind each result.</p>
+
+        <h2>How to Choose a Macro Split for Your Goal</h2>
+        <p>Your specific fitness goal should influence how your calories are distributed:</p>
+
+        <h3>Macros for Weight Loss</h3>
+        <p>Weight loss generally requires an energy deficit over time. Protein can help support lean mass, while carbohydrates and fats can be adjusted according to personal preference and activity. Calculate customized deficit targets on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</p>
+
+        <h3>Macros for Muscle Gain</h3>
+        <p>Muscle gain typically requires appropriate resistance training, sufficient protein, and enough total energy. Carbohydrates can also support training performance. Therefore, an overly restrictive approach may make it harder to fuel demanding workouts. Calculate lean bulk targets on our <a href="/calorie-surplus-calculator/">Calorie Surplus Calculator</a>.</p>
+
+        <h3>Macros for Maintenance</h3>
+        <p>Maintenance means aiming to keep body weight relatively stable over time. In practice, your actual maintenance intake may differ from a calculator estimate. Consequently, tracking your weight and intake over several weeks can provide useful real-world information. Learn more on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> page.</p>
+
+        <h3>Body Recomposition</h3>
+        <p>Body recomposition refers to reducing body fat while building or maintaining muscle simultaneously. This goal can be more complex than simply trying to make the scale move in one direction. Therefore, progress can also be evaluated through measurements, strength, photos, and changes in body composition.</p>
+
+        <h2>Calculate Macros Per Meal</h2>
+        <p>Daily targets become easier to follow when they are divided across meals throughout the day.</p>
+        <p>For instance, someone with a 150-gram protein target could distribute protein across breakfast (35g), lunch (40g), dinner (45g), and a post-workout snack (30g).</p>
+        <p>There is no requirement for every meal to contain exactly the same amount. Instead, choose a distribution that fits your schedule, appetite, and lifestyle.</p>
+        <p>Similarly, carbohydrate intake can be adjusted around training windows when that approach works well for your routine.</p>
+
+        <h2>How to Track Your Macros</h2>
+        <p>Once your targets are calculated, tracking becomes the next practical step.</p>
+        <p>Food labels provide information about calories and macronutrients. Digital food-tracking apps can also help estimate daily intake.</p>
+        <p>For greater precision, weighing food with a digital scale can make portion estimates more consistent. On the other hand, hand-portion methods can be useful when weighing every ingredient is inconvenient.</p>
+        <p>The best method is usually the one you can follow consistently over time.</p>
+
+        <h2>Training and Rest Day Macro Planning</h2>
+        <p>Your activity level can change your energy needs from day to day.</p>
+        <p>Someone who trains heavily may choose a higher carbohydrate intake on workout days. Conversely, rest days may require fewer calories or carbs if overall activity is lower.</p>
+        <p>However, this does not mean you must create completely different macro targets every day. A consistent daily target can work well for many people.</p>
+        <p>The important point is to match the approach to your training schedule and overall goal.</p>
+
+        <h2>A Word About Fiber and Sugar</h2>
+        <p>Macros do not tell the entire story of nutrition.</p>
+        <p>For example, two foods can contain similar amounts of carbohydrates while providing very different amounts of fiber, vitamins, minerals, and other micronutrients.</p>
+        <p>Therefore, hitting your macro targets does not automatically make a diet nutritionally balanced.</p>
+        <p>Include a variety of nutrient-dense foods such as vegetables, fruits, whole grains, legumes, lean protein sources, nuts, and seeds.</p>
+        <p>Likewise, pay attention to the quality of fats and carbohydrates rather than focusing only on numbers.</p>
+
+        <h2>Why Macro Tracking Works</h2>
+        <p>Macro tracking can make dietary intake more visible and objective.</p>
+        <p>Instead of guessing how much protein or energy you consume, tracking gives you measurable targets. Consequently, it makes it easier to identify patterns and make controlled adjustments.</p>
+        <p>However, tracking is a tool, not a requirement. Some people prefer detailed tracking, while others use portions and general calorie targets.</p>
+
+        <h2>What to Do After You Calculate Your Macros</h2>
+        <p>Calculating your targets is only the beginning of your journey.</p>
+        <ol>
+          <li><strong>Use the numbers consistently:</strong> Apply your daily gram targets for 2 to 3 weeks.</li>
+          <li><strong>Monitor real-world metrics:</strong> Track body weight averages, measurements, hunger, workout energy, and adherence.</li>
+          <li><strong>Review longer-term trends:</strong> Evaluate progress over several weeks rather than reacting to one single day's weigh-in.</li>
+          <li><strong>Make empirical adjustments:</strong> If progress differs from your goal, check tracking accuracy before adjusting targets.</li>
+        </ol>
+
+        <h2>How to Adjust Your Macro Targets Over Time</h2>
+        <p>Your calculated target may not remain appropriate forever. Changes in body weight, activity, training volume, and goals can affect your energy needs. Therefore, periodic reassessment can be useful.</p>
+        <p>For example, if your actual weight trend consistently differs from the expected direction, review your average calorie intake and activity first. Afterward, adjust calories or macro distribution based on the evidence you have collected.</p>
+
+        <h2>When Macro Planning Is Useful and When It Is Not Enough</h2>
+        <p>Macro planning can be useful when you want clear daily targets or need help organizing your diet. Nevertheless, it does not diagnose nutritional deficiencies or replace individualized medical nutrition advice.</p>
+        <p>People with medical conditions such as diabetes, kidney disease, pregnancy, breastfeeding needs, or a history of disordered eating should seek personalized guidance from a qualified healthcare professional.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>What are macros?</h3>
+          <p>Macros are protein, carbohydrates, and fat. They are the primary macronutrients that provide energy and perform essential biological functions in the human body.</p>
+
+          <h3>What macro split should I use for weight loss, maintenance, or muscle gain?</h3>
+          <p>There is no universal split. Your calorie needs, body size, activity, training, preferences, and goal should guide your starting point (e.g. Balanced 30/40/30, High Protein 35/35/30, or Low Carb).</p>
+
+          <h3>Do I need to hit my macros exactly every day?</h3>
+          <p>No. Daily targets are guidelines. Small differences (&plusmn;5–10g) are normal, and consistency over time is generally more useful than trying to achieve perfect numbers every day.</p>
+
+          <h3>What is the difference between a Macro Calculator and a TDEE calculator?</h3>
+          <p>A TDEE calculator estimates how many calories you use in a typical day. A Macro Calculator uses calorie needs and other inputs to create protein, carbohydrate, and fat gram targets.</p>
+
+          <h3>Should I use gram targets or percentages?</h3>
+          <p>Gram targets (e.g. 150g protein) are often easier to apply to actual food intake. Percentages can still be useful for understanding overall calorie distribution.</p>
+
+          <h3>Can two people eat the same calories and need different macros?</h3>
+          <p>Yes. People can have different body sizes, activity levels, training demands, dietary preferences, and goals. Therefore, identical calorie intake does not automatically mean identical macro targets.</p>
+
+          <h3>What are good macros for weight loss?</h3>
+          <p>A practical weight-loss plan should provide an appropriate calorie deficit while including sufficient protein (1.6–2.2 g/kg) and a balanced intake of carbohydrates and fats.</p>
+        </div>
+
+        <h2>Related Calculators and Guides</h2>
+        <p>A <strong>Macro Calculator</strong> provides a practical way to turn estimated calorie needs into daily protein, carbohydrate, and fat targets. Use it as a structured starting point for your goal. Explore our complete tool suite:</p>
+
         <ul>
-          <li><strong>Protein (4 kcal/g):</strong> Essential for muscle tissue repair, enzyme production, and satiety during fat loss. It also has the highest Thermic Effect of Food (TEF).</li>
-          <li><strong>Carbohydrates (4 kcal/g):</strong> The primary high-intensity fuel source for workout performance and glycogen replenishment.</li>
-          <li><strong>Fats (9 kcal/g):</strong> Required for hormone production (testosterone, estrogen), joint health, and nutrient absorption.</li>
+          <li><a href="/bmr-calculator/">BMR Calculator</a> — Estimate your baseline resting energy floor.</li>
+          <li><a href="/">TDEE Calculator</a> — Estimate total daily energy expenditure across all activity levels.</li>
+          <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> — Determine your zero-gain weight maintenance intake.</li>
+          <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> — Calculate optimal calorie targets for fat loss.</li>
+          <li><a href="/calorie-surplus-calculator/">Calorie Surplus Calculator</a> — Calculate lean bulk targets for muscle gain.</li>
+          <li><a href="/calories-burned-calculator/">Calories Burned Calculator</a> — Estimate energy expended during specific workouts and activities.</li>
+          <li><a href="/how-we-calculate/">Methodology & Scientific References</a> — Learn about our mathematical equations and research foundation.</li>
         </ul>
 
-        <h2>Choosing a Macro Split</h2>
-        <p>There is no "magic" ratio, but depending on your goals (from <a href="/calorie-deficit-calculator/">cutting</a> to <a href="/calorie-surplus-calculator/">bulking</a>), certain presets work best:</p>
+        <div class="takeaway-callout-box">
+          <p><strong>Complete Nutrition Planning Sequence:</strong></p>
+          <p><strong>BMR &rarr; TDEE &rarr; Goal Calorie Target &rarr; Protein Grams &rarr; Fat Grams &rarr; Carbohydrate Grams</strong></p>
+        </div>
+
+        <h2>Sources & Scientific References</h2>
         <ul>
-          <li><strong>Balanced (30/40/30):</strong> The ideal starting point for most active adults.</li>
-          <li><strong>High Protein:</strong> Essential during aggressive fat loss to preserve lean body mass.</li>
-          <li><strong>Low Carb / Keto:</strong> Useful for sedentary individuals or those managing insulin resistance, though not optimal for high-intensity athletes.</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. Dietary Guidelines for Americans, 2020-2025.</li>
         </ul>
-      `
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>A reliable macro calculator should explain its formulas, assumptions, sources, and limitations clearly. Ultimately, the goal is not simply to hit three numbers every single day. It is to create a sustainable eating plan that supports your calorie needs, workout performance, nutritional quality, and long-term health goals.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This calculator is intended for informational and educational purposes. It does not diagnose medical conditions or provide individualized medical or nutrition treatment.</p>
+        </div>`
     },
 
     '/calories-burned-calculator/': {
