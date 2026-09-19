@@ -2571,29 +2571,206 @@ window.TDEEContent = {
     },
 
     '/how-we-calculate/': {
-      title: 'How We Calculate TDEE, BMR & Adaptive Expenditure',
-      metaDescription: 'Comprehensive breakdown of our mathematical formulas, activity score algorithms, and adaptive calibration models.',
+      title: 'How We Calculate: TDEE Calculator Methodology',
+      metaDescription: 'Learn how we calculate TDEE, BMR, and resting energy expenditure. Explore our formula selection, unit conversions, activity factors, rounding, testing, and limitations.',
       category: 'Methodology',
-      h1: 'How We Calculate: Scientific Formulas & Methodology',
-      content: `
-        <p>Transparency is our highest priority. We believe you should understand exactly how your body's energy needs are being calculated. Here is the comprehensive mathematical framework and methodology powering our tools:</p>
-        
-        <h2>1. The Baseline: Mifflin-St Jeor Equation</h2>
-        <p>For users who do not know their body fat percentage, we calculate Basal Metabolic Rate (BMR) using the <strong>Mifflin-St Jeor equation</strong>. Published in 1990, this formula has been repeatedly validated by clinical dietitians as the most accurate predictive equation for modern adults, offering a precision rate within ±10% for the majority of the population.</p>
-        <p><em>Men: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5</em><br>
-        <em>Women: (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161</em></p>
-        
-        <h2>2. Advanced Precision: Katch-McArdle Equation</h2>
-        <p>When a user supplies their body fat percentage, our engine automatically switches to the <strong>Katch-McArdle equation</strong>. This formula ignores total body weight and instead calculates resting expenditure directly from Lean Body Mass (LBM). This prevents the calculator from overestimating the calorie needs of individuals with higher body fat, and underestimating the needs of heavily muscled athletes.</p>
-        <p><em>BMR = 370 + (21.6 × Lean Body Mass in kg)</em></p>
-        
-        <h2>3. Activity Multipliers (TDEE)</h2>
-        <p>To convert BMR into Total Daily Energy Expenditure (TDEE), we apply standard physical activity level (PAL) multipliers ranging from 1.2 (Sedentary) to 1.9 (Extra Active). For users who utilize our Smart Wizard, we dynamically adjust these multipliers based on reported step counts and workout intensity to generate a custom fractional multiplier (e.g., 1.42).</p>
-        
-        <h2>4. The Adaptive Calibration Engine</h2>
-        <p>Static formulas can only estimate. Our signature <strong>Adaptive Calibration Engine</strong> looks at what actually happens in the real world. By analyzing your daily caloric intake against your daily scale weight over a 14 to 28 day period, we use linear regression to find your true observed TDEE.</p>
-        <p>The engine utilizes the established clinical constant that a change in body tissue of 1 kilogram roughly equates to an energy imbalance of 7,700 kilocalories (or 3,500 kcals per pound). By calculating the daily energy delta required to produce your specific rate of weight change, we output a calibrated TDEE that is customized to your unique metabolic rate and NEAT (Non-Exercise Activity Thermogenesis) levels.</p>
-      `
+      readTime: '7 min read',
+      h1: 'How We Calculate: TDEE Calculator Methodology',
+      content: `<p class="lead-paragraph">Have you ever entered the same details into two calorie calculators and received different results? That can make a simple calorie question confusing. Without knowing the formula, assumptions, and calculation method, it is difficult to understand why the numbers do not match.</p>
+
+        <p>At <strong>TDEECalculator</strong>, our goal is to make the calculation process clear. Therefore, this page explains <strong>how we calculate</strong> TDEE, where the formula comes from, how inputs are handled, and what the final estimate can and cannot tell you.</p>
+
+        <h2>How We Calculate TDEE</h2>
+        <p>The calculation follows a simple, transparent 5-step process:</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>The Calculation Pipeline:</strong></p>
+          <p><strong>Inputs &rarr; Unit Conversion &rarr; Resting Energy Estimate &rarr; Activity Factor &rarr; Final TDEE</strong></p>
+        </div>
+
+        <p>First, the calculator uses your basic information (age, biological sex, height, weight). Next, the required unit conversions are applied. Then, resting energy expenditure is estimated. Finally, an activity factor is used to estimate total daily energy expenditure.</p>
+        <p>As a result, the final number is an <strong>estimate</strong>, not a direct laboratory measurement of your metabolism.</p>
+
+        <h2>How We Choose the Formula</h2>
+        <p>Formula selection matters because different equations can produce different results.</p>
+        <p>For resting energy expenditure, the <strong>Mifflin-St Jeor Equation</strong> is a widely used, clinically validated predictive equation. The original 1990 study included 498 healthy adults (251 men and 247 women aged 19–78) and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <div class="equation-box">
+          <p><strong>Men:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
+          <p style="margin-top:0.5rem;"><strong>Women:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) − 161</p>
+        </div>
+
+        <p>Importantly, this equation predicts <strong>resting energy expenditure (REE)</strong>. It does not directly measure your personal metabolic rate. Learn more in our detailed <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor Equation Guide</a>.</p>
+
+        <h2>How We Handle Your Inputs</h2>
+        <p>Several inputs affect the calculation:</p>
+        <ul>
+          <li><strong>Age:</strong> Accounts for age-related changes in metabolic rate (-5 calories per year).</li>
+          <li><strong>Weight:</strong> Mass directly drives baseline metabolic expenditure (10 &times; kg).</li>
+          <li><strong>Height:</strong> Accounts for height and body surface area (6.25 &times; cm).</li>
+          <li><strong>Sex:</strong> Applies biological baseline constants (+5 for men, -161 for women).</li>
+          <li><strong>Activity Level:</strong> Applies physical activity level (PAL) multipliers (1.2 to 1.9).</li>
+        </ul>
+
+        <p>Each value has a specific role. For example, age, weight, height, and sex are used in the Mifflin-St Jeor calculation. Meanwhile, activity level is used later to estimate TDEE.</p>
+
+        <h3>Units Matter</h3>
+        <p>The formula uses kilograms for weight and centimeters for height. Consequently, imperial units (pounds and inches) must be converted before they are used in the equation.</p>
+        <p>For example:</p>
+        <ul>
+          <li><strong>180 lb &approx; 81.65 kg</strong> (pounds &divide; 2.20462)</li>
+          <li><strong>70 in &approx; 177.8 cm</strong> (inches &times; 2.54)</li>
+        </ul>
+        <p>A wrong unit can produce a drastically incorrect result. Therefore, correct unit handling is an important part of our calculation process.</p>
+
+        <h2>How We Calculate Resting Energy</h2>
+        <p>Once the inputs are ready, the formula is applied.</p>
+
+        <div class="worked-example-card">
+          <p><strong>Resting Calculation Example:</strong> Consider a 30-year-old man weighing <strong>80 kg</strong> with a height of <strong>180 cm</strong>:</p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 80) + (6.25 &times; 180) − (5 &times; 30) + 5</strong></p>
+          <p class="calc-step-line"><strong>REE = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
+        </div>
+
+        <p>That figure represents estimated resting energy expenditure. However, it is not yet the person's TDEE. Check your resting baseline on our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+
+        <h2>How We Calculate TDEE</h2>
+        <p>TDEE means <strong>Total Daily Energy Expenditure</strong>.</p>
+        <div class="formula-callout-box">
+          <p><strong>TDEE Calculation Method:</strong></p>
+          <p><strong>TDEE = Estimated REE &times; Activity Factor</strong></p>
+        </div>
+
+        <p>Suppose the estimated REE is 1,780 calories and the selected activity factor is 1.55 (Moderately Active):</p>
+        <p class="calc-step-line"><strong>TDEE = 1,780 &times; 1.55 = 2,759 calories/day</strong></p>
+        <p>Therefore, the estimated TDEE is about <strong>2,759 calories per day</strong> on our <a href="/">homepage TDEE Calculator</a>.</p>
+        <p>Still, an activity factor is only an estimate. Two people in the same activity category can have different jobs, exercise habits, walking levels, and daily movement. Learn more in our guide on <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE</a>.</p>
+
+        <h2>BMR, RMR, REE, and TDEE</h2>
+        <p>These terms are related, but they are not identical:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>BMR (Basal Metabolic Rate):</strong> Basal energy requirements measured under strict laboratory resting conditions (fasting, post-sleep).</li>
+            <li><strong>RMR / REE (Resting Metabolic / Energy Expenditure):</strong> Energy used at rest under less rigid fasting conditions.</li>
+            <li><strong>TDEE (Total Daily Energy Expenditure):</strong> Total energy expenditure across the entire 24-hour day (REE + physical activity + food digestion).</li>
+          </ul>
+        </div>
+
+        <p>Online calculators sometimes use “BMR” when referring to a resting-energy estimate. However, the original Mifflin-St Jeor research developed a predictive equation for resting energy expenditure (REE). Read our breakdown in the <a href="/blog/tdee-vs-bmr/">TDEE vs BMR Guide</a>.</p>
+
+        <h2>How We Handle Rounding</h2>
+        <p>Calculations can produce decimal values.</p>
+        <p>For instance, a result of <strong>2,758.7 calories</strong> is displayed as <strong>2,759 calories</strong>.</p>
+        <p>This makes the result easier to read. Furthermore, different rounding rules can cause small differences (&plusmn;1–5 kcal) between calculators.</p>
+        <p>For that reason, a rounded result should not be treated as more precise than the underlying estimate.</p>
+
+        <h2>How We Test Calculations</h2>
+        <p>A calculator should produce results that can be reproduced.</p>
+        <p>For this reason, our testing suite includes manual calculations, known benchmarks, unit conversion accuracy checks, different input combinations, and rounding behavior validation.</p>
+        <p>In addition, testing helps identify formula implementation errors. However, mathematical testing does not prove that a prediction will be exact for every person.</p>
+        <p>A formula can be implemented correctly while still producing an estimate that differs from an individual's actual energy expenditure.</p>
+
+        <h2>Why Two Calculators Give Different Results</h2>
+        <div class="question-callout-box">
+          <p>Different calculators can produce different answers for several reasons:</p>
+          <ul>
+            <li>Calculators may use different underlying formulas (Mifflin-St Jeor vs Harris-Benedict vs Katch-McArdle).</li>
+            <li>Calculators may assign different activity multipliers.</li>
+            <li>Calculators may apply different body composition assumptions.</li>
+            <li>Calculators may handle unit conversions or rounding differently.</li>
+          </ul>
+        </div>
+
+        <p>Therefore, a different result does not automatically mean that one calculator is mathematically wrong.</p>
+        <p>Instead, compare the <strong>formula, inputs, assumptions, and calculation method</strong> behind each result.</p>
+
+        <h2>Calculated, Sourced, and Assumed Values</h2>
+        <p>Calculator values come from different sources:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Value Type</th>
+                <th>Meaning & Methodology</th>
+                <th>Example in Calculator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Calculated</strong></td>
+                <td>Produced dynamically by a mathematical formula</td>
+                <td>Estimated REE & TDEE numbers</td>
+              </tr>
+              <tr>
+                <td><strong>Sourced</strong></td>
+                <td>Based on peer-reviewed published clinical research</td>
+                <td>Mifflin-St Jeor Equation constants</td>
+              </tr>
+              <tr>
+                <td><strong>Assumed</strong></td>
+                <td>Used when direct laboratory measurement is unavailable</td>
+                <td>Physical Activity Multipliers (1.2–1.9)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>This distinction improves transparency. Moreover, it helps explain why a calculator provides an estimate rather than a laboratory measurement.</p>
+
+        <h2>How Accurate Is a TDEE Calculation?</h2>
+        <p>A TDEE calculator is a prediction tool.</p>
+        <p>Research shows that predictive energy equations can have individual errors (&plusmn;10% in ~82% of people), and accuracy can vary across different populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Consequently, a calculated TDEE should be treated as a <strong>starting estimate</strong>.</p>
+        <p>It cannot directly measure your metabolism. Likewise, it cannot guarantee a specific change in body weight from a particular calorie intake on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> or <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</p>
+
+        <h2>What a TDEE Calculator Can and Cannot Tell You</h2>
+        <div class="disclaimer-callout-card">
+          <p><strong>What It Can Tell You:</strong> Estimates daily energy needs from your personal inputs to give you an evidence-based starting point.</p>
+          <p style="margin-top: 0.5rem;"><strong>What It Cannot Tell You:</strong> Cannot directly measure your individual metabolism, determine exact daily burn, or guarantee how your weight will respond to a specific intake.</p>
+        </div>
+
+        <p>Actual energy expenditure can vary because of individual differences, body composition, physical activity, exercise, and daily movement.</p>
+        <p>Therefore, the result should be used as a practical estimate rather than an exact measurement.</p>
+
+        <h2>Our Sources and Methodology</h2>
+        <p>The Mifflin-St Jeor Equation was published in the <em>American Journal of Clinical Nutrition</em> in 1990. The original study included 498 healthy subjects and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Later research has also evaluated predictive energy equations and their limitations. These findings support using such formulas as estimates while recognizing that individual accuracy can vary.</p>
+        <p>For that reason, our methodology focuses on clear formulas, transparent calculations, documented sources, and honest limitations.</p>
+
+        <ul>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>How does TDEECalculator calculate TDEE?</h3>
+          <p>TDEE is estimated by calculating resting energy expenditure using the Mifflin-St Jeor equation and then applying an activity factor. The final value represents estimated daily energy expenditure.</p>
+
+          <h3>Why does my TDEE differ between calculators?</h3>
+          <p>Different formulas, activity factors, assumptions, unit conversions, and rounding methods can produce different results. Comparing the methodology behind each calculator can explain the difference.</p>
+
+          <h3>Is a TDEE calculator 100% accurate?</h3>
+          <p>No. TDEE calculators use predictive equations and activity estimates. Individual energy expenditure can differ from the calculated result.</p>
+
+          <h3>What formula is used to calculate resting energy expenditure?</h3>
+          <p>The Mifflin-St Jeor Equation is a commonly used predictive equation. It uses age, weight, height, and sex to estimate resting energy expenditure.</p>
+
+          <h3>Does TDEE equal BMR?</h3>
+          <p>No. BMR refers to basal energy requirements under specific conditions, while TDEE represents total daily energy expenditure. TDEE therefore includes energy expenditure beyond resting needs.</p>
+        </div>
+
+        <h2>The Bottom Line</h2>
+        <p>A useful calculator should not hide the process behind its result. Instead, the formula, inputs, assumptions, and limitations should be clear enough for users to understand.</p>
+        <p>Our approach to <strong>how we calculate</strong> TDEE is based on a documented equation, clear calculation steps, practical examples, and transparent limitations. The Mifflin-St Jeor Equation has a published research foundation, yet it remains a predictive equation rather than a direct measurement of an individual's metabolism.</p>
+        <p>Ultimately, good calculator methodology is about transparency. The purpose is not to make an estimate appear perfectly precise. Rather, it is to help you understand <strong>where the number comes from, how it was calculated, and how the result should be interpreted</strong>.</p>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>We built TDEECalculator with a commitment to mathematical clarity and scientific integrity. By explaining every equation, multiplier, and limitation, we empower you to take full control of your nutrition strategy with confidence.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This methodology page is for educational purposes only and does not constitute medical advice.</p>
+        </div>`
     },
 
     '/sources/': {
