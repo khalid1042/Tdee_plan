@@ -2504,29 +2504,124 @@ window.TDEEContent = {
     // ==========================================
 
     '/about/': {
-      title: 'About Us: Science-Backed Energy Expenditure Platform',
-      metaDescription: 'Learn about our team, scientific calculation methodology, and commitment to evidence-based nutrition tools.',
+      title: 'About Our TDEE Platform: Methodology, Science, and Tools',
+      metaDescription: 'Learn about our TDEE calculation platform, scientific sources (Mifflin-St Jeor), formula limitations, input transparency, and commitment to evidence-based nutrition.',
       category: 'Company',
+      readTime: '6 min read',
       h1: 'About Our TDEE Platform',
-      content: `
-        <p>Welcome to <strong>TDEE Calculator</strong>, a platform dedicated to providing science-backed, accurate, and actionable energy expenditure tools.</p>
-        
-        <h2>Our Mission</h2>
-        <p>Our mission is to bridge the gap between static mathematical energy formulas and real-world human metabolic adaptation. Standard calculators often provide a single, static estimate that can be frustratingly inaccurate for individuals with unique metabolisms, changing activity levels, or extended dieting histories. Our tool empowers users not just with a baseline starting point, but with an <strong>adaptive calibration engine</strong> that aligns the math with your body's real-world weight trends.</p>
-        
-        <h2>Who We Are</h2>
-        <p>We are a team of data-driven fitness enthusiasts, developers, and nutrition science researchers. We noticed that while there are many TDEE calculators on the internet, most rely on outdated formulas or fail to explain the massive error margins inherent in estimating metabolism. We built this platform to provide a transparent, clinical-grade tool that anyone can use for free.</p>
-        
-        <h2>Our Core Values</h2>
+      content: `<p class="lead-paragraph">Finding your daily calorie needs can become confusing when different calculators give different answers. One tool may show 2,300 calories while another shows 2,500, leaving you unsure which result to trust. <strong>As a result, the real problem is not getting a number; it is understanding how that number was calculated.</strong></p>
+
+        <p><strong>About Our TDEE Platform</strong> explains the formulas, inputs, assumptions, sources, and limitations behind our calculations. Rather than presenting a number without context, the goal is to make the calculation easier to understand. Moreover, this approach helps users see what a TDEE estimate can tell them and where its accuracy has limits.</p>
+
+        <h2>The Premise</h2>
+        <p>A TDEE calculator estimates how much energy a person may use during a typical day. It does not directly measure metabolism. Instead, a predictive equation estimates resting energy expenditure, and an activity factor is then used to estimate total daily energy expenditure.</p>
+
+        <p>Therefore, <strong>About Our TDEE Platform</strong> treats TDEE as an estimate rather than an exact biological measurement. Research supports predictive equations as useful tools, but individual differences can still produce meaningful errors. A systematic review found Mifflin-St Jeor to be the most reliable among several commonly used equations examined, while also noting important individual limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [1]</a>)</p>
+
+        <h2>What TDEECalculator Does</h2>
+        <p>TDEECalculator brings related calorie and nutrition tools together in one platform. These tools include:</p>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/">TDEE Calculator</a> — Estimates total daily energy expenditure based on activity.</li>
+            <li><a href="/bmr-calculator/">BMR Calculator</a> — Establishes cellular resting energy expenditure floor.</li>
+            <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> — Determines zero-weight-change baseline calories.</li>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> — Projects sustainable fat loss calorie targets.</li>
+            <li><a href="/macro-calculator/">Macro Calculator</a> — Converts calorie goals into protein, carb, and fat targets.</li>
+            <li><a href="/calories-burned-calculator/">Calories Burned Calculator</a> — Estimates workout energy burn across physical activities.</li>
+          </ul>
+        </div>
+
+        <p>Together, these calculators support different stages of calorie planning. However, each result should still be viewed within the limits of its underlying formula and assumptions. Consequently, the platform focuses on useful estimates rather than claims of perfect precision.</p>
+
+        <h2>How We Calculate</h2>
+        <p>The basic calculation follows a clear, transparent path:</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Calculation Sequence:</strong></p>
+          <p><strong>Personal Inputs &rarr; Resting-Energy Estimate &rarr; Activity Adjustment &rarr; Estimated TDEE</strong></p>
+        </div>
+
+        <p>First, information such as age, sex, height, and weight is entered into the selected equation. Next, the resulting resting-energy estimate is adjusted for activity. Finally, the calculation produces an estimated TDEE. Read our full technical engine breakdown on <a href="/how-we-calculate/">How We Calculate</a>.</p>
+
+        <h3>Choosing a Formula</h3>
+        <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original 1990 study developed this predictive equation using data from 498 healthy adults, with resting energy expenditure measured through indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
+        <p>The published equation uses weight, height, age, and sex. Furthermore, later research found Mifflin-St Jeor performed well compared with several commonly used alternatives, although it is not equally accurate for every individual or population. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h3>Activity Matters</h3>
+        <p>Resting energy is only one part of total daily expenditure. Physical activity must also be considered when estimating TDEE. Therefore, two people with identical basic measurements can receive different results when their activity levels differ.</p>
+        <p>For example, someone with a sedentary routine may require a different activity estimate from someone who trains frequently and remains active throughout the day. Thus, selecting the activity level carefully is an important part of the calculation.</p>
+
+        <h2>Where Our Numbers Come From</h2>
+        <p>A transparent calculator should separate research-based information from practical assumptions. Formula coefficients can be traced to published research, while activity categories represent estimates used to model daily energy expenditure.</p>
+        <p>In addition, scientific evidence should be interpreted carefully. The original Mifflin-St Jeor research provides the equation's foundation, whereas later reviews show that predictive equations can still have meaningful errors at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h2>Why TDEE Results Can Differ</h2>
+        <p>Different TDEE calculators may produce different numbers even when similar information is entered. One calculator may use another equation, while a second may use different activity factors or rounding methods.</p>
+        <p>Likewise, differences in weight, height, age, units, or activity selection can change the result. Therefore, comparing the methodology behind two calculators is more useful than comparing their final numbers alone.</p>
+
+        <h2>Accuracy and Limitations</h2>
+        <div class="disclaimer-callout-card">
+          <p><strong>Clinical Limitation Notice:</strong> A TDEE result should be treated as a practical starting estimate, not an exact biological prescription. Predictive equations are useful for everyday planning, but research shows that their individual accuracy varies by &plusmn;10% or more.</p>
+        </div>
+
+        <p>For that reason, <strong>About Our TDEE Platform</strong> does not depend on claims of perfect accuracy. Instead, the focus is on explaining the formula, inputs, assumptions, and limitations so users can interpret the result responsibly.</p>
+
+        <h2>How We Check Calculations</h2>
+        <p>Correct calculation depends on both the selected formula and its implementation. Therefore, reliable checking should include known benchmarks, input validation, unit conversion checks, and independent calculation comparisons.</p>
+        <p>At the same time, technical claims should match the platform's real implementation. Input testing and formula validation are built directly into our codebase to ensure consistent mathematical precision.</p>
+
+        <h2>What TDEECalculator Does Not Do</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li>Does NOT directly measure an individual's unique cellular metabolism.</li>
+            <li>Does NOT guarantee exact daily calorie expenditure or exact scale weight changes.</li>
+            <li>Does NOT replace medical diagnosis or individualized advice from a Registered Dietitian.</li>
+            <li>Does NOT assume static energy needs over prolonged dieting periods.</li>
+          </ul>
+        </div>
+
+        <p>For example, body composition, activity patterns, health conditions, medications, and lifestyle changes may affect energy needs. Consequently, calculator results should not be treated as a medical diagnosis or a replacement for individualized professional advice.</p>
+
+        <h2>Privacy and Transparency</h2>
+        <p>Privacy information should always match the platform's actual technical behavior. All core calculations on TDEECalculator are processed entirely within your browser environment. Your personal metrics are not transmitted, stored, or sold to third-party databases.</p>
+        <p>Likewise, <strong>About Our TDEE Platform</strong> identifies the team responsible for maintaining our suite of tools. Clear ownership, genuine contact channels, documented sources, and an accessible correction process all contribute to stronger trust.</p>
+
+        <h2>Sources We Use</h2>
+        <p>The Mifflin-St Jeor equation has a documented primary research source, while later systematic reviews provide additional evidence about its strengths and limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+
         <ul>
-          <li><strong>Scientific Rigor:</strong> We only utilize peer-reviewed, clinically validated formulas (such as Mifflin-St Jeor and Katch-McArdle) rather than arbitrary math.</li>
-          <li><strong>Radical Transparency:</strong> We explicitly communicate the error margins, confidence intervals, and biological variance that affect energy expenditure. We never pretend our calculator is magic—it is an estimate that requires your real-world data to perfect.</li>
-          <li><strong>Privacy First:</strong> Your body measurements, weight logs, and daily caloric entries remain 100% local to your device's browser. We do not transmit, store, or sell your personal health metrics to third-party servers. Your data belongs to you.</li>
-          <li><strong>No Fads, Just Math:</strong> We do not promote fad diets, rapid weight loss schemes, or unsustainable fitness practices. Energy balance is a biological mechanism, and we aim to explain it clearly.</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
         </ul>
-        
-        <p>Whether you are a competitive athlete, a fitness beginner, or someone looking to maintain a healthy lifestyle, our platform is designed to give you the precise data you need to reach your goals.</p>
-      `
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>Is a TDEE calculator accurate?</h3>
+          <p>A TDEE calculator provides an estimate rather than a direct measurement. Mifflin-St Jeor has performed well among commonly used equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+          <h3>Why do different TDEE calculators show different numbers?</h3>
+          <p>Different equations, activity factors, input values, unit conversions, and rounding methods can produce different results. Therefore, methodology matters when comparing calculators.</p>
+
+          <h3>What formula does TDEECalculator use?</h3>
+          <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+
+          <h3>Is TDEE the same as BMR?</h3>
+          <p>No. BMR or resting energy expenditure represents energy used at rest, while TDEE estimates total daily energy expenditure after physical activity and food digestion are considered.</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p><strong>About Our TDEE Platform</strong> is ultimately about transparency rather than promising a perfect calorie number. A useful calculator should explain its formula, identify important assumptions, use credible references, and clearly communicate the limits of prediction.</p>
+
+        <p>From an evidence-based perspective, that distinction matters. The original Mifflin-St Jeor research provides a documented foundation, while later research shows why predictive equations should still be interpreted as estimates rather than exact measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+
+        <p>Ultimately, the goal is simple: users should understand the number they receive. Clear methodology, credible sources, transparent assumptions, and honest limitations provide a stronger foundation for trust than unsupported claims of perfect accuracy.</p>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>We are dedicated to building fitness tools grounded in scientific reality. By pairing clinical predictive equations with transparent explanations and user privacy, we help you make informed decisions about your health and body composition.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This page is for informational purposes only and does not constitute medical advice.</p>
+        </div>`
     },
 
     '/contact/': {
