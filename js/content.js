@@ -896,27 +896,193 @@ window.TDEEContent = {
     },
 
     '/blog/mifflin-st-jeor-equation/': {
-      title: 'Mifflin-St Jeor Equation: BMR Formula Accuracy & Science (2026)',
-      metaDescription: 'In-depth guide to the Mifflin-St Jeor BMR equation. Learn why clinical studies validate it as the most accurate resting metabolic rate formula.',
+      title: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
+      metaDescription: 'Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and practical TDEE calculation examples.',
       category: 'Scientific Formulas',
       readTime: '6 min read',
-      h1: 'Mifflin-St Jeor Equation: History, Accuracy & Science',
-      content: `
-        <p>The <strong>Mifflin-St Jeor Equation</strong> was published in 1990 by Dr. MD Mifflin and ST St Jeor in the <em>American Journal of Clinical Nutrition</em>. It remains the gold-standard formula used by clinical dietitians and sports nutritionists worldwide to predict Basal Metabolic Rate (BMR).</p>
+      h1: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
+      content: `<p class="lead-paragraph">Calculating your calorie needs can become confusing fast. You may find a BMR number online but still wonder what it actually means. Is it your maintenance intake, your daily calorie burn, or simply the energy your body uses at rest? Different calculators can also show different results, making the process even harder.</p>
 
-        <h2>The Mathematical Equations</h2>
-        <p>The formula calculates daily resting caloric expenditure based on body mass, height, age, and biological sex:</p>
-        <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:8px; border-left:4px solid var(--accent-cyan); margin:1.5rem 0;">
+        <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <h2>What Is the Mifflin-St Jeor Equation?</h2>
+        <p>The Mifflin-St Jeor Equation is a mathematical formula developed to predict resting energy expenditure. In simple terms, REE estimates the energy your body uses while resting.</p>
+        <p>The original 1990 study included 251 men and 247 women aged 19–78. Both normal-weight and obese adults were included. Therefore, the equation was developed from a broader adult sample than many older formulas.</p>
+        <p>Although many websites call the result BMR, the original research specifically developed the equation for <strong>REE</strong>. BMR and RMR are related concepts, but they are not technically identical. Read more in our <a href="/blog/tdee-vs-bmr/">TDEE vs BMR Guide</a>.</p>
+
+        <h2>Mifflin-St Jeor Formula</h2>
+        <p>The equation uses specific mathematical constants for men and women:</p>
+
+        <div class="equation-box">
+          <p><strong>For Men:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
+          <p style="margin-top:0.5rem;"><strong>For Women:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) − 161</p>
+        </div>
+
+        <p>These simplified formulas come directly from the original research. The researchers found that simplifying the original coefficients did not reduce predictive value. Estimate your baseline instantly with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+
+        <h3>What the Coefficients Mean</h3>
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Input Term</th>
+                <th>Role in the Formula</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Weight &times; 10</strong></td>
+                <td>Adds to the estimated resting energy need based on body mass</td>
+              </tr>
+              <tr>
+                <td><strong>Height &times; 6.25</strong></td>
+                <td>Accounts for body height and surface area</td>
+              </tr>
+              <tr>
+                <td><strong>Age &times; &minus;5</strong></td>
+                <td>Lowers the estimate as age increases to reflect age-related metabolic decline</td>
+              </tr>
+              <tr>
+                <td><strong>+5 / &minus;161</strong></td>
+                <td>Sex-specific constant adjustment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These numbers are <strong>regression coefficients</strong>. They should not be interpreted as direct measurements of muscle, hormones, or metabolism.</p>
+
+        <h2>How to Calculate It</h2>
+        <p>First, make sure your measurements use the correct units. Weight must be in kilograms (kg), while height must be in centimeters (cm).</p>
+
+        <div class="worked-example-card">
+          <p><strong>Male Worked Example:</strong> Consider a 30-year-old man weighing <strong>80 kg</strong> and measuring <strong>180 cm</strong>:</p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 80) + (6.25 &times; 180) − (5 &times; 30) + 5</strong></p>
+          <p class="calc-step-line"><strong>REE = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
+          <p>Therefore, his estimated resting energy expenditure is about <strong>1,780 calories per day</strong>.</p>
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+          <p><strong>Female Worked Example:</strong> Consider a 30-year-old woman weighing <strong>65 kg</strong> and measuring <strong>165 cm</strong>:</p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 65) + (6.25 &times; 165) − (5 &times; 30) − 161</strong></p>
+          <p class="calc-step-line"><strong>REE = 650 + 1,031.25 − 150 − 161 = 1,370 calories/day</strong></p>
+        </div>
+
+        <p>Importantly, neither number represents maintenance calories. Instead, both are resting estimates.</p>
+
+        <h2>How Does It Become TDEE?</h2>
+        <p>Your body uses energy for more than resting functions. Physical activity, exercise, and digestion also contribute to daily energy expenditure. Consequently, TDEE is higher than your resting estimate for most people.</p>
+
+        <div class="formula-callout-box">
+          <p><strong>Calculating TDEE from REE:</strong></p>
+          <p><strong>TDEE = Estimated REE &times; Activity Factor</strong></p>
+        </div>
+
+        <p>Typical calculator activity multiplier factors include:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level Category</th>
+                <th style="text-align: right;">Common Multiplier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong> (desk job, little exercise)</td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong> (1–3 workout sessions/week)</td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong> (3–5 workout sessions/week)</td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong> (6–7 hard training sessions/week)</td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong> (physical labor + heavy training)</td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>For example, an estimated REE of 1,780 calories multiplied by 1.55 gives about <strong>2,759 calories per day</strong> on our <a href="/">homepage TDEE Calculator</a>.</p>
+        <p>However, these factors are broad estimates. Two people in the same activity category can have different jobs, step counts, workouts, and daily movement. As a result, calculated TDEE can differ from actual energy expenditure. Learn more in our <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Guide</a>.</p>
+
+        <h2>Is the Mifflin-St Jeor Equation Accurate?</h2>
+        <p>Research supports the formula as a useful general prediction equation. A systematic review by the Academy of Nutrition and Dietetics found that Mifflin-St Jeor predicted measured RMR within &plusmn;10% in more non-obese and obese adults than the other commonly used equations examined. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Even so, individual accuracy is not guaranteed. One study found that accuracy varied by factors such as BMI, age, sex, and race or ethnicity. Moreover, research in older adults found that no prediction equation consistently provided accurate and precise results for every individual.</p>
+        <p>Therefore, the result should be treated as an <strong>estimate</strong>, not an exact laboratory measurement.</p>
+
+        <h2>Why Can Your Result Differ?</h2>
+        <p>Different calculators may use different formulas, activity factors, rounding methods, or assumptions. For instance, one tool may use Mifflin-St Jeor while another uses Harris-Benedict.</p>
+        <p>The original Mifflin study found that the older Harris-Benedict equation (1919/1984) overestimated measured REE by about 5% in its study sample. Later evidence also found Mifflin-St Jeor to perform well among commonly used equations.</p>
+        <p>Nevertheless, that does not mean it is automatically more accurate for every single person.</p>
+
+        <h2>Mifflin-St Jeor vs. Katch-McArdle</h2>
+        <p>Katch-McArdle uses lean body mass, while Mifflin-St Jeor uses total weight, height, age, and biological sex.</p>
+        <p>Therefore, someone with reliable body-composition data (such as DEXA scans) may consider a lean-mass-based equation like Katch-McArdle. However, using more information does not automatically guarantee better accuracy. Prediction performance depends on the individual and population being studied.</p>
+
+        <h2>Common Calculation Mistakes</h2>
+        <div class="question-callout-box">
           <ul>
-            <li><strong>Men:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5</li>
-            <li><strong>Women:</strong> BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161</li>
+            <li>Entering weight in pounds instead of kilograms (lb &divide; 2.2 = kg).</li>
+            <li>Entering height in inches instead of centimeters (in &times; 2.54 = cm).</li>
+            <li>Choosing the wrong sex formula constants (+5 vs &minus;161).</li>
+            <li>Using an incorrect or outdated age input.</li>
+            <li>Confusing resting energy expenditure (REE) with total burn (TDEE).</li>
+            <li>Applying an activity multiplier factor twice.</li>
+            <li>Treating a mathematical estimate as an absolute calorie requirement.</li>
           </ul>
         </div>
 
-        <h2>Why Mifflin-St Jeor Outperformed Harris-Benedict</h2>
-        <p>Prior to 1990, the <strong>Revised Harris-Benedict equation (1984)</strong> was the primary BMR formula. However, clinical validation studies by the Academy of Nutrition and Dietetics demonstrated that Harris-Benedict systematically overestimates BMR in modern adults by 5% to 15% due to changes in population body composition over time.</p>
-        <p>Mifflin-St Jeor was proven accurate within ±10% for over 82% of healthy non-obese and obese adults, establishing it as the most reliable standard.</p>
-      `
+        <p>For this reason, check every input before using the final number.</p>
+
+        <h2>What Does the Result Tell You?</h2>
+        <p>The calculation gives you a starting point for understanding your energy needs. Next, the estimate can be used to calculate TDEE. After that, TDEE can help you understand maintenance calories on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> and plan a suitable target on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</p>
+
+        <p>In contrast, the equation does <strong>not</strong> directly measure your individual metabolism, exercise calories, exact maintenance intake, or exact weight-loss calories.</p>
+
+        <p>Real-world results matter, too. If your calculated maintenance level does not match your observed weight trend over time, the estimate may need adjustment.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>Is the Mifflin-St Jeor Equation the most accurate?</h3>
+          <p>It is one of the better-supported general prediction equations in clinical research, but no formula is guaranteed to be most accurate for every individual. Accuracy varies between populations and body types.</p>
+
+          <h3>Is it BMR or RMR?</h3>
+          <p>The original 1990 equation predicts <strong>REE (Resting Energy Expenditure)</strong>. Many consumer calculators label the result BMR, but BMR, RMR, and REE have subtle technical measurement differences.</p>
+
+          <h3>Can it calculate TDEE?</h3>
+          <p>Not by itself. First, it estimates resting energy expenditure. Then, an activity multiplier factor is applied to estimate Total Daily Energy Expenditure (TDEE).</p>
+
+          <h3>Why do two calculators show different numbers?</h3>
+          <p>They may use different equations (Mifflin-St Jeor vs Harris-Benedict), activity multipliers, rounding methods, or assumptions. Therefore, different results do not necessarily mean one calculator has made a calculation error.</p>
+        </div>
+
+        <h2>The Bottom Line</h2>
+        <p>The <strong>Mifflin-St Jeor Equation</strong> is a practical way to estimate resting energy expenditure using four basic inputs: weight, height, age, and sex. Its original research and later systematic reviews support its usefulness, while also showing that prediction errors can occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>For that reason, use the result as a starting point rather than an exact metabolic measurement. Estimate your resting needs, calculate TDEE, and then compare the estimate with real-world scale changes over time. That approach makes the calculation more useful while respecting its scientific limitations.</p>
+
+        <h2>Methodology and Sources</h2>
+        <p>This article uses the original 1990 Mifflin-St Jeor study as the primary source for the formula and its development. Later systematic reviews and validation studies were used to explain accuracy, population differences, and limitations.</p>
+        <p>The goal is to explain both <strong>how the equation works and how to interpret it responsibly</strong>. In particular, the article distinguishes a calculated estimate from a directly measured value, helping readers use the number as a practical starting point rather than treating it as an exact result.</p>
+
+        <ul>
+          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990 Feb;51(2):241-7. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005.</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>Our tools implement the Mifflin-St Jeor equation because clinical research demonstrates its superior reliability for modern adult populations. We believe in providing transparent, evidence-based tools that help you take control of your energy balance.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for general educational purposes only and does not constitute medical advice.</p>
+        </div>`
     },
 
     // ==========================================
