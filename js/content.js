@@ -2487,16 +2487,178 @@ window.TDEEContent = {
     },
 
     '/calories-burned-calculator/': {
-      title: 'Calories Burned Calculator: Daily Energy Expenditure Burn',
-      metaDescription: 'Calculate total calories burned per day based on non-exercise movement, daily steps, and workout sessions.',
+      title: 'Calories Burned Calculator: How to Estimate Daily Workout & Activity Burn',
+      metaDescription: 'Calculate calories burned from exercise, daily steps, and physical activity. Understand MET values, workout energy expenditure, and how to avoid double-counting.',
       category: 'Calculator',
-      h1: 'Calories Burned Calculator',
-      content: `
-        <p>Your daily caloric burn is dynamic. The <strong>Calories Burned Calculator</strong> calculates your total expenditure by combining baseline resting metabolic rate with step counts, daily lifestyle movement, and workout duration.</p>
+      readTime: '7 min read',
+      h1: 'Calories Burned Calculator: How to Estimate Daily Activity & Workout Burn',
+      content: `<p class="lead-paragraph">Estimating how many calories you burn during a workout or throughout your active day can be surprisingly difficult. Fitness trackers, cardio machines, and online tools often provide wildly different numbers. As a result, relying on inaccurate energy burn numbers can throw off your calorie deficit or lead to accidental overeating.</p>
 
-        <h2>Understanding Daily Step Burn</h2>
-        <p>Walking is one of the most effective ways to boost Non-Exercise Activity Thermogenesis (NEAT). On average, every 1,000 steps burn approximately 35 to 45 additional calories depending on body weight.</p>
-      `
+        <p>The <strong>Calories Burned Calculator</strong> provides a practical, evidence-based method for estimating activity energy expenditure. By utilizing clinical Metabolic Equivalent of Task (MET) values and physical activity level multipliers, you can calculate exercise burn accurately without double-counting your resting baseline. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="2011 Compendium of Physical Activities - PubMed">PubMed [1]</a>)</p>
+
+        <h2>What Is a Calories Burned Calculator?</h2>
+        <p>A calories burned calculator estimates the energy your body expends during specific physical activities, structured workouts, or general daily movement.</p>
+
+        <p>Unlike Basal Metabolic Rate (BMR), which measures energy expended while resting, activity burn accounts for body mass, exercise duration, and movement intensity. These calculations are grounded in the <strong>Compendium of Physical Activities</strong>, a standard reference established by exercise physiologists to quantify activity cost. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h2>How Calories Burned Are Calculated (The MET Formula)</h2>
+        <p>Exercise scientists measure activity intensity using <strong>METs (Metabolic Equivalent of Task)</strong>. One MET represents your resting metabolic rate—the energy burned while sitting quietly (approximately 1 kcal per kilogram of body weight per hour).</p>
+
+        <div class="formula-callout-box">
+          <p><strong>Exercise Burn Calculation Formula:</strong></p>
+          <p><strong>Calories Burned = MET Value &times; Weight in kg &times; Duration in Hours</strong></p>
+        </div>
+
+        <p>For example, an activity with a MET rating of 6.0 burns six times more energy per minute than sitting at rest. Because body mass directly affects the energy required to move, heavier individuals burn more total calories performing the same physical task for the same duration.</p>
+
+        <h2>Common Activity MET Values</h2>
+        <p>The table below highlights standard MET values established in exercise physiology research for popular workouts and daily activities: (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Physical Activity Description</th>
+                <th>MET Rating</th>
+                <th style="text-align: right;">Est. Burn (70 kg / 154 lb person)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Walking (moderate pace, 3.0 mph)</strong></td>
+                <td>3.5 METs</td>
+                <td style="text-align: right;"><strong>245 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Weightlifting (moderate resistance training)</strong></td>
+                <td>3.5 METs</td>
+                <td style="text-align: right;"><strong>245 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Vigorous Weightlifting / Bodybuilding</strong></td>
+                <td>6.0 METs</td>
+                <td style="text-align: right;"><strong>420 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Cycling (moderate pace, 12–14 mph)</strong></td>
+                <td>8.0 METs</td>
+                <td style="text-align: right;"><strong>560 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Running (jogging pace, 6.0 mph / 10 min mile)</strong></td>
+                <td>9.8 METs</td>
+                <td style="text-align: right;"><strong>686 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>High-Intensity Interval Training (HIIT)</strong></td>
+                <td>8.0 METs</td>
+                <td style="text-align: right;"><strong>560 kcal/hr</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lap Swimming (light to moderate effort)</strong></td>
+                <td>6.0 METs</td>
+                <td style="text-align: right;"><strong>420 kcal/hr</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Step-by-Step Worked Calculation Examples</h2>
+
+        <div class="worked-example-card">
+          <p><strong>Example 1: Running Workout</strong></p>
+          <p>A 75 kg (165 lb) runner completes a <strong>45-minute (0.75 hours)</strong> jog at 6 mph (MET = 9.8):</p>
+          <p class="calc-step-line"><strong>Burn = 9.8 &times; 75 kg &times; 0.75 hours = 551 calories burned</strong></p>
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+          <p><strong>Example 2: Strength Training Workout</strong></p>
+          <p>A 60 kg (132 lb) athlete performs <strong>60 minutes (1.0 hour)</strong> of moderate weightlifting (MET = 3.5):</p>
+          <p class="calc-step-line"><strong>Burn = 3.5 &times; 60 kg &times; 1.0 hour = 210 calories burned</strong></p>
+        </div>
+
+        <p>Notice how duration, intensity (METs), and body weight interact to produce your total caloric output.</p>
+
+        <h2>Daily Step Count and NEAT Calories</h2>
+        <p>Planned gym workouts represent only a fraction of your total expenditure. Non-Exercise Activity Thermogenesis (NEAT)—the calories burned through walking, standing, working, and chores—often accounts for a far greater daily burn.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Daily Step Burn Rule of Thumb:</strong></p>
+          <p>On average, walking <strong>1,000 steps</strong> burns approximately <strong>35 to 50 calories</strong> depending on body mass and walking speed.</p>
+        </div>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>5,000 steps/day:</strong> ~175–250 kcal burned above sedentary baseline.</li>
+            <li><strong>8,000 steps/day:</strong> ~280–400 kcal burned above sedentary baseline.</li>
+            <li><strong>10,000 steps/day:</strong> ~350–500 kcal burned above sedentary baseline.</li>
+            <li><strong>12,000+ steps/day:</strong> ~420–600+ kcal burned above sedentary baseline.</li>
+          </ul>
+        </div>
+
+        <h2>Warning: Beware of Double-Counting Exercise Calories</h2>
+        <div class="disclaimer-callout-card">
+          <p><strong>Avoid Double-Counting:</strong> A common calorie-tracking error is adding your workout burn on top of a TDEE estimate that already accounts for exercise.</p>
+        </div>
+
+        <p>If you set your activity multiplier to "Moderately Active" (1.55) on our <a href="/">homepage TDEE Calculator</a>, your daily expenditure estimate <em>already includes</em> your 3–5 weekly workouts. Adding 500 calories from your smartwatch on top of that baseline will artificially inflate your target, potentially erasing your calorie deficit.</p>
+
+        <p>Instead, use the <strong>Calories Burned Calculator</strong> to isolate individual workout expenditures or check your baseline on our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+
+        <h2>Why Fitness Trackers Overestimate Energy Burn</h2>
+        <p>Wearable devices and smartwatches frequently overestimate exercise calorie burn. Systematic validation studies evaluating commercial fitness trackers found median error rates ranging from <strong>27% to over 90%</strong> when measuring activity expenditure compared to indirect calorimetry standard lab equipment.</p>
+
+        <div class="question-callout-box">
+          <p>Key reasons device readings can differ from real-world burn:</p>
+          <ul>
+            <li>Smartwatches include baseline BMR calories inside workout logs.</li>
+            <li>Heart rate spikes from stress or heat can be miscalculated as movement.</li>
+            <li>Devices rely on generalized population algorithms rather than personal metabolic testing.</li>
+          </ul>
+        </div>
+
+        <p>Therefore, use device numbers as relative trends rather than exact energy metrics. Explore our calculation engine logic on <a href="/how-we-calculate/">How We Calculate</a>.</p>
+
+        <h2>How to Use Activity Burn for Weight Loss or Maintenance</h2>
+        <p>Understanding activity burn helps you adjust your energy balance intelligently:</p>
+
+        <ul>
+          <li><strong>For Weight Loss:</strong> Keep your calorie intake based on your estimated TDEE deficit target on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>. Do not "eat back" all workout calories unless you notice excessive weight loss or performance drops.</li>
+          <li><strong>For Maintenance:</strong> Pair consistent daily steps with stable intake targets on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a>.</li>
+          <li><strong>For Muscle Gain:</strong> Support intense workouts with target macronutrients using our <a href="/macro-calculator/">Macro Calculator</a>.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>How many calories do I burn in a day naturally?</h3>
+          <p>Your natural daily burn equals your Total Daily Energy Expenditure (TDEE). This includes your resting Basal Metabolic Rate (BMR), non-exercise activity (NEAT), exercise (EAT), and food digestion (TEF).</p>
+
+          <h3>How many calories does 10,000 steps burn?</h3>
+          <p>Walking 10,000 steps burns approximately 350 to 500 calories, depending on your body weight, stride length, and walking pace.</p>
+
+          <h3>Does weightlifting burn more calories than cardio?</h3>
+          <p>During the workout itself, steady-state cardio (running, cycling) usually burns more calories per minute than weightlifting. However, resistance training builds lean muscle tissue, which elevates your baseline resting metabolic rate over time.</p>
+
+          <h3>Should I eat back the calories I burn exercising?</h3>
+          <p>Usually no. If your primary TDEE target already includes your activity level multiplier, eating back workout calories leads to double-counting and can stall fat loss.</p>
+        </div>
+
+        <h2>Final Takeaway</h2>
+        <p>A <strong>Calories Burned Calculator</strong> provides a reliable, evidence-backed methodology for measuring workout and movement energy expenditure based on clinical MET values. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <p>Rather than treating tracker readings as perfect measurements, use calculated activity burn as a practical reference. Combine your estimated TDEE with consistent daily step habits, structured training, and real-world weight trends to manage your fitness goals with scientific clarity.</p>
+
+        <h2>Methodology and Sources</h2>
+        <p>This article utilizes standard metabolic equivalent data from the <em>Compendium of Physical Activities</em> and peer-reviewed exercise science literature indexed by PubMed. Calculated estimates serve as baseline models rather than direct laboratory calorimetry measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <ul>
+          <li>Ainsworth BE, Haskell WL, Herrmann SD, et al. 2011 Compendium of Physical Activities: a second update of codes and MET values. <em>Med Sci Sports Exerc</em>. 2011. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf.</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>We provide evidence-based physical activity calculations to help you manage your daily energy expenditure accurately. By separating resting burn from exercise thermogenesis, we help you eliminate dietary guesswork.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This calculator and guide are for educational purposes only and do not replace individualized medical advice.</p>
+        </div>`
     },
 
     // ==========================================
