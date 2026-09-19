@@ -15,7 +15,7 @@ window.TDEEContent = {
 
     '/blog/what-is-tdee/': {
       title: 'What Is TDEE? Meaning, 4 Components & Complete Guide (2026)',
-      metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, the 4 components of daily calorie burn (BMR, NEAT, TEF, EAT), and how your metabolism uses energy.',
+      metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, its 4 energy components (BMR, NEAT, TEF, EAT), and how metabolism burns daily calories.',
       category: 'TDEE Guides',
       readTime: '7 min read',
       h1: 'What Is TDEE? Total Daily Energy Expenditure Explained',
@@ -190,7 +190,7 @@ window.TDEEContent = {
 
     '/blog/how-to-calculate-tdee/': {
       title: 'How to Calculate Your TDEE: Formula, Steps, and Examples (2026)',
-      metaDescription: 'Learn how to calculate your TDEE step-by-step using the Mifflin-St Jeor formula, activity multipliers, unit conversions, and worked male/female examples.',
+      metaDescription: 'Learn how to calculate your TDEE step-by-step using the Mifflin-St Jeor formula, activity multipliers, unit conversions, and worked examples.',
       category: 'TDEE Guides',
       readTime: '8 min read',
       h1: 'How to Calculate Your TDEE: Formula, Steps, and Examples',
@@ -459,7 +459,7 @@ window.TDEEContent = {
 
     '/blog/tdee-vs-bmr/': {
       title: 'TDEE vs BMR: What Is the Difference & Which Should You Use?',
-      metaDescription: 'Understand the key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy breakdown, RMR vs BMR, and calorie planning.',
+      metaDescription: 'Understand key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy burn, and calorie planning.',
       category: 'Comparisons',
       readTime: '6 min read',
       h1: 'TDEE vs BMR: What’s the Difference and Which One Should You Use?',
@@ -724,7 +724,7 @@ window.TDEEContent = {
 
     '/blog/tdee-for-weight-loss/': {
       title: 'TDEE for Sustainable Fat Loss: How to Use Your TDEE to Lose Fat',
-      metaDescription: 'Learn how to use your TDEE for sustainable fat loss, calculate your calorie deficit, preserve muscle, and adjust your target using real-world weight trends.',
+      metaDescription: 'Learn how to use your TDEE for fat loss, calculate a sustainable calorie deficit, preserve lean muscle mass, and track real-world weight trends.',
       category: 'Weight Loss',
       readTime: '7 min read',
       h1: 'TDEE for Sustainable Fat Loss: How to Use Your TDEE to Lose Fat',
@@ -897,7 +897,7 @@ window.TDEEContent = {
 
     '/blog/mifflin-st-jeor-equation/': {
       title: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
-      metaDescription: 'Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and practical TDEE calculation examples.',
+      metaDescription: 'Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and TDEE examples.',
       category: 'Scientific Formulas',
       readTime: '6 min read',
       h1: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
@@ -1091,7 +1091,7 @@ window.TDEEContent = {
 
     '/bmr-calculator/': {
       title: 'BMR Calculator: Calculate Your Basal Metabolic Rate Accurately',
-      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Understand BMR vs RMR, energy expenditure, and calorie requirements.',
+      metaDescription: 'Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Understand BMR vs RMR and baseline calorie needs.',
       category: 'Calculator',
       h1: 'BMR Calculator: Calculate Your Basal Metabolic Rate',
       content: `<p class="lead-paragraph">You enter your age, height, weight, and sex into a BMR calculator and get a calorie number. But then the confusion starts. Is that number how many calories you should eat? Why does another calculator give you a different result? And does a higher or lower BMR mean your metabolism is better or worse?</p>
@@ -1492,7 +1492,7 @@ window.TDEEContent = {
 
     '/maintenance-calorie-calculator/': {
       title: 'Maintenance Calorie Calculator: Calculate Your Daily Maintenance Calories',
-      metaDescription: 'Find your precise maintenance calories using Mifflin-St Jeor formulas, activity multipliers, and real-world weight trends. Learn BMR vs TDEE energy balance.',
+      metaDescription: 'Calculate your maintenance calories using Mifflin-St Jeor formulas, activity multipliers, and weight trends. Understand BMR vs TDEE balance.',
       category: 'Calculator',
       h1: 'Maintenance Calorie Calculator: Calculate Your Daily Maintenance Calories',
       content: `<p class="lead-paragraph">You calculate your maintenance calories and get a number. But then a bigger question appears: <strong>Can you actually trust that number?</strong> Your weight may still move up or down, while another calculator gives you a different result. As a result, calorie planning can become confusing, especially when you are still learning about BMR, TDEE, and energy balance.</p>
@@ -1779,7 +1779,7 @@ window.TDEEContent = {
 
     '/calorie-deficit-calculator/': {
       title: 'Calorie Deficit Calculator: Calculate Your Daily Calorie Target',
-      metaDescription: 'Calculate your ideal calorie deficit for weight loss based on age, height, weight, and activity level. Learn how to calculate a deficit, BMR vs TDEE, and sustainable weight loss.',
+      metaDescription: 'Calculate your ideal calorie deficit for weight loss based on age, height, weight, and activity. Learn safe fat loss rates and BMR limits.',
       category: 'Calculator',
       h1: 'Calorie Deficit Calculator: Calculate Your Daily Calorie Target',
       content: `<p class="lead-paragraph">Trying to lose weight can be frustrating when you do not know how many calories to eat each day. Different calculators can also give different numbers, making it difficult to know which target to follow. Choosing a calorie target at random may leave you eating more than needed or making your plan unnecessarily difficult.</p>
@@ -1992,7 +1992,7 @@ window.TDEEContent = {
 
     '/calorie-surplus-calculator/': {
       title: 'Calorie Surplus Calculator: Calculate Calories for Weight Gain and Muscle Gain',
-      metaDescription: 'Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training experience. Learn BMR to surplus formulas.',
+      metaDescription: 'Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training. Learn bulking formulas.',
       category: 'Calculator',
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
       content: `<p class="lead-paragraph">Trying to gain weight can become frustrating when you do not know how many calories you actually need. Perhaps you eat more but see little change, or you increase food too quickly and gain more fat than expected. The real problem is not simply eating more. Instead, you need a sensible calorie target and a way to check whether that target is working.</p>
@@ -2223,7 +2223,7 @@ window.TDEEContent = {
 
     '/macro-calculator/': {
       title: 'Macro Calculator: Calculate Daily Protein, Carbs & Fat Targets',
-      metaDescription: 'Calculate your daily macronutrient breakdown (protein, carbs, fat) for weight loss, maintenance, or muscle gain based on TDEE, BMR, and body composition.',
+      metaDescription: 'Calculate your daily macros (protein, carbs, fat) for weight loss, maintenance, or muscle gain based on TDEE, BMR, and body composition.',
       category: 'Calculator',
       h1: 'Macro Calculator (Flexible Macronutrients)',
       content: `<p class="lead-paragraph">Planning your diet can become confusing fast. You may know your calorie goal but still wonder how much protein, carbohydrates, and fat you should eat. Different calculators can also show different results, making it difficult to know which numbers to use.</p>
@@ -2488,7 +2488,7 @@ window.TDEEContent = {
 
     '/calories-burned-calculator/': {
       title: 'Calories Burned Calculator: How to Estimate Daily Workout & Activity Burn',
-      metaDescription: 'Calculate calories burned from exercise, daily steps, and physical activity. Understand MET values, workout energy expenditure, and how to avoid double-counting.',
+      metaDescription: 'Calculate calories burned from exercise, daily steps, and workouts. Understand MET values, activity expenditure, and avoid double-counting.',
       category: 'Calculator',
       readTime: '7 min read',
       h1: 'Calories Burned Calculator: How to Estimate Daily Activity & Workout Burn',
@@ -2667,7 +2667,7 @@ window.TDEEContent = {
 
     '/about/': {
       title: 'About Our TDEE Platform: Methodology, Science, and Tools',
-      metaDescription: 'Learn about our TDEE calculation platform, scientific sources (Mifflin-St Jeor), formula limitations, input transparency, and commitment to evidence-based nutrition.',
+      metaDescription: 'Learn about our TDEE calculation platform, scientific sources (Mifflin-St Jeor), formula limitations, and evidence-based nutrition methodology.',
       category: 'Company',
       readTime: '6 min read',
       h1: 'About Our TDEE Platform',
@@ -2829,7 +2829,7 @@ window.TDEEContent = {
 
     '/how-we-calculate/': {
       title: 'How We Calculate: TDEE Calculator Methodology',
-      metaDescription: 'Learn how we calculate TDEE, BMR, and resting energy expenditure. Explore our formula selection, unit conversions, activity factors, rounding, testing, and limitations.',
+      metaDescription: 'Learn how we calculate TDEE, BMR, and resting energy expenditure. Explore formula selection, unit conversions, activity factors, and testing.',
       category: 'Methodology',
       readTime: '7 min read',
       h1: 'How We Calculate: TDEE Calculator Methodology',
