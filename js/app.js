@@ -155,6 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', routeData.metaDescription || '');
 
+    // Update canonical link
+    var canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', 'https://tdeecalculator.com' + (path === '/' ? '/' : path));
+    }
+
     // Mount interactive calculator on silo pages that have one
     var calcMount = document.getElementById('silo-calculator-mount');
     if (calcMount) {
