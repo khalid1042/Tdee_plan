@@ -2794,7 +2794,7 @@ window.TDEEContent = {
       content: `
         <p>If you have questions about how our calculators work, feedback on our tools, or business inquiries, please reach out.</p>
         <h2>Contact Information</h2>
-        <p><strong>Email:</strong> support@tdeecalculator.com</p>
+        <p><strong>Email:</strong> support@tdeecalculater.com</p>
         <p><em>Please note that we cannot provide personal medical or dietary advice. All information is for general educational purposes.</em></p>
       `
     },
@@ -3100,3 +3100,4 @@ window.TDEEContent = {
     }
   }
 };
+

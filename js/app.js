@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update canonical link
     var canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', 'https://tdeecalculator.com' + (path === '/' ? '/' : path));
+      canonicalLink.setAttribute('href', 'https://tdeecalculater.com' + (path === '/' ? '/' : path));
     }
 
     // Mount interactive calculator on silo pages that have one
@@ -631,3 +631,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 })();
+

@@ -41,7 +41,7 @@ function updateHtmlForRoute(html, route, routeData) {
   updatedHtml = updatedHtml.replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${routeData.metaDescription}">`);
 
   // Update Canonical URL
-  updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculator.com${route}">`);
+  updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculater.com${route}">`);
 
   // Hide Hero workspace
   updatedHtml = updatedHtml.replace(/<div id="hero-workspace">/, '<div id="hero-workspace" class="hidden">');
@@ -103,3 +103,4 @@ for (const [route, routeData] of Object.entries(routes)) {
 }
 
 console.log('Static pre-rendering complete!');
+

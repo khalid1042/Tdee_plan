@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tdeecalculator.com/sitemap.xml
+Sitemap: https://tdeecalculater.com/sitemap.xml
+
