@@ -46,6 +46,9 @@ function updateHtmlForRoute(html, route, routeData) {
   // Hide Hero workspace
   updatedHtml = updatedHtml.replace(/<div id="hero-workspace">/, '<div id="hero-workspace" class="hidden">');
 
+  // Change hidden hero H1 to a div so subpages only have 1 H1 (the silo title)
+  updatedHtml = updatedHtml.replace(/<h1 class="hero-title">TDEE Calculator<\/h1>/, '<div class="hero-title">TDEE Calculator</div>');
+
   const author = window.TDEEContent.author;
   const reviewer = window.TDEEContent.reviewer;
   const lastUpdated = window.TDEEContent.lastUpdated;
