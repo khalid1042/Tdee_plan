@@ -3105,424 +3105,231 @@ window.TDEEContent = {
       metaDescription: 'Get practical diet advice for healthy weight management, including TDEE, calories, protein, balanced meals, food choices, weight loss and weight gain guidance.',
       category: 'Diet & Nutrition',
       h1: 'Diet Advice for Healthy Weight Management',
-      content: `
-        <p class="lead-paragraph">TDEE estimates how much energy a person may use each day, while the food you eat provides the energy and nutrients required to fuel that expenditure.</p>
-        <p>You can use your TDEE as a valuable starting point when thinking about calorie intake, while recognizing that actual metabolic needs vary from person to person.</p>
-        
-        <div style="margin: 2rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="/" class="btn-primary" style="flex: 1; text-align: center; white-space: nowrap;">Calculate My TDEE</a>
-          <a href="/calorie-deficit-calculator/" class="btn-secondary" style="flex: 1; text-align: center; white-space: nowrap;">Calculate My Calorie Deficit</a>
-        </div>
+      content: `\n
+        <p class="lead-paragraph">Finding reliable <strong>Diet Advice</strong> can feel harder than eating healthy. One source says to avoid carbs, another promotes high protein, while social media recommends a different diet every week. As a result, choosing what to eat can become confusing, especially when your goal is better health or weight management.</p>
 
-        <div id="tdee-integration-block" style="display: none; background: var(--bg-tertiary); border-left: 4px solid var(--accent-cyan); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-          <h3 style="margin-top: 0; margin-bottom: 0.5rem;">Your Estimated TDEE</h3>
-          <div style="font-size: 2.2rem; font-weight: 900; color: var(--accent-cyan); margin-bottom: 0.5rem;"><span id="tdee-integration-val"></span> kcal/day</div>
-          <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Use this <strong>starting calorie estimate</strong> as a baseline for your diet planning.</p>
-        </div>
+        <p>A better approach is to build a balanced eating pattern around nutrient-dense foods, sensible portions, personal preferences, and your daily energy needs. The current Dietary Guidelines for Americans, 2025–2030, emphasize protein foods, dairy, vegetables, fruits, healthy fats, and whole grains while recommending less highly processed food, added sugar, excess sodium, and refined carbohydrates.</p>
 
-        <h2>How TDEE Affects Your Diet</h2>
-        <p><strong>TDEE = estimated daily energy expenditure.</strong> It represents the total calories your body burns in a day.</p>
-        <ul>
-          <li><strong>Eating around maintenance needs</strong> &rarr; your weight may remain relatively stable over time.</li>
-          <li><strong>Eating below energy needs</strong> &rarr; your weight may decrease over time.</li>
-          <li><strong>Eating above energy needs</strong> &rarr; your weight may increase over time.</li>
-        </ul>
-        <div class="takeaway-callout-box">
-          <p><strong>Important:</strong> Make it clear that TDEE is an estimate. Do not claim that a calculated number is your exact metabolic requirement.</p>
-        </div>
+        <h2>What Is Healthy Eating?</h2>
+        <p>Healthy eating means regularly choosing different foods that provide the nutrients and energy your body needs. Therefore, it does not require a perfect menu or eliminating every food you enjoy.</p>
+        <p>Instead, a healthy eating pattern can include vegetables, fruits, protein foods, whole grains, dairy or suitable alternatives, and healthy fats. Moreover, your choices can reflect your budget, culture, preferences, schedule, and individual needs.</p>
 
-        <h2>Goal-Based Diet Advice</h2>
-        
-        <div class="about-calculator-card">
-          <h3>Weight Loss</h3>
-          <p>Losing weight requires a calorie deficit. Focus on nutrient-dense foods, adequate protein, vegetables, fruits, and fiber. Maintaining portion awareness, engaging in physical activity, prioritizing sleep, and practicing consistency are key.</p>
-          <p>Avoid crash diets or extreme calorie restriction. Gradual weight loss (about 1&ndash;2 pounds per week) is generally more sustainable and likely to be maintained than faster loss.</p>
-          <p style="font-size: 0.85rem; color: var(--text-muted);"><a href="https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html" target="_blank" rel="noopener">CDC Guidance on Losing Weight</a></p>
-        </div>
+        <h2>The Fundamentals of Healthy Eating</h2>
+        <p>A balanced diet starts with variety. Different foods provide different nutrients, so relying heavily on one food group can make it harder to meet your nutritional needs.</p>
 
-        <div class="about-calculator-card">
-          <h3>Weight Maintenance</h3>
-          <p>To maintain your weight, focus on eating around your actual maintenance needs. Build balanced meals with adequate protein and fiber-rich foods. Maintain regular physical activity, consistent habits, and monitor your long-term trends.</p>
-          <p>Remember that your TDEE is only a starting estimate and your maintenance needs may shift over time.</p>
-        </div>
+        <h3>Protein Foods</h3>
+        <p>Protein foods include eggs, fish, poultry, lean meats, beans, lentils, nuts, seeds, and soy foods. Including a protein source regularly can make meals more satisfying while helping you meet your nutritional needs.</p>
 
-        <div class="about-calculator-card">
-          <h3>Weight Gain</h3>
-          <p>Healthy weight gain requires a moderate calorie surplus. Focus on nutrient-dense foods providing adequate protein, carbohydrates, and healthy fats. Combine this with resistance training where appropriate for gradual progress.</p>
-          <p>Do not encourage excessive junk food; focus on quality nutrients.</p>
-        </div>
+        <h3>Fiber-Rich Foods</h3>
+        <p>Fiber is found in vegetables, fruits, whole grains, legumes, nuts, and seeds. It supports digestive health and can help you feel full.</p>
+        <p>For example, choose oatmeal at breakfast, beans or lentils with meals, whole-grain bread, vegetables, or whole fruit as snacks.</p>
 
-        <h2>What Is a Healthy Diet?</h2>
-        <p>Healthy eating involves variety, balance, and adequate nutrients. A healthy pattern covers vegetables, fruits, whole grains, protein foods, healthy fats, dairy (or suitable alternatives), fiber, and water.</p>
-        <p>Current evidence-based guidance highlights these elements while recommending limits on added sugars, sodium, saturated fats, and highly processed foods.</p>
-        <p style="font-size: 0.85rem; color: var(--text-muted);"><a href="https://www.cdc.gov/healthy-weight-growth/healthy-eating/index.html" target="_blank" rel="noopener">CDC Guidance on Healthy Eating</a></p>
+        <h3>Fruits and Vegetables</h3>
+        <p>Try to include different types and colors of fruits and vegetables throughout the week. Fresh, frozen, and suitable canned options can all fit into a healthy eating pattern.</p>
+        <p>Furthermore, whole fruit can provide fiber that many fruit drinks do not provide. Adding berries to oatmeal, spinach to eggs, or vegetables to sandwiches can make this habit easier.</p>
 
-        <div class="table-responsive">
+        <h3>Whole Grains</h3>
+        <p>Whole grains can provide fiber and other nutrients. Oats, brown rice, whole-grain bread, and other whole-grain foods can fit into balanced meals.</p>
+
+        <h2>The Facts on Fat</h2>
+        <p>Dietary fat is not automatically unhealthy. Your body needs fat, and some foods provide essential fatty acids.</p>
+        <p>Instead of treating every type of fat the same, focus on the overall quality of your food choices. Nuts, seeds, fish, avocado, and plant oils can provide unsaturated fats.</p>
+        <p>Meanwhile, foods high in saturated fat should be limited within an overall healthy eating pattern. The goal is balance rather than labeling every food as simply "good" or "bad."</p>
+
+        <h2>The Facts on Sugar</h2>
+        <p>Total sugar and added sugar are different. Total sugars include naturally occurring sugars in foods such as fruit and milk. Added sugars are added during processing or preparation.</p>
+        <p>Consequently, check the <strong>Added Sugars</strong> line when reading a Nutrition Facts label. The FDA lists 50 grams as the Daily Value for added sugars based on a 2,000-calorie diet.</p>
+        <p>This does not mean every person should consume exactly 50 grams. Individual calorie needs differ, so use the Daily Value mainly as a label-reading reference.</p>
+
+        <h2>A Healthy Eating Pattern</h2>
+        <p>A practical meal can combine several food groups.</p>
+        <div class="table-responsive" style="margin-bottom: 2rem;">
           <table class="styled-table">
             <thead>
               <tr>
-                <th>Food Group</th>
+                <th>Meal Component</th>
                 <th>Examples</th>
-                <th>Main Benefits</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Protein</strong></td>
-                <td>Eggs, chicken, fish, beans, lentils, yogurt</td>
-                <td>Protein and satiety</td>
+                <td>Protein</td>
+                <td>Eggs, fish, chicken, beans, lentils</td>
               </tr>
               <tr>
-                <td><strong>Vegetables</strong></td>
-                <td>Spinach, broccoli, carrots, peppers</td>
-                <td>Fiber and micronutrients</td>
+                <td>Vegetables or fruit</td>
+                <td>Broccoli, spinach, berries, oranges</td>
               </tr>
               <tr>
-                <td><strong>Fruits</strong></td>
-                <td>Apples, oranges, berries, bananas</td>
-                <td>Fiber and micronutrients</td>
+                <td>Whole grains or carbohydrates</td>
+                <td>Oats, brown rice, potatoes, whole-grain bread</td>
               </tr>
               <tr>
-                <td><strong>Whole grains</strong></td>
-                <td>Oats, brown rice, whole-grain bread</td>
-                <td>Carbohydrates and fiber</td>
-              </tr>
-              <tr>
-                <td><strong>Healthy fats</strong></td>
-                <td>Nuts, seeds, olive oil, avocado</td>
-                <td>Energy and essential fats</td>
-              </tr>
-              <tr>
-                <td><strong>Dairy/alternatives</strong></td>
-                <td>Milk, yogurt, fortified alternatives</td>
-                <td>Protein and nutrients</td>
-              </tr>
-              <tr>
-                <td><strong>Water</strong></td>
-                <td>Water and unsweetened drinks</td>
-                <td>Hydration</td>
+                <td>Healthy fats</td>
+                <td>Nuts, seeds, avocado, plant oils</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p>This framework is flexible rather than a strict prescription. Therefore, portions and food choices can change according to your calorie needs, activity level, preferences, and goals.</p>
 
-        <h2>Foods and Drinks to Limit</h2>
-        <p>An overall dietary pattern is what matters. You do not need to completely eliminate every less-nutritious food, but it is wise to limit:</p>
+        <h2>Healthy Diets, Calories, and TDEE</h2>
+        <p>Healthy food choices matter. However, calorie intake also matters because calories provide energy.</p>
+        <p>Your daily energy needs can vary because of factors such as age, body size, sex, and physical activity. Consequently, two people can have different calorie needs even when they eat similar foods.</p>
+        <p><strong>TDEE</strong>, or Total Daily Energy Expenditure, is an estimate of the energy your body uses during a typical day. It reflects resting energy needs, physical activity, and other energy expenditure.</p>
+        <p>Therefore, a <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE calculator</a> can provide a useful starting estimate when your goal involves weight loss, weight maintenance, or weight gain. Nevertheless, the result is an estimate rather than a direct measurement of your metabolism.</p>
+
+        <h2>Making the Switch to a Healthy Diet</h2>
+        <p>Changing everything at once can make healthy eating difficult to maintain. Instead, begin with a few realistic changes.</p>
+        <p>For example, add vegetables to one meal, include protein regularly, choose whole fruit for some snacks, drink water more often, and replace some refined grains with whole grains.</p>
+        <p>Over time, repeated small changes can become normal habits. As a result, healthy eating becomes easier to maintain without following extreme rules.</p>
+
+        <h2>Setting Yourself Up for Success</h2>
+        <p>Planning can make healthy choices easier, especially when your schedule is busy.</p>
+        <p>Before shopping, prepare a simple grocery list. Keep practical foods available, such as eggs, oats, beans, fruit, vegetables, yogurt, and whole grains.</p>
+        <p>Frozen vegetables can also reduce preparation time. Likewise, simple meals such as eggs with whole-grain toast and fruit, yogurt with berries and nuts, or rice with beans and vegetables can provide convenient options.</p>
+
+        <h2>Moderation: Important to Healthy Eating</h2>
+        <p>Healthy eating does not require fear of individual foods. A dessert, favorite snack, or restaurant meal does not automatically ruin your overall eating pattern.</p>
+        <p>Instead, consider how a food fits into your diet as a whole. This approach can make healthy habits more flexible and sustainable.</p>
+        <p>The goal is not perfection. Rather, focus on what you do consistently.</p>
+
+        <h2>It's Not Just What You Eat, but When You Eat</h2>
+        <p>Meal timing can differ between people. Some prefer three larger meals, while others prefer smaller meals and snacks.</p>
+        <p>Your schedule, hunger, activity, and preferences can all affect your eating routine. Therefore, avoid rigid meal-timing rules unless they are appropriate for your individual situation.</p>
+        <p>Focus first on food quality, portions, overall energy intake, and consistency.</p>
+
+        <h2>Add More Fruit and Vegetables to Your Diet</h2>
+        <p>Increasing fruit and vegetable intake does not require complicated recipes.</p>
+        <p>Try adding:</p>
         <ul>
-          <li>Sugar-sweetened beverages</li>
-          <li>Foods high in added sugar</li>
-          <li>Excessive sodium</li>
-          <li>Foods high in saturated fat</li>
-          <li>Highly processed foods</li>
-          <li>Frequent high-calorie snacks</li>
-          <li>Excessive alcohol (where relevant)</li>
+          <li>Spinach to eggs</li>
+          <li>Berries to oatmeal</li>
+          <li>Vegetables to sandwiches</li>
+          <li>Beans to salads</li>
+          <li>Frozen vegetables to rice or pasta</li>
+          <li>Fruit as a snack</li>
         </ul>
+        <p>Additionally, using different colors can increase variety. Fresh, frozen, and suitable canned produce can all be useful choices.</p>
 
-        <h2>Build a Balanced Meal</h2>
-        <div class="glass-card" style="padding: 1.5rem; margin-bottom: 2rem;">
-          <div class="extras-form-grid" style="grid-template-columns: 1fr 1fr;">
-            <div class="form-group">
-              <label class="form-label">Protein</label>
-              <select id="meal-protein" class="select-field">
-                <option value="Chicken">Chicken</option>
-                <option value="Eggs">Eggs</option>
-                <option value="Fish">Fish</option>
-                <option value="Beans">Beans</option>
-                <option value="Lentils">Lentils</option>
-                <option value="Tofu">Tofu</option>
-                <option value="Yogurt">Yogurt</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Carbohydrate</label>
-              <select id="meal-carb" class="select-field">
-                <option value="Rice">Rice</option>
-                <option value="Oats">Oats</option>
-                <option value="Potatoes">Potatoes</option>
-                <option value="Whole-grain bread">Whole-grain bread</option>
-                <option value="Whole-grain pasta">Whole-grain pasta</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Vegetables</label>
-              <select id="meal-veg" class="select-field">
-                <option value="Broccoli">Broccoli</option>
-                <option value="Spinach">Spinach</option>
-                <option value="Carrots">Carrots</option>
-                <option value="Peppers">Peppers</option>
-                <option value="Mixed vegetables">Mixed vegetables</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Fruit (Optional)</label>
-              <select id="meal-fruit" class="select-field">
-                <option value="None">None</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Orange">Orange</option>
-                <option value="Berries">Berries</option>
-              </select>
-            </div>
-            <div class="form-group" style="grid-column: 1 / -1;">
-              <label class="form-label">Healthy Fat</label>
-              <select id="meal-fat" class="select-field">
-                <option value="Olive oil">Olive oil</option>
-                <option value="Nuts">Nuts</option>
-                <option value="Seeds">Seeds</option>
-                <option value="Avocado">Avocado</option>
-              </select>
-            </div>
-          </div>
-          <button id="btn-build-meal" class="btn-primary" style="margin-top: 1rem; width: 100%;">Generate Meal Idea</button>
-          
-          <div id="meal-idea-result" style="display: none; margin-top: 1.5rem; padding: 1rem; background: var(--bg-primary); border-radius: 8px; border: 1px solid var(--border-color);">
-            <h4 style="margin-top: 0; color: var(--accent-cyan);">Your Balanced Meal Idea:</h4>
-            <p id="meal-idea-text" style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;"></p>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);"><em>Note: This is a general meal idea, not a medical diet plan.</em></p>
-          </div>
-        </div>
+        <h3>How to Make Vegetables Tasty</h3>
+        <p>Vegetables do not have to be plain. Try roasting, grilling, steaming, or sautéing them.</p>
+        <p>Furthermore, herbs, spices, garlic, lemon, and other seasonings can improve flavor. Simple preparation can make vegetables easier to enjoy regularly.</p>
 
-        <h2>Example Day of Balanced Eating</h2>
-        <div class="worked-example-card">
-          <p class="calc-step-line"><strong>Breakfast:</strong> Eggs + whole-grain toast + fruit</p>
-          <p class="calc-step-line"><strong>Lunch:</strong> Chicken + rice + vegetables</p>
-          <p class="calc-step-line"><strong>Snack:</strong> Greek yogurt + fruit + nuts</p>
-          <p class="calc-step-line"><strong>Dinner:</strong> Fish or beans + potatoes/whole grains + vegetables</p>
-          <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(239, 35, 60, 0.1); border-radius: 4px; border-left: 3px solid var(--accent-rose);">
-            <p style="margin: 0; font-size: 0.85rem; color: var(--text-main);"><strong>Example only — this is not a personalized medical diet plan.</strong></p>
-          </div>
-        </div>
-
-        <h2>Understanding Protein, Carbohydrates and Fats</h2>
-        <p>Individual macro needs vary. Use our <a href="/macro-calculator/">Macro Calculator</a> to explore distributions.</p>
+        <h2>Healthy Cooking</h2>
+        <p>Cooking at home can make ingredients and portions easier to manage.</p>
+        <p>Simple cooking methods include:</p>
         <ul>
-          <li><strong>Protein:</strong> Found in eggs, chicken, fish, dairy, beans, lentils, soy, nuts, and seeds.</li>
-          <li><strong>Carbohydrates:</strong> Found in oats, rice, potatoes, fruit, vegetables, beans, and whole grains.</li>
-          <li><strong>Fats:</strong> Found in olive oil, nuts, seeds, avocado, and fish.</li>
+          <li>Baking</li>
+          <li>Roasting</li>
+          <li>Grilling</li>
+          <li>Steaming</li>
+          <li>Sautéing</li>
         </ul>
+        <p>Use a variety of vegetables, protein foods, whole grains, and healthy fats. At the same time, avoid relying heavily on ingredients that add excessive sodium, added sugar, or saturated fat.</p>
 
-        <h2>Why Fiber Matters</h2>
-        <p>Fiber-rich foods can support digestive health and may help with fullness. Great sources include vegetables, fruits, beans, lentils, whole grains, nuts, and seeds.</p>
+        <h2>Healthy Menus and Shopping Strategies</h2>
+        <p>A simple grocery plan can prevent random food choices. Before shopping, decide which protein foods, vegetables, fruits, grains, and other foods you need.</p>
+        <p>For a limited budget, compare prices, use seasonal produce, choose frozen vegetables when practical, and include affordable foods such as beans, lentils, oats, eggs, and whole grains.</p>
+        <p>When buying packaged foods, use the Nutrition Facts label instead of relying only on marketing claims.</p>
 
-        <h2>Water and Hydration</h2>
-        <p>Drink water regularly, as it is an excellent replacement for sugary drinks. Remember that hydration needs differ per individual; your physical activity and environmental conditions directly affect your fluid needs. There is no single exact amount everyone must drink.</p>
-
-        <h2>Common Diet Mistakes</h2>
-        <ol>
-          <li>Using an unrealistic calorie target</li>
-          <li>Cutting calories too aggressively</li>
-          <li>Ignoring protein</li>
-          <li>Ignoring fiber</li>
-          <li>Drinking many liquid calories</li>
-          <li>Ignoring portion sizes</li>
-          <li>Following extreme diets</li>
-          <li>Expecting instant results</li>
-          <li>Judging progress from one day's weight</li>
-          <li>Changing too many habits at once</li>
-        </ol>
-
-        <h2>Diet and Physical Activity Work Together</h2>
-        <p>Energy intake and physical activity both affect energy balance. The CDC recommends adults get at least <strong>150 minutes of moderate-intensity aerobic activity per week</strong> and <strong>muscle-strengthening activity on at least 2 days per week</strong>.</p>
-        <p>You can estimate activity burn with our <a href="/calories-burned-calculator/">Calories Burned Calculator</a>.</p>
-        <p style="font-size: 0.85rem; color: var(--text-muted);"><a href="https://www.cdc.gov/healthy-weight-growth/physical-activity/index.html" target="_blank" rel="noopener">CDC Guidance on Physical Activity</a></p>
-
-        <h2>Sleep and Healthy Weight</h2>
-        <p>Weight management is influenced by more than food alone. Sleep, physical activity, stress management, and consistent eating habits all play roles in your overall health and metabolic balance.</p>
-
-        <h2>When Should You Talk to a Doctor or Dietitian?</h2>
-        <p>Seek professional guidance if you:</p>
+        <h3>How to Read a Nutrition Facts Label</h3>
+        <p>Start with the <strong>serving size</strong>. It tells you the amount used for the nutrition information on the label. However, it is not a recommendation for how much you should eat.</p>
+        <p>Your <strong>portion size</strong> is the amount you actually choose to consume. One package can also contain multiple servings.</p>
+        <p>Next, check:</p>
         <ul>
-          <li>have diabetes, kidney disease, or heart disease</li>
-          <li>are pregnant or breastfeeding</li>
-          <li>take medications affecting appetite or weight</li>
-          <li>have a history of an eating disorder</li>
-          <li>have unexplained weight loss or weight gain</li>
-          <li>have significant digestive symptoms</li>
-          <li>need a therapeutic diet</li>
-          <li>are unsure whether a calorie deficit is appropriate</li>
+          <li>Calories</li>
+          <li>Protein</li>
+          <li>Dietary fiber</li>
+          <li>Saturated fat</li>
+          <li>Sodium</li>
+          <li>Total sugars</li>
+          <li>Added sugars</li>
         </ul>
-        <p>Consult a doctor, registered dietitian, or qualified healthcare professional for individualized advice.</p>
+        <p>The FDA considers 5% Daily Value or less to be low and 20% or more to be high for an individual nutrient.</p>
 
-        <h2>Evidence-Based Diet Information</h2>
-        <p>This information is gathered from established health authorities and scientific consensus. It is provided for general education.</p>
+        <h2>Hydration and Healthy Eating</h2>
+        <p>Water is an important part of a healthy lifestyle. Fluid needs can vary according to activity, environment, diet, and individual circumstances.</p>
+        <p>Therefore, drink water regularly and pay attention to your body's signals, especially during physical activity or hot weather. There is no single fluid target that fits every person.</p>
 
-        <h2>Get General Diet Guidance</h2>
-        <div class="glass-card" style="padding: 1.5rem; margin-bottom: 2rem;">
-          <div class="extras-form-grid" style="grid-template-columns: 1fr 1fr;">
-            <div class="form-group">
-              <label class="form-label">Goal</label>
-              <select id="guidance-goal" class="select-field">
-                <option value="loss">Weight Loss</option>
-                <option value="maintain">Weight Maintenance</option>
-                <option value="gain">Weight Gain</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Dietary Preference</label>
-              <select id="guidance-pref" class="select-field">
-                <option value="none">No preference</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="high-protein">High-protein</option>
-                <option value="mediterranean">Mediterranean-style</option>
-              </select>
-            </div>
-          </div>
-          <button id="btn-get-guidance" class="btn-primary" style="margin-top: 1rem; width: 100%;">Get General Guidance Overview</button>
-          
-          <div id="guidance-result" style="display: none; margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
-            <h3 style="margin-top: 0; color: var(--text-main);">Your Nutrition Overview</h3>
-            <div id="guidance-tdee-display" style="display: none; font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--accent-cyan);">Estimated TDEE: <span id="guidance-tdee-val"></span> kcal</div>
-            <p><strong>Goal:</strong> <span id="guidance-goal-val"></span></p>
-            <p><strong>General Calorie Direction:</strong> <span id="guidance-cal-dir"></span></p>
-            <p><strong>Food Priorities:</strong> <span id="guidance-priorities"></span></p>
-            <p><strong>Protein Examples:</strong> <span id="guidance-protein"></span></p>
-            <p><strong>Fiber Examples:</strong> <span id="guidance-fiber"></span></p>
-            <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(239, 35, 60, 0.1); border-radius: 4px; border-left: 3px solid var(--accent-rose);">
-              <p style="margin: 0; font-size: 0.85rem; color: var(--text-main);"><strong>General educational guidance &mdash; not personalized medical advice.</strong></p>
-            </div>
-          </div>
-        </div>
+        <h2>Eating Healthy When Busy</h2>
+        <p>A busy schedule does not mean every meal needs to come from a restaurant.</p>
+        <p>Keep simple ingredients available so you can prepare food quickly. Eggs, yogurt, oats, fruit, vegetables, beans, canned fish, and whole grains can support quick meals.</p>
+        <p>For example, an egg and vegetable sandwich can work for breakfast, while rice, beans, and vegetables can make a simple lunch or dinner.</p>
+
+        <h2>Eating Healthy at Restaurants</h2>
+        <p>Restaurant meals can still fit into a balanced eating pattern.</p>
+        <p>Check the menu before ordering when possible. Choose meals that include protein and vegetables, and consider grilled, baked, or steamed options when suitable.</p>
+        <p>Portions can also be larger than what you normally eat. Therefore, eating slowly, sharing a meal, or saving part for later can help you manage the amount you consume.</p>
+
+        <h2>What's a Fad Diet?</h2>
+        <p>A fad diet usually promotes an extreme or restrictive approach and may promise unusually fast results.</p>
+        <p>Be cautious when a diet:</p>
+        <ul>
+          <li>Promises dramatic results quickly</li>
+          <li>Eliminates major food groups without a clear reason</li>
+          <li>Promotes a "miracle" food</li>
+          <li>Relies mainly on testimonials</li>
+          <li>Uses one study as proof</li>
+          <li>Requires expensive products or supplements</li>
+        </ul>
+        <p>Reliable nutrition advice should explain evidence, limitations, and individual differences.</p>
+
+        <h2>Why Fad Diets Can Be a Problem</h2>
+        <p>Highly restrictive diets can be difficult to maintain. They may also remove foods or food groups without considering a person's nutritional needs.</p>
+        <p>Consequently, a diet that looks attractive for a few weeks may not be practical for long-term use.</p>
+        <p>A sustainable eating pattern should fit your lifestyle rather than force you to follow rules that you cannot maintain.</p>
+
+        <h2>How to Safely Lose Weight</h2>
+        <p>For most people, sustained weight loss requires an energy deficit over time. However, the appropriate calorie target differs between individuals.</p>
+        <p>A TDEE estimate can provide useful context for understanding daily energy expenditure. Nevertheless, it should not be treated as an exact measurement.</p>
+        <p>Short-term changes on the scale can also reflect water, glycogen, digestive contents, and other factors. Therefore, a daily weight change does not necessarily represent a change in body fat.</p>
+        <p>Avoid extreme restrictions and guaranteed-result claims. If you have a medical condition, take medications affected by diet, are pregnant or breastfeeding, or have specific nutritional needs, seek individualized guidance from a qualified healthcare professional.</p>
+
+        <h2>Nutritional Supplements</h2>
+        <p>Supplements may be useful for specific nutritional needs. However, they should not replace a varied eating pattern.</p>
+        <p>If you believe you need a supplement because of a deficiency, medical condition, medication, or dietary restriction, discuss it with a qualified healthcare professional.</p>
+
+        <h2>Your Personalized Healthy Eating Pattern</h2>
+        <p>Useful <strong>Diet Advice</strong> should fit your real life.</p>
+        <p>Consider:</p>
+        <ul>
+          <li>Your health or weight goal</li>
+          <li>Estimated calorie needs</li>
+          <li>Activity level</li>
+          <li>Food preferences</li>
+          <li>Budget</li>
+          <li>Cooking skills</li>
+          <li>Work or school schedule</li>
+          <li>Cultural food choices</li>
+          <li>Individual nutritional needs</li>
+        </ul>
+        <p>There is no single meal plan that works exactly the same way for everyone. Instead, build an eating pattern that is nutritious, realistic, and sustainable.</p>
 
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
           <div class="faq-item">
-            <h3 class="faq-question">What is the best diet for weight loss?</h3>
-            <p>There is no single "best" diet. The most effective diet is one that creates a sustainable calorie deficit while providing adequate protein, nutrients, and foods you actually enjoy eating long-term.</p>
+            <h3 class="faq-question">What is the best Diet Advice for healthy eating?</h3>
+            <p>There is no single diet that works exactly the same way for everyone. A healthy eating pattern generally includes a variety of nutrient-dense foods while considering personal needs, preferences, budget, and lifestyle.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">How many calories should I eat based on my TDEE?</h3>
-            <p>To lose weight, you generally eat fewer calories than your TDEE (e.g., a 15-20% deficit). To maintain, you eat around your TDEE. To gain, you eat in a moderate surplus (e.g., 10-15% above TDEE).</p>
+            <h3 class="faq-question">How many calories should I eat each day?</h3>
+            <p>Your calorie needs depend on factors such as age, body size, sex, and activity level. A <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE calculator</a> can estimate your daily energy expenditure, but the result should be treated as a starting estimate rather than an exact measurement.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Can I use TDEE to plan my diet?</h3>
-            <p>Yes, your TDEE is an excellent starting point for estimating how much food your body needs daily.</p>
+            <h3 class="faq-question">Can I eat sugar and still have a healthy diet?</h3>
+            <p>Yes. Eating some foods that contain sugar does not automatically make your entire diet unhealthy. However, it is useful to distinguish naturally occurring sugar from added sugar and limit excessive added sugar.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">What should I eat to lose weight?</h3>
-            <p>Prioritize nutrient-dense foods like lean proteins, vegetables, fruits, and whole grains. They help keep you full and satisfied while eating in a calorie deficit.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">What foods are high in protein?</h3>
-            <p>Excellent sources include poultry, fish, eggs, dairy, beans, lentils, tofu, and lean meats.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">How can I build a balanced meal?</h3>
-            <p>A good rule of thumb is filling half your plate with vegetables or fruits, a quarter with lean protein, and a quarter with complex carbohydrates, adding a small amount of healthy fats.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">Should I completely avoid carbohydrates?</h3>
-            <p>No, carbohydrates are your body's preferred energy source. Focus on high-quality complex carbohydrates like oats, quinoa, and sweet potatoes rather than highly processed sugars.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">How much of a calorie deficit should I use?</h3>
-            <p>A moderate deficit of 300 to 500 calories below your TDEE is generally recommended for sustainable, gradual weight loss.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">Can I eat my favorite foods while losing weight?</h3>
-            <p>Yes! No food is inherently "off-limits." Portion awareness and fitting your favorite foods into an overall balanced dietary pattern is completely fine.</p>
-          </div>
-          <div class="faq-item">
-            <h3 class="faq-question">When should I talk to a doctor about my diet?</h3>
-            <p>If you have medical conditions (like diabetes), take medications, are pregnant, or have a history of disordered eating, you should consult a professional.</p>
+            <h3 class="faq-question">Is a calorie deficit necessary for weight loss?</h3>
+            <p>For most people, sustained weight loss requires an energy deficit over time. However, the appropriate approach varies between individuals. Extreme calorie restriction is not necessary for building a healthy eating pattern.</p>
           </div>
         </div>
 
-        <h2>Start With Your TDEE</h2>
-        <p>Your calorie needs are a starting point. Calculate your TDEE, choose your goal, and use the result to better understand your daily energy needs.</p>
-        <div style="margin-top: 1.5rem; margin-bottom: 3rem;">
-          <a href="/" class="btn-primary" style="display: inline-block;">Calculate My TDEE</a>
-        </div>
-
-        <div class="calculator-disclaimer" style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-rose); border-radius: 8px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-          <strong>Disclaimer:</strong> This website provides general educational information about calories, TDEE, nutrition, and healthy eating. It is not medical advice and does not diagnose, treat, or prevent any disease. TDEE and calorie calculations are estimates and may not reflect your individual energy needs. Consult a qualified healthcare professional or registered dietitian for personalized nutrition advice, especially if you are pregnant, breastfeeding, taking medication, managing a medical condition, or have a history of an eating disorder.
-        </div>
-
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            // TDEE Integration
-            var savedTdee = localStorage.getItem('tdee_last_result');
-            if (savedTdee) {
-              var tdeeBlock = document.getElementById('tdee-integration-block');
-              var tdeeVal = document.getElementById('tdee-integration-val');
-              if (tdeeBlock && tdeeVal) {
-                tdeeVal.textContent = parseFloat(savedTdee).toLocaleString();
-                tdeeBlock.style.display = 'block';
-              }
-            }
-
-            // Meal Builder Logic
-            var btnMeal = document.getElementById('btn-build-meal');
-            if (btnMeal) {
-              btnMeal.addEventListener('click', function() {
-                var p = document.getElementById('meal-protein').value;
-                var c = document.getElementById('meal-carb').value;
-                var v = document.getElementById('meal-veg').value;
-                var f = document.getElementById('meal-fruit').value;
-                var fat = document.getElementById('meal-fat').value;
-                
-                var mealStr = p + " with " + c + " and " + v + ", prepared with a touch of " + fat.toLowerCase();
-                if (f !== 'None') mealStr += " and a side of " + f.toLowerCase();
-                mealStr += ".";
-                
-                document.getElementById('meal-idea-text').textContent = mealStr;
-                document.getElementById('meal-idea-result').style.display = 'block';
-              });
-            }
-
-            // Guidance Tool Logic
-            var btnGuide = document.getElementById('btn-get-guidance');
-            if (btnGuide) {
-              btnGuide.addEventListener('click', function() {
-                var goal = document.getElementById('guidance-goal').value;
-                var pref = document.getElementById('guidance-pref').value;
-                
-                var calDir = "Maintain your current TDEE estimate.";
-                var goalLabel = "Weight Maintenance";
-                if (goal === 'loss') {
-                  calDir = "Eat slightly below your estimated TDEE (moderate deficit).";
-                  goalLabel = "Weight Loss";
-                } else if (goal === 'gain') {
-                  calDir = "Eat slightly above your estimated TDEE (moderate surplus).";
-                  goalLabel = "Weight Gain";
-                }
-
-                var proteinEx = "Chicken, Fish, Eggs, Greek Yogurt, Beans, Tofu";
-                var fiberEx = "Mixed vegetables, whole grains, fruits";
-                var priorities = "Focus on balance, adequate protein, and hydration.";
-
-                if (pref === 'vegetarian') {
-                  proteinEx = "Eggs, Greek Yogurt, Beans, Lentils, Tofu, Tempeh";
-                  priorities = "Ensure diverse plant protein sources and B12 awareness.";
-                } else if (pref === 'vegan') {
-                  proteinEx = "Lentils, Black Beans, Tofu, Tempeh, Seitan, Edamame";
-                  priorities = "Diverse plant proteins, fortified foods (B12/Iron/Calcium).";
-                } else if (pref === 'high-protein') {
-                  priorities = "High satiety meals, muscle retention support.";
-                } else if (pref === 'mediterranean') {
-                  proteinEx = "Fish, Seafood, Poultry, Legumes";
-                  fiberEx = "Leafy greens, tomatoes, whole grains, nuts";
-                  priorities = "Healthy fats (olive oil, avocado), lean proteins, whole foods.";
-                }
-
-                document.getElementById('guidance-goal-val').textContent = goalLabel;
-                document.getElementById('guidance-cal-dir').textContent = calDir;
-                document.getElementById('guidance-priorities').textContent = priorities;
-                document.getElementById('guidance-protein').textContent = proteinEx;
-                document.getElementById('guidance-fiber').textContent = fiberEx;
-                
-                var savedTdee = localStorage.getItem('tdee_last_result');
-                if (savedTdee) {
-                  document.getElementById('guidance-tdee-display').style.display = 'block';
-                  document.getElementById('guidance-tdee-val').textContent = parseFloat(savedTdee).toLocaleString();
-                }
-
-                document.getElementById('guidance-result').style.display = 'block';
-              });
-            }
-          });
-        </script>
-      `
+        <h2>Final Thoughts</h2>
+        <p>Good <strong>Diet Advice</strong> should make healthy eating easier, not create unnecessary fear around food. Focus on variety, nutrient-dense foods, protein, fiber-rich choices, fruits, vegetables, whole grains, suitable portions, and reasonable limits on added sugar, excess sodium, and highly processed foods.</p>
+        <p>From a practical perspective, consistency matters more than chasing every new diet trend. Understanding your estimated energy needs, including <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE</a>, can provide useful context for weight-related goals. Still, a calculator is only a starting estimate. When medical conditions or specific nutritional needs are involved, qualified professional guidance is the appropriate next step.</p>
+\n      `
     }
 
     ,
