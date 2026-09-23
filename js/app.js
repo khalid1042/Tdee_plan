@@ -89,15 +89,33 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderRoute(path) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    var heroTitle = document.querySelector('.hero-title');
+
     if (path === '/') {
       // Show Homepage Calculator Workspace
       heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
       document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
+      
+      // Ensure hero-title is an H1 on the homepage
+      if (heroTitle && heroTitle.tagName.toLowerCase() !== 'h1') {
+        var newH1 = document.createElement('h1');
+        newH1.className = heroTitle.className;
+        newH1.innerHTML = heroTitle.innerHTML;
+        heroTitle.parentNode.replaceChild(newH1, heroTitle);
+      }
       return;
     }
 
     var routeData = window.TDEEContent.routes[path];
+
+    // Ensure hero-title is a DIV on subpages so we don't have multiple H1s
+    if (heroTitle && heroTitle.tagName.toLowerCase() === 'h1') {
+      var newDiv = document.createElement('div');
+      newDiv.className = heroTitle.className;
+      newDiv.innerHTML = heroTitle.innerHTML;
+      heroTitle.parentNode.replaceChild(newDiv, heroTitle);
+    }
 
     if (!routeData) {
       ensureSiloContainer();
