@@ -247,6 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
     displayMinRange.textContent = calcResult.minRange.toLocaleString() + ' kcal';
     displayMaxRange.textContent = calcResult.maxRange.toLocaleString() + ' kcal';
 
+    try { localStorage.setItem('tdee_last_result', calcResult.tdee); } catch (e) {}
+
     // Update Goals & Targets
     var goals = window.TDEECalculator.calculateGoals(calcResult.tdee, state.weightKg);
     var activeGoalObj = goals[state.activeGoal] || goals.maintain;
