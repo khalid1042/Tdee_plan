@@ -6,5 +6,8 @@
     "build": "node build.js",
     "dev": "npx --yes serve -s ."
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
 }
