@@ -1214,14 +1214,20 @@ a:hover {
     justify-content: flex-start;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
     gap: 1rem;
     padding-bottom: 0.25rem;
     /* hide scrollbar but keep it scrollable */
-    scrollbar-width: thin;
+    scrollbar-width: none;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-menu li {
     flex-shrink: 0;
+    scroll-snap-align: start;
   }
 
   .dropdown-menu {
@@ -1264,6 +1270,15 @@ a:hover {
   }
 
   /* Header uses hamburger nav — layout handled by the mobile nav layer */
+  .header {
+    background: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  [data-theme="light"] .header {
+    background: rgba(255, 255, 255, 0.95);
+  }
 
   /* Calculator + results already switch to 1 column below 1024px via
      the existing rule; just tighten spacing here */
@@ -1276,7 +1291,7 @@ a:hover {
   .calibration-section,
   .wizard-box,
   .diagnostic-box {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   /* Card header (title + unit toggle) stacks instead of squeezing */
@@ -1308,9 +1323,9 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Macro cards: 3 columns is too tight on phones */
+  /* Macro cards: 2 columns is better than 3 on phones */
   .macro-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
 
@@ -1322,11 +1337,18 @@ a:hover {
   .goals-tabs {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .goals-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .goal-tab-btn {
     flex: 0 0 auto;
     min-width: 110px;
+    scroll-snap-align: start;
   }
 
   .target-calories-display {
@@ -1394,6 +1416,15 @@ a:hover {
 
   .footer-tree {
     gap: 1.5rem;
+  }
+
+  /* Increase tap targets for accessibility */
+  .btn-primary,
+  .btn-secondary,
+  .segmented-btn,
+  .input-field,
+  .select-field {
+    min-height: 48px;
   }
 }
 
