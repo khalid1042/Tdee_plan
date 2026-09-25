@@ -80,6 +80,20 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ==========================================================================
      1. ROUTING & NAVIGATION SYSTEM
      ========================================================================== */
+  function normalizeRoutePath(rawPath) {
+    if (!rawPath) return '/';
+    var p = rawPath.replace(/\?.*$/, '').replace(/#.*$/, '');
+    p = p.replace(/\/index\.html$/, '');
+    p = p.replace(/^\/[^\/]+\.github\.io/i, '');
+    if (p.toLowerCase().startsWith('/tdee_plan')) {
+      p = p.substring('/tdee_plan'.length);
+    }
+    if (p === '' || p === '/') return '/';
+    if (!p.startsWith('/')) p = '/' + p;
+    if (!p.endsWith('/')) p = p + '/';
+    return p;
+  }
+
   function navigateTo(path) {
     state.currentRoute = path;
     window.history.pushState({}, '', path);
@@ -90,12 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     var heroTitle = document.querySelector('.hero-title');
+    var normPath = normalizeRoutePath(path);
 
-    // Clean up path (strip index.html, query strings, hashes)
-    var cleanPath = path.replace(/\/index\.html$/, '').replace(/\?.*$/, '').replace(/#.*$/, '');
-    if (cleanPath === '') cleanPath = '/';
-
-    if (cleanPath === '/') {
+    if (normPath === '/') {
       // Show Homepage Calculator Workspace
       heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
@@ -111,12 +122,18 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    var normalizedPath = cleanPath;
-    if (!normalizedPath.endsWith('/')) {
-      normalizedPath = normalizedPath + '/';
-    }
+    var routes = (window.TDEEContent && window.TDEEContent.routes) ? window.TDEEContent.routes : {};
+    var routeData = routes[normPath] || routes[path];
 
-    var routeData = window.TDEEContent.routes[normalizedPath] || window.TDEEContent.routes[cleanPath] || window.TDEEContent.routes[path];
+    // Fallback: search for matching route key
+    if (!routeData) {
+      for (var key in routes) {
+        if (normPath !== '/' && (normPath.endsWith(key) || key.endsWith(normPath))) {
+          routeData = routes[key];
+          break;
+        }
+      }
+    }
 
     // Ensure hero-title is a DIV on subpages so we don't have multiple H1s
     if (heroTitle && heroTitle.tagName.toLowerCase() === 'h1') {
@@ -128,6 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!routeData) {
       ensureSiloContainer();
+      // Safety Check: If the page ALREADY contains static pre-rendered article content, do NOT overwrite it!
+      if (siloBody && siloBody.innerHTML && siloBody.innerHTML.trim().length > 100 && heroWorkspace.classList.contains('hidden')) {
+        console.log('Preserving static pre-rendered content for:', path);
+        return;
+      }
+
       // Show Custom 404 Error Page
       heroWorkspace.classList.add('hidden');
       siloContainer.classList.remove('hidden');

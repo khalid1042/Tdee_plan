@@ -7,8 +7,11 @@ http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   let f = path.join(root, p === '/' ? 'index.html' : p);
   try {
+    if (fs.existsSync(f) && fs.statSync(f).isDirectory()) {
+      f = path.join(f, 'index.html');
+    }
     const d = fs.readFileSync(f);
-    res.writeHead(200, { 'Content-Type': mime[path.extname(f)] || 'application/octet-stream' });
+    res.writeHead(200, { 'Content-Type': mime[path.extname(f)] || 'text/html' });
     res.end(d);
   } catch (e) {
     try {
