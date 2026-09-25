@@ -91,7 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var heroTitle = document.querySelector('.hero-title');
 
-    if (path === '/') {
+    // Clean up path (strip index.html, query strings, hashes)
+    var cleanPath = path.replace(/\/index\.html$/, '').replace(/\?.*$/, '').replace(/#.*$/, '');
+    if (cleanPath === '') cleanPath = '/';
+
+    if (cleanPath === '/') {
       // Show Homepage Calculator Workspace
       heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
@@ -107,7 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    var routeData = window.TDEEContent.routes[path];
+    var normalizedPath = cleanPath;
+    if (!normalizedPath.endsWith('/')) {
+      normalizedPath = normalizedPath + '/';
+    }
+
+    var routeData = window.TDEEContent.routes[normalizedPath] || window.TDEEContent.routes[cleanPath] || window.TDEEContent.routes[path];
 
     // Ensure hero-title is a DIV on subpages so we don't have multiple H1s
     if (heroTitle && heroTitle.tagName.toLowerCase() === 'h1') {

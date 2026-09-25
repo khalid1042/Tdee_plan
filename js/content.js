@@ -3097,239 +3097,223 @@ window.TDEEContent = {
       content: `
         <p>This website utilizes local storage to save your preferred units (metric/imperial) and temporary calibration data locally on your device.</p>
       `
-    }
+    },
 
-    ,
     '/diet-advice/': {
-      title: 'Diet Advice for Healthy Weight Management | TDEE Calculator',
-      metaDescription: 'Get practical diet advice for healthy weight management, including TDEE, calories, protein, balanced meals, food choices, weight loss and weight gain guidance.',
+      title: 'Diet Advice for Healthy Weight Management & Energy Balance | TDEE Calculator',
+      metaDescription: 'Evidence-based diet advice for sustainable weight loss, muscle retention, and long-term nutrition. Learn macro ratios, volumetric eating, protein priming, and meal planning.',
       category: 'Diet & Nutrition',
+      readTime: '8 min read',
       h1: 'Diet Advice for Healthy Weight Management',
-      content: `\n
-        <p class="lead-paragraph">Finding reliable <strong>Diet Advice</strong> can feel harder than eating healthy. One source says to avoid carbs, another promotes high protein, while social media recommends a different diet every week. As a result, choosing what to eat can become confusing, especially when your goal is better health or weight management.</p>
+      content: `
+        <p class="lead-paragraph">Navigating modern <strong>Diet Advice</strong> can feel overwhelming. One source claims carbohydrates cause weight gain, another insists high-fat keto is essential, while social media algorithms promote a new elimination diet every week. The resulting confusion often leads to overly restrictive diets that are impossible to maintain over time.</p>
 
-        <p>A better approach is to build a balanced eating pattern around nutrient-dense foods, sensible portions, personal preferences, and your daily energy needs. The current Dietary Guidelines for Americans, 2025–2030, emphasize protein foods, dairy, vegetables, fruits, healthy fats, and whole grains while recommending less highly processed food, added sugar, excess sodium, and refined carbohydrates.</p>
+        <p>Scientific nutrition research reveals a much simpler reality: long-term health and successful weight management are not built on extreme dietary rules. Instead, they depend on understanding <strong>energy balance (TDEE vs. calorie intake)</strong>, prioritizing nutrient-dense whole foods, eating adequate protein, and creating an adaptable eating pattern that fits your lifestyle.</p>
 
-        <h2>What Is Healthy Eating?</h2>
-        <p>Healthy eating means regularly choosing different foods that provide the nutrients and energy your body needs. Therefore, it does not require a perfect menu or eliminating every food you enjoy.</p>
-        <p>Instead, a healthy eating pattern can include vegetables, fruits, protein foods, whole grains, dairy or suitable alternatives, and healthy fats. Moreover, your choices can reflect your budget, culture, preferences, schedule, and individual needs.</p>
+        <div style="margin: 2rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="/" class="btn-primary" style="flex: 1; text-align: center; white-space: nowrap;">Calculate Your TDEE Baseline</a>
+          <a href="/macro-calculator/" class="btn-secondary" style="flex: 1; text-align: center; white-space: nowrap;">Configure Custom Macros</a>
+        </div>
 
-        <h2>The Fundamentals of Healthy Eating</h2>
-        <p>A balanced diet starts with variety. Different foods provide different nutrients, so relying heavily on one food group can make it harder to meet your nutritional needs.</p>
+        <div class="takeaway-callout-box">
+          <p><strong>Core Nutrition Takeaway:</strong> The best diet is not the most restrictive one—it is the one you can consistently maintain while hitting your energy balance (calories) and essential nutrient targets (protein, micronutrients, fiber, and essential fats).</p>
+        </div>
 
-        <h3>Protein Foods</h3>
-        <p>Protein foods include eggs, fish, poultry, lean meats, beans, lentils, nuts, seeds, and soy foods. Including a protein source regularly can make meals more satisfying while helping you meet your nutritional needs.</p>
+        <h2>1. The Four Pillars of Evidence-Based Diet Advice</h2>
+        <p>Regardless of whether you follow an omnivorous, Mediterranean, plant-based, or low-carb meal pattern, successful weight management relies on four fundamental principles:</p>
 
-        <h3>Fiber-Rich Foods</h3>
-        <p>Fiber is found in vegetables, fruits, whole grains, legumes, nuts, and seeds. It supports digestive health and can help you feel full.</p>
-        <p>For example, choose oatmeal at breakfast, beans or lentils with meals, whole-grain bread, vegetables, or whole fruit as snacks.</p>
+        <div class="about-calculator-card" style="margin-bottom: 2rem;">
+          <ul style="margin: 0; padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.75rem;"><strong>Energy Balance (Calories In vs. Calories Out):</strong> Your total daily energy expenditure (<a href="/" style="color: var(--accent-cyan); font-weight: 600;">TDEE</a>) sets the baseline for weight change. To lose body fat, you need a sustained calorie deficit. To gain lean muscle, you need a controlled calorie surplus.</li>
+            <li style="margin-bottom: 0.75rem;"><strong>Protein Priming & Satiety:</strong> Adequate protein intake preserves lean muscle mass during weight loss, stimulates muscle protein synthesis, and maximizes satiety via gut hormone signals (GLP-1 and PYY).</li>
+            <li style="margin-bottom: 0.75rem;"><strong>Volumetric Quality & Micronutrients:</strong> Prioritizing high-volume, low-energy-density foods (vegetables, fruits, whole grains, legumes) provides essential vitamins, minerals, and dietary fiber while keeping hunger manageable.</li>
+            <li style="margin-bottom: 0;"><strong>Behavioral Sustainability & Adherence:</strong> Flexible dietary restraint produces significantly higher long-term weight maintenance success than rigid "all-or-nothing" diet rules.</li>
+          </ul>
+        </div>
 
-        <h3>Fruits and Vegetables</h3>
-        <p>Try to include different types and colors of fruits and vegetables throughout the week. Fresh, frozen, and suitable canned options can all fit into a healthy eating pattern.</p>
-        <p>Furthermore, whole fruit can provide fiber that many fruit drinks do not provide. Adding berries to oatmeal, spinach to eggs, or vegetables to sandwiches can make this habit easier.</p>
+        <h2>2. Energy Density & Volumetric Eating Strategy</h2>
+        <p>Hunger is primarily triggered by the physical volume of food in your stomach rather than the number of calories consumed. This principle, known as <em>volumetric eating</em>, is one of the most effective strategies for fat loss.</p>
 
-        <h3>Whole Grains</h3>
-        <p>Whole grains can provide fiber and other nutrients. Oats, brown rice, whole-grain bread, and other whole-grain foods can fit into balanced meals.</p>
+        <p>By replacing energy-dense foods (high calorie, low volume) with nutrient-dense foods (low calorie, high volume and high fiber), you can consume satisfying portion sizes while remaining within your target calorie budget on our <a href="/calorie-deficit-calculator/" style="color: var(--accent-cyan); font-weight: 600;">Calorie Deficit Calculator</a>.</p>
 
-        <h2>The Facts on Fat</h2>
-        <p>Dietary fat is not automatically unhealthy. Your body needs fat, and some foods provide essential fatty acids.</p>
-        <p>Instead of treating every type of fat the same, focus on the overall quality of your food choices. Nuts, seeds, fish, avocado, and plant oils can provide unsaturated fats.</p>
-        <p>Meanwhile, foods high in saturated fat should be limited within an overall healthy eating pattern. The goal is balance rather than labeling every food as simply "good" or "bad."</p>
-
-        <h2>The Facts on Sugar</h2>
-        <p>Total sugar and added sugar are different. Total sugars include naturally occurring sugars in foods such as fruit and milk. Added sugars are added during processing or preparation.</p>
-        <p>Consequently, check the <strong>Added Sugars</strong> line when reading a Nutrition Facts label. The FDA lists 50 grams as the Daily Value for added sugars based on a 2,000-calorie diet.</p>
-        <p>This does not mean every person should consume exactly 50 grams. Individual calorie needs differ, so use the Daily Value mainly as a label-reading reference.</p>
-
-        <h2>A Healthy Eating Pattern</h2>
-        <p>A practical meal can combine several food groups.</p>
         <div class="table-responsive" style="margin-bottom: 2rem;">
           <table class="styled-table">
             <thead>
               <tr>
-                <th>Meal Component</th>
-                <th>Examples</th>
+                <th>Food Category</th>
+                <th>High Energy Density (Limit Portions)</th>
+                <th>Low Energy Density / Volumetric (Emphasize)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Protein</td>
-                <td>Eggs, fish, chicken, beans, lentils</td>
+                <td><strong>Proteins</strong></td>
+                <td>Processed sausage, fatty beef cuts, fried chicken</td>
+                <td>Skinless chicken breast, white fish, egg whites, Greek yogurt, tofu</td>
               </tr>
               <tr>
-                <td>Vegetables or fruit</td>
-                <td>Broccoli, spinach, berries, oranges</td>
+                <td><strong>Carbohydrates</strong></td>
+                <td>Potato chips, sugary cereals, pastries, white bread</td>
+                <td>Boiled potatoes, oats, quinoa, berries, watermelon, air-popped popcorn</td>
               </tr>
               <tr>
-                <td>Whole grains or carbohydrates</td>
-                <td>Oats, brown rice, potatoes, whole-grain bread</td>
+                <td><strong>Vegetables</strong></td>
+                <td>Deep-fried vegetables, heavy cream-based dishes</td>
+                <td>Spinach, broccoli, zucchini, cucumber, cauliflower, bell peppers</td>
               </tr>
               <tr>
-                <td>Healthy fats</td>
-                <td>Nuts, seeds, avocado, plant oils</td>
+                <td><strong>Fats</strong></td>
+                <td>Heavy oils, butter, margarine, processed dressings</td>
+                <td>Avocado (portioned), chia seeds, raw almonds, extra virgin olive oil</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p>This framework is flexible rather than a strict prescription. Therefore, portions and food choices can change according to your calorie needs, activity level, preferences, and goals.</p>
 
-        <h2>Healthy Diets, Calories, and TDEE</h2>
-        <p>Healthy food choices matter. However, calorie intake also matters because calories provide energy.</p>
-        <p>Your daily energy needs can vary because of factors such as age, body size, sex, and physical activity. Consequently, two people can have different calorie needs even when they eat similar foods.</p>
-        <p><strong>TDEE</strong>, or Total Daily Energy Expenditure, is an estimate of the energy your body uses during a typical day. It reflects resting energy needs, physical activity, and other energy expenditure.</p>
-        <p>Therefore, a <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE calculator</a> can provide a useful starting estimate when your goal involves weight loss, weight maintenance, or weight gain. Nevertheless, the result is an estimate rather than a direct measurement of your metabolism.</p>
+        <h2>3. Target Macronutrient Distributions by Goal</h2>
+        <p>While energy intake controls weight change, your macronutrient distribution (protein, carbohydrates, and fats) dictates whether that weight loss comes from body fat or muscle tissue.</p>
 
-        <h2>Making the Switch to a Healthy Diet</h2>
-        <p>Changing everything at once can make healthy eating difficult to maintain. Instead, begin with a few realistic changes.</p>
-        <p>For example, add vegetables to one meal, include protein regularly, choose whole fruit for some snacks, drink water more often, and replace some refined grains with whole grains.</p>
-        <p>Over time, repeated small changes can become normal habits. As a result, healthy eating becomes easier to maintain without following extreme rules.</p>
+        <div class="worked-example-card" style="margin-bottom: 2rem;">
+          <h4 style="margin: 0 0 0.75rem; color: var(--accent-cyan);">Protein Recommendations:</h4>
+          <p style="margin-bottom: 0.5rem;">• <strong>Fat Loss Goal:</strong> 1.6 to 2.2 grams per kilogram of body weight (0.7 to 1.0 g/lb) to prevent muscle loss while in a deficit.</p>
+          <p style="margin-bottom: 0.5rem;">• <strong>Muscle Gain Goal:</strong> 1.6 to 2.4 grams per kilogram of body weight alongside progressive resistance training.</p>
+          <p style="margin: 0;">• <strong>General Maintenance:</strong> 1.2 to 1.6 grams per kilogram of total body weight.</p>
+        </div>
 
-        <h2>Setting Yourself Up for Success</h2>
-        <p>Planning can make healthy choices easier, especially when your schedule is busy.</p>
-        <p>Before shopping, prepare a simple grocery list. Keep practical foods available, such as eggs, oats, beans, fruit, vegetables, yogurt, and whole grains.</p>
-        <p>Frozen vegetables can also reduce preparation time. Likewise, simple meals such as eggs with whole-grain toast and fruit, yogurt with berries and nuts, or rice with beans and vegetables can provide convenient options.</p>
+        <div class="table-responsive" style="margin-bottom: 2rem;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Primary Goal</th>
+                <th>Calorie Intake Relative to TDEE</th>
+                <th>Protein Target</th>
+                <th>Carbohydrate Target</th>
+                <th>Fat Target</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sustainable Fat Loss</strong></td>
+                <td>15% to 25% Deficit (<a href="/calorie-deficit-calculator/">Calculate</a>)</td>
+                <td>30% – 35% (1.8–2.2g/kg)</td>
+                <td>35% – 45% (Whole grains, veggies)</td>
+                <td>20% – 30% (Healthy fats)</td>
+              </tr>
+              <tr>
+                <td><strong>Weight Maintenance</strong></td>
+                <td>100% of TDEE (<a href="/maintenance-calorie-calculator/">Calculate</a>)</td>
+                <td>25% – 30% (1.4–1.8g/kg)</td>
+                <td>40% – 50% (Balanced sources)</td>
+                <td>25% – 30% (Unsaturated fats)</td>
+              </tr>
+              <tr>
+                <td><strong>Lean Muscle Building</strong></td>
+                <td>5% to 15% Surplus (<a href="/calorie-surplus-calculator/">Calculate</a>)</td>
+                <td>25% – 30% (1.6–2.2g/kg)</td>
+                <td>45% – 55% (Energy for training)</td>
+                <td>20% – 25% (Hormonal support)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <h2>Moderation: Important to Healthy Eating</h2>
-        <p>Healthy eating does not require fear of individual foods. A dessert, favorite snack, or restaurant meal does not automatically ruin your overall eating pattern.</p>
-        <p>Instead, consider how a food fits into your diet as a whole. This approach can make healthy habits more flexible and sustainable.</p>
-        <p>The goal is not perfection. Rather, focus on what you do consistently.</p>
+        <h2>4. The Practical Meal Construction Blueprint</h2>
+        <p>Creating a healthy eating pattern does not require complicated meal prep routines or expensive gourmet ingredients. Use this simple 4-step plate blueprint for lunch and dinner:</p>
 
-        <h2>It's Not Just What You Eat, but When You Eat</h2>
-        <p>Meal timing can differ between people. Some prefer three larger meals, while others prefer smaller meals and snacks.</p>
-        <p>Your schedule, hunger, activity, and preferences can all affect your eating routine. Therefore, avoid rigid meal-timing rules unless they are appropriate for your individual situation.</p>
-        <p>Focus first on food quality, portions, overall energy intake, and consistency.</p>
+        <div class="glass-card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent-emerald);">
+          <ol style="margin: 0; padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Fill ½ of your plate with non-starchy vegetables or salad:</strong> Spinach, kale, broccoli, bell peppers, asparagus, or cucumbers.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Fill ¼ of your plate with lean protein:</strong> Chicken breast, salmon, turkey, sirloin, eggs, tofu, or lentils.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Fill ¼ of your plate with complex carbohydrates:</strong> Sweet potato, brown rice, quinoa, whole-wheat pasta, or beans.</li>
+            <li style="margin: 0;"><strong>Add 1 thumb-sized portion of healthy fats:</strong> Extra virgin olive oil dressing, avocado slice, or a sprinkle of seeds.</li>
+          </ol>
+        </div>
 
-        <h2>Add More Fruit and Vegetables to Your Diet</h2>
-        <p>Increasing fruit and vegetable intake does not require complicated recipes.</p>
-        <p>Try adding:</p>
+        <h2>5. Managing Appetite, Cravings, and Emotional Eating</h2>
+        <p>One of the biggest hurdles during fat loss is managing hunger cues. Understanding the difference between physiological hunger and psychological cravings is essential:</p>
+
+        <div class="question-callout-box" style="margin-bottom: 2rem;">
+          <h4 style="margin: 0 0 0.5rem; color: var(--accent-amber);">The "Apple Test" for True Hunger:</h4>
+          <p style="margin: 0;">If you feel hungry, ask yourself: <em>"Would I eat a fresh plain apple right now?"</em> If the answer is yes, you are experiencing true physical hunger. If the answer is no and you only want chips, chocolate, or ice cream, you are experiencing a psychological craving driven by stress, boredom, or habit.</p>
+        </div>
+
+        <h3>5 Tactical Rules for Managing Hunger:</h3>
         <ul>
-          <li>Spinach to eggs</li>
-          <li>Berries to oatmeal</li>
-          <li>Vegetables to sandwiches</li>
-          <li>Beans to salads</li>
-          <li>Frozen vegetables to rice or pasta</li>
-          <li>Fruit as a snack</li>
+          <li><strong>Front-load Protein:</strong> Aim for 25–40g of protein in your morning meal to stabilize blood sugar and suppress ghrelin (the hunger hormone) throughout the day.</li>
+          <li><strong>Prioritize Dietary Fiber:</strong> Consume at least 28–38 grams of total dietary fiber daily from whole food sources to delay gastric emptying.</li>
+          <li><strong>Stay Hydrated Before Meals:</strong> Drinking 500 ml (17 oz) of water 15–20 minutes before meals increases gastric fullness and naturally reduces energy intake.</li>
+          <li><strong>Get 7 to 9 Hours of Sleep:</strong> Sleep restriction increases ghrelin levels while decreasing leptin (the satiety hormone), leading to heightened cravings for calorie-dense foods.</li>
+          <li><strong>Practice 80/20 Flexible Dieting:</strong> Derive 80% of your daily calories from whole, minimally processed foods, while leaving 20% flexibility for foods you enjoy to prevent bingeing cycles.</li>
         </ul>
-        <p>Additionally, using different colors can increase variety. Fresh, frozen, and suitable canned produce can all be useful choices.</p>
 
-        <h3>How to Make Vegetables Tasty</h3>
-        <p>Vegetables do not have to be plain. Try roasting, grilling, steaming, or sautéing them.</p>
-        <p>Furthermore, herbs, spices, garlic, lemon, and other seasonings can improve flavor. Simple preparation can make vegetables easier to enjoy regularly.</p>
+        <h2>6. Debunking Common Nutrition & Diet Myths</h2>
 
-        <h2>Healthy Cooking</h2>
-        <p>Cooking at home can make ingredients and portions easier to manage.</p>
-        <p>Simple cooking methods include:</p>
-        <ul>
-          <li>Baking</li>
-          <li>Roasting</li>
-          <li>Grilling</li>
-          <li>Steaming</li>
-          <li>Sautéing</li>
-        </ul>
-        <p>Use a variety of vegetables, protein foods, whole grains, and healthy fats. At the same time, avoid relying heavily on ingredients that add excessive sodium, added sugar, or saturated fat.</p>
-
-        <h2>Healthy Menus and Shopping Strategies</h2>
-        <p>A simple grocery plan can prevent random food choices. Before shopping, decide which protein foods, vegetables, fruits, grains, and other foods you need.</p>
-        <p>For a limited budget, compare prices, use seasonal produce, choose frozen vegetables when practical, and include affordable foods such as beans, lentils, oats, eggs, and whole grains.</p>
-        <p>When buying packaged foods, use the Nutrition Facts label instead of relying only on marketing claims.</p>
-
-        <h3>How to Read a Nutrition Facts Label</h3>
-        <p>Start with the <strong>serving size</strong>. It tells you the amount used for the nutrition information on the label. However, it is not a recommendation for how much you should eat.</p>
-        <p>Your <strong>portion size</strong> is the amount you actually choose to consume. One package can also contain multiple servings.</p>
-        <p>Next, check:</p>
-        <ul>
-          <li>Calories</li>
-          <li>Protein</li>
-          <li>Dietary fiber</li>
-          <li>Saturated fat</li>
-          <li>Sodium</li>
-          <li>Total sugars</li>
-          <li>Added sugars</li>
-        </ul>
-        <p>The FDA considers 5% Daily Value or less to be low and 20% or more to be high for an individual nutrient.</p>
-
-        <h2>Hydration and Healthy Eating</h2>
-        <p>Water is an important part of a healthy lifestyle. Fluid needs can vary according to activity, environment, diet, and individual circumstances.</p>
-        <p>Therefore, drink water regularly and pay attention to your body's signals, especially during physical activity or hot weather. There is no single fluid target that fits every person.</p>
-
-        <h2>Eating Healthy When Busy</h2>
-        <p>A busy schedule does not mean every meal needs to come from a restaurant.</p>
-        <p>Keep simple ingredients available so you can prepare food quickly. Eggs, yogurt, oats, fruit, vegetables, beans, canned fish, and whole grains can support quick meals.</p>
-        <p>For example, an egg and vegetable sandwich can work for breakfast, while rice, beans, and vegetables can make a simple lunch or dinner.</p>
-
-        <h2>Eating Healthy at Restaurants</h2>
-        <p>Restaurant meals can still fit into a balanced eating pattern.</p>
-        <p>Check the menu before ordering when possible. Choose meals that include protein and vegetables, and consider grilled, baked, or steamed options when suitable.</p>
-        <p>Portions can also be larger than what you normally eat. Therefore, eating slowly, sharing a meal, or saving part for later can help you manage the amount you consume.</p>
-
-        <h2>What's a Fad Diet?</h2>
-        <p>A fad diet usually promotes an extreme or restrictive approach and may promise unusually fast results.</p>
-        <p>Be cautious when a diet:</p>
-        <ul>
-          <li>Promises dramatic results quickly</li>
-          <li>Eliminates major food groups without a clear reason</li>
-          <li>Promotes a "miracle" food</li>
-          <li>Relies mainly on testimonials</li>
-          <li>Uses one study as proof</li>
-          <li>Requires expensive products or supplements</li>
-        </ul>
-        <p>Reliable nutrition advice should explain evidence, limitations, and individual differences.</p>
-
-        <h2>Why Fad Diets Can Be a Problem</h2>
-        <p>Highly restrictive diets can be difficult to maintain. They may also remove foods or food groups without considering a person's nutritional needs.</p>
-        <p>Consequently, a diet that looks attractive for a few weeks may not be practical for long-term use.</p>
-        <p>A sustainable eating pattern should fit your lifestyle rather than force you to follow rules that you cannot maintain.</p>
-
-        <h2>How to Safely Lose Weight</h2>
-        <p>For most people, sustained weight loss requires an energy deficit over time. However, the appropriate calorie target differs between individuals.</p>
-        <p>A TDEE estimate can provide useful context for understanding daily energy expenditure. Nevertheless, it should not be treated as an exact measurement.</p>
-        <p>Short-term changes on the scale can also reflect water, glycogen, digestive contents, and other factors. Therefore, a daily weight change does not necessarily represent a change in body fat.</p>
-        <p>Avoid extreme restrictions and guaranteed-result claims. If you have a medical condition, take medications affected by diet, are pregnant or breastfeeding, or have specific nutritional needs, seek individualized guidance from a qualified healthcare professional.</p>
-
-        <h2>Nutritional Supplements</h2>
-        <p>Supplements may be useful for specific nutritional needs. However, they should not replace a varied eating pattern.</p>
-        <p>If you believe you need a supplement because of a deficiency, medical condition, medication, or dietary restriction, discuss it with a qualified healthcare professional.</p>
-
-        <h2>Your Personalized Healthy Eating Pattern</h2>
-        <p>Useful <strong>Diet Advice</strong> should fit your real life.</p>
-        <p>Consider:</p>
-        <ul>
-          <li>Your health or weight goal</li>
-          <li>Estimated calorie needs</li>
-          <li>Activity level</li>
-          <li>Food preferences</li>
-          <li>Budget</li>
-          <li>Cooking skills</li>
-          <li>Work or school schedule</li>
-          <li>Cultural food choices</li>
-          <li>Individual nutritional needs</li>
-        </ul>
-        <p>There is no single meal plan that works exactly the same way for everyone. Instead, build an eating pattern that is nutritious, realistic, and sustainable.</p>
-
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
+        <div class="faq-container" style="margin-bottom: 2rem;">
           <div class="faq-item">
-            <h3 class="faq-question">What is the best Diet Advice for healthy eating?</h3>
-            <p>There is no single diet that works exactly the same way for everyone. A healthy eating pattern generally includes a variety of nutrient-dense foods while considering personal needs, preferences, budget, and lifestyle.</p>
+            <h3 class="faq-question">Myth 1: Carbohydrates automatically cause weight gain</h3>
+            <p><strong>The Scientific Reality:</strong> Carbohydrates contain 4 calories per gram—exactly the same as protein. Carbohydrates do not inherently cause fat gain; excess total energy intake causes fat gain. Whole-grain carbohydrates provide valuable glycogen for intense physical training and brain function.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">How many calories should I eat each day?</h3>
-            <p>Your calorie needs depend on factors such as age, body size, sex, and activity level. A <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE calculator</a> can estimate your daily energy expenditure, but the result should be treated as a starting estimate rather than an exact measurement.</p>
+            <h3 class="faq-question">Myth 2: Eating food late at night stores more body fat</h3>
+            <p><strong>The Scientific Reality:</strong> Your body processes calories based on 24-hour total energy balance, not clock time. Late-night eating is associated with weight gain only because late-night snacks are often hyper-palatable, calorie-dense foods consumed out of boredom.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Can I eat sugar and still have a healthy diet?</h3>
-            <p>Yes. Eating some foods that contain sugar does not automatically make your entire diet unhealthy. However, it is useful to distinguish naturally occurring sugar from added sugar and limit excessive added sugar.</p>
+            <h3 class="faq-question">Myth 3: You need expensive detox teas or cleanses</h3>
+            <p><strong>The Scientific Reality:</strong> Commercial detox products are ineffective and unnecessary. Your liver, kidneys, skin, and gastrointestinal system perform continuous metabolic detoxification without the need for juice cleanses or detox supplements.</p>
           </div>
           <div class="faq-item">
-            <h3 class="faq-question">Is a calorie deficit necessary for weight loss?</h3>
-            <p>For most people, sustained weight loss requires an energy deficit over time. However, the appropriate approach varies between individuals. Extreme calorie restriction is not necessary for building a healthy eating pattern.</p>
+            <h3 class="faq-question">Myth 4: Eating small meals every 2 hours boosts your metabolic rate</h3>
+            <p><strong>The Scientific Reality:</strong> Total Thermic Effect of Food (TEF) is determined by total daily macronutrient intake, not meal frequency. Eating 2,000 calories across 3 meals burns the exact same TEF calories as eating 2,000 calories across 6 smaller meals.</p>
           </div>
         </div>
 
-        <h2>Final Thoughts</h2>
-        <p>Good <strong>Diet Advice</strong> should make healthy eating easier, not create unnecessary fear around food. Focus on variety, nutrient-dense foods, protein, fiber-rich choices, fruits, vegetables, whole grains, suitable portions, and reasonable limits on added sugar, excess sodium, and highly processed foods.</p>
-        <p>From a practical perspective, consistency matters more than chasing every new diet trend. Understanding your estimated energy needs, including <a href="/" style="color: var(--accent-cyan); font-weight: bold; text-decoration: none;">TDEE</a>, can provide useful context for weight-related goals. Still, a calculator is only a starting estimate. When medical conditions or specific nutritional needs are involved, qualified professional guidance is the appropriate next step.</p>
-\n      `
+        <h2>7. Hydration & Evidence-Based Supplementation</h2>
+        <p>Proper hydration is a key component of optimal performance, digestion, and metabolic health. A general target for daily fluid intake is:</p>
+        
+        <div class="formula-callout-box" style="margin-bottom: 2rem;">
+          <p><strong>Daily Fluid Requirement Formula:</strong></p>
+          <p><strong>Fluid Intake (Liters) = Body Weight in kg &times; 0.035 to 0.040</strong></p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">For example, a 75 kg individual should target roughly 2.6 to 3.0 liters of water daily, adding extra fluids for heavy sweat sessions.</p>
+        </div>
+
+        <h3>Tier 1 Supplements with Strong Clinical Backing:</h3>
+        <ul>
+          <li><strong>Creatine Monohydrate (3-5g daily):</strong> Increases muscle phosphocreatine stores, supporting strength, power output, and lean mass retention.</li>
+          <li><strong>Whey or Plant Protein Powder:</strong> A convenient, high-quality option to meet daily protein targets when whole food sources are unavailable.</li>
+          <li><strong>Vitamin D3 (1000–4000 IU daily):</strong> Supports bone mineral density, immune function, and hormonal balance, especially in individuals with limited sunlight exposure.</li>
+          <li><strong>Omega-3 Fatty Acids (EPA/DHA 1-2g daily):</strong> Promotes cardiovascular health, joint mobility, and systemic anti-inflammatory responses.</li>
+        </ul>
+
+        <h2>8. Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-container" style="margin-bottom: 2rem;">
+          <div class="faq-item">
+            <h3 class="faq-question">What is the single best diet for long-term weight loss?</h3>
+            <p>Clinical studies comparing low-carb, low-fat, Mediterranean, and intermittent fasting diets show that no single diet superiorly burns fat when calories and protein are equated. The "best" diet is whichever pattern allows you to consistently maintain your calorie deficit while feeling satisfied.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How do I calculate my daily calorie needs for diet planning?</h3>
+            <p>Start by calculating your Total Daily Energy Expenditure (<a href="/">TDEE Calculator</a>) using your age, biological sex, height, weight, and activity multiplier. For sustainable weight loss, subtract 300 to 500 calories from your TDEE for a steady loss of 0.5 to 1.0 lb (0.25 to 0.5 kg) per week.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How much protein should I eat per meal?</h3>
+            <p>Research suggests consuming 0.4 to 0.55 g/kg of protein per meal across 3 to 5 meals per day (typically 25g to 45g of protein per meal) to optimize muscle protein synthesis and maintain hunger control.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Should I track calories strictly forever?</h3>
+            <p>No. Tracking calories with an app or food scale for 4 to 8 weeks is a valuable educational exercise to learn portion sizes, food energy density, and macronutrient content. Over time, you can transition to intuitive portion control using hand measurements and body weight trends.</p>
+          </div>
+        </div>
+
+        <h2>Scientific References & Sources</h2>
+        <ul>
+          <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. <em>Dietary Guidelines for Americans, 2025–2030</em>. 10th Edition.</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed</a>)</li>
+          <li>Hall KD, et al. Ultra-Processed Diets Cause Excess Energy Intake and Weight Gain: An Inpatient Randomized Controlled Trial of Ad Libitum Food Intake. <em>Cell Metab</em>. 2019. (<a href="https://pubmed.ncbi.nlm.nih.gov/31105044/" target="_blank" rel="noopener">PubMed</a>)</li>
+          <li>Helms ER, et al. Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. <em>J Int Soc Sports Nutr</em>. 2014. (<a href="https://pubmed.ncbi.nlm.nih.gov/24864135/" target="_blank" rel="noopener">PubMed</a>)</li>
+        </ul>
+      `
+
+
     }
 
     ,
