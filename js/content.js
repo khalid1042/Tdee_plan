@@ -3317,6 +3317,110 @@ window.TDEEContent = {
     }
 
     ,
+    '/diet-plan/': {
+      title: 'Diet Plan for Weight Loss & Healthy Life | TDEE Calculator',
+      metaDescription: 'Customizable diet plan templates for weight loss, muscle gain, and maintenance. Learn how to structure daily meal plans based on your TDEE and macros.',
+      category: 'Diet & Nutrition',
+      readTime: '7 min read',
+      h1: 'Complete Diet Plan for Weight Loss & Healthy Life',
+      content: `
+        <p class="lead-paragraph">A structured <strong>Diet Plan</strong> is the bridge between knowing your target numbers and achieving real-world health and body composition results. Whether your objective is fat loss, muscle retention, or steady energy throughout the day, a well-balanced diet plan aligns your daily food choices with your estimated Total Daily Energy Expenditure (<a href="/">TDEE</a>).</p>
+
+        <p>This guide provides evidence-based diet plan frameworks, meal timing schedules, macro targets, and practical meal ideas that you can customize for your individual calorie requirements.</p>
+
+        <div style="margin: 2rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="/" class="btn-primary" style="flex: 1; text-align: center; white-space: nowrap;">Calculate Your TDEE Baseline</a>
+          <a href="/daily-diet-plan/" class="btn-secondary" style="flex: 1; text-align: center; white-space: nowrap;">View Daily Diet Plan Schedule</a>
+        </div>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Diet Plan Rule #1:</strong> The ideal diet plan is not built on total food restriction. It is built around hitting your target calories, consuming sufficient protein, meeting essential micronutrient needs, and keeping hunger under control with high-fiber whole foods.</p>
+        </div>
+
+        <h2>1. Step-by-Step Diet Plan Construction</h2>
+        <p>Before selecting specific foods, follow this 4-step process to build a diet plan tailored to your body:</p>
+
+        <div class="about-calculator-card" style="margin-bottom: 2rem;">
+          <ol style="margin: 0; padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.75rem;"><strong>Establish Your Calorie Baseline:</strong> Calculate your daily expenditure using our <a href="/">TDEE Calculator</a>. For fat loss, set a 15% to 25% calorie deficit on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>. For muscle building, set a 5% to 15% surplus on our <a href="/calorie-surplus-calculator/">Calorie Surplus Calculator</a>.</li>
+            <li style="margin-bottom: 0.75rem;"><strong>Calculate Daily Protein Requirements:</strong> Target 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) to support muscle retention and satiety.</li>
+            <li style="margin-bottom: 0.75rem;"><strong>Distribute Fats and Carbohydrates:</strong> Allocate 20% to 30% of total calories to healthy fats for hormonal regulation, and fill remaining calories with complex carbohydrates to power workouts.</li>
+            <li style="margin-bottom: 0;"><strong>Structure Meal Timing & Portions:</strong> Divide your daily targets across 3 to 5 satisfying meals that match your work, training, and sleep schedule.</li>
+          </ol>
+        </div>
+
+        <h2>2. Sample Calorie-Based Diet Plan Frameworks</h2>
+
+        <div class="table-responsive" style="margin-bottom: 2rem;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Calorie Target</th>
+                <th>Breakfast Example</th>
+                <th>Lunch Example</th>
+                <th>Dinner Example</th>
+                <th>Snack Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1,500 kcal/day</strong> (Fat Loss)</td>
+                <td>3 Egg Whites + 1 Whole Egg + Spinach + 40g Oats with Berries</td>
+                <td>120g Grilled Chicken Breast + Large Mixed Green Salad + 100g Baked Sweet Potato</td>
+                <td>130g White Fish + Roasted Broccoli & Zucchini + 1 tsp Extra Virgin Olive Oil</td>
+                <td>150g Non-fat Greek Yogurt + 10g Almonds</td>
+              </tr>
+              <tr>
+                <td><strong>2,000 kcal/day</strong> (Moderate Deficit / Maintenance)</td>
+                <td>3 Whole Eggs + 2 Slices Whole-Wheat Toast + 1/2 Avocado</td>
+                <td>150g Lean Ground Turkey + 150g Jasmine Rice + Steamed Green Beans</td>
+                <td>160g Salmon Fillet + Quinoa Salad with Cucumber & Tomatoes</td>
+                <td>1 Apple + 20g Whey Protein Shake</td>
+              </tr>
+              <tr>
+                <td><strong>2,500 kcal/day</strong> (Maintenance / Muscle Gain)</td>
+                <td>4 Eggs + 70g Oats cooked in Almond Milk + 1 Banana + 15g Peanut Butter</td>
+                <td>180g Chicken Breast + 200g Brown Rice + Roasted Asparagus + Olive Oil</td>
+                <td>200g Lean Beef Sirloin + 250g Roasted Potatoes + Side Salad</td>
+                <td>Protein Smoothie (1 Scoop Whey + 1 Cup Milk + Berries + Oats)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Key Components of a High-Quality Diet Plan</h2>
+        <div class="worked-example-card" style="margin-bottom: 2rem;">
+          <h4 style="margin: 0 0 0.75rem; color: var(--accent-cyan);">Essential Food Groups to Include:</h4>
+          <p style="margin-bottom: 0.5rem;">• <strong>Lean Protein:</strong> Chicken breast, turkey, eggs, fish (salmon, tuna, cod), tofu, tempeh, seitan, lentils, and Greek yogurt.</p>
+          <p style="margin-bottom: 0.5rem;">• <strong>Complex Carbohydrates:</strong> Oats, sweet potatoes, brown rice, quinoa, whole-grain bread, and legumes.</p>
+          <p style="margin-bottom: 0.5rem;">• <strong>Fibrous Vegetables:</strong> Broccoli, spinach, kale, cauliflower, asparagus, zucchini, and peppers.</p>
+          <p style="margin: 0;">• <strong>Healthy Fats:</strong> Avocados, extra virgin olive oil, almonds, walnuts, chia seeds, and flaxseed.</p>
+        </div>
+
+        <h2>4. Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-container" style="margin-bottom: 2rem;">
+          <div class="faq-item">
+            <h3 class="faq-question">What is the difference between a Diet Plan and Diet Advice?</h3>
+            <p>A diet plan provides structured daily meal outlines, calorie targets, and portion guidelines. Diet advice covers broader scientific nutrition principles, energy balance strategies, and long-term habit formation.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How do I adjust my diet plan if I hit a weight loss plateau?</h3>
+            <p>If scale weight remains unchanged for 2 to 3 consecutive weeks while adhering strictly to your diet plan, reduce daily intake by 100 to 200 calories or increase daily steps by 2,000. Use our Adaptive TDEE Calibration tool on the homepage to calculate your real-world expenditure.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I customize my diet plan for vegetarian or vegan diets?</h3>
+            <p>Yes. Swap animal protein sources for high-protein plant options such as tofu, tempeh, edamame, lentils, chickpeas, seitan, and plant-based protein powders while maintaining your daily protein and calorie targets.</p>
+          </div>
+        </div>
+
+        <h2>Scientific Sources & References</h2>
+        <ul>
+          <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. <em>Dietary Guidelines for Americans, 2025–2030</em>. 10th Edition.</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed</a>)</li>
+        </ul>
+      `
+    },
+
     '/daily-diet-plan/': {
       title: 'Daily Diet Plan for a Healthy Life | TDEE Calculator',
       metaDescription: 'Create a balanced daily diet plan with healthy breakfast, lunch, dinner, snacks, hydration and calorie-based meal ideas for your health and fitness goals.',
