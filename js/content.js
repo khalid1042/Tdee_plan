@@ -1491,10 +1491,10 @@ window.TDEEContent = {
     },
 
     '/maintenance-calorie-calculator/': {
-      title: 'Maintenance Calorie Calculator: Calculate Your Daily Maintenance Calories',
-      metaDescription: 'Calculate your maintenance calories using Mifflin-St Jeor formulas, activity multipliers, and weight trends. Understand BMR vs TDEE balance.',
+      title: 'Calorie Calculator: Calculate Your Daily Calorie Needs',
+      metaDescription: 'Calculate your daily calorie needs with our Calorie Calculator. Estimate BMR, maintenance calories, and calorie targets for weight loss or gain.',
       category: 'Calculator',
-      h1: 'Maintenance Calorie Calculator: Calculate Your Daily Maintenance Calories',
+      h1: 'Calorie Calculator',
       content: `<p class="lead-paragraph">You calculate your maintenance calories and get a number. But then a bigger question appears: <strong>Can you actually trust that number?</strong> Your weight may still move up or down, while another calculator gives you a different result. As a result, calorie planning can become confusing, especially when you are still learning about BMR, TDEE, and energy balance.</p>
 
         <p>Our <strong>maintenance calorie calculator</strong> gives you a practical starting estimate based on established energy-expenditure methods. Instead of presenting the result as a perfect measurement, this guide explains how the estimate is calculated, what the number means, why results can vary, and how to compare the estimate with your real-world weight trends.</p>

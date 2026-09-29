@@ -51,14 +51,17 @@ window.TDEEExtras = (function() {
       age: inputs.age, gender: inputs.gender, heightCm: m.heightCm,
       weightKg: m.weightKg, bodyFat: inputs.bodyFat, activityKey: inputs.activity
     });
+    var goals = window.TDEECalculator.calculateGoals(res.tdee, m.weightKg);
     return {
       primary: res.tdee,
-      unitLabel: 'kcal/day to maintain weight',
-      formulaName: res.formula,
+      unitLabel: 'kcal/day (Maintenance Calories)',
+      formulaName: 'Formula: ' + res.formula,
       rows: [
-        { label: 'BMR (resting burn)', value: res.bmr + ' kcal', show: true },
-        { label: 'Activity multiplier applied', value: '×' + res.multiplier, show: true },
-        { label: 'Likely real-world range', value: res.minRange + ' – ' + res.maxRange + ' kcal', show: true }
+        { label: 'BMR (Resting Baseline Floor)', value: res.bmr.toLocaleString() + ' kcal/day', show: true },
+        { label: 'Maintenance Calories (TDEE)', value: res.tdee.toLocaleString() + ' kcal/day', show: true },
+        { label: 'Weight-Loss Target (Optimal Deficit -22%)', value: goals.moderateDeficit.calories.toLocaleString() + ' kcal/day (−0.5 kg / ~1.1 lb per week)', show: true },
+        { label: 'Weight-Gain Target (Lean Surplus +10%)', value: goals.leanBulk.calories.toLocaleString() + ' kcal/day (+0.2 kg / ~0.4 lb per week)', show: true },
+        { label: 'Estimated Range (±9% variance)', value: res.minRange.toLocaleString() + ' – ' + res.maxRange.toLocaleString() + ' kcal/day', show: true }
       ]
     };
   }
@@ -186,34 +189,34 @@ window.TDEEExtras = (function() {
         '</div>' +
         '<div class="extras-form-grid">' +
           '<div class="form-group">' +
-            '<label class="form-label">Sex</label>' +
-            '<div class="segmented-control">' +
-              '<button type="button" class="segmented-btn active" data-gender="male">Male</button>' +
-              '<button type="button" class="segmented-btn" data-gender="female">Female</button>' +
+            '<label class="form-label" id="lbl-sex">Sex</label>' +
+            '<div class="segmented-control" role="group" aria-labelledby="lbl-sex">' +
+              '<button type="button" class="segmented-btn active" data-gender="male" aria-label="Male">Male</button>' +
+              '<button type="button" class="segmented-btn" data-gender="female" aria-label="Female">Female</button>' +
             '</div>' +
           '</div>' +
           '<div class="form-group">' +
-            '<label class="form-label">Age <span class="label-hint">years</span></label>' +
-            '<input type="number" class="input-field ex-age" value="28" min="15" max="90">' +
+            '<label class="form-label" for="ex-input-age">Age <span class="label-hint">years</span></label>' +
+            '<input type="number" id="ex-input-age" class="input-field ex-age" value="28" min="15" max="90" inputmode="decimal" aria-label="Age in years">' +
           '</div>' +
           '<div class="form-group">' +
-            '<label class="form-label">Height <span class="label-hint ex-hunit">cm</span></label>' +
-            '<input type="number" class="input-field ex-height" value="175" min="50" max="260">' +
+            '<label class="form-label" for="ex-input-height">Height <span class="label-hint ex-hunit">cm</span></label>' +
+            '<input type="number" id="ex-input-height" class="input-field ex-height" value="175" min="50" max="260" inputmode="decimal" aria-label="Height">' +
           '</div>' +
           '<div class="form-group">' +
-            '<label class="form-label">Weight <span class="label-hint ex-wunit">kg</span></label>' +
-            '<input type="number" class="input-field ex-weight" value="75" min="30" max="300">' +
+            '<label class="form-label" for="ex-input-weight">Weight <span class="label-hint ex-wunit">kg</span></label>' +
+            '<input type="number" id="ex-input-weight" class="input-field ex-weight" value="75" min="30" max="300" inputmode="decimal" aria-label="Weight">' +
           '</div>' +
           (isBmr
             ? '<div class="form-group">' +
-                '<label class="form-label">Body Fat % <span class="label-hint">(Optional — Katch-McArdle)</span></label>' +
-                '<input type="number" class="input-field ex-bodyfat" placeholder="e.g. 18" min="3" max="60">' +
+                '<label class="form-label" for="ex-input-bodyfat">Body Fat % <span class="label-hint">(Optional — Katch-McArdle)</span></label>' +
+                '<input type="number" id="ex-input-bodyfat" class="input-field ex-bodyfat" placeholder="e.g. 18" min="3" max="60" inputmode="decimal" aria-label="Body Fat Percentage">' +
               '</div>'
             : '') +
           (!isBmr
             ? '<div class="form-group">' +
-                '<label class="form-label">Activity Level</label>' +
-                '<select class="select-field ex-activity">' +
+                '<label class="form-label" for="ex-select-activity">Activity Level</label>' +
+                '<select id="ex-select-activity" class="select-field ex-activity" aria-label="Activity Level">' +
                   '<option value="sedentary">Sedentary (desk job, little exercise)</option>' +
                   '<option value="lightly_active">Lightly Active (1-3 workouts/wk)</option>' +
                   '<option value="moderately_active" selected>Moderately Active (3-5 workouts/wk)</option>' +
@@ -222,19 +225,22 @@ window.TDEEExtras = (function() {
                 '</select>' +
               '</div>'
             : '') +
-          (isMacro
+          (isMacro || calcKey === 'maintenance' || calcKey === 'deficit' || calcKey === 'surplus'
             ? '<div class="form-group">' +
-                '<label class="form-label">Goal</label>' +
-                '<select class="select-field ex-goal">' +
-                  '<option value="1">Maintain weight</option>' +
+                '<label class="form-label" for="ex-select-goal">Goal</label>' +
+                '<select id="ex-select-goal" class="select-field ex-goal" aria-label="Fitness Goal">' +
+                  '<option value="1" selected>Maintain weight</option>' +
                   '<option value="0.85">Slow fat loss (−15%)</option>' +
                   '<option value="0.78">Optimal fat loss (−22%)</option>' +
+                  '<option value="0.70">Aggressive fat loss (−30%)</option>' +
                   '<option value="1.10">Lean bulk (+10%)</option>' +
                 '</select>' +
-              '</div>' +
-              '<div class="form-group">' +
-                '<label class="form-label">Macro Preset</label>' +
-                '<select class="select-field ex-preset">' +
+              '</div>'
+            : '') +
+          (isMacro
+            ? '<div class="form-group">' +
+                '<label class="form-label" for="ex-select-preset">Macro Preset</label>' +
+                '<select id="ex-select-preset" class="select-field ex-preset" aria-label="Macronutrient Preset">' +
                   '<option value="balanced" selected>Balanced (30/40/30)</option>' +
                   '<option value="high_protein">High Protein (2.2 g/kg)</option>' +
                   '<option value="low_carb">Low Carb</option>' +
@@ -244,17 +250,20 @@ window.TDEEExtras = (function() {
             : '') +
           (isBurned
             ? '<div class="form-group">' +
-                '<label class="form-label">Daily Steps</label>' +
-                '<input type="number" class="input-field ex-steps" value="8000" step="500" min="0">' +
+                '<label class="form-label" for="ex-input-steps">Daily Steps</label>' +
+                '<input type="number" id="ex-input-steps" class="input-field ex-steps" value="8000" step="500" min="0" inputmode="decimal" aria-label="Daily Steps">' +
               '</div>' +
               '<div class="form-group">' +
-                '<label class="form-label">Workout Duration <span class="label-hint">min/day</span></label>' +
-                '<input type="number" class="input-field ex-workout" value="45" step="5" min="0">' +
+                '<label class="form-label" for="ex-input-workout">Workout Duration <span class="label-hint">min/day</span></label>' +
+                '<input type="number" id="ex-input-workout" class="input-field ex-workout" value="45" step="5" min="0" inputmode="decimal" aria-label="Workout Duration">' +
               '</div>'
             : '') +
         '</div>' +
+        '<div style="margin: 1.25rem 0 1rem;">' +
+          '<button type="button" class="btn-primary ex-calc-btn" style="width:100%; padding: 0.85rem 1.5rem; font-size: 1.05rem; font-weight: 700; border-radius: 8px; cursor: pointer; background: var(--accent-rose); color: #fff; border: none; transition: transform 0.15s ease, background 0.15s ease;">Calculate My Calories</button>' +
+        '</div>' +
         '<div class="extras-result">' +
-          '<div class="ex-result-label">Your Result</div>' +
+          '<div class="ex-result-label">Your Estimated Daily Calorie Needs</div>' +
           '<div class="ex-result-value">—</div>' +
           '<div class="ex-result-formula"></div>' +
         '</div>' +
@@ -301,6 +310,15 @@ window.TDEEExtras = (function() {
       el.addEventListener('input', recalc);
       el.addEventListener('change', recalc);
     });
+
+    var calcBtn = root.querySelector('.ex-calc-btn');
+    if (calcBtn) {
+      calcBtn.addEventListener('click', function() {
+        recalc();
+        var resEl = root.querySelector('.extras-result');
+        if (resEl) resEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
 
     function readInputs() {
       var inputs = {
