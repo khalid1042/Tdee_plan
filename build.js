@@ -83,6 +83,81 @@ ${routeData.content}
 
   updatedHtml = updatedHtml.replace('<div id="hero-workspace" class="hidden">', siloContainerHTML + '\n  <div id="hero-workspace" class="hidden">');
 
+  // Inject Route-Specific Structured Data (JSON-LD)
+  const isArticle = route.startsWith('/blog/') || route === '/how-we-calculate/' || route === '/about/';
+  const fullUrl = `https://tdeecalculater.com${route}`;
+  const pageTitle = (routeData.h1 || routeData.title);
+  const pageDesc = routeData.metaDescription || '';
+  const categoryName = routeData.category || (route.includes('calculator') ? 'Calculators' : 'TDEE Guides');
+
+  const routeJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://tdeecalculater.com/#website",
+        "url": "https://tdeecalculater.com/",
+        "name": "TDEE Calculator",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://tdeecalculater.com/#organization",
+        "name": "TDEE Calculator",
+        "url": "https://tdeecalculater.com/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${fullUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tdeecalculater.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": categoryName,
+            "item": fullUrl
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": pageTitle,
+            "item": fullUrl
+          }
+        ]
+      },
+      isArticle ? {
+        "@type": "Article",
+        "@id": `${fullUrl}#article`,
+        "isPartOf": { "@id": "https://tdeecalculater.com/#website" },
+        "headline": pageTitle,
+        "description": pageDesc,
+        "mainEntityOfPage": fullUrl,
+        "dateModified": "2026-10-02",
+        "author": {
+          "@type": "Organization",
+          "name": "TDEE Plan Editorial Team",
+          "url": "https://tdeecalculater.com/editorial-policy/"
+        },
+        "publisher": { "@id": "https://tdeecalculater.com/#organization" }
+      } : {
+        "@type": "WebApplication",
+        "@id": `${fullUrl}#webapp`,
+        "name": pageTitle,
+        "url": fullUrl,
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
+  };
+
+  updatedHtml = updatedHtml.replace(/<!-- JSON-LD Structured Data Schema -->[\s\S]*?<\/script>/, `<!-- JSON-LD Structured Data Schema -->\n  <script type="application/ld+json">\n  ${JSON.stringify(routeJsonLd, null, 4)}\n  </script>`);
+
   return updatedHtml;
 }
 

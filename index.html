@@ -50,38 +50,168 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Adaptive TDEE Calculator & Metabolic Calibrator",
-    "operatingSystem": "All",
-    "applicationCategory": "HealthApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Evidence-based Total Daily Energy Expenditure calculator featuring Mifflin-St Jeor, Katch-McArdle equations, activity quiz, and adaptive expenditure calibration."
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What is TDEE?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "TDEE stands for Total Daily Energy Expenditure. It represents the total number of calories your body burns in 24 hours including baseline metabolism, daily movement, physical exercise, and food digestion."
+        "@type": "WebSite",
+        "@id": "https://tdeecalculater.com/#website",
+        "url": "https://tdeecalculater.com/",
+        "name": "TDEE Calculator",
+        "description": "Calculate Total Daily Energy Expenditure with Mifflin-St Jeor, Katch-McArdle, and real-world expenditure calibration.",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://tdeecalculater.com/#organization",
+        "name": "TDEE Calculator",
+        "url": "https://tdeecalculater.com/",
+        "logo": "https://tdeecalculater.com/mobile-final.png"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://tdeecalculater.com/#webapp",
+        "name": "TDEE Calculator & Metabolic Calibrator",
+        "url": "https://tdeecalculater.com/",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         }
       },
       {
-        "@type": "Question",
-        "name": "How accurate are standard TDEE formulas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Static formulas like Mifflin-St Jeor provide widely accepted baseline estimates for most adults. However, individual variations in non-exercise activity (NEAT) and metabolic adaptation mean that formula results are estimates, not exact medical measurements. Using a real-world calibration tool tracking intake vs. weight can provide highly personalized precision."
-        }
+        "@type": "FAQPage",
+        "@id": "https://tdeecalculater.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does TDEE stand for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TDEE stands for Total Daily Energy Expenditure. It is an estimate of the total energy (in calories) your body burns in a 24-hour day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a TDEE calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A TDEE calculator estimates your daily calorie burn based on age, sex, height, weight, body fat %, and activity level using evidence-based metabolic equations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is TDEE calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TDEE is calculated by estimating resting energy expenditure (REE or BMR) using formulas like Mifflin-St Jeor and multiplying it by an activity factor (1.2 to 1.9)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What formula does this TDEE calculator use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The calculator uses the Mifflin-St Jeor equation by default and automatically activates the Katch-McArdle formula when body fat percentage is provided."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Mifflin-St Jeor accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mifflin-St Jeor is one of the most clinically validated predictive equations for resting metabolic rate. However, all equations produce baseline estimates rather than exact laboratory measurements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is TDEE the same as maintenance calories?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TDEE estimates total energy burn, while maintenance calories represent the daily intake needed to maintain stable body weight. TDEE serves as the starting estimate for maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How accurate is a TDEE calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A calculator provides an initial baseline estimate. Real-world differences in NEAT and metabolic adaptation mean individual results vary, which is why tracking weight trends for 14-28 days provides higher precision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do two TDEE calculators give different results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Different calculators use different BMR formulas (e.g. Harris-Benedict vs Mifflin-St Jeor), different activity multipliers, or different rounding rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which activity level should I choose?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select the activity level matching your complete 24-hour routine, including desk work, daily steps, and workout sessions, or use our interactive Activity Level Wizard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use TDEE for weight loss?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Subtracting 15% to 25% from your estimated TDEE establishes a sustainable calorie deficit for fat loss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use TDEE for weight gain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Adding 10% to 15% to your estimated TDEE creates a controlled calorie surplus for lean muscle hypertrophy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does TDEE change when I lose weight?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. As body weight decreases, the energy required for cellular maintenance and movement decreases, lowering your TDEE."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I recalculate TDEE every day?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recalculate TDEE only when your body weight changes by 3 to 5 kg or when your daily activity routine changes meaningfully."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can TDEE be measured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Scientific research measures energy expenditure using indirect calorimetry and doubly labeled water. Online calculators provide estimates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should men and women calculate TDEE differently?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Mifflin-St Jeor formula includes biological sex-specific constants due to average differences in muscle mass and metabolic rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my calculated TDEE seems too high or too low?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Verify your input values and activity factor first, then use our Adaptive TDEE Calibration Lab to track actual intake vs weight change over 14 to 28 days."
+            }
+          }
+        ]
       }
     ]
   }
@@ -1212,20 +1342,20 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>3. Diet Plans</h4>
+          <h4>3. Methodology & Science</h4>
           <ul>
-            <li><a href="/healthy-eating/">Healthy Eating</a></li>
-            <li><a href="/diet-advice/">Diet Advice</a></li>
-            <li><a href="/daily-diet-plan/">Daily Diet Plan</a></li>
+            <li><a href="/how-we-calculate/">Calculation Methodology</a></li>
+            <li><a href="/sources/">Sources & References</a></li>
+            <li><a href="/editorial-policy/">Editorial Policy</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>4. Trust & Authority</h4>
           <ul>
             <li><a href="/about/">About Us</a></li>
-            <li><a href="/editorial-policy/">Editorial Policy</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
             <li><a href="/how-we-calculate/">How We Calculate</a></li>
-            <li><a href="/sources/">Sources & References</a></li>
+            <li><a href="/sources/">Scientific Sources</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1286,6 +1416,25 @@
       <button id="chat-send-btn" class="chat-send-btn" aria-label="Send message">➔</button>
     </div>
   </div>
+
+  <!-- AI Referral Traffic Analytics Helper -->
+  <script>
+    (function() {
+      var ref = document.referrer || '';
+      if (ref) {
+        var aiPlatforms = ['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'claude.ai', 'copilot.microsoft.com'];
+        for (var i = 0; i < aiPlatforms.length; i++) {
+          if (ref.indexOf(aiPlatforms[i]) !== -1) {
+            if (window.gtag) {
+              window.gtag('event', 'ai_referral', { 'ai_source': aiPlatforms[i], 'referrer_url': ref });
+            }
+            try { sessionStorage.setItem('tdee_ai_referrer', aiPlatforms[i]); } catch(e) {}
+            break;
+          }
+        }
+      }
+    })();
+  </script>
 
   <!-- Application Logic Modules -->
   <script src="/js/calculator.js"></script>
