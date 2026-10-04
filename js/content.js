@@ -1641,113 +1641,513 @@ window.TDEEContent = {
         </div>`
     },
 
-    '/blog/tdee-for-muscle-building/': {
-      title: 'TDEE for Muscle Building & Lean Bulking: Complete Surplus & Macro Guide',
-      metaDescription: 'Learn how to calculate your TDEE for muscle growth, structure a clean lean bulk, optimize protein and macronutrient ratios, and gain lean muscle without excess fat.',
+    '/tdee-for-muscle-building/': {
+      title: 'TDEE for Muscle Building: How to Set Calories for Muscle Gain',
+      metaDescription: 'Learn how to use your TDEE to set a starting calorie target for muscle building, track your progress, adjust calories, and support muscle growth.',
       category: 'Muscle Building',
-      readTime: '8 min read',
-      h1: 'TDEE for Muscle Building & Lean Bulking: Complete Surplus & Macro Guide',
-      content: `<p class="lead-paragraph">Building lean muscle mass efficiently requires more than just lifting heavy weights in the gym. Without adequate energy and raw building blocks, your body cannot optimize muscle protein synthesis (MPS). Using your Total Daily Energy Expenditure (TDEE) to set a precise "lean bulk" calorie surplus is the single most effective way to gain muscular size while minimizing unnecessary body fat gain.</p>
-
-        <p>In this guide, we cover how to calculate your TDEE for muscle building, choose between conservative and aggressive surplus strategies, balance your macronutrients for hypertrophy, and measure your progress over time.</p>
-
-        <div class="calculator-cta-box">
-          <div class="cta-content">
-            <h3>Calculate Your Lean Bulking Surplus & Macros</h3>
-            <p>Get instant personalized calorie targets and macronutrient breakdowns optimized for muscle growth.</p>
-          </div>
-          <a href="#silo-calculator-mount" class="btn-primary">Calculate Muscle Building Calories &rarr;</a>
+      readTime: '9 min read',
+      h1: 'TDEE for Muscle Building: How to Set Your Calories for Muscle Gain',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>TDEE for Muscle Building</span>
         </div>
 
-        <h2>What Is TDEE and Why Is It Essential for Hypertrophy?</h2>
-        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> represents the total number of calories your body burns over 24 hours. It includes your Basal Metabolic Rate (BMR), Thermic Effect of Food (TEF), Non-Exercise Activity Thermogenesis (NEAT), and Exercise Activity Thermogenesis (EAT).</p>
+        <p class="lead-paragraph">TDEE is an estimate of the calories you use each day. For muscle building, it can serve as a starting maintenance baseline before you choose a calorie target and refine it using your real-world progress.</p>
 
-        <p>When your primary goal is muscle hypertrophy, consuming energy equal to your TDEE will maintain your current body composition. To fuel new muscle tissue creation, you must provide a caloric surplus—consuming slightly more energy than your daily expenditure. This extra energy powers intensive resistance training workouts and supports cellular repair processes post-workout.</p>
+        <div class="takeaway-callout-box">
+          <p><strong>Core Concept:</strong></p>
+          <p>TDEE is a starting estimate, not a permanent prescription. Use calculated TDEE as your maintenance baseline, add a calculated surplus, track your scale weight trends and lifting performance over 2–4 weeks, and adjust calories based on actual results.</p>
+        </div>
 
-        <h2>Lean Bulking vs. Dirty Bulking: Choosing Your Calorie Surplus</h2>
-        <p>A common mistake in muscle building is adopting a "dirty bulk"—eating an unrestricted calorie surplus of 1,000+ calories per day. While this guarantees weight gain, muscle protein synthesis rates have a biological upper limit. Excessive extra calories will primarily be stored as adipose tissue (body fat).</p>
+        <div class="about-calculator-card" style="text-align:center; padding:1.5rem; margin:1.5rem 0 2rem; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(14,165,233,0.05)); border:1px solid var(--accent-cyan);">
+          <h3 style="margin-bottom:0.5rem; color:var(--text-main);">Calculate Your Muscle Building Calories</h3>
+          <p style="margin-bottom:1rem; color:var(--text-muted);">Use our interactive calculator to estimate your daily baseline expenditure and personalized surplus target.</p>
+          <a href="#silo-calculator-mount" class="btn-primary" style="display:inline-flex; width:auto; padding:0.75rem 2rem;">Calculate Your TDEE &rarr;</a>
+        </div>
 
-        <p>A <strong>lean bulk</strong> (or "clean bulk") utilizes a calculated, controlled surplus to maximize muscle gains while keeping fat accumulation to a absolute minimum.</p>
+        <!-- Visual 5: Core Information-Gain Framework Feedback Loop -->
+        <div class="about-calculator-card" style="margin:2rem 0; background:var(--card-bg); border:1px solid var(--border-color);">
+          <h3 style="text-align:center; margin-bottom:1rem; color:var(--accent-cyan);">The Continuous Feedback Loop</h3>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:0.5rem; text-align:center; font-weight:600; font-size:0.9rem;">
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Calculate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Start</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Track</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Evaluate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Adjust</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Recalculate</span>
+          </div>
+        </div>
 
+        <h2>How TDEE Helps You Build Muscle</h2>
+        <h3>What TDEE Actually Tells You</h3>
+        <p>Your Total Daily Energy Expenditure (TDEE) is an estimate of the total daily energy your body expends to maintain basic biological functions and power physical movement. It combines your Basal Metabolic Rate (BMR), Thermic Effect of Food (TEF), Non-Exercise Activity Thermogenesis (NEAT), and Exercise Activity Thermogenesis (EAT).</p>
+
+        <h3>Why TDEE Is Only a Starting Point</h3>
+        <p>Mathematical formulas cannot capture daily shifts in fidgeting, digestive efficiency, stress, or sleep quality. For this reason, calculated TDEE represents a baseline estimate rather than an exact biological measurement. Treat your result as a initial hypothesis to test in the real world.</p>
+
+        <h2>TDEE vs. Maintenance Calories vs. Muscle-Building Calories</h2>
+        <h3>Is TDEE the Same as Maintenance Calories?</h3>
+        <p><strong>Direct Answer:</strong> Conceptually, TDEE and maintenance calories refer to the same concept: the energy needed to keep body weight stable. However, calculated TDEE is a mathematical estimate, whereas your actual maintenance intake is determined by real-world weight trends over time.</p>
+
+        <h3>Why Your Muscle-Building Calories May Be Higher Than TDEE</h3>
+        <p>Synthesizing new muscle tissue requires energy. Consuming slightly more energy than your estimated maintenance baseline ensures your body has the substrate and anabolic signals necessary to recover from resistance training and build lean tissue.</p>
+
+        <h2>How to Calculate Your TDEE for Muscle Building</h2>
+        <h3>Step 1: Estimate Your BMR</h3>
+        <p>Basal Metabolic Rate represents energy burned at complete rest. Validated equations like Mifflin-St Jeor calculate BMR using your age, sex, height, and weight.</p>
+
+        <h3>Step 2: Account for Physical Activity</h3>
+        <p>Multiply your BMR by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active) to account for daily job movement and structured lifting sessions.</p>
+
+        <h3>Step 3: Estimate Your TDEE</h3>
+        <p>Multiplying BMR by your activity factor yields your estimated TDEE. This represents your estimated daily energy expenditure.</p>
+
+        <h3>Step 4: Use TDEE as Your Starting Point</h3>
+        <p>Take this calculated baseline as your starting energy target before adding a calibrated surplus for hypertrophy.</p>
+
+        <h2>How Many Calories Above TDEE Should You Eat?</h2>
+        <h3>Is a Calorie Surplus Necessary for Muscle Growth?</h3>
+        <p>A calorie surplus is commonly used to maximize the rate of muscle growth. While muscle gain without a surplus is biologically possible under specific conditions (such as in training beginners), an energy surplus provides optimal conditions for hyper-trophic adaptation.</p>
+
+        <h3>Should You Use a Small, Moderate, or Large Surplus?</h3>
+        <p>Research indicates that smaller to moderate surpluses are typically sufficient for maximizing muscle gain while limiting excess fat storage:</p>
+        <ul>
+          <li><strong>Beginners:</strong> +300 to +400 kcal/day (higher potential rate of tissue growth).</li>
+          <li><strong>Intermediates:</strong> +200 to +300 kcal/day.</li>
+          <li><strong>Advanced Lifters:</strong> +150 to +200 kcal/day (lower rate of muscle growth potential).</li>
+        </ul>
+
+        <h3>Why More Calories Do Not Automatically Mean More Muscle</h3>
+        <p>Muscle protein synthesis has biological speed limits. Consuming an excessively large surplus (+800 to +1,000 kcal/day) does not double muscle growth; instead, the extra energy is predominantly stored as body fat.</p>
+
+        <h2>Example: Turning Your TDEE Into a Muscle-Building Calorie Target</h2>
+        <div class="about-calculator-card">
+          <p><strong>Fictional Example Scenario:</strong></p>
+          <ul>
+            <li><strong>Lifter:</strong> Alex, 175 lbs, lifting 4 days/week.</li>
+            <li><strong>Estimated BMR:</strong> 1,700 kcal/day.</li>
+            <li><strong>Activity Factor:</strong> 1.425 (Moderately Active).</li>
+            <li><strong>Estimated TDEE (Maintenance Baseline):</strong> ~2,422 kcal/day.</li>
+            <li><strong>Chosen Surplus:</strong> +275 kcal/day (Moderate surplus).</li>
+            <li><strong>Starting Calorie Target:</strong> ~2,700 kcal/day.</li>
+          </ul>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);">Note: This scenario demonstrates the calculation process and is not a universal prescription.</p>
+        </div>
+
+        <h2>What to Eat for Muscle Growth</h2>
+        <h3>Protein for Muscle Building</h3>
+        <p>Protein provides essential amino acids required for muscle protein synthesis. Research suggests consuming approximately 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) per day support optimal hypertrophy.</p>
+
+        <h3>Carbohydrates and Dietary Fat</h3>
+        <p>Carbohydrates replenish muscle glycogen stores and fuel high-intensity lifting workouts. Dietary fats (20%–35% of total calories) support hormone production and cellular health. Learn more with our <a href="/macro-calculator/">Macro Calculator</a>.</p>
+
+        <h2>Why Resistance Training Matters for Muscle Building</h2>
+        <h3>Progressive Resistance Training</h3>
+        <p>Calories alone do not build muscle. Mechanical tension from progressive resistance training provides the essential biological signal that instructs your body to direct surplus calories into muscle tissue growth rather than fat storage.</p>
+
+        <h3>Calories Cannot Replace Training</h3>
+        <p>Eating in a calorie surplus without structured, progressive lifting will result in fat gain rather than muscular hypertrophy.</p>
+
+        <h2>How to Track Whether Your Calorie Target Is Working</h2>
+        <h3>Track Body-Weight Trends</h3>
+        <p>Weigh yourself 3–5 times per week under consistent conditions (e.g., morning after waking). Use weekly average trends rather than reacting to daily scale fluctuations caused by water weight and digestion.</p>
+
+        <h3>Track Training Progress</h3>
+        <p>Monitor your performance on primary compound lifts. Gradual increases in weight lifted or repetitions completed signal positive adaptation.</p>
+
+        <h3>Consider Body Composition</h3>
+        <p>Track waist measurements, progress photos, and how clothing fits to distinguish lean tissue gain from body fat accumulation.</p>
+
+        <h2>When to Increase or Decrease Your Calories</h2>
+        <h3>If Your Weight Is Not Increasing</h3>
+        <p>If scale averages remain flat after 3–4 weeks and lifting performance is stagnant, increase daily intake by 100–150 calories.</p>
+
+        <h3>If Your Weight Is Increasing Quickly</h3>
+        <p>If weight increases faster than 2–3 lbs per month (in intermediate lifters) alongside rapid waist growth, reduce daily intake by 100–150 calories.</p>
+
+        <h3>If Your Weight Increases but Training Stalls</h3>
+        <p>Review training quality, recovery, sleep, and protein distribution before automatically increasing intake further.</p>
+
+        <h2>Progress Interpretation Framework</h2>
         <div class="table-container">
           <table>
             <thead>
               <tr>
-                <th>Bulking Strategy</th>
-                <th>Calorie Adjustment</th>
-                <th>Target Weight Gain / Month</th>
-                <th>Ideal Candidate</th>
+                <th scope="col">What you're seeing</th>
+                <th scope="col">What to consider</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Lean / Conservative Surplus</td>
-                <td>+200 to +300 kcal/day</td>
-                <td>1.0 to 1.5 lbs (0.45 - 0.7 kg)</td>
-                <td>Intermediate/Advanced Lifters, Fat-Sensitive Individuals</td>
+                <td>Weight is relatively stable</td>
+                <td>Check whether intake is actually near the estimated maintenance level</td>
               </tr>
               <tr>
-                <td>Moderate Bulking Surplus</td>
-                <td>+350 to +500 kcal/day</td>
-                <td>2.0 to 3.0 lbs (0.9 - 1.4 kg)</td>
-                <td>Beginner Lifters ("Newbie Gains"), Hardgainers</td>
+                <td>Weight is gradually increasing</td>
+                <td>Monitor training progress and body composition</td>
               </tr>
               <tr>
-                <td>Aggressive Surplus ("Dirty Bulk")</td>
-                <td>+750+ kcal/day</td>
-                <td>4.0+ lbs (1.8+ kg)</td>
-                <td>Underweight individuals, Strength Athletes (Not Recommended for Pure Aesthetics)</td>
+                <td>Weight is increasing rapidly</td>
+                <td>Review whether the calorie target is higher than necessary for your goal</td>
+              </tr>
+              <tr>
+                <td>Weight is not increasing</td>
+                <td>Check tracking accuracy, consistency, activity, and intake</td>
+              </tr>
+              <tr>
+                <td>Weight increases but training stalls</td>
+                <td>Review training quality, recovery, protein, and overall plan</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2>Step-by-Step: How to Calculate Your TDEE for Muscle Growth</h2>
-        <ol>
-          <li><strong>Find Baseline TDEE:</strong> Use our <a href="/">TDEE Calculator</a> to estimate your daily energy maintenance.</li>
-          <li><strong>Factor In Training Volume:</strong> Ensure your activity level selection accounts for 3 to 5 weekly progressive weight lifting sessions.</li>
-          <li><strong>Add Your Lean Surplus:</strong> Add 250–300 calories to your TDEE for a steady lean bulk.</li>
-          <li><strong>Track 14-Day Scale Trends:</strong> Compare your actual body weight changes over 2-3 weeks and calibrate your surplus accordingly.</li>
-        </ol>
+        <h2>When Should You Recalculate Your TDEE?</h2>
+        <h3>After Meaningful Body-Weight Changes</h3>
+        <p>Recalculate your baseline TDEE after gaining 5–10 lbs of body mass, as larger body mass increases baseline energy expenditure.</p>
 
-        <h2>Macronutrient Ratios for Maximum Muscle Hypertrophy</h2>
-        <p>Calories dictate weight change, but macronutrients dictate composition change (muscle vs. fat):</p>
-        <ul>
-          <li><strong>Protein (1.6 to 2.2 g/kg / 0.8–1.0 g/lb):</strong> Provides essential amino acids required to repair micro-tears in muscle fibers and trigger MPS.</li>
-          <li><strong>Carbohydrates (4.0 to 7.0 g/kg):</strong> Carbs are the primary fuel source for high-intensity weight training. They replenish muscle glycogen stores and elevate insulin, a potent anabolic hormone.</li>
-          <li><strong>Fats (0.8 to 1.2 g/kg / 20–30% of total calories):</strong> Vital for maintaining healthy testosterone levels, joint lubrication, and cellular membrane structure.</li>
-        </ul>
+        <h3>After Activity Changes</h3>
+        <p>Recalculate if your daily occupational activity or exercise frequency changes significantly (e.g., taking a new job or adding extra training sessions).</p>
 
-        <p>Explore our dedicated <a href="/macro-calculator/">Macro Calculator</a> to customize your daily bulking macronutrient split.</p>
+        <h3>When Real-World Results Do Not Match the Estimate</h3>
+        <p>If actual weight trends consistently diverge from your initial target over a month-long evaluation period, update your calculations using your new baseline body weight.</p>
+
+        <h2>Can You Build Muscle Without Eating Above TDEE?</h2>
+        <p><strong>Direct Answer:</strong> Yes, under specific physiological conditions known as body recomposition. Beginners, individuals returning from a layoff, or individuals carrying higher body fat can build muscle at maintenance calories or even in a mild energy deficit. However, experienced lifters with lower body fat typically require an energy surplus for sustained growth.</p>
+
+        <h2>Lean Bulk vs. Aggressive Bulk</h2>
+        <p>A <strong>lean bulk</strong> targets a modest calorie surplus (+200 to +300 kcal/day) for gradual weight gain, prioritizing lean muscle mass while minimizing fat gain. An <strong>aggressive bulk</strong> uses a large surplus (+500 to +1,000 kcal/day), which increases body weight faster but results in a significantly higher proportion of fat accumulation without increasing the rate of muscle growth.</p>
+
+        <h2>Common TDEE and Muscle-Building Mistakes</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Mistake:</strong> Treating calculated TDEE as an exact number.<br>
+                <em>Why it matters:</em> Causes frustration when real-world results differ from calculated numbers.<br>
+                <em>Better approach:</em> Treat TDEE as a baseline starting estimate to be refined by real-world scale trends.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Automatically adding a massive calorie surplus.<br>
+                <em>Why it matters:</em> Leads to excessive fat gain without speeding up muscle growth.<br>
+                <em>Better approach:</em> Use a modest, calibrated surplus suited to your experience level.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Reacting to daily scale fluctuations.<br>
+                <em>Why it matters:</em> Daily weight varies due to water, sodium, and digestion, causing unnecessary calorie changes.<br>
+                <em>Better approach:</em> Track 7-day weekly averages over 2–4 week blocks.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Ignoring resistance training progression.<br>
+                <em>Why it matters:</em> Extra calories without progressive overload lead to fat gain.<br>
+                <em>Better approach:</em> Ensure progressive overload in key lifts alongside your calorie surplus.</li>
+          </ul>
+        </div>
 
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
-          <div class="faq-item">
-            <h3>Can I gain muscle at maintenance TDEE (body recomposition)?</h3>
-            <p>Yes, body recomposition (gaining muscle while staying at maintenance) is possible for training beginners, individuals returning from a layoff, or those carrying higher body fat percentages. However, intermediate and advanced lifters require a dedicated calorie surplus to continue building tissue efficiently.</p>
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is TDEE the same as maintenance calories?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">TDEE is a calculated mathematical estimate of daily energy expenditure, whereas maintenance calories represent the real-world daily calorie intake that keeps your weight stable over time.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How many calories above TDEE should I eat to build muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">For most lifters, a modest surplus of 200 to 400 calories per day above estimated TDEE is optimal for supporting muscle growth while minimizing excess fat gain.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Can I build muscle without a calorie surplus?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Training beginners, individuals returning after a break, or those with higher body fat can build muscle at maintenance calories through body recomposition. Intermediate and advanced lifters generally benefit from a dedicated surplus.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How often should I recalculate TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Recalculate TDEE after meaningful body-weight changes (5–10 lbs), major shifts in daily activity levels, or when real-world weight trends deviate from expected progress over a 3–4 week period.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">What if I am not gaining weight above my TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">If scale weight is stable over 3–4 weeks, your estimated TDEE may have underestimated your true maintenance intake. Increase daily intake by 100–150 calories and reassess after 2 weeks.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Does TDEE increase when you gain muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Muscle tissue is metabolically active, slightly increasing your BMR. Furthermore, moving a heavier body during workouts and daily activity increases overall energy expenditure.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is a bigger calorie surplus better for muscle growth?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">No. Muscle protein synthesis has an upper physiological limit. Calorie surpluses beyond what is needed for maximal hypertrophy are stored primarily as body fat.</p>
+          </details>
+        </div>
+
+        <h2>Calculate Your TDEE for Muscle Building</h2>
+        <div class="calculator-cta-box">
+          <div class="cta-content">
+            <h3>Ready to Set Your Starting Calorie Target?</h3>
+            <p>Use our TDEE calculator to estimate your maintenance calories and select a starting surplus tailored to your experience level.</p>
           </div>
-          <div class="faq-item">
-            <h3>How much muscle can I realistically gain per month?</h3>
-            <p>In your first year of proper lifting, natural male lifters can gain roughly 1.5 to 2 lbs of pure muscle per month (women ~0.75 to 1 lb). Rate of gain slows down by ~50% each subsequent year of consistent training.</p>
-          </div>
-          <div class="faq-item">
-            <h3>What should I do if I notice too much fat gain?</h3>
-            <p>If scale weight is rising faster than 3 lbs per month and waist circumference is increasing rapidly, reduce daily intake by 150–200 calories until weight gain settles into the optimal range.</p>
-          </div>
+          <a href="#silo-calculator-mount" class="btn-primary">Calculate Your TDEE &rarr;</a>
         </div>
 
         <h2>Scientific Evidence & References</h2>
-        <p>Guidance in this article is supported by peer-reviewed sports nutrition literature indexed in PubMed and NCBI.</p>
+        <p>Guidance in this article is supported by peer-reviewed sports nutrition and exercise physiology literature indexed in PubMed and NCBI.</p>
         <ul>
           <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
           <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
           <li>Iraki J, et al. Nutrition Recommendations for Bodybuilding Contest Preparation: Exercise and Performance. <em>J Int Soc Sports Nutr</em>. 2019. (<a href="https://pubmed.ncbi.nlm.nih.gov/31247008/" target="_blank" rel="noopener">PubMed [3]</a>)</li>
         </ul>
 
-        <h2>A Word From Our Team</h2>
+        <h2>Educational Disclaimer</h2>
         <div class="about-calculator-card">
-          <p>Successful muscle building relies on progressive overload in the gym combined with a well-calibrated energy surplus. Our calculator tools provide a precise baseline, but monitoring real-world progress over 3-4 week blocks remains the gold standard for long-term athletic development.</p>
-          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This content is for educational purposes only and does not replace medical or athletic coaching advice.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Disclaimer:</strong> This calculator and guide provide general educational information, not individualized medical or nutrition advice. Individual calorie and nutrition needs vary. If you have a medical condition, are pregnant, follow a prescribed diet, or have a history of an eating disorder, consult an appropriately qualified healthcare professional.</p>
+        </div>`
+    },
+
+    '/blog/tdee-for-muscle-building/': {
+      title: 'TDEE for Muscle Building: How to Set Calories for Muscle Gain',
+      metaDescription: 'Learn how to use your TDEE to set a starting calorie target for muscle building, track your progress, adjust calories, and support muscle growth.',
+      category: 'Muscle Building',
+      readTime: '9 min read',
+      h1: 'TDEE for Muscle Building: How to Set Your Calories for Muscle Gain',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>TDEE for Muscle Building</span>
+        </div>
+
+        <p class="lead-paragraph">TDEE is an estimate of the calories you use each day. For muscle building, it can serve as a starting maintenance baseline before you choose a calorie target and refine it using your real-world progress.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Core Concept:</strong></p>
+          <p>TDEE is a starting estimate, not a permanent prescription. Use calculated TDEE as your maintenance baseline, add a calculated surplus, track your scale weight trends and lifting performance over 2–4 weeks, and adjust calories based on actual results.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:1.5rem; margin:1.5rem 0 2rem; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(14,165,233,0.05)); border:1px solid var(--accent-cyan);">
+          <h3 style="margin-bottom:0.5rem; color:var(--text-main);">Calculate Your Muscle Building Calories</h3>
+          <p style="margin-bottom:1rem; color:var(--text-muted);">Use our interactive calculator to estimate your daily baseline expenditure and personalized surplus target.</p>
+          <a href="#silo-calculator-mount" class="btn-primary" style="display:inline-flex; width:auto; padding:0.75rem 2rem;">Calculate Your TDEE &rarr;</a>
+        </div>
+
+        <!-- Visual 5: Core Information-Gain Framework Feedback Loop -->
+        <div class="about-calculator-card" style="margin:2rem 0; background:var(--card-bg); border:1px solid var(--border-color);">
+          <h3 style="text-align:center; margin-bottom:1rem; color:var(--accent-cyan);">The Continuous Feedback Loop</h3>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:0.5rem; text-align:center; font-weight:600; font-size:0.9rem;">
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Calculate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Start</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Track</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Evaluate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Adjust</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Recalculate</span>
+          </div>
+        </div>
+
+        <h2>How TDEE Helps You Build Muscle</h2>
+        <h3>What TDEE Actually Tells You</h3>
+        <p>Your Total Daily Energy Expenditure (TDEE) is an estimate of the total daily energy your body expends to maintain basic biological functions and power physical movement. It combines your Basal Metabolic Rate (BMR), Thermic Effect of Food (TEF), Non-Exercise Activity Thermogenesis (NEAT), and Exercise Activity Thermogenesis (EAT).</p>
+
+        <h3>Why TDEE Is Only a Starting Point</h3>
+        <p>Mathematical formulas cannot capture daily shifts in fidgeting, digestive efficiency, stress, or sleep quality. For this reason, calculated TDEE represents a baseline estimate rather than an exact biological measurement. Treat your result as a initial hypothesis to test in the real world.</p>
+
+        <h2>TDEE vs. Maintenance Calories vs. Muscle-Building Calories</h2>
+        <h3>Is TDEE the Same as Maintenance Calories?</h3>
+        <p><strong>Direct Answer:</strong> Conceptually, TDEE and maintenance calories refer to the same concept: the energy needed to keep body weight stable. However, calculated TDEE is a mathematical estimate, whereas your actual maintenance intake is determined by real-world weight trends over time.</p>
+
+        <h3>Why Your Muscle-Building Calories May Be Higher Than TDEE</h3>
+        <p>Synthesizing new muscle tissue requires energy. Consuming slightly more energy than your estimated maintenance baseline ensures your body has the substrate and anabolic signals necessary to recover from resistance training and build lean tissue.</p>
+
+        <h2>How to Calculate Your TDEE for Muscle Building</h2>
+        <h3>Step 1: Estimate Your BMR</h3>
+        <p>Basal Metabolic Rate represents energy burned at complete rest. Validated equations like Mifflin-St Jeor calculate BMR using your age, sex, height, and weight.</p>
+
+        <h3>Step 2: Account for Physical Activity</h3>
+        <p>Multiply your BMR by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active) to account for daily job movement and structured lifting sessions.</p>
+
+        <h3>Step 3: Estimate Your TDEE</h3>
+        <p>Multiplying BMR by your activity factor yields your estimated TDEE. This represents your estimated daily energy expenditure.</p>
+
+        <h3>Step 4: Use TDEE as Your Starting Point</h3>
+        <p>Take this calculated baseline as your starting energy target before adding a calibrated surplus for hypertrophy.</p>
+
+        <h2>How Many Calories Above TDEE Should You Eat?</h2>
+        <h3>Is a Calorie Surplus Necessary for Muscle Growth?</h3>
+        <p>A calorie surplus is commonly used to maximize the rate of muscle growth. While muscle gain without a surplus is biologically possible under specific conditions (such as in training beginners), an energy surplus provides optimal conditions for hyper-trophic adaptation.</p>
+
+        <h3>Should You Use a Small, Moderate, or Large Surplus?</h3>
+        <p>Research indicates that smaller to moderate surpluses are typically sufficient for maximizing muscle gain while limiting excess fat storage:</p>
+        <ul>
+          <li><strong>Beginners:</strong> +300 to +400 kcal/day (higher potential rate of tissue growth).</li>
+          <li><strong>Intermediates:</strong> +200 to +300 kcal/day.</li>
+          <li><strong>Advanced Lifters:</strong> +150 to +200 kcal/day (lower rate of muscle growth potential).</li>
+        </ul>
+
+        <h3>Why More Calories Do Not Automatically Mean More Muscle</h3>
+        <p>Muscle protein synthesis has biological speed limits. Consuming an excessively large surplus (+800 to +1,000 kcal/day) does not double muscle growth; instead, the extra energy is predominantly stored as body fat.</p>
+
+        <h2>Example: Turning Your TDEE Into a Muscle-Building Calorie Target</h2>
+        <div class="about-calculator-card">
+          <p><strong>Fictional Example Scenario:</strong></p>
+          <ul>
+            <li><strong>Lifter:</strong> Alex, 175 lbs, lifting 4 days/week.</li>
+            <li><strong>Estimated BMR:</strong> 1,700 kcal/day.</li>
+            <li><strong>Activity Factor:</strong> 1.425 (Moderately Active).</li>
+            <li><strong>Estimated TDEE (Maintenance Baseline):</strong> ~2,422 kcal/day.</li>
+            <li><strong>Chosen Surplus:</strong> +275 kcal/day (Moderate surplus).</li>
+            <li><strong>Starting Calorie Target:</strong> ~2,700 kcal/day.</li>
+          </ul>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);">Note: This scenario demonstrates the calculation process and is not a universal prescription.</p>
+        </div>
+
+        <h2>What to Eat for Muscle Growth</h2>
+        <h3>Protein for Muscle Building</h3>
+        <p>Protein provides essential amino acids required for muscle protein synthesis. Research suggests consuming approximately 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) per day support optimal hypertrophy.</p>
+
+        <h3>Carbohydrates and Dietary Fat</h3>
+        <p>Carbohydrates replenish muscle glycogen stores and fuel high-intensity lifting workouts. Dietary fats (20%–35% of total calories) support hormone production and cellular health. Learn more with our <a href="/macro-calculator/">Macro Calculator</a>.</p>
+
+        <h2>Why Resistance Training Matters for Muscle Building</h2>
+        <h3>Progressive Resistance Training</h3>
+        <p>Calories alone do not build muscle. Mechanical tension from progressive resistance training provides the essential biological signal that instructs your body to direct surplus calories into muscle tissue growth rather than fat storage.</p>
+
+        <h3>Calories Cannot Replace Training</h3>
+        <p>Eating in a calorie surplus without structured, progressive lifting will result in fat gain rather than muscular hypertrophy.</p>
+
+        <h2>How to Track Whether Your Calorie Target Is Working</h2>
+        <h3>Track Body-Weight Trends</h3>
+        <p>Weigh yourself 3–5 times per week under consistent conditions (e.g., morning after waking). Use weekly average trends rather than reacting to daily scale fluctuations caused by water weight and digestion.</p>
+
+        <h3>Track Training Progress</h3>
+        <p>Monitor your performance on primary compound lifts. Gradual increases in weight lifted or repetitions completed signal positive adaptation.</p>
+
+        <h3>Consider Body Composition</h3>
+        <p>Track waist measurements, progress photos, and how clothing fits to distinguish lean tissue gain from body fat accumulation.</p>
+
+        <h2>When to Increase or Decrease Your Calories</h2>
+        <h3>If Your Weight Is Not Increasing</h3>
+        <p>If scale averages remain flat after 3–4 weeks and lifting performance is stagnant, increase daily intake by 100–150 calories.</p>
+
+        <h3>If Your Weight Is Increasing Quickly</h3>
+        <p>If weight increases faster than 2–3 lbs per month (in intermediate lifters) alongside rapid waist growth, reduce daily intake by 100–150 calories.</p>
+
+        <h3>If Your Weight Increases but Training Stalls</h3>
+        <p>Review training quality, recovery, sleep, and protein distribution before automatically increasing intake further.</p>
+
+        <h2>Progress Interpretation Framework</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">What you're seeing</th>
+                <th scope="col">What to consider</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Weight is relatively stable</td>
+                <td>Check whether intake is actually near the estimated maintenance level</td>
+              </tr>
+              <tr>
+                <td>Weight is gradually increasing</td>
+                <td>Monitor training progress and body composition</td>
+              </tr>
+              <tr>
+                <td>Weight is increasing rapidly</td>
+                <td>Review whether the calorie target is higher than necessary for your goal</td>
+              </tr>
+              <tr>
+                <td>Weight is not increasing</td>
+                <td>Check tracking accuracy, consistency, activity, and intake</td>
+              </tr>
+              <tr>
+                <td>Weight increases but training stalls</td>
+                <td>Review training quality, recovery, protein, and overall plan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>When Should You Recalculate Your TDEE?</h2>
+        <h3>After Meaningful Body-Weight Changes</h3>
+        <p>Recalculate your baseline TDEE after gaining 5–10 lbs of body mass, as larger body mass increases baseline energy expenditure.</p>
+
+        <h3>After Activity Changes</h3>
+        <p>Recalculate if your daily occupational activity or exercise frequency changes significantly (e.g., taking a new job or adding extra training sessions).</p>
+
+        <h3>When Real-World Results Do Not Match the Estimate</h3>
+        <p>If actual weight trends consistently diverge from your initial target over a month-long evaluation period, update your calculations using your new baseline body weight.</p>
+
+        <h2>Can You Build Muscle Without Eating Above TDEE?</h2>
+        <p><strong>Direct Answer:</strong> Yes, under specific physiological conditions known as body recomposition. Beginners, individuals returning from a layoff, or individuals carrying higher body fat can build muscle at maintenance calories or even in a mild energy deficit. However, experienced lifters with lower body fat typically require an energy surplus for sustained growth.</p>
+
+        <h2>Lean Bulk vs. Aggressive Bulk</h2>
+        <p>A <strong>lean bulk</strong> targets a modest calorie surplus (+200 to +300 kcal/day) for gradual weight gain, prioritizing lean muscle mass while minimizing fat gain. An <strong>aggressive bulk</strong> uses a large surplus (+500 to +1,000 kcal/day), which increases body weight faster but results in a significantly higher proportion of fat accumulation without increasing the rate of muscle growth.</p>
+
+        <h2>Common TDEE and Muscle-Building Mistakes</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Mistake:</strong> Treating calculated TDEE as an exact number.<br>
+                <em>Why it matters:</em> Causes frustration when real-world results differ from calculated numbers.<br>
+                <em>Better approach:</em> Treat TDEE as a baseline starting estimate to be refined by real-world scale trends.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Automatically adding a massive calorie surplus.<br>
+                <em>Why it matters:</em> Leads to excessive fat gain without speeding up muscle growth.<br>
+                <em>Better approach:</em> Use a modest, calibrated surplus suited to your experience level.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Reacting to daily scale fluctuations.<br>
+                <em>Why it matters:</em> Daily weight varies due to water, sodium, and digestion, causing unnecessary calorie changes.<br>
+                <em>Better approach:</em> Track 7-day weekly averages over 2–4 week blocks.</li>
+            <li style="margin-top:0.75rem;"><strong>Mistake:</strong> Ignoring resistance training progression.<br>
+                <em>Why it matters:</em> Extra calories without progressive overload lead to fat gain.<br>
+                <em>Better approach:</em> Ensure progressive overload in key lifts alongside your calorie surplus.</li>
+          </ul>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is TDEE the same as maintenance calories?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">TDEE is a calculated mathematical estimate of daily energy expenditure, whereas maintenance calories represent the real-world daily calorie intake that keeps your weight stable over time.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How many calories above TDEE should I eat to build muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">For most lifters, a modest surplus of 200 to 400 calories per day above estimated TDEE is optimal for supporting muscle growth while minimizing excess fat gain.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Can I build muscle without a calorie surplus?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Training beginners, individuals returning after a break, or those with higher body fat can build muscle at maintenance calories through body recomposition. Intermediate and advanced lifters generally benefit from a dedicated surplus.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How often should I recalculate TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Recalculate TDEE after meaningful body-weight changes (5–10 lbs), major shifts in daily activity levels, or when real-world weight trends deviate from expected progress over a 3–4 week period.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">What if I am not gaining weight above my TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">If scale weight is stable over 3–4 weeks, your estimated TDEE may have underestimated your true maintenance intake. Increase daily intake by 100–150 calories and reassess after 2 weeks.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Does TDEE increase when you gain muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Muscle tissue is metabolically active, slightly increasing your BMR. Furthermore, moving a heavier body during workouts and daily activity increases overall energy expenditure.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is a bigger calorie surplus better for muscle growth?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">No. Muscle protein synthesis has an upper physiological limit. Calorie surpluses beyond what is needed for maximal hypertrophy are stored primarily as body fat.</p>
+          </details>
+        </div>
+
+        <h2>Calculate Your TDEE for Muscle Building</h2>
+        <div class="calculator-cta-box">
+          <div class="cta-content">
+            <h3>Ready to Set Your Starting Calorie Target?</h3>
+            <p>Use our TDEE calculator to estimate your maintenance calories and select a starting surplus tailored to your experience level.</p>
+          </div>
+          <a href="#silo-calculator-mount" class="btn-primary">Calculate Your TDEE &rarr;</a>
+        </div>
+
+        <h2>Scientific Evidence & References</h2>
+        <p>Guidance in this article is supported by peer-reviewed sports nutrition and exercise physiology literature indexed in PubMed and NCBI.</p>
+        <ul>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Iraki J, et al. Nutrition Recommendations for Bodybuilding Contest Preparation: Exercise and Performance. <em>J Int Soc Sports Nutr</em>. 2019. (<a href="https://pubmed.ncbi.nlm.nih.gov/31247008/" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+        </ul>
+
+        <h2>Educational Disclaimer</h2>
+        <div class="about-calculator-card">
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Disclaimer:</strong> This calculator and guide provide general educational information, not individualized medical or nutrition advice. Individual calorie and nutrition needs vary. If you have a medical condition, are pregnant, follow a prescribed diet, or have a history of an eating disorder, consult an appropriately qualified healthcare professional.</p>
         </div>`
     },
 
