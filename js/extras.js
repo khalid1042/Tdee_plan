@@ -380,12 +380,34 @@ window.TDEEExtras = (function() {
     '/calorie-deficit-calculator/': 'deficit',
     '/calorie-surplus-calculator/': 'surplus',
     '/macro-calculator/': 'macro',
-    '/calories-burned-calculator/': 'burned'
+    '/calories-burned-calculator/': 'burned',
+    '/weight-gain/': 'surplus',
+    '/tdee-calculator-for-women-to-gain-weight/': 'surplus',
+    '/blog/tdee-for-weight-gain/': 'surplus',
+    '/blog/tdee-for-muscle-building/': 'surplus',
+    '/blog/tdee-for-weight-loss/': 'deficit',
+    '/blog/what-is-tdee/': 'maintenance',
+    '/blog/how-to-calculate-tdee/': 'maintenance',
+    '/blog/tdee-vs-bmr/': 'bmr',
+    '/blog/mifflin-st-jeor-equation/': 'bmr'
   };
 
   function mount(path, container) {
-    var calcKey = ROUTE_MAP[path];
-    if (!calcKey || !container) return false;
+    if (!path || !container) return false;
+    var normPath = path;
+    if (!normPath.startsWith('/')) normPath = '/' + normPath;
+    if (!normPath.endsWith('/')) normPath = normPath + '/';
+    
+    var calcKey = ROUTE_MAP[normPath] || ROUTE_MAP[path];
+    if (!calcKey) {
+      for (var k in ROUTE_MAP) {
+        if (normPath.endsWith(k) || k.endsWith(normPath)) {
+          calcKey = ROUTE_MAP[k];
+          break;
+        }
+      }
+    }
+    if (!calcKey) return false;
     buildForm(container, calcKey);
     return true;
   }
