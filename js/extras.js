@@ -441,6 +441,7 @@ window.TDEEExtras = (function() {
     '/calories-burned-calculator/': 'burned',
     '/weight-gain/': 'surplus',
     '/tdee-calculator-for-women-to-gain-weight/': 'surplus',
+    '/tdee-for-weight-gain/': 'surplus',
     '/blog/tdee-for-weight-gain/': 'surplus',
     '/tdee-for-muscle-building/': 'muscle',
     '/blog/tdee-for-muscle-building/': 'muscle',

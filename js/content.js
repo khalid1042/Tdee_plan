@@ -1522,6 +1522,125 @@ window.TDEEContent = {
         </div>`
     },
 
+    '/tdee-for-weight-gain/': {
+      title: 'TDEE for Sustainable Weight Gain: How to Use Your TDEE to Gain Weight',
+      metaDescription: 'Learn how to use your TDEE for weight gain, calculate a sustainable calorie surplus, gain weight safely, and track real-world weight trends.',
+      category: 'Weight Gain',
+      readTime: '7 min read',
+      h1: 'TDEE for Sustainable Weight Gain: How to Use Your TDEE to Gain Weight',
+      content: `<p class="lead-paragraph">Gaining weight in a healthy, controlled manner requires understanding your total energy needs. Whether your goal is to recover from an under-eating period, support athletic performance, or overcome a high metabolism, using your Total Daily Energy Expenditure (TDEE) to guide your calorie surplus is the most reliable strategy.</p>
+
+        <p>Without knowing your maintenance calories, attempting to gain weight often leads to either frustrating lack of progress or excessive unwanted fat gain. In this guide, we break down how to calculate your TDEE for weight gain, determine the ideal calorie surplus, balance your macronutrients, and track your progress effectively.</p>
+
+        <div class="calculator-cta-box">
+          <div class="cta-content">
+            <h3>Calculate Your Maintenance & Surplus Calories</h3>
+            <p>Get personalized daily calorie and macro recommendations tailored specifically for sustainable weight gain.</p>
+          </div>
+          <a href="#silo-calculator-mount" class="btn-primary">Calculate Weight Gain Calories &rarr;</a>
+        </div>
+
+        <h2>What Is TDEE and Why Is It Essential for Weight Gain?</h2>
+        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> is an estimate of the total number of calories your body burns in a 24-hour period. It accounts for your baseline metabolic function as well as all daily movement and exercise.</p>
+
+        <p>To gain weight, you must consume more energy than your body expends—a state known as a <strong>calorie surplus</strong>. Your TDEE serves as the baseline maintenance line. Eating above this baseline ensures your body has the extra energy needed to gain body weight safely.</p>
+
+        <h2>The 4 Components of TDEE</h2>
+        <ul>
+          <li><strong>Basal Metabolic Rate (BMR):</strong> The calories burned carrying out basic life-sustaining functions at rest (typically 60–70% of TDEE).</li>
+          <li><strong>Thermic Effect of Food (TEF):</strong> Energy consumed digesting, absorbing, and processing nutrients (roughly 10% of total intake).</li>
+          <li><strong>Exercise Activity Thermogenesis (EAT):</strong> Calories burned during structured workouts like cardio or sports.</li>
+          <li><strong>Non-Exercise Activity Thermogenesis (NEAT):</strong> Calories burned through unstructured movement like walking, fidgeting, and posture maintenance.</li>
+        </ul>
+
+        <p>Understanding NEAT is especially critical for weight gain, as some individuals naturally increase subconscious movement when calories rise, requiring slightly higher surplus targets over time.</p>
+
+        <h2>How to Calculate Your Calorie Surplus for Weight Gain</h2>
+        <p>To calculate your weight gain calorie target, follow a simple three-step process:</p>
+        <ol>
+          <li><strong>Determine Your TDEE:</strong> Use our <a href="/">TDEE Calculator</a> or specialized <a href="/tdee-calculator-for-women-to-gain-weight/">TDEE Calculator for Women to Gain Weight</a> to find your maintenance calories.</li>
+          <li><strong>Select a Target Rate of Gain:</strong> Aim for 0.5 to 1.0 lb (0.25 to 0.5 kg) per week for steady body mass gain.</li>
+          <li><strong>Add a Moderate Calorie Surplus:</strong>
+            <ul>
+              <li><strong>Conservative Surplus:</strong> TDEE + 250 to 300 calories/day (~0.5 lb gain per week).</li>
+              <li><strong>Moderate Surplus:</strong> TDEE + 400 to 500 calories/day (~1.0 lb gain per week). Ideal for hardgainers and active individuals.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Goal Strategy</th>
+                <th>Daily Calorie Adjustment</th>
+                <th>Expected Rate of Gain</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Conservative Surplus</td>
+                <td>+250 to +300 kcal</td>
+                <td>0.5 lbs / week</td>
+                <td>Gradual, controlled weight gain</td>
+              </tr>
+              <tr>
+                <td>Moderate Weight Gain</td>
+                <td>+400 to +500 kcal</td>
+                <td>1.0 lb / week</td>
+                <td>General weight gain & hyper-metabolic types</td>
+              </tr>
+              <tr>
+                <td>Aggressive Weight Gain</td>
+                <td>+700+ kcal</td>
+                <td>1.5+ lbs / week</td>
+                <td>Underweight recovery under guidance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Optimal Macronutrient Breakdown for Weight Gain</h2>
+        <p>Proper macro distribution helps support healthy weight gain:</p>
+        <ul>
+          <li><strong>Protein:</strong> 0.8 to 1.0 gram per pound of body weight (1.6 to 2.2g per kg) to support lean body mass.</li>
+          <li><strong>Fats:</strong> 0.4 to 0.5 grams per pound of body weight (20–30% of total calories) for hormone production and calorie density.</li>
+          <li><strong>Carbohydrates:</strong> Fill the remaining daily calories with complex and easily digestible carbs to fuel daily activities and restock glycogen reserves.</li>
+        </ul>
+
+        <p>For detailed macronutrient advice tailored for women, visit our guide on <a href="/weight-gain/">Weight Gain Strategies & Nutrition</a>.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How long does it take to see weight gain results?</h3>
+            <p>With a consistent surplus of 300–500 calories above TDEE, noticeable weight changes usually appear on the scale within 2 to 3 weeks.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I am not gaining weight despite eating above my TDEE?</h3>
+            <p>If your scale weight remains flat over 14 days, your actual TDEE may be higher than estimated due to increased NEAT. Increase daily intake by an additional 200 calories and reassess.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Should I do cardio while trying to gain weight?</h3>
+            <p>Yes. Moderate cardiovascular exercise supports heart health and recovery without consuming excessive energy. Simply account for cardio activity in your total TDEE calculation.</p>
+          </div>
+        </div>
+
+        <h2>Scientific Evidence & References</h2>
+        <p>This article relies on peer-reviewed energy balance literature indexed by PubMed and NCBI.</p>
+        <ul>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>Healthy weight gain is a gradual, deliberate process that requires consistent energy surplus and adequate nutrition. Our calculator suite uses validated clinical formulas to help you estimate your baseline needs and establish an effective weight gain plan.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for general educational purposes only and does not constitute medical advice.</p>
+        </div>`
+    },
+
     '/blog/tdee-for-weight-gain/': {
       title: 'TDEE for Sustainable Weight Gain: How to Use Your TDEE to Gain Weight & Muscle',
       metaDescription: 'Learn how to use your TDEE for weight gain, calculate a sustainable calorie surplus, build lean muscle mass, and track real-world weight trends.',
