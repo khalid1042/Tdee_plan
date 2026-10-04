@@ -1656,7 +1656,7 @@ window.TDEEContent = {
             <h3>Calculate Your Lean Bulking Surplus & Macros</h3>
             <p>Get instant personalized calorie targets and macronutrient breakdowns optimized for muscle growth.</p>
           </div>
-          <a href="/" class="btn-primary">Go to TDEE Calculator &rarr;</a>
+          <a href="#silo-calculator-mount" class="btn-primary">Calculate Muscle Building Calories &rarr;</a>
         </div>
 
         <h2>What Is TDEE and Why Is It Essential for Hypertrophy?</h2>

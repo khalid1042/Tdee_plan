@@ -96,7 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function navigateTo(path) {
     state.currentRoute = path;
-    window.history.pushState({}, '', path);
+    var base = '';
+    var m = window.location.pathname.match(/^(\/tdee_plan)/i);
+    if (m) base = m[1];
+    var fullPath = base + (path === '/' ? '/' : path);
+    try {
+      window.history.pushState({}, '', fullPath);
+    } catch (e) {}
     renderRoute(path);
   }
 
@@ -108,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (normPath === '/') {
       // Show Homepage Calculator Workspace
-      heroWorkspace.classList.remove('hidden');
+      if (heroWorkspace) heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
       document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
       
@@ -152,23 +158,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Show Custom 404 Error Page
-      heroWorkspace.classList.add('hidden');
-      siloContainer.classList.remove('hidden');
+      if (heroWorkspace) heroWorkspace.classList.add('hidden');
+      if (siloContainer) siloContainer.classList.remove('hidden');
 
-      siloCategory.textContent = '404 Error';
-      siloTitle.textContent = '404 - Page Not Found';
-      siloBody.innerHTML = `
-        <div style="text-align: center; padding: 2.5rem 1rem;">
-          <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🔎</div>
-          <h3 style="margin-bottom: 0.75rem; color: var(--accent-rose);">Requested Page Not Found</h3>
-          <p style="font-size: 1rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 1.5rem;">
-            The page you are trying to reach does not exist or may have moved.
-          </p>
-          <a href="/" class="btn-primary" style="display: inline-flex; width: auto; padding: 0.75rem 2rem;">
-            ← Return to Main Calculator
-          </a>
-        </div>
-      `;
+      if (siloCategory) siloCategory.textContent = '404 Error';
+      if (siloTitle) siloTitle.textContent = '404 - Page Not Found';
+      if (siloBody) {
+        siloBody.innerHTML = `
+          <div style="text-align: center; padding: 2.5rem 1rem;">
+            <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🔎</div>
+            <h3 style="margin-bottom: 0.75rem; color: var(--accent-rose);">Requested Page Not Found</h3>
+            <p style="font-size: 1rem; color: var(--text-muted); max-width: 480px; margin: 0 auto 1.5rem;">
+              The page you are trying to reach does not exist or may have moved.
+            </p>
+            <a href="/" class="btn-primary" style="display: inline-flex; width: auto; padding: 0.75rem 2rem;">
+              ← Return to Main Calculator
+            </a>
+          </div>
+        `;
+      }
       document.title = '404 Page Not Found — TDEE Calculator';
 
       var calcMount = document.getElementById('silo-calculator-mount');
@@ -178,11 +186,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show Silo Content Article
     ensureSiloContainer();
-    heroWorkspace.classList.add('hidden');
-    siloContainer.classList.remove('hidden');
+    if (heroWorkspace) heroWorkspace.classList.add('hidden');
+    if (siloContainer) siloContainer.classList.remove('hidden');
 
-    siloCategory.textContent = routeData.category || 'Guide';
-    siloTitle.textContent = routeData.h1 || routeData.title;
+    if (siloCategory) siloCategory.textContent = routeData.category || 'Guide';
+    if (siloTitle) siloTitle.textContent = routeData.h1 || routeData.title;
     
     var trustMeta = document.getElementById('silo-trust-meta');
     if (trustMeta) {
@@ -198,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
     }
 
-    siloBody.innerHTML = routeData.content;
+    if (siloBody) siloBody.innerHTML = routeData.content;
     document.title = routeData.title;
 
     // Update meta description
@@ -234,17 +242,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (href.startsWith('#')) {
       e.preventDefault();
       var targetId = href.substring(1);
-      if (state.currentRoute !== '/') {
-        // Return to homepage first if currently on a silo page
-        navigateTo('/');
-        if (siloContainer) siloContainer.classList.add('hidden');
-      }
-      if (targetId) {
-        var elem = document.getElementById(targetId);
-        if (elem) {
-          elem.scrollIntoView({ behavior: 'smooth' });
-        }
+      var elem = targetId ? document.getElementById(targetId) : null;
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
       } else {
+        if (state.currentRoute !== '/') {
+          navigateTo('/');
+          if (siloContainer) siloContainer.classList.add('hidden');
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
