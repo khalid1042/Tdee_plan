@@ -13,6 +13,633 @@ window.TDEEContent = {
     // SILO 1: TDEE CORE & KNOWLEDGE GUIDES
     // ==========================================
 
+    '/weight-gain/': {
+      title: 'Weight Gain TDEE Guide & Calorie Surplus Calculator',
+      metaDescription: 'Learn how to calculate your TDEE for weight gain, estimate maintenance calories, and create a healthy calorie surplus to gain weight and build muscle.',
+      category: 'Weight Gain Guides',
+      readTime: '8 min read',
+      h1: 'How to Calculate Your TDEE to Gain Weight: Complete Guide & Calculator',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <a href="/blog/how-to-calculate-tdee/" data-link>TDEE Calculator</a> &rsaquo; <span>Weight Gain TDEE Guide</span>
+        </div>
+
+        <p class="lead-paragraph">Calculating your energy needs when trying to gain weight can feel overwhelming. Many people are told to simply “eat more calories,” but without knowing your baseline energy burn, it is difficult to determine how much food your body actually requires for healthy, lean weight gain.</p>
+
+        <p>Whether your goal is to build lean muscle mass, recover from an under-eating period, support athletic performance, or simply reach a healthy body weight, knowing <strong>how to calculate your TDEE for weight gain</strong> gives you a clear, science-backed roadmap.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Quick Answer:</strong></p>
+          <p>To calculate your TDEE for weight gain, first estimate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor formula, multiply it by your activity factor (1.2 to 1.9) to find your TDEE (maintenance calories), and then add a conservative calorie surplus of <strong>250 to 400 calories per day</strong> above your TDEE to foster steady, healthy weight gain.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:1.5rem; margin:1.5rem 0 2rem; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(14,165,233,0.05)); border:1px solid var(--accent-cyan);">
+          <h3 style="margin-bottom:0.5rem; color:var(--text-main);">Find Your Exact Numbers in 60 Seconds</h3>
+          <p style="margin-bottom:1rem; color:var(--text-muted);">Use our primary scientific TDEE calculator to estimate your maintenance baseline and custom weight gain targets instantly.</p>
+          <a href="/" class="btn-primary" style="display:inline-flex; width:auto; padding:0.75rem 2rem;" data-link>Calculate My TDEE</a>
+        </div>
+
+        <h2>What Is TDEE?</h2>
+        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong> It represents the total estimated number of calories your body burns in a 24-hour day to sustain life, digest food, and power all physical movement.</p>
+        <p>Your TDEE consists of four primary energy expenditure components:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Basal Metabolic Rate (BMR):</strong> The baseline calories burned at complete rest to keep your heart pumping, lungs breathing, brain functioning, and organs operating (~60%–70% of TDEE).</li>
+            <li><strong>Non-Exercise Activity Thermogenesis (NEAT):</strong> Energy expended during daily non-workout movements such as walking around the house, standing, typing, doing chores, and fidgeting (~15%–20% of TDEE).</li>
+            <li><strong>Thermic Effect of Food (TEF):</strong> The metabolic cost of chewing, digesting, absorbing, and processing macronutrients (~10% of TDEE).</li>
+            <li><strong>Exercise Activity Thermogenesis (EAT):</strong> Energy burned during structured physical workouts like resistance training, cardio, or sports (~5%–15% of TDEE).</li>
+          </ul>
+        </div>
+        <p>Understanding TDEE is essential because your daily calorie intake directly compares against this expenditure. TDEE represents your energy maintenance level—the amount of calories needed to keep your current body weight constant.</p>
+
+        <h2>How Does TDEE Help With Weight Gain?</h2>
+        <p>Weight change follows the fundamental physiological principle of energy balance. To gain body weight, your total energy intake over time must exceed your total daily energy expenditure.</p>
+        <div class="formula-callout-box">
+          <p><strong>The Weight Gain Progression:</strong></p>
+          <p><strong>BMR &rarr; TDEE (Maintenance Calories) &rarr; Calorie Surplus &rarr; Weight Gain</strong></p>
+        </div>
+        <p>When you eat fewer calories than your TDEE, your body burns stored tissue for energy, resulting in weight loss. When you eat equal to your TDEE, your weight remains stable. Consistently eating above your estimated maintenance expenditure creates an energy surplus, providing the extra energy your body needs to synthesize new body mass, including muscle tissue and healthy body reserves.</p>
+        <p>Importantly, TDEE is an <em>estimate</em> of daily energy expenditure, not an exact, immutable law. Factors such as daily steps, sleep, stress, and hormonal fluctuations can shift expenditure slightly from day to day. However, using TDEE as your calculated baseline removes guesswork when setting your calorie surplus.</p>
+
+        <h2>How to Calculate Your TDEE for Weight Gain</h2>
+        <p>Calculating your TDEE to gain weight involves a straightforward two-step mathematical process followed by applying a calorie surplus.</p>
+
+        <h3>Step 1: Calculate Your BMR (Basal Metabolic Rate)</h3>
+        <p>Your Basal Metabolic Rate estimates the baseline energy your body requires at rest. One of the most clinically validated and widely accepted methods for estimating BMR is the <strong>Mifflin-St Jeor equation</strong>, developed from measured resting energy expenditure data in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <div class="equation-box">
+          <p><strong>Mifflin-St Jeor Formulas:</strong></p>
+          <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) + 5</p>
+          <p style="margin-top:0.5rem;"><strong>For Women:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) &minus; 161</p>
+        </div>
+
+        <p>Pay close attention to the units used in the clinical formula:</p>
+        <ul>
+          <li><strong>Weight:</strong> Must be in kilograms (kg). If you measure in pounds (lbs), divide by 2.205 (e.g. 120 lbs &divide; 2.205 = 54.4 kg).</li>
+          <li><strong>Height:</strong> Must be in centimeters (cm). If you measure in inches, multiply by 2.54 (e.g. 65 inches &times; 2.54 = 165.1 cm).</li>
+          <li><strong>Age:</strong> Age in complete years.</li>
+        </ul>
+        <p>Calculate your resting baseline floor directly using our <a href="/bmr-calculator/" data-link>BMR Calculator</a>.</p>
+
+        <h3>Step 2: Multiply BMR by Your Activity Level</h3>
+        <p>Once you have estimated your BMR, multiply it by an activity factor to account for your lifestyle and physical movement. This gives you your estimated TDEE (maintenance calories):</p>
+
+        <div class="formula-callout-box">
+          <p><strong>TDEE Maintenance Formula:</strong> TDEE = BMR &times; Activity Multiplier</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level</th>
+                <th>Description & Routine</th>
+                <th style="text-align: right;">Activity Factor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td>Little or no exercise, desk job, under 5,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td>Light exercise 1&ndash;3 days/week or 5,000&ndash;8,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td>Moderate exercise 3&ndash;5 days/week or 8,000&ndash;11,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td>Hard training 6&ndash;7 days/week or 11,000+ steps/day</td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong></td>
+                <td>Physical labor job plus daily heavy athletic training</td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These activity factors match the exact scientific multipliers used in our main calculator to ensure complete consistency.</p>
+
+        <h2>How Many Calories Should You Eat to Gain Weight?</h2>
+        <p>There is no single calorie number that works for every person. A sedentary individual requires a very different target than someone who is lifting weights 5 days a week.</p>
+        <p>Instead of relying on generic calorie suggestions, establish your target by adding a controlled <strong>calorie surplus</strong> to your personal calculated TDEE.</p>
+        <div class="about-calculator-card">
+          <p><strong>Key Factors That Determine Your Calorie Surplus Target:</strong></p>
+          <ul>
+            <li><strong>Current Body Mass:</strong> Smaller body frames burn fewer calories at rest; larger frames require more.</li>
+            <li><strong>Daily Activity & Training Volume:</strong> Higher step counts and intense lifting require a larger calorie buffer.</li>
+            <li><strong>Weight Gain Goal:</strong> Lean muscle gain requires a moderate, controlled surplus, while faster weight restoration may warrant a slightly larger intake.</li>
+            <li><strong>Individual Metabolic Rate & NEAT Response:</strong> Some people naturally fidget and move more when eating extra calories, requiring gradual calorie increases over time.</li>
+          </ul>
+        </div>
+
+        <h2>Example: Calculating TDEE for Weight Gain</h2>
+        <p>To see how the step-by-step math works in practice, let us walk through a complete worked example.</p>
+
+        <div class="worked-example-card">
+          <p><strong>Example Profile Details:</strong></p>
+          <ul>
+            <li><strong>Age:</strong> 25 years old</li>
+            <li><strong>Sex:</strong> Female</li>
+            <li><strong>Weight:</strong> 55 kg (~121 lbs)</li>
+            <li><strong>Height:</strong> 165 cm (~5 ft 5 in)</li>
+            <li><strong>Activity Level:</strong> Moderately Active (Multiplier = 1.55)</li>
+          </ul>
+
+          <p style="margin-top:1rem;"><strong>Step 1: Calculate BMR (Mifflin-St Jeor)</strong></p>
+          <p class="calc-step-line">BMR = (10 &times; 55) + (6.25 &times; 165) &minus; (5 &times; 25) &minus; 161</p>
+          <p class="calc-step-line">BMR = 550 + 1,031.25 &minus; 125 &minus; 161</p>
+          <p class="calc-step-line"><strong>BMR = 1,295.25 calories/day</strong></p>
+
+          <p style="margin-top:1rem;"><strong>Step 2: Calculate TDEE (Maintenance Baseline)</strong></p>
+          <p class="calc-step-line">TDEE = 1,295.25 &times; 1.55 (Moderately Active multiplier)</p>
+          <p class="calc-step-line"><strong>TDEE = 2,007.64 calories/day (approx. 2,008 kcal/day)</strong></p>
+
+          <p style="margin-top:1rem;"><strong>Step 3: Add a Calorie Surplus for Weight Gain</strong></p>
+          <p class="calc-step-line">Conservative Surplus (+250 kcal): 2,008 + 250 = <strong>2,258 kcal/day</strong></p>
+          <p class="calc-step-line">Optimal Surplus (+400 kcal): 2,008 + 400 = <strong>2,408 kcal/day</strong></p>
+          <p class="calc-step-line"><strong>Target Calorie Range: ~2,250 to 2,400 calories/day</strong></p>
+        </div>
+
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.5rem;"><em>Note: This worked example is an educational illustration to show the exact calculation steps and arithmetic. It does not constitute personalized medical or dietetic advice.</em></p>
+
+        <h2>What Is a Good Calorie Surplus for Weight Gain?</h2>
+        <p>Choosing the right calorie surplus depends on how quickly you want to gain weight and whether your focus is on maximizing muscle building while keeping fat gain minimal.</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>Calorie Surplus Options:</strong></p>
+          <ul>
+            <li><strong>Conservative / Lean Surplus (+200 to +300 kcal/day or +10% above TDEE):</strong> Ideal for lean muscle growth with minimal fat gain. Expect a steady weight gain rate of roughly 0.5 to 1 lb (0.2 to 0.4 kg) per month.</li>
+            <li><strong>Moderate Surplus (+350 to +500 kcal/day or +15% to +20% above TDEE):</strong> Great for individuals needing faster weight restoration or recovery. Expect a gain of roughly 1.5 to 2 lbs (0.7 to 0.9 kg) per month.</li>
+            <li><strong>Aggressive Surplus (+500+ kcal/day):</strong> Generally not recommended for long-term lean muscle building, as excess calories beyond muscle protein synthesis limits are stored primarily as body fat.</li>
+          </ul>
+        </div>
+
+        <p>Starting with a conservative surplus allows you to observe how your body responds before making further adjustments. For specific surplus target breakdowns, use our dedicated <a href="/calorie-surplus-calculator/" data-link>Calorie Surplus Calculator</a>.</p>
+
+        <h2>TDEE vs. Maintenance Calories for Weight Gain</h2>
+        <p>While the terms TDEE and maintenance calories are frequently used interchangeably in fitness discussions, understanding their precise definitions helps clarify your plan.</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Definition & Meaning</th>
+                <th>Role in Weight Gain Plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BMR</strong></td>
+                <td>Estimated calories burned at complete 100% rest</td>
+                <td>Baseline physiological floor for vital organs</td>
+              </tr>
+              <tr>
+                <td><strong>TDEE</strong></td>
+                <td>Estimated total 24-hour expenditure (BMR + activity + TEF)</td>
+                <td>Calculated scientific estimate of energy burn</td>
+              </tr>
+              <tr>
+                <td><strong>Maintenance Calories</strong></td>
+                <td>Actual food intake required to keep body weight stable</td>
+                <td>Real-world baseline intake before adding surplus</td>
+              </tr>
+              <tr>
+                <td><strong>Calorie Surplus</strong></td>
+                <td>Consuming more calories than your maintenance level</td>
+                <td>The required energy driver for weight gain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>For more details on estimating zero-gain balance, visit our <a href="/maintenance-calorie-calculator/" data-link>Maintenance Calorie Calculator</a>.</p>
+
+        <h2>How to Know If Your Calorie Target Is Working</h2>
+        <p>Because TDEE formulas provide baseline estimates, monitoring your real-world progress is essential for long-term success.</p>
+        <div class="about-calculator-card">
+          <p><strong>Best Practices for Monitoring Progress:</strong></p>
+          <ul>
+            <li><strong>Weigh Yourself Under Consistent Conditions:</strong> Take morning body weight measurements 3–4 times a week right after waking and using the restroom, before eating or drinking.</li>
+            <li><strong>Focus on Weekly Averages:</strong> Daily weight fluctuates due to hydration, sodium intake, and digestion. Compare 7-day average trends rather than single weigh-ins.</li>
+            <li><strong>Give Your Calorie Target 2 to 4 Weeks:</strong> Do not change your target after just a few days. Give your body sufficient time to demonstrate a true weight trend.</li>
+            <li><strong>Adjust Calories Gradually:</strong> If your weight remains completely stagnant after 3 weeks, increase your daily intake by 150 to 200 calories per day.</li>
+            <li><strong>Track Performance & Energy:</strong> In addition to scale weight, track your strength improvements in the gym and daily energy levels.</li>
+          </ul>
+        </div>
+
+        <h2>What Should You Eat to Gain Weight?</h2>
+        <p>Reaching a calorie surplus is easiest and healthiest when focusing on nutrient-dense, wholesome foods rather than relying exclusively on ultra-processed junk food.</p>
+
+        <div class="about-calculator-card">
+          <h3>1. Quality Protein Sources</h3>
+          <p>Protein provides the essential amino acids needed to build and repair muscle tissue. Excellent options include chicken, turkey, salmon, tuna, eggs, Greek yogurt, cottage cheese, tofu, edamame, and protein powders.</p>
+
+          <h3>2. Complex Carbohydrates</h3>
+          <p>Carbohydrates fuel intense workouts and restock muscle glycogen reserves. Focus on oats, brown and white rice, sweet potatoes, quinoa, whole-grain bread, pasta, and fruits like bananas and berries.</p>
+
+          <h3>3. Healthy Fats & Calorie-Dense Foods</h3>
+          <p>Dietary fats contain 9 calories per gram (compared to 4 cal/g for protein and carbs), making them ideal for easily increasing calorie intake without feeling uncomfortably full. Include extra virgin olive oil, avocados, almonds, walnuts, chia seeds, flaxseeds, peanut butter, and almond butter.</p>
+
+          <h3>4. Dairy or Plant-Based Alternatives</h3>
+          <p>Whole milk, full-fat Greek yogurt, cheese, and fortified plant milks offer convenient liquid calories, calcium, and protein.</p>
+
+          <h3>5. Smart Liquid Calories & Snacks</h3>
+          <p>If eating large volume meals is difficult, liquid calories like fruit and nut-butter smoothies, trail mix, and dried fruit provide concentrated nutrition without excessive digestive fullness.</p>
+        </div>
+
+        <h2>Can You Gain Weight and Build Muscle at the Same Time?</h2>
+        <p>Yes! Consuming a calorie surplus combined with structured resistance training creates the optimal physiological environment for building lean muscle mass while gaining weight.</p>
+        <p>To maximize muscle synthesis:</p>
+        <ul>
+          <li><strong>Engage in Progressive Resistance Training:</strong> Lift weights or perform challenging bodyweight resistance exercises 3 to 5 days a week, gradually increasing resistance or repetitions over time.</li>
+          <li><strong>Consume Adequate Daily Protein:</strong> Aim for approximately 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) to support muscle repair. Calculate your precise macro distribution with our <a href="/macro-calculator/" data-link>Macro Calculator</a>.</li>
+          <li><strong>Prioritize Sleep & Recovery:</strong> Muscle growth occurs during rest. Ensure 7 to 9 hours of quality sleep per night to optimize recovery hormones.</li>
+        </ul>
+
+        <h2>Common Mistakes When Using TDEE for Weight Gain</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li><strong>Mistake 1: Treating TDEE as an Exact Number:</strong> TDEE formulas are mathematical estimates. Use them as starting guidelines and adjust based on your real-world progress.</li>
+            <li><strong>Mistake 2: Choosing the Wrong Activity Level:</strong> Overestimating daily activity (e.g. classifying 3 gym sessions as "Very Active" while sitting at a desk all day) can lead to inaccurate maintenance estimates.</li>
+            <li><strong>Mistake 3: Changing Calorie Intake Too Quickly:</strong> Reacting to short-term scale fluctuations by suddenly adding 800 calories can cause unnecessary fat gain.</li>
+            <li><strong>Mistake 4: Focusing on Single Daily Weigh-Ins:</strong> Fluid shifts and normal physiological fluctuations can mask real weight gain. Always look at 14-day average trends.</li>
+            <li><strong>Mistake 5: Ignoring Nutritional Quality:</strong> Meeting your calorie surplus solely with sugary snacks or fried foods can leave you feeling sluggish and compromise long-term health.</li>
+            <li><strong>Mistake 6: Forgetting That Calorie Needs Change Over Time:</strong> As your body mass increases, your TDEE will naturally rise. Recalculate your TDEE after every 3 to 5 kg of weight gain.</li>
+          </ul>
+        </div>
+
+        <h2>Related Calculators</h2>
+        <p>Explore our suite of evidence-based metabolic calculators to customize your fitness journey:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/" data-link><strong>Primary TDEE Calculator:</strong></a> Calculate your complete daily energy expenditure and maintenance calories.</li>
+            <li><a href="/bmr-calculator/" data-link><strong>BMR Calculator:</strong></a> Find your baseline resting metabolic floor using Mifflin-St Jeor and Katch-McArdle.</li>
+            <li><a href="/maintenance-calorie-calculator/" data-link><strong>Maintenance Calorie Calculator:</strong></a> Determine exact zero-gain maintenance calories.</li>
+            <li><a href="/calorie-surplus-calculator/" data-link><strong>Calorie Surplus Calculator:</strong></a> Calculate customized lean bulk and muscle gain calorie targets.</li>
+            <li><a href="/macro-calculator/" data-link><strong>Macro Calculator:</strong></a> Split your daily calories into optimal protein, carbohydrate, and fat targets.</li>
+            <li><a href="/calorie-deficit-calculator/" data-link><strong>Calorie Deficit Calculator:</strong></a> Calculate fat loss targets for future reference.</li>
+          </ul>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>How do I calculate my TDEE for weight gain?</h3>
+          <p>Calculate your BMR using the Mifflin-St Jeor formula, multiply it by your daily activity factor (1.2 to 1.9) to find your TDEE, then add a conservative surplus of 250 to 400 calories per day.</p>
+
+          <h3>How many calories should I eat to gain weight?</h3>
+          <p>You should eat your calculated TDEE plus a conservative surplus of 250 to 400 calories per day. For example, if your TDEE is 2,000 calories/day, aim for 2,250 to 2,400 calories/day for steady weight gain.</p>
+
+          <h3>Is TDEE the same as maintenance calories?</h3>
+          <p>Yes. TDEE is the estimated total energy your body expends daily, making it the primary baseline reference used for maintenance calories.</p>
+
+          <h3>Can I use TDEE to gain muscle?</h3>
+          <p>Protein and resistance training combined with a TDEE calorie surplus provide the building blocks and energy needed for optimal muscle tissue growth.</p>
+
+          <h3>Why am I not gaining weight even when eating above my calculated TDEE?</h3>
+          <p>If your weight remains stagnant after 3 weeks, your actual TDEE may be higher than estimated (often due to high NEAT or uncounted exercise), or your calorie intake tracking may be underestimating food intake. Try increasing your daily intake by 150 to 200 calories and re-evaluating over 14 days.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:2rem; margin-top:3rem; background:var(--bg-tertiary); border:1px solid var(--border-highlight); border-radius:12px;">
+          <h3 style="margin-bottom:0.75rem; color:var(--text-main);">Ready to Find Your Numbers?</h3>
+          <p style="margin-bottom:1.5rem; color:var(--text-muted);">Use the TDEE Calculator to estimate your daily calorie needs based on your age, sex, height, weight, and activity level.</p>
+          <a href="/" class="btn-primary" style="display:inline-flex; width:auto; padding:0.85rem 2.25rem;" data-link>Calculate Your TDEE</a>
+        </div>
+
+        <h2>Sources & Clinical References</h2>
+        <ul>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Levine JA. Non-exercise activity thermogenesis (NEAT). <em>Best Pract Res Clin Endocrinol Metab</em>. 2002;16(4):679-702.</li>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019;6:131.</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018;52(6):376-384.</li>
+        </ul>
+
+        <h2>Medical Disclaimer</h2>
+        <div class="about-calculator-card" style="border-left: 4px solid var(--accent-rose);">
+          <p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--text-muted);"><strong>Important Health Notice:</strong> This educational guide and calculator outputs are estimates intended for general informational purposes. Individual calorie needs vary based on genetics, metabolic health, body composition, and medical conditions. If you are pregnant, breastfeeding, recovering from an illness or eating disorder, or taking medications that affect metabolism, consult a qualified healthcare provider or registered dietitian before making significant changes to your nutrition plan.</p>
+        </div>`
+    },
+
+    '/tdee-calculator-for-women-to-gain-weight/': {
+      title: 'How to Calculate TDEE to Gain Weight as a Woman',
+      metaDescription: 'Learn how to calculate TDEE for women to gain weight, estimate maintenance calories, and create a healthy calorie surplus with worked math examples.',
+      category: 'Weight Gain Guides',
+      readTime: '8 min read',
+      h1: 'How Can I Calculate My TDEE to Gain Weight as a Woman?',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <a href="/blog/how-to-calculate-tdee/" data-link>TDEE Calculator</a> &rsaquo; <span>How to Calculate TDEE to Gain Weight as a Woman</span>
+        </div>
+
+        <p class="lead-paragraph">Calculating your energy needs when trying to gain weight can feel overwhelming. Many women are told to simply “eat more calories,” but without knowing your baseline energy burn, it is difficult to determine how much food your body actually requires for healthy, lean weight gain.</p>
+
+        <p>Whether your goal is to build lean muscle, recover from an under-eating period, support athletic performance, or simply reach a healthy body weight, knowing <strong>how to calculate your TDEE to gain weight as a woman</strong> gives you a clear, science-backed roadmap.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Quick Answer:</strong></p>
+          <p>To calculate your TDEE to gain weight as a woman, first estimate your Basal Metabolic Rate (BMR) using the female Mifflin-St Jeor formula: <code>BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) &minus; 161</code>. Next, multiply your BMR by your activity factor (1.2 to 1.9) to find your TDEE (maintenance calories). Finally, add a conservative calorie surplus of <strong>250 to 400 calories per day</strong> above your TDEE to foster steady, healthy weight gain.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:1.5rem; margin:1.5rem 0 2rem; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(14,165,233,0.05)); border:1px solid var(--accent-cyan);">
+          <h3 style="margin-bottom:0.5rem; color:var(--text-main);">Find Your Exact Numbers in 60 Seconds</h3>
+          <p style="margin-bottom:1rem; color:var(--text-muted);">Use our primary scientific TDEE calculator to estimate your maintenance baseline and custom weight gain targets instantly.</p>
+          <a href="/" class="btn-primary" style="display:inline-flex; width:auto; padding:0.75rem 2rem;" data-link>Calculate My TDEE</a>
+        </div>
+
+        <h2>What Is TDEE?</h2>
+        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong> It represents the total estimated number of calories your body burns in a 24-hour day to sustain life, digest food, and power all physical movement.</p>
+        <p>Your TDEE consists of four primary energy expenditure components:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Basal Metabolic Rate (BMR):</strong> The baseline calories burned at complete rest to keep your heart pumping, lungs breathing, brain functioning, and organs operating (~60%–70% of TDEE).</li>
+            <li><strong>Non-Exercise Activity Thermogenesis (NEAT):</strong> Energy expended during daily non-workout movements such as walking around the house, standing, typing, doing chores, and fidgeting (~15%–20% of TDEE).</li>
+            <li><strong>Thermic Effect of Food (TEF):</strong> The metabolic cost of chewing, digesting, absorbing, and processing macronutrients (~10% of TDEE).</li>
+            <li><strong>Exercise Activity Thermogenesis (EAT):</strong> Energy burned during structured physical workouts like resistance training, cardio, or sports (~5%–15% of TDEE).</li>
+          </ul>
+        </div>
+        <p>Understanding TDEE is essential because your daily calorie intake directly compares against this expenditure. TDEE represents your energy maintenance level—the amount of calories needed to keep your current body weight constant.</p>
+
+        <h2>How Does TDEE Help With Weight Gain?</h2>
+        <p>Weight change follows the fundamental physiological principle of energy balance. To gain body weight, your total energy intake over time must exceed your total daily energy expenditure.</p>
+        <div class="formula-callout-box">
+          <p><strong>The Weight Gain Progression:</strong></p>
+          <p><strong>BMR &rarr; TDEE (Maintenance Calories) &rarr; Calorie Surplus &rarr; Weight Gain</strong></p>
+        </div>
+        <p>When you eat fewer calories than your TDEE, your body burns stored tissue for energy, resulting in weight loss. When you eat equal to your TDEE, your weight remains stable. Consistently eating above your estimated maintenance expenditure creates an energy surplus, providing the extra energy your body needs to synthesize new body mass, including muscle tissue and healthy body reserves.</p>
+        <p>Importantly, TDEE is an <em>estimate</em> of daily energy expenditure, not an exact, immutable law. Factors such as daily steps, sleep, stress, and hormonal fluctuations can shift expenditure slightly from day to day. However, using TDEE as your calculated baseline removes guesswork when setting your calorie surplus.</p>
+
+        <h2>How to Calculate Your TDEE for Weight Gain</h2>
+        <p>Calculating your TDEE to gain weight involves a straightforward two-step mathematical process followed by applying a calorie surplus.</p>
+
+        <h3>Step 1: Calculate Your BMR (Basal Metabolic Rate)</h3>
+        <p>Your Basal Metabolic Rate estimates the baseline energy your body requires at rest. One of the most clinically validated and widely accepted methods for estimating BMR is the <strong>Mifflin-St Jeor equation</strong>, developed from measured resting energy expenditure data in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <div class="equation-box">
+          <p><strong>Mifflin-St Jeor Formula for Women:</strong></p>
+          <p><strong>BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age in years) &minus; 161</strong></p>
+        </div>
+
+        <p>Pay close attention to the units used in the clinical formula:</p>
+        <ul>
+          <li><strong>Weight:</strong> Must be in kilograms (kg). If you measure in pounds (lbs), divide by 2.205 (e.g. 120 lbs &divide; 2.205 = 54.4 kg).</li>
+          <li><strong>Height:</strong> Must be in centimeters (cm). If you measure in inches, multiply by 2.54 (e.g. 65 inches &times; 2.54 = 165.1 cm).</li>
+          <li><strong>Age:</strong> Age in complete years.</li>
+        </ul>
+        <p>Calculate your resting baseline floor directly using our <a href="/bmr-calculator/" data-link>BMR Calculator</a>.</p>
+
+        <h3>Step 2: Multiply BMR by Your Activity Level</h3>
+        <p>Once you have estimated your BMR, multiply it by an activity factor to account for your lifestyle and physical movement. This gives you your estimated TDEE (maintenance calories):</p>
+
+        <div class="formula-callout-box">
+          <p><strong>TDEE Maintenance Formula:</strong> TDEE = BMR &times; Activity Multiplier</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level</th>
+                <th>Description & Routine</th>
+                <th style="text-align: right;">Activity Factor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td>Little or no exercise, desk job, under 5,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td>Light exercise 1&ndash;3 days/week or 5,000&ndash;8,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td>Moderate exercise 3&ndash;5 days/week or 8,000&ndash;11,000 steps/day</td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td>Hard training 6&ndash;7 days/week or 11,000+ steps/day</td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong></td>
+                <td>Physical labor job plus daily heavy athletic training</td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These activity factors match the exact scientific multipliers used in our main calculator to ensure complete consistency.</p>
+
+        <h2>How Many Calories Should a Woman Eat to Gain Weight?</h2>
+        <p>There is no single calorie number that works for every woman. A woman who is 5'2" and sedentary will require a very different target than a woman who is 5'9" and lifting weights 5 days a week.</p>
+        <p>Instead of relying on a generic 2,500-calorie suggestion, establish your target by adding a controlled <strong>calorie surplus</strong> to your personal calculated TDEE.</p>
+        <div class="about-calculator-card">
+          <p><strong>Key Factors That Determine Your Calorie Surplus Target:</strong></p>
+          <ul>
+            <li><strong>Current Body Mass:</strong> Smaller body frames burn fewer calories at rest; larger frames require more.</li>
+            <li><strong>Daily Activity & Training Volume:</strong> Higher step counts and intense lifting require a larger calorie buffer.</li>
+            <li><strong>Weight Gain Goal:</strong> Lean muscle gain requires a moderate, controlled surplus, while faster recovery weight gain may warrant a slightly larger intake.</li>
+            <li><strong>Individual Metabolic Rate & NEAT Response:</strong> Some women naturally fidget and move more when eating extra calories, requiring gradual calorie increases over time.</li>
+          </ul>
+        </div>
+
+        <h2>Example: Calculating TDEE for a Woman Who Wants to Gain Weight</h2>
+        <p>To see how the step-by-step math works in practice, let us walk through a complete worked example for a representative female profile.</p>
+
+        <div class="worked-example-card">
+          <p><strong>Example Profile Details:</strong></p>
+          <ul>
+            <li><strong>Age:</strong> 25 years old</li>
+            <li><strong>Sex:</strong> Female</li>
+            <li><strong>Weight:</strong> 55 kg (~121 lbs)</li>
+            <li><strong>Height:</strong> 165 cm (~5 ft 5 in)</li>
+            <li><strong>Activity Level:</strong> Moderately Active (Multiplier = 1.55)</li>
+          </ul>
+
+          <p style="margin-top:1rem;"><strong>Step 1: Calculate BMR (Mifflin-St Jeor)</strong></p>
+          <p class="calc-step-line">BMR = (10 &times; 55) + (6.25 &times; 165) &minus; (5 &times; 25) &minus; 161</p>
+          <p class="calc-step-line">BMR = 550 + 1,031.25 &minus; 125 &minus; 161</p>
+          <p class="calc-step-line"><strong>BMR = 1,295.25 calories/day</strong></p>
+
+          <p style="margin-top:1rem;"><strong>Step 2: Calculate TDEE (Maintenance Baseline)</strong></p>
+          <p class="calc-step-line">TDEE = 1,295.25 &times; 1.55 (Moderately Active multiplier)</p>
+          <p class="calc-step-line"><strong>TDEE = 2,007.64 calories/day (approx. 2,008 kcal/day)</strong></p>
+
+          <p style="margin-top:1rem;"><strong>Step 3: Add a Calorie Surplus for Weight Gain</strong></p>
+          <p class="calc-step-line">Conservative Surplus (+250 kcal): 2,008 + 250 = <strong>2,258 kcal/day</strong></p>
+          <p class="calc-step-line">Optimal Surplus (+400 kcal): 2,008 + 400 = <strong>2,408 kcal/day</strong></p>
+          <p class="calc-step-line"><strong>Target Calorie Range: ~2,250 to 2,400 calories/day</strong></p>
+        </div>
+
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.5rem;"><em>Note: This worked example is an educational illustration to show the exact calculation steps and arithmetic. It does not constitute personalized medical or dietetic advice.</em></p>
+
+        <h2>What Is a Good Calorie Surplus for Weight Gain?</h2>
+        <p>Choosing the right calorie surplus depends on how quickly you want to gain weight and whether your focus is on maximizing muscle building while keeping fat gain minimal.</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>Calorie Surplus Options for Women:</strong></p>
+          <ul>
+            <li><strong>Conservative / Lean Surplus (+200 to +300 kcal/day or +10% above TDEE):</strong> Ideal for lean muscle growth with minimal fat gain. Expect a steady weight gain rate of roughly 0.5 to 1 lb (0.2 to 0.4 kg) per month.</li>
+            <li><strong>Moderate Surplus (+350 to +500 kcal/day or +15% to +20% above TDEE):</strong> Great for women needing faster weight restoration or recovery. Expect a gain of roughly 1.5 to 2 lbs (0.7 to 0.9 kg) per month.</li>
+            <li><strong>Aggressive Surplus (+500+ kcal/day):</strong> Generally not recommended for long-term lean muscle building, as excess calories beyond muscle protein synthesis limits are stored primarily as body fat.</li>
+          </ul>
+        </div>
+
+        <p>Starting with a conservative surplus allows you to observe how your body responds before making further adjustments. For specific surplus target breakdowns, use our dedicated <a href="/calorie-surplus-calculator/" data-link>Calorie Surplus Calculator</a>.</p>
+
+        <h2>TDEE vs. Maintenance Calories for Weight Gain</h2>
+        <p>While the terms TDEE and maintenance calories are frequently used interchangeably in fitness discussions, understanding their precise definitions helps clarify your plan.</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Definition & Meaning</th>
+                <th>Role in Weight Gain Plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BMR</strong></td>
+                <td>Estimated calories burned at complete 100% rest</td>
+                <td>Baseline physiological floor for vital organs</td>
+              </tr>
+              <tr>
+                <td><strong>TDEE</strong></td>
+                <td>Estimated total 24-hour expenditure (BMR + activity + TEF)</td>
+                <td>Calculated scientific estimate of energy burn</td>
+              </tr>
+              <tr>
+                <td><strong>Maintenance Calories</strong></td>
+                <td>Actual food intake required to keep body weight stable</td>
+                <td>Real-world baseline intake before adding surplus</td>
+              </tr>
+              <tr>
+                <td><strong>Calorie Surplus</strong></td>
+                <td>Consuming more calories than your maintenance level</td>
+                <td>The required energy driver for weight gain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>For more details on estimating zero-gain balance, visit our <a href="/maintenance-calorie-calculator/" data-link>Maintenance Calorie Calculator</a>.</p>
+
+        <h2>How to Know If Your Calorie Target Is Working</h2>
+        <p>Because TDEE formulas provide baseline estimates, monitoring your real-world progress is essential for long-term success.</p>
+        <div class="about-calculator-card">
+          <p><strong>Best Practices for Monitoring Progress:</strong></p>
+          <ul>
+            <li><strong>Weigh Yourself Under Consistent Conditions:</strong> Take morning body weight measurements 3–4 times a week right after waking and using the restroom, before eating or drinking.</li>
+            <li><strong>Focus on Weekly Averages:</strong> Daily weight fluctuates due to hydration, sodium intake, digestion, and menstrual cycle phases. Compare 7-day average trends rather than single weigh-ins.</li>
+            <li><strong>Give Your Calorie Target 2 to 4 Weeks:</strong> Do not change your target after just a few days. Give your body sufficient time to demonstrate a true weight trend.</li>
+            <li><strong>Adjust Calories Gradually:</strong> If your weight remains completely stagnant after 3 weeks, increase your daily intake by 150 to 200 calories per day.</li>
+            <li><strong>Track Performance & Energy:</strong> In addition to scale weight, track your strength improvements in the gym and daily energy levels.</li>
+          </ul>
+        </div>
+
+        <h2>What Should Women Eat to Gain Weight?</h2>
+        <p>Reaching a calorie surplus is easiest and healthiest when focusing on nutrient-dense, wholesome foods rather than relying exclusively on ultra-processed junk food.</p>
+
+        <div class="about-calculator-card">
+          <h3>1. Quality Protein Sources</h3>
+          <p>Protein provides the essential amino acids needed to build and repair muscle tissue. Excellent options include chicken, turkey, salmon, tuna, eggs, Greek yogurt, cottage cheese, tofu, edamame, and protein powders.</p>
+
+          <h3>2. Complex Carbohydrates</h3>
+          <p>Carbohydrates fuel intense workouts and restock muscle glycogen reserves. Focus on oats, brown and white rice, sweet potatoes, quinoa, whole-grain bread, pasta, and fruits like bananas and berries.</p>
+
+          <h3>3. Healthy Fats & Calorie-Dense Foods</h3>
+          <p>Dietary fats contain 9 calories per gram (compared to 4 cal/g for protein and carbs), making them ideal for easily increasing calorie intake without feeling uncomfortably full. Include extra virgin olive oil, avocados, almonds, walnuts, chia seeds, flaxseeds, peanut butter, and almond butter.</p>
+
+          <h3>4. Dairy or Plant-Based Alternatives</h3>
+          <p>Whole milk, full-fat Greek yogurt, cheese, and fortified plant milks offer convenient liquid calories, calcium, and protein.</p>
+
+          <h3>5. Smart Liquid Calories & Snacks</h3>
+          <p>If eating large volume meals is difficult, liquid calories like fruit and nut-butter smoothies, trail mix, and dried fruit provide concentrated nutrition without excessive digestive fullness.</p>
+        </div>
+
+        <h2>Can You Gain Weight and Build Muscle at the Same Time?</h2>
+        <p>Yes! Consuming a calorie surplus combined with structured resistance training creates the optimal physiological environment for building lean muscle mass while gaining weight.</p>
+        <p>To maximize muscle synthesis:</p>
+        <ul>
+          <li><strong>Engage in Progressive Resistance Training:</strong> Lift weights or perform challenging bodyweight resistance exercises 3 to 5 days a week, gradually increasing resistance or repetitions over time.</li>
+          <li><strong>Consume Adequate Daily Protein:</strong> Aim for approximately 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) to support muscle repair. Calculate your precise macro distribution with our <a href="/macro-calculator/" data-link>Macro Calculator</a>.</li>
+          <li><strong>Prioritize Sleep & Recovery:</strong> Muscle growth occurs during rest. Ensure 7 to 9 hours of quality sleep per night to optimize recovery hormones.</li>
+        </ul>
+
+        <h2>Common Mistakes When Using TDEE for Weight Gain</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li><strong>Mistake 1: Treating TDEE as an Exact Number:</strong> TDEE formulas are mathematical estimates. Use them as starting guidelines and adjust based on your real-world progress.</li>
+            <li><strong>Mistake 2: Choosing the Wrong Activity Level:</strong> Overestimating daily activity (e.g. classifying 3 gym sessions as "Very Active" while sitting at a desk all day) can lead to inaccurate maintenance estimates.</li>
+            <li><strong>Mistake 3: Changing Calorie Intake Too Quickly:</strong> Reacting to short-term scale fluctuations by suddenly adding 800 calories can cause unnecessary fat gain.</li>
+            <li><strong>Mistake 4: Focusing on Single Daily Weigh-Ins:</strong> Fluid shifts and hormonal cycle fluctuations can mask real weight gain. Always look at 14-day average trends.</li>
+            <li><strong>Mistake 5: Ignoring Nutritional Quality:</strong> Meeting your calorie surplus solely with sugary snacks or fried foods can leave you feeling sluggish and compromise long-term health.</li>
+            <li><strong>Mistake 6: Forgetting That Calorie Needs Change Over Time:</strong> As your body mass increases, your TDEE will naturally rise. Recalculate your TDEE after every 3 to 5 kg of weight gain.</li>
+          </ul>
+        </div>
+
+        <h2>Related Calculators</h2>
+        <p>Explore our suite of evidence-based metabolic calculators to customize your fitness journey:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/" data-link><strong>Primary TDEE Calculator:</strong></a> Calculate your complete daily energy expenditure and maintenance calories.</li>
+            <li><a href="/bmr-calculator/" data-link><strong>BMR Calculator:</strong></a> Find your baseline resting metabolic floor using Mifflin-St Jeor and Katch-McArdle.</li>
+            <li><a href="/maintenance-calorie-calculator/" data-link><strong>Maintenance Calorie Calculator:</strong></a> Determine exact zero-gain maintenance calories.</li>
+            <li><a href="/calorie-surplus-calculator/" data-link><strong>Calorie Surplus Calculator:</strong></a> Calculate customized lean bulk and muscle gain calorie targets.</li>
+            <li><a href="/macro-calculator/" data-link><strong>Macro Calculator:</strong></a> Split your daily calories into optimal protein, carbohydrate, and fat targets.</li>
+            <li><a href="/calorie-deficit-calculator/" data-link><strong>Calorie Deficit Calculator:</strong></a> Calculate fat loss targets for future reference.</li>
+          </ul>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>How do I calculate my TDEE as a woman?</h3>
+          <p>Calculate your BMR using the female Mifflin-St Jeor formula: <code>(10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age) &minus; 161</code>. Then multiply your BMR by your daily activity factor (1.2 for sedentary up to 1.9 for extra active) to find your estimated TDEE.</p>
+
+          <h3>How many calories should a woman eat to gain weight?</h3>
+          <p>A woman should eat her calculated TDEE plus a conservative surplus of 250 to 400 calories per day. For example, if your estimated TDEE is 2,000 calories/day, aim for 2,250 to 2,400 calories/day for steady weight gain.</p>
+
+          <h3>Is TDEE the same as maintenance calories?</h3>
+          <p>Yes. TDEE is the estimated total energy your body expends daily, making it the primary baseline reference used for maintenance calories.</p>
+
+          <h3>Can I use TDEE to gain muscle?</h3>
+          <p>Absolutely. Estimating your TDEE ensures you eat a consistent calorie surplus above maintenance, providing the extra energy needed to synthesize new muscle tissue when paired with resistance training.</p>
+
+          <h3>Why am I not gaining weight even when eating above my calculated TDEE?</h3>
+          <p>If your weight remains stagnant after 3 weeks, your actual TDEE may be higher than estimated (often due to high NEAT or uncounted exercise), or your calorie intake tracking may be underestimating food intake. Try increasing your daily intake by 150 to 200 calories and re-evaluating over 14 days.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:2rem; margin-top:3rem; background:var(--bg-tertiary); border:1px solid var(--border-highlight); border-radius:12px;">
+          <h3 style="margin-bottom:0.75rem; color:var(--text-main);">Ready to Find Your Numbers?</h3>
+          <p style="margin-bottom:1.5rem; color:var(--text-muted);">Use the TDEE Calculator to estimate your daily calorie needs based on your age, sex, height, weight, and activity level.</p>
+          <a href="/" class="btn-primary" style="display:inline-flex; width:auto; padding:0.85rem 2.25rem;" data-link>Calculate Your TDEE</a>
+        </div>
+
+        <h2>Sources & Clinical References</h2>
+        <ul>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Levine JA. Non-exercise activity thermogenesis (NEAT). <em>Best Pract Res Clin Endocrinol Metab</em>. 2002;16(4):679-702.</li>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019;6:131.</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018;52(6):376-384.</li>
+        </ul>
+
+        <h2>Medical Disclaimer</h2>
+        <div class="about-calculator-card" style="border-left: 4px solid var(--accent-rose);">
+          <p style="margin-bottom:0.5rem; font-size:0.9rem; color:var(--text-muted);"><strong>Important Health Notice:</strong> This educational guide and calculator outputs are estimates intended for general informational purposes. Individual calorie needs vary based on genetics, metabolic health, body composition, and medical conditions. If you are pregnant, breastfeeding, recovering from an illness or eating disorder, or taking medications that affect metabolism, consult a qualified healthcare provider or registered dietitian before making significant changes to your nutrition plan.</p>
+        </div>`
+    },
+
     '/blog/what-is-tdee/': {
       title: 'What Is TDEE? Meaning, 4 Components & Complete Guide (2026)',
       metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, its 4 energy components (BMR, NEAT, TEF, EAT), and how metabolism burns daily calories.',
@@ -891,6 +1518,125 @@ window.TDEEContent = {
         <h2>A Word From Our Team</h2>
         <div class="about-calculator-card">
           <p>Sustainable fat loss relies on realistic calorie targets combined with consistent tracking. Our calculator suite uses validated clinical formulas to help you estimate your energy expenditure and create a personalized, evidence-informed weight management strategy.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for general educational purposes only and does not constitute medical advice.</p>
+        </div>`
+    },
+
+    '/blog/tdee-for-weight-gain/': {
+      title: 'TDEE for Sustainable Weight Gain: How to Use Your TDEE to Gain Weight & Muscle',
+      metaDescription: 'Learn how to use your TDEE for weight gain, calculate a sustainable calorie surplus, build lean muscle mass, and track real-world weight trends.',
+      category: 'Weight Gain',
+      readTime: '7 min read',
+      h1: 'TDEE for Sustainable Weight Gain: How to Use Your TDEE to Gain Weight',
+      content: `<p class="lead-paragraph">Gaining weight in a healthy, controlled manner requires understanding your total energy needs. Whether your goal is to build lean muscle, recover from an under-eating period, or overcome a high metabolism, using your Total Daily Energy Expenditure (TDEE) to guide your calorie surplus is the most reliable strategy.</p>
+
+        <p>Without knowing your maintenance calories, attempting to gain weight often leads to either frustrating lack of progress or excessive fat gain. In this guide, we break down how to calculate your TDEE for weight gain, determine the ideal calorie surplus, balance your macronutrients, and track your progress effectively.</p>
+
+        <div class="calculator-cta-box">
+          <div class="cta-content">
+            <h3>Calculate Your Maintenance & Surplus Calories</h3>
+            <p>Get personalized daily calorie and macro recommendations tailored specifically for sustainable weight gain.</p>
+          </div>
+          <a href="/" class="btn-primary">Go to TDEE Calculator &rarr;</a>
+        </div>
+
+        <h2>What Is TDEE and Why Is It Essential for Weight Gain?</h2>
+        <p>Your <strong>Total Daily Energy Expenditure (TDEE)</strong> is an estimate of the total number of calories your body burns in a 24-hour period. It accounts for your baseline metabolic function as well as all daily movement and exercise.</p>
+
+        <p>To gain weight, you must consume more energy than your body expends—a state known as a <strong>calorie surplus</strong>. Your TDEE serves as the baseline maintenance line. Eating above this baseline ensures your body has the extra energy and building blocks necessary to synthesize new muscle tissue and gain weight.</p>
+
+        <h2>The 4 Components of TDEE</h2>
+        <ul>
+          <li><strong>Basal Metabolic Rate (BMR):</strong> The calories burned carrying out basic life-sustaining functions at rest (typically 60–70% of TDEE).</li>
+          <li><strong>Thermic Effect of Food (TEF):</strong> Energy consumed digesting, absorbing, and processing nutrients (roughly 10% of total intake).</li>
+          <li><strong>Exercise Activity Thermogenesis (EAT):</strong> Calories burned during structured workouts like resistance training or cardio.</li>
+          <li><strong>Non-Exercise Activity Thermogenesis (NEAT):</strong> Calories burned through unstructured movement like walking, fidgeting, and posture maintenance.</li>
+        </ul>
+
+        <p>Understanding NEAT is especially critical for weight gain, as some individuals naturally increase subconscious movement when calories rise, requiring slightly higher surplus targets over time.</p>
+
+        <h2>How to Calculate Your Calorie Surplus for Weight Gain</h2>
+        <p>To calculate your weight gain calorie target, follow a simple three-step process:</p>
+        <ol>
+          <li><strong>Determine Your TDEE:</strong> Use our <a href="/">TDEE Calculator</a> or specialized <a href="/tdee-calculator-for-women-to-gain-weight/">TDEE Calculator for Women to Gain Weight</a> to find your maintenance calories.</li>
+          <li><strong>Select a Target Rate of Gain:</strong> Aim for 0.5 to 1.0 lb (0.25 to 0.5 kg) per week for lean tissue gain.</li>
+          <li><strong>Add a Moderate Calorie Surplus:</strong>
+            <ul>
+              <li><strong>Lean Surplus (Conservative):</strong> TDEE + 250 to 300 calories/day (~0.5 lb gain per week). Ideal for minimizing fat gain while building muscle.</li>
+              <li><strong>Moderate Surplus:</strong> TDEE + 400 to 500 calories/day (~1.0 lb gain per week). Ideal for hardgainers and active lifters.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Goal Strategy</th>
+                <th>Daily Calorie Adjustment</th>
+                <th>Expected Rate of Gain</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lean Muscle Surplus</td>
+                <td>+250 to +300 kcal</td>
+                <td>0.5 lbs / week</td>
+                <td>Minimizing fat gain & muscle building</td>
+              </tr>
+              <tr>
+                <td>Moderate Weight Gain</td>
+                <td>+400 to +500 kcal</td>
+                <td>1.0 lb / week</td>
+                <td>General weight gain & hyper-metabolic types</td>
+              </tr>
+              <tr>
+                <td>Aggressive Weight Gain</td>
+                <td>+700+ kcal</td>
+                <td>1.5+ lbs / week</td>
+                <td>Underweight recovery under guidance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Optimal Macronutrient Breakdown for Weight Gain</h2>
+        <p>To maximize muscle synthesis rather than fat storage, proper macro distribution is key:</p>
+        <ul>
+          <li><strong>Protein:</strong> 0.8 to 1.0 gram per pound of body weight (1.6 to 2.2g per kg) to support muscle tissue repair.</li>
+          <li><strong>Fats:</strong> 0.4 to 0.5 grams per pound of body weight (20–30% of total calories) for hormone production and calorie density.</li>
+          <li><strong>Carbohydrates:</strong> Fill the remaining daily calories with complex and easily digestible carbs to fuel workouts and restock glycogen reserves.</li>
+        </ul>
+
+        <p>For detailed macronutrient advice tailored for women, visit our guide on <a href="/weight-gain/">Weight Gain Strategies & Nutrition</a>.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How long does it take to see weight gain results?</h3>
+            <p>With a consistent surplus of 300–500 calories above TDEE, noticeable weight changes usually appear on the scale within 2 to 3 weeks.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I am not gaining weight despite eating above my TDEE?</h3>
+            <p>If your scale weight remains flat over 14 days, your actual TDEE may be higher than estimated due to increased NEAT. Increase daily intake by an additional 200 calories and reassess.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Should I do cardio while trying to gain weight?</h3>
+            <p>Yes. Moderate cardiovascular exercise supports heart health and recovery without consuming excessive energy. Simply account for cardio activity in your total TDEE calculation.</p>
+          </div>
+        </div>
+
+        <h2>Scientific Evidence & References</h2>
+        <p>This article relies on peer-reviewed energy balance literature and exercise science studies indexed by PubMed and NCBI.</p>
+        <ul>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+        </ul>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>Healthy weight gain is a gradual, deliberate process that requires consistent energy surplus, adequate protein intake, and progressive resistance training. Our calculator suite uses validated clinical formulas to help you estimate your baseline needs and establish an effective weight gain plan.</p>
           <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for general educational purposes only and does not constitute medical advice.</p>
         </div>`
     },
