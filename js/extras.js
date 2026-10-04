@@ -443,6 +443,8 @@ window.TDEEExtras = (function() {
     '/tdee-calculator-for-women-to-gain-weight/': 'surplus',
     '/tdee-for-weight-gain/': 'surplus',
     '/blog/tdee-for-weight-gain/': 'surplus',
+    '/tdee-for-muscle-building/': 'muscle',
+    '/blog/tdee-for-muscle-building/': 'muscle',
     '/blog/tdee-for-weight-loss/': 'deficit',
     '/blog/what-is-tdee/': 'maintenance',
     '/blog/how-to-calculate-tdee/': 'maintenance',
