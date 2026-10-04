@@ -15,7 +15,7 @@ window.TDEEContent = {
 
     '/weight-gain/': {
       title: 'Weight Gain TDEE Guide & Calorie Surplus Calculator',
-      metaDescription: 'Learn how to calculate your TDEE for weight gain, estimate maintenance calories, and create a healthy calorie surplus to gain weight and build muscle.',
+      metaDescription: 'Learn how to calculate your TDEE for weight gain, estimate maintenance calories, and create a healthy calorie surplus to gain weight safely.',
       category: 'Weight Gain Guides',
       readTime: '8 min read',
       h1: 'How to Calculate Your TDEE to Gain Weight: Complete Guide & Calculator',
