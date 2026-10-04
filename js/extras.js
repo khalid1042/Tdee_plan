@@ -156,11 +156,54 @@ window.TDEEExtras = (function() {
     };
   }
 
+  function muscleCalc(inputs, unit) {
+    var m = toMetric(inputs, unit);
+    var res = window.TDEECalculator.calculateTDEE({
+      age: inputs.age, gender: inputs.gender, heightCm: m.heightCm,
+      weightKg: m.weightKg, bodyFat: inputs.bodyFat, activityKey: inputs.activity
+    });
+    
+    var exp = inputs.experience || 'intermediate';
+    var surplusAdd = (exp === 'beginner') ? 350 : (exp === 'advanced' ? 200 : 275);
+    var bulkingTarget = res.tdee + surplusAdd;
+    
+    var proteinGrams = Math.round(m.weightKg * 2.2);
+    var fatGrams = Math.round((bulkingTarget * 0.25) / 9);
+    var carbGrams = Math.round((bulkingTarget - (proteinGrams * 4) - (fatGrams * 9)) / 4);
+
+    var expTitle = (exp === 'beginner') ? 'Beginner (1st Year)' : (exp === 'advanced' ? 'Advanced (4+ Years)' : 'Intermediate (2-3 Years)');
+
+    var muscleGainRate = (exp === 'beginner') 
+      ? '1.5 – 2.0 lbs (0.7–0.9 kg) / month' 
+      : (exp === 'advanced') 
+      ? '0.25 – 0.5 lbs (0.1–0.2 kg) / month' 
+      : '0.75 – 1.0 lb (0.35–0.45 kg) / month';
+
+    return {
+      primary: bulkingTarget,
+      unitLabel: 'kcal/day for Lean Muscle Hypertrophy',
+      formulaName: 'Based on ' + res.formula + ' + ' + surplusAdd + ' kcal Surplus',
+      macroCards: [
+        { name: 'Protein (MPS Optimization)', grams: proteinGrams, cals: proteinGrams * 4, pct: Math.round((proteinGrams * 4 / bulkingTarget) * 100), cls: 'protein' },
+        { name: 'Carbohydrates (Glycogen & Power)', grams: carbGrams, cals: carbGrams * 4, pct: Math.round((carbGrams * 4 / bulkingTarget) * 100), cls: 'carbs' },
+        { name: 'Healthy Fats (Anabolic Support)', grams: fatGrams, cals: fatGrams * 9, pct: Math.round((fatGrams * 9 / bulkingTarget) * 100), cls: 'fat' }
+      ],
+      rows: [
+        { label: 'Maintenance Energy Expenditure (TDEE)', value: res.tdee + ' kcal/day', show: true },
+        { label: 'Hypertrophy Calorie Surplus (' + expTitle + ')', value: '+' + surplusAdd + ' kcal/day', show: true },
+        { label: 'Daily Muscle Synthesis Protein Floor (2.2g/kg)', value: proteinGrams + 'g protein/day', show: true },
+        { label: 'Estimated Monthly Lean Muscle Potential', value: muscleGainRate, show: true },
+        { label: 'Recommended Monthly Weight Cap', value: '+' + Math.round((surplusAdd * 30 / 3500) * 10) / 10 + ' lbs / month', show: true }
+      ]
+    };
+  }
+
   var ENGINES = {
     bmr: bmrCalc,
     maintenance: maintenanceCalc,
     deficit: deficitCalc,
     surplus: surplusCalc,
+    muscle: muscleCalc,
     macro: macroCalc,
     burned: burnedCalc
   };
@@ -177,11 +220,12 @@ window.TDEEExtras = (function() {
     var isBmr = calcKey === 'bmr';
     var isMacro = calcKey === 'macro';
     var isBurned = calcKey === 'burned';
+    var isMuscle = calcKey === 'muscle';
 
     container.innerHTML =
       '<div class="glass-card extras-calc">' +
         '<div class="card-header">' +
-          '<h3 class="card-title"><span class="card-title-icon">🧮</span> Calculator</h3>' +
+          '<h3 class="card-title"><span class="card-title-icon">🏋️‍♂️</span> ' + (isMuscle ? 'Muscle Building & Hypertrophy Calculator' : 'Calculator') + '</h3>' +
           '<div class="segmented-control" style="width:140px;">' +
             '<button type="button" class="segmented-btn active" data-unit="metric">Metric</button>' +
             '<button type="button" class="segmented-btn" data-unit="imperial">Imperial</button>' +
@@ -207,6 +251,16 @@ window.TDEEExtras = (function() {
             '<label class="form-label" for="ex-input-weight">Weight <span class="label-hint ex-wunit">kg</span></label>' +
             '<input type="number" id="ex-input-weight" class="input-field ex-weight" value="75" min="30" max="300" inputmode="decimal" aria-label="Weight">' +
           '</div>' +
+          (isMuscle
+            ? '<div class="form-group">' +
+                '<label class="form-label" for="ex-select-experience">Lifting Experience</label>' +
+                '<select id="ex-select-experience" class="select-field ex-experience" aria-label="Lifting Experience Level">' +
+                  '<option value="beginner">Beginner (1st Year Lifting)</option>' +
+                  '<option value="intermediate" selected>Intermediate (2-3 Years Lifting)</option>' +
+                  '<option value="advanced">Advanced (4+ Years Lifting)</option>' +
+                '</select>' +
+              '</div>'
+            : '') +
           (isBmr
             ? '<div class="form-group">' +
                 '<label class="form-label" for="ex-input-bodyfat">Body Fat % <span class="label-hint">(Optional — Katch-McArdle)</span></label>' +
@@ -260,10 +314,10 @@ window.TDEEExtras = (function() {
             : '') +
         '</div>' +
         '<div style="margin: 1.25rem 0 1rem;">' +
-          '<button type="button" class="btn-primary ex-calc-btn" style="width:100%; padding: 0.85rem 1.5rem; font-size: 1.05rem; font-weight: 700; border-radius: 8px; cursor: pointer; background: var(--accent-rose); color: #fff; border: none; transition: transform 0.15s ease, background 0.15s ease;">Calculate My Calories</button>' +
+          '<button type="button" class="btn-primary ex-calc-btn" style="width:100%; padding: 0.85rem 1.5rem; font-size: 1.05rem; font-weight: 700; border-radius: 8px; cursor: pointer; background: var(--accent-rose); color: #fff; border: none; transition: transform 0.15s ease, background 0.15s ease;">Calculate My Muscle Bulking Calories</button>' +
         '</div>' +
         '<div class="extras-result">' +
-          '<div class="ex-result-label">Your Estimated Daily Calorie Needs</div>' +
+          '<div class="ex-result-label">' + (isMuscle ? 'Your Target Muscle Building Energy Intake' : 'Your Estimated Daily Calorie Needs') + '</div>' +
           '<div class="ex-result-value">—</div>' +
           '<div class="ex-result-formula"></div>' +
         '</div>' +
@@ -331,7 +385,8 @@ window.TDEEExtras = (function() {
         goalPct: (root.querySelector('.ex-goal') || {}).value,
         macroPreset: (root.querySelector('.ex-preset') || {}).value,
         steps: (root.querySelector('.ex-steps') || {}).value,
-        workoutMin: (root.querySelector('.ex-workout') || {}).value
+        workoutMin: (root.querySelector('.ex-workout') || {}).value,
+        experience: (root.querySelector('.ex-experience') || {}).value
       };
       var imperial = root.querySelector('[data-unit].active').getAttribute('data-unit') === 'imperial';
       inputs.imperial = imperial;
@@ -354,20 +409,23 @@ window.TDEEExtras = (function() {
 
       // Breakdown rows
       var bd = root.querySelector('.extras-breakdown');
+      var html = '';
       if (result.macroCards) {
-        bd.innerHTML = '<div class="macro-grid extras-macro-grid">' + result.macroCards.map(function(mc) {
+        html += '<div class="macro-grid extras-macro-grid" style="margin-bottom:1.5rem;">' + result.macroCards.map(function(mc) {
           return '<div class="macro-card ' + mc.cls + '">' +
             '<div class="macro-grams">' + mc.grams + 'g</div>' +
             '<div class="macro-cals">' + esc(mc.name) + ' · ' + mc.cals.toLocaleString() + ' kcal (' + mc.pct + '%)</div>' +
           '</div>';
         }).join('') + '</div>';
-      } else {
-        bd.innerHTML = result.rows.filter(function(r) { return r.show && r.value !== null && r.value !== undefined; })
+      }
+      if (result.rows && result.rows.length > 0) {
+        html += result.rows.filter(function(r) { return r.show && r.value !== null && r.value !== undefined; })
           .map(function(r) {
             return '<div class="ex-row"><span class="ex-row-label">' + esc(r.label) + '</span>' +
                    '<span class="ex-row-value">' + esc(r.value) + '</span></div>';
           }).join('');
       }
+      bd.innerHTML = html;
     }
 
     recalc();
@@ -381,10 +439,10 @@ window.TDEEExtras = (function() {
     '/calorie-surplus-calculator/': 'surplus',
     '/macro-calculator/': 'macro',
     '/calories-burned-calculator/': 'burned',
-    '/weight-gain/': 'surplus',
+    '/weight-gain/': 'muscle',
     '/tdee-calculator-for-women-to-gain-weight/': 'surplus',
     '/blog/tdee-for-weight-gain/': 'surplus',
-    '/blog/tdee-for-muscle-building/': 'surplus',
+    '/blog/tdee-for-muscle-building/': 'muscle',
     '/blog/tdee-for-weight-loss/': 'deficit',
     '/blog/what-is-tdee/': 'maintenance',
     '/blog/how-to-calculate-tdee/': 'maintenance',
