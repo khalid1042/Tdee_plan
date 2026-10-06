@@ -1,5 +1,11 @@
 {
   "buildCommand": "node build.js",
   "outputDirectory": ".",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/blog/tdee-for-weight-gain/", "destination": "/tdee-for-weight-gain/", "permanent": true },
+    { "source": "/weight-gain/", "destination": "/tdee-for-weight-gain/", "permanent": true },
+    { "source": "/tdee-calculator-for-women-to-gain-weight/", "destination": "/tdee-for-weight-gain/", "permanent": true },
+    { "source": "/blog/tdee-for-muscle-building/", "destination": "/tdee-for-muscle-building/", "permanent": true }
+  ]
 }

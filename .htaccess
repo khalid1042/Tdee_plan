@@ -5,6 +5,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# 301 Redirects for Consolidated Pages
+Redirect 301 /blog/tdee-for-weight-gain/ /tdee-for-weight-gain/
+Redirect 301 /weight-gain/ /tdee-for-weight-gain/
+Redirect 301 /tdee-calculator-for-women-to-gain-weight/ /tdee-for-weight-gain/
+Redirect 301 /blog/tdee-for-muscle-building/ /tdee-for-muscle-building/
+
 # Add trailing slash if not present and if it's a directory (or exists as a directory)
 # This mimics Vercel's "trailingSlash": true behavior
 RewriteCond %{REQUEST_FILENAME} !-f

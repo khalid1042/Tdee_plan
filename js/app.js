@@ -112,6 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var heroTitle = document.querySelector('.hero-title');
     var normPath = normalizeRoutePath(path);
 
+    // Client-side 301 SPA redirects for consolidated duplicate pages
+    var spaRedirects = {
+      '/blog/tdee-for-weight-gain/': '/tdee-for-weight-gain/',
+      '/weight-gain/': '/tdee-for-weight-gain/',
+      '/tdee-calculator-for-women-to-gain-weight/': '/tdee-for-weight-gain/',
+      '/blog/tdee-for-muscle-building/': '/tdee-for-muscle-building/'
+    };
+    if (spaRedirects[normPath]) {
+      navigateTo(spaRedirects[normPath]);
+      return;
+    }
+
     if (normPath === '/') {
       // Show Homepage Calculator Workspace
       if (heroWorkspace) heroWorkspace.classList.remove('hidden');
