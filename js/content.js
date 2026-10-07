@@ -185,6 +185,16 @@ window.TDEEContent = {
           <li>Levine JA. Non-exercise activity thermogenesis (NEAT). <em>Best Pract Res Clin Endocrinol Metab</em>. 2002;16(4):679-702.</li>
         </ul>
 
+        <h2>Related Guides and Calculators</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Step-by-Step</a> &ndash; Practical math formula breakdown and worked examples to calculate your daily energy burn.</li>
+            <li><a href="/blog/tdee-vs-bmr/">TDEE vs BMR Comparison Guide</a> &ndash; Understand key differences between resting metabolic rate and total daily expenditure.</li>
+            <li><a href="/bmr-calculator/">Scientific BMR Calculator</a> &ndash; Estimate your Basal Metabolic Rate using the Mifflin-St Jeor clinical equation.</li>
+            <li><a href="/blog/tdee-for-weight-loss/">TDEE for Weight Loss Guide</a> &ndash; Learn how to calculate a sustainable calorie deficit to burn body fat effectively.</li>
+          </ul>
+        </div>
+
         <h2>A Word From Our Team</h2>
         <div class="about-calculator-card">
           <p>Understanding your energy expenditure is the foundation of scientific body composition management. Our platform uses evidence-based equations to provide transparent, accurate estimates without unrealistic claims. Calculate your TDEE, track your real-world progress, and adjust your plan as your body adapts.</p>
@@ -454,6 +464,16 @@ window.TDEEContent = {
 
         <p style="font-size:0.9rem; color:var(--text-muted); margin-top:1rem;"><strong>Last reviewed:</strong> September 2026</p>
 
+        <h2>Related Guides and Calculators</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor Equation Breakdown</a> &ndash; In-depth look at the clinical formula used to estimate resting energy expenditure.</li>
+            <li><a href="/blog/tdee-vs-bmr/">TDEE vs BMR Comparison Guide</a> &ndash; Discover why BMR is only one component of your total daily calorie needs.</li>
+            <li><a href="/maintenance-calorie-calculator/">Zero-Gain Maintenance Calorie Calculator</a> &ndash; Calculate your exact maintenance baseline to keep weight stable.</li>
+            <li><a href="/blog/tdee-for-weight-loss/">TDEE for Weight Loss Guide</a> &ndash; Set up a realistic calorie deficit based on your calculated energy expenditure.</li>
+          </ul>
+        </div>
+
         <h2>A Word From Our Team</h2>
         <div class="about-calculator-card">
           <p>Our goal is to bring scientific clarity to daily energy calculations. By explaining the exact math, equations, activity factors, and individual limitations, we help you replace dietary guesswork with actionable baseline estimates.</p>
@@ -718,6 +738,16 @@ window.TDEEContent = {
           <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</li>
           <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
         </ul>
+
+        <h2>Related Guides and Calculators</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/blog/what-is-tdee/">What Is TDEE & How It Works</a> &ndash; Learn about the 4 primary components of daily energy expenditure.</li>
+            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE</a> &ndash; Worked math examples and activity multiplier breakdown.</li>
+            <li><a href="/bmr-calculator/">Basal Metabolic Rate (BMR) Calculator</a> &ndash; Find your baseline resting metabolic floor at rest.</li>
+            <li><a href="/macro-calculator/">Macronutrient Calculator</a> &ndash; Calculate optimal daily protein, carb, and fat distributions for your body.</li>
+          </ul>
+        </div>
 
         <h2>A Word From Our Team</h2>
         <div class="about-calculator-card">
@@ -1120,6 +1150,16 @@ window.TDEEContent = {
           <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
           <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
         </ul>
+
+        <h2>Related Guides and Calculators</h2>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> &ndash; Determine exact daily calorie targets and timelines for fat loss.</li>
+            <li><a href="/blog/what-is-tdee/">What Is TDEE & Energy Balance?</a> &ndash; Understand how daily movement and workout burn impact fat loss.</li>
+            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Step-by-Step</a> &ndash; Learn the math behind estimating maintenance expenditure before subtracting a deficit.</li>
+            <li><a href="/macro-calculator/">Macro Distribution Calculator</a> &ndash; Set protein and fat ratios to preserve muscle mass during a calorie deficit.</li>
+          </ul>
+        </div>
 
         <h2>Educational Disclaimer</h2>
         <div class="about-calculator-card">
@@ -1697,15 +1737,16 @@ window.TDEEContent = {
           <p>Yes, your estimated BMR will naturally decrease as body weight decreases because smaller body mass requires less energy to maintain at rest.</p>
         </div>
 
-        <h2>Related Calculators and Guides</h2>
-        <p>Once you know your estimated BMR, continue your calorie planning with our dedicated suite of tools:</p>
-        <ul>
-          <li><a href="/">TDEE Calculator</a> — Estimate your total daily energy expenditure based on BMR and activity level.</li>
-          <li><a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> — Find your exact zero-gain calorie target.</li>
-          <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> — Calculate optimal calorie targets and timelines for fat loss.</li>
-          <li><a href="/macro-calculator/">Macro Calculator</a> — Customize your daily protein, carb, and fat distributions.</li>
-          <li><a href="/how-we-calculate/">Methodology & Scientific References</a> — Explore our mathematical engine and clinical studies.</li>
-        </ul>
+        <h2>Related Guides and Calculators</h2>
+        <p>Once you know your estimated BMR, continue your calorie planning with our dedicated suite of tools and guides:</p>
+        <div class="about-calculator-card">
+          <ul>
+            <li><a href="/bmr-calculator/">Basal Metabolic Rate (BMR) Calculator</a> &ndash; Estimate your resting energy expenditure using the Mifflin-St Jeor clinical equation.</li>
+            <li><a href="/blog/tdee-vs-bmr/">TDEE vs BMR Comparison Guide</a> &ndash; Understand why REE/BMR differs from total 24-hour daily energy expenditure.</li>
+            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Step-by-Step</a> &ndash; Learn how activity multipliers transform your BMR into daily maintenance calories.</li>
+            <li><a href="/how-we-calculate/">Calculation Methodology & Formulas</a> &ndash; Explore the scientific literature and clinical studies behind our calculator engine.</li>
+          </ul>
+        </div>
 
         <h2>Sources & Scientific References</h2>
         <ul>
