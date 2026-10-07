@@ -14,12 +14,12 @@
   <meta property="og:description" content="Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training. Learn bulking formulas.">
   <meta property="og:url" content="https://tdeecalculater.com/calorie-surplus-calculator/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta property="og:image" content="https://tdeecalculater.com/images/og-calorie-surplus-calculator.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="Calorie Surplus Calculator: Calculate Calories for Weight Gain and Muscle Gain">
   <meta name="twitter:description" content="Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training. Learn bulking formulas.">
-  <meta name="twitter:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta name="twitter:image" content="https://tdeecalculater.com/images/og-calorie-surplus-calculator.png">
   
   <!-- Sitemap Link for Crawlers -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -99,6 +99,60 @@
                 "price": "0",
                 "priceCurrency": "USD"
             }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://tdeecalculater.com/calorie-surplus-calculator/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How big should a calorie surplus be to build muscle?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no single universally proven surplus for everyone. A smaller or moderate surplus (+200 to +300 kcal/day) is an excellent starting point for lean bulking, followed by real-world progress tracking. Research continues to show uncertainty around the exact optimal surplus. (PubMed [1])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Will I gain fat in a calorie surplus?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Some minor fat gain can occur during a bulking phase, but the amount varies. Generally, larger surpluses increase the proportion of fat gained. Monitoring your weight trend and keeping the rate of gain controlled helps limit fat accretion. (PubMed [2])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much protein do I need in a calorie surplus?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For most exercising individuals, approximately 1.4–2.0 g/kg of body weight per day (or up to 2.2 g/kg for intense lifters) is a well-supported range for supporting muscle recovery and growth. (PubMed [3])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why am I not gaining weight even though I am eating more?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your estimated maintenance may be higher than expected, your actual intake may be lower than tracked, or your daily movement (NEAT) may have spontaneously increased. Check portion sizes, sauces, and tracking consistency before increasing your target."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How often should I adjust my calorie target?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Avoid changing your target based on one single weigh-in. Instead, compare your weekly average weight trend over 3 to 4 weeks. If your weight stalls, increase daily intake by 150 to 200 calories."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is the 3,500-calorie rule exact?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. The 3,500-calorie rule is a simplified energy model and should not be treated as a guarantee of exact body mass gain. Real-world weight change is affected by metabolic adaptation, muscle tissue synthesis costs, water retention, and glycogen storage."
+                    }
+                }
+            ]
         }
     ]
 }
@@ -403,30 +457,6 @@
     </div>
   </div>
   
-  <div id="hero-workspace" class="hidden">
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-badge">⚡ Accurate & Adaptive Expenditure Engine</div>
-        <div class="hero-title">TDEE Calculator</div>
-        <p class="hero-subtitle">Calculate your Total Daily Energy Expenditure (TDEE) and estimate how many calories you burn each day based on your body information and activity level.</p>
-      </div>
-    </section>
-
-    <!-- Main Calculator Workspace Grid -->
-    <main class="container">
-      <div class="calc-grid">
-
-        <!-- Left Panel: Quick Calculator Form -->
-        <div class="glass-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-title-icon">⚙️</span> TDEE Calculator
-            </h2>
-            <div class="segmented-control" style="width: 140px;">
-              <button id="unit-metric" class="segmented-btn active">Metric</button>
-              <button id="unit-imperial" class="segmented-btn">Imperial</button>
-            </div>
-          </div>
 
           <form id="tdee-form" onsubmit="return false;">
 
@@ -808,7 +838,7 @@
           </div>
 
           <p style="font-size: 1.1rem; color: var(--text-muted);">You enter your age, weight, height, and activity level into a TDEE calculator and get a calorie number. But what does that number actually mean? If another calculator gives you a different result, it can be hard to know which number to trust. The problem is that a TDEE estimate is not a direct measurement of how many calories your body burns each day.</p>
-          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         </header>
 
         <!-- How to Use the TDEE Calculator: Step-by-Step Visual Guide -->
@@ -852,7 +882,7 @@
         </section>
 
         <h2>What Is TDEE?</h2>
-        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong></p>
+        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong></p>
         <p>It is an estimate of the total energy, expressed in kilocalories (kcal), that your body expends over a 24-hour period to support baseline survival, daily movement, physical work, and food digestion.</p>
         <p>Your daily energy expenditure includes energy used at rest, physical activity, and the thermic effect of food. Resting energy expenditure is generally the largest component for most people, accounting for 60% to 75% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [2]</a>)</p>
 

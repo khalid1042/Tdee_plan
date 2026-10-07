@@ -14,12 +14,12 @@
   <meta property="og:description" content="Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Understand BMR vs RMR and baseline calorie needs.">
   <meta property="og:url" content="https://tdeecalculater.com/bmr-calculator/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta property="og:image" content="https://tdeecalculater.com/images/og-bmr-calculator.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="BMR Calculator: Calculate Your Basal Metabolic Rate Accurately">
   <meta name="twitter:description" content="Calculate your Basal Metabolic Rate (BMR) using Mifflin-St Jeor and Katch-McArdle formulas. Understand BMR vs RMR and baseline calorie needs.">
-  <meta name="twitter:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta name="twitter:image" content="https://tdeecalculater.com/images/og-bmr-calculator.png">
   
   <!-- Sitemap Link for Crawlers -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -99,6 +99,276 @@
                 "price": "0",
                 "priceCurrency": "USD"
             }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://tdeecalculater.com/bmr-calculator/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Calculation Method Overview",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (PubMed [2])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Step 1: Enter Your Age",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Enter your age in years. Age is one of the primary independent variables used by the Mifflin-St Jeor equation, as baseline metabolic expenditure tends to change predictably across adulthood."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Step 2: Select Your Sex",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (PubMed [1])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Step 3: Enter Your Height",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Enter your height using the available unit options (Centimeters or Feet & Inches). Height reflects body surface area and structural organ scale."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Step 4: Enter Your Weight",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Enter your current body weight in Kilograms or Pounds. Body mass is the single strongest driver of total resting metabolic output."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Step 5: Calculate Your BMR",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The calculator applies the selected equation and gives you an estimated resting calorie expenditure. Remember that this number is a starting estimate, not a direct measurement of your metabolism."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Mifflin-St Jeor Equation Breakdown",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For Men: BMR estimate = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "BMR Calculation Worked Example",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Suppose a 30-year-old woman weighs 65 kg and is 165 cm tall."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Revised Harris-Benedict Equation",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The original Harris-Benedict equation was developed in 1919 and revised in 1984. It uses variables such as age, sex, height, and weight. Different versions of the Harris-Benedict equation exist, so the exact formula matters when comparing results."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Katch-McArdle Formula",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The Katch-McArdle approach uses lean body mass rather than biological sex as a direct variable."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Sedentary",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You spend most of the day sitting at a desk or driving, and perform little to no structured exercise."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Lightly Active",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You have a desk job but walk regularly or perform 1 to 3 light exercise sessions per week."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Moderately Active",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You exercise 3 to 5 times per week and maintain an active daily schedule (e.g. 8,000–10,000 daily steps)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Very Active",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You perform frequent or intense workout sessions 6 to 7 days per week and have a physically active lifestyle."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Extra Active",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You have an intensely demanding physical job (construction, farming, athletics) combined with rigorous daily training."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Body Size",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Larger bodies generally require more total energy to support their organ systems and metabolic processes at rest."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Height",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Height is included in the Mifflin-St Jeor equation and several other prediction equations to account for body surface area."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Age",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Age is another variable used by common resting-energy equations. Resting energy expenditure tends to decline gradually across adulthood, primarily due to changes in muscle mass and endocrine regulation."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Sex",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Mifflin-St Jeor uses different baseline constants for biological men and women to account for average population differences in fat-free mass."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Body Composition",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (PubMed [1])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Individual Biological Differences",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Prediction equations cannot capture every biological difference between individuals, such as thyroid hormone levels, genetics, or mitochondrial efficiency. This is one reason why a BMR calculator should be treated as an estimate rather than an exact measurement."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What Is a Normal BMR by Age?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no single normal BMR value for each age group. Two people of the same age can have very different BMR estimates because their height, weight, sex, and body composition may differ. For this reason, an age-only BMR chart cannot accurately tell you what your personal BMR should be."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Should You Eat Your BMR to Lose Weight?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no general rule that says you should eat exactly your BMR. BMR estimates resting energy expenditure. It does not represent your complete daily calorie needs. Eating at or near BMR for extended periods without medical supervision can cause fatigue, nutritional deficiencies, and extreme hunger. For individualized nutrition advice, consult a qualified healthcare professional or registered dietitian."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why Do BMR Calculators Give Different Results?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Different calculators may use different underlying equations. One may use Mifflin-St Jeor, while another may use Harris-Benedict or Katch-McArdle. Different input assumptions, rounding rules, and body-composition algorithms can also produce different results. A difference between two calculators does not mean one is broken; compare the methodology before deciding why the numbers differ."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is BMR?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "BMR stands for Basal Metabolic Rate. It describes the energy your body uses under strict resting conditions to support basic physiological functions like breathing and circulation. Online calculators estimate it using predictive equations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I calculate my BMR?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A common clinical method is the Mifflin-St Jeor equation, which uses age, sex, height, and body weight to estimate resting energy expenditure."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the difference between BMR and TDEE?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "BMR estimates energy expenditure at rest. TDEE estimates your total energy expenditure across 24 hours, including daily movement, exercise, and food digestion."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I burn calories while sleeping?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Your body continues burning calories during sleep to power baseline physiological functions such as respiration, brain activity, and tissue repair."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is a good BMR for my age?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no single \"good\" BMR for an age group. Your BMR depends on height, weight, sex, and body composition. A higher or lower number simply reflects body size and tissue mass."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Should I eat my BMR to lose weight?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Not as a general rule. BMR represents resting energy expenditure, not your total energy intake requirement. Weight loss targets should be calculated based on TDEE and individual health needs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How accurate is a BMR calculator?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A BMR calculator provides a statistical estimate, not a direct measurement. Accuracy varies by individual. Laboratory indirect calorimetry provides direct physiological measurement."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is my BMR different from another calculator?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Calculators may use different underlying formulas (Mifflin-St Jeor vs. Harris-Benedict vs. Katch-McArdle), rounding methods, or unit inputs. Check the methodology of each tool."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Should my BMR go down when I lose weight?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, your estimated BMR will naturally decrease as body weight decreases because smaller body mass requires less energy to maintain at rest."
+                    }
+                }
+            ]
         }
     ]
 }
@@ -574,30 +844,6 @@
     </div>
   </div>
   
-  <div id="hero-workspace" class="hidden">
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-badge">⚡ Accurate & Adaptive Expenditure Engine</div>
-        <div class="hero-title">TDEE Calculator</div>
-        <p class="hero-subtitle">Calculate your Total Daily Energy Expenditure (TDEE) and estimate how many calories you burn each day based on your body information and activity level.</p>
-      </div>
-    </section>
-
-    <!-- Main Calculator Workspace Grid -->
-    <main class="container">
-      <div class="calc-grid">
-
-        <!-- Left Panel: Quick Calculator Form -->
-        <div class="glass-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-title-icon">⚙️</span> TDEE Calculator
-            </h2>
-            <div class="segmented-control" style="width: 140px;">
-              <button id="unit-metric" class="segmented-btn active">Metric</button>
-              <button id="unit-imperial" class="segmented-btn">Imperial</button>
-            </div>
-          </div>
 
           <form id="tdee-form" onsubmit="return false;">
 
@@ -979,7 +1225,7 @@
           </div>
 
           <p style="font-size: 1.1rem; color: var(--text-muted);">You enter your age, weight, height, and activity level into a TDEE calculator and get a calorie number. But what does that number actually mean? If another calculator gives you a different result, it can be hard to know which number to trust. The problem is that a TDEE estimate is not a direct measurement of how many calories your body burns each day.</p>
-          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         </header>
 
         <!-- How to Use the TDEE Calculator: Step-by-Step Visual Guide -->
@@ -1023,7 +1269,7 @@
         </section>
 
         <h2>What Is TDEE?</h2>
-        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong></p>
+        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong></p>
         <p>It is an estimate of the total energy, expressed in kilocalories (kcal), that your body expends over a 24-hour period to support baseline survival, daily movement, physical work, and food digestion.</p>
         <p>Your daily energy expenditure includes energy used at rest, physical activity, and the thermic effect of food. Resting energy expenditure is generally the largest component for most people, accounting for 60% to 75% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [2]</a>)</p>
 

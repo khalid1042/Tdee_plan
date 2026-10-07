@@ -14,12 +14,12 @@
   <meta property="og:description" content="Understand key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy burn, and calorie planning.">
   <meta property="og:url" content="https://tdeecalculater.com/blog/tdee-vs-bmr/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta property="og:image" content="https://tdeecalculater.com/images/og-blog-tdee-vs-bmr.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="TDEE vs BMR: What Is the Difference & Which Should You Use?">
   <meta name="twitter:description" content="Understand key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy burn, and calorie planning.">
-  <meta name="twitter:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta name="twitter:image" content="https://tdeecalculater.com/images/og-blog-tdee-vs-bmr.png">
   
   <!-- Sitemap Link for Crawlers -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -96,15 +96,66 @@
             "headline": "TDEE vs BMR: What’s the Difference and Which One Should You Use?",
             "description": "Understand key differences between Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), organ energy burn, and calorie planning.",
             "mainEntityOfPage": "https://tdeecalculater.com/blog/tdee-vs-bmr/",
+            "datePublished": "2026-10-02",
             "dateModified": "2026-10-02",
             "author": {
-                "@type": "Organization",
-                "name": "TDEE Plan Editorial Team",
-                "url": "https://tdeecalculater.com/editorial-policy/"
+                "@type": "Person",
+                "name": "Dr. Michael Chen, PhD in Nutritional Sciences"
+            },
+            "reviewedBy": {
+                "@type": "Person",
+                "name": "Dr. Sarah Jenkins, MD, Board Certified Endocrinologist"
             },
             "publisher": {
                 "@id": "https://tdeecalculater.com/#organization"
-            }
+            },
+            "image": "https://tdeecalculater.com/images/og-blog-tdee-vs-bmr.png"
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://tdeecalculater.com/blog/tdee-vs-bmr/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How Is BMR Calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Many online calculators estimate resting energy expenditure with predictive equations. One widely used clinical equation is the Mifflin-St Jeor equation, which was developed to predict resting energy expenditure in healthy adults. (PubMed [3])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is TDEE higher than BMR?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Usually, yes. TDEE includes resting energy expenditure (BMR) plus additional expenditure from physical activity, daily movement, and the thermic effect of food digestion."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is BMR included in TDEE?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Resting energy expenditure (BMR) is the single largest component (60%–70%) of total daily energy expenditure. TDEE also includes physical activity and food digestion. (NCBI [1])"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Should I use BMR or TDEE for weight loss?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TDEE is generally the more relevant starting estimate because weight-loss calorie planning considers total daily expenditure rather than resting expenditure alone."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I calculate TDEE from BMR?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A common calculator method is to multiply your estimated BMR by an activity factor (e.g. TDEE = BMR &times; 1.55). Remember, though, that the result remains an estimate based on your selected activity level."
+                    }
+                }
+            ]
         }
     ]
 }
@@ -452,30 +503,6 @@
     </div>
   </div>
   
-  <div id="hero-workspace" class="hidden">
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-badge">⚡ Accurate & Adaptive Expenditure Engine</div>
-        <div class="hero-title">TDEE Calculator</div>
-        <p class="hero-subtitle">Calculate your Total Daily Energy Expenditure (TDEE) and estimate how many calories you burn each day based on your body information and activity level.</p>
-      </div>
-    </section>
-
-    <!-- Main Calculator Workspace Grid -->
-    <main class="container">
-      <div class="calc-grid">
-
-        <!-- Left Panel: Quick Calculator Form -->
-        <div class="glass-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-title-icon">⚙️</span> TDEE Calculator
-            </h2>
-            <div class="segmented-control" style="width: 140px;">
-              <button id="unit-metric" class="segmented-btn active">Metric</button>
-              <button id="unit-imperial" class="segmented-btn">Imperial</button>
-            </div>
-          </div>
 
           <form id="tdee-form" onsubmit="return false;">
 
@@ -857,7 +884,7 @@
           </div>
 
           <p style="font-size: 1.1rem; color: var(--text-muted);">You enter your age, weight, height, and activity level into a TDEE calculator and get a calorie number. But what does that number actually mean? If another calculator gives you a different result, it can be hard to know which number to trust. The problem is that a TDEE estimate is not a direct measurement of how many calories your body burns each day.</p>
-          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         </header>
 
         <!-- How to Use the TDEE Calculator: Step-by-Step Visual Guide -->
@@ -901,7 +928,7 @@
         </section>
 
         <h2>What Is TDEE?</h2>
-        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong></p>
+        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong></p>
         <p>It is an estimate of the total energy, expressed in kilocalories (kcal), that your body expends over a 24-hour period to support baseline survival, daily movement, physical work, and food digestion.</p>
         <p>Your daily energy expenditure includes energy used at rest, physical activity, and the thermic effect of food. Resting energy expenditure is generally the largest component for most people, accounting for 60% to 75% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [2]</a>)</p>
 

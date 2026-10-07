@@ -9,6 +9,202 @@ window.TDEEContent = {
   reviewer: 'Dr. Sarah Jenkins, MD, Board Certified Endocrinologist',
   lastUpdated: 'September 2026',
   routes: {
+
+    '/tdee-for-muscle-building/': {
+      title: 'TDEE for Muscle Building: How to Set Calories for Muscle Gain',
+      metaDescription: 'Learn how to use your TDEE to set a starting calorie target for muscle building, track your progress, adjust calories, and support muscle growth.',
+      category: 'Muscle Building',
+      readTime: '9 min read',
+      h1: 'TDEE for Muscle Building: How to Set Calories for Muscle Gain',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>TDEE for Muscle Building</span>
+        </div>
+
+        <p class="lead-paragraph">TDEE is an estimate of the calories you use each day. For muscle building, it can serve as a starting maintenance baseline before you choose a calorie target and refine it using your real-world progress.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Core Concept:</strong></p>
+          <p>TDEE is a starting estimate, not a permanent prescription. Use calculated TDEE as your maintenance baseline, add a calculated surplus target, track 7-day scale weight averages over 2–4 weeks, and adjust calories based on actual results.</p>
+        </div>
+
+        <div class="about-calculator-card" style="text-align:center; padding:1.5rem; margin:1.5rem 0 2rem; background:linear-gradient(135deg, rgba(6,182,212,0.1), rgba(14,165,233,0.05)); border:1px solid var(--accent-cyan);">
+          <h3 style="margin-bottom:0.5rem; color:var(--text-main);">Calculate Your Muscle Building Calories</h3>
+          <p style="margin-bottom:1rem; color:var(--text-muted);">Use our interactive calculator to estimate your daily baseline expenditure and personalized surplus target.</p>
+          <a href="#silo-calculator-mount" class="btn-primary" style="display:inline-flex; width:auto; padding:0.75rem 2rem;">Calculate Muscle Building Calories &rarr;</a>
+        </div>
+
+        <div class="about-calculator-card" style="margin:2rem 0; background:var(--card-bg); border:1px solid var(--border-color);">
+          <h3 style="text-align:center; margin-bottom:1rem; color:var(--accent-cyan);">The Continuous Feedback Loop</h3>
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:0.5rem; text-align:center; font-weight:600; font-size:0.9rem;">
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Calculate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Start</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Track</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Evaluate</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Adjust</span> &rarr;
+            <span style="background:rgba(6,182,212,0.15); padding:0.5rem 0.8rem; border-radius:6px; color:var(--text-main);">Recalculate</span>
+          </div>
+        </div>
+
+        <h2>How TDEE Helps You Build Muscle</h2>
+        <h3>What TDEE Actually Tells You</h3>
+        <p>Your Total Daily Energy Expenditure (TDEE) is an estimate of <a href="/blog/what-is-tdee/" data-link>what TDEE measures</a> across basic biological functions, food digestion, and physical movement. It combines BMR, TEF, NEAT, and EAT into a single 24-hour baseline figure.</p>
+
+        <h3>Why TDEE Is Only a Starting Point</h3>
+        <p>Mathematical formulas cannot capture daily shifts in fidgeting, digestive efficiency, stress, or sleep quality. For this reason, calculated TDEE should be treated as an initial baseline estimate to test in the real world.</p>
+
+        <h2>TDEE vs. Maintenance Calories vs. Muscle-Building Calories</h2>
+        <h3>Is TDEE the Same as Maintenance Calories?</h3>
+        <p><strong>Direct Answer:</strong> Conceptually, TDEE and maintenance calories refer to the same concept: the energy needed to keep body weight stable. However, calculated TDEE is a formula-based prediction, while your actual maintenance intake is determined by real-world progress over time.</p>
+
+        <h3>Why Your Muscle-Building Calories May Be Higher Than TDEE</h3>
+        <p>Synthesizing new muscle tissue requires energy. Consuming slightly more energy than your estimated maintenance baseline provides the building blocks and metabolic signaling necessary for optimal muscle hypertrophy.</p>
+
+        <h2>How to Calculate Your TDEE for Muscle Building</h2>
+        <h3>Step 1: Estimate Your BMR</h3>
+        <p>Basal Metabolic Rate represents energy burned at complete rest. Validated equations like Mifflin-St Jeor calculate BMR using age, sex, height, and weight.</p>
+
+        <h3>Step 2: Account for Daily Activity & Resistance Training</h3>
+        <p>Multiply your BMR by an activity factor ranging from 1.2 (sedentary) to 1.9 (extremely active) to account for daily job movement and lifting sessions.</p>
+
+        <h3>Step 3: Calculate Your Baseline Energy Expenditure</h3>
+        <p>Multiplying BMR by your activity factor yields your estimated TDEE. This represents your estimated daily energy expenditure.</p>
+
+        <h3>Step 4: Add a Calibrated Hypertrophy Surplus</h3>
+        <p>Take this calculated baseline as your starting energy target before adding a calibrated surplus for hypertrophy.</p>
+
+        <h2>How Many Calories Above TDEE Should You Eat?</h2>
+        <h3>Why a Calorie Surplus Helps Build Muscle</h3>
+        <p>A calorie surplus is commonly used to maximize the rate of muscle growth. If you need overall body weight restoration first, consider a broader <a href="/tdee-for-weight-gain/" data-link>healthy weight-gain approach</a>.</p>
+
+        <h3>Recommended Surplus Ranges by Lifting Experience</h3>
+        <p>Research indicates that smaller to moderate surpluses are typically sufficient for maximizing muscle gain while limiting excess fat storage:</p>
+        <ul>
+          <li><strong>Beginners (1st Year Lifting):</strong> +300 to +400 kcal/day (~1.5–2.0 lbs muscle growth potential per month).</li>
+          <li><strong>Intermediates (2–3 Years):</strong> +200 to +300 kcal/day (~0.75–1.0 lb muscle growth potential per month).</li>
+          <li><strong>Advanced Lifters (4+ Years):</strong> +100 to +200 kcal/day (~0.25–0.5 lb muscle growth potential per month).</li>
+        </ul>
+
+        <h3>Why Bigger Surpluses Do Not Mean Faster Muscle Growth</h3>
+        <p>Muscle protein synthesis has biological speed limits; set appropriate <a href="/macro-calculator/" data-link>protein and macro targets</a> to optimize muscle hypertrophy. Consuming an excessively large surplus (+800 to +1,000 kcal/day) does not accelerate muscle synthesis once physiological limits are met; it simply increases fat accumulation.</p>
+
+        <h2>Worked Calculation Example for Muscle Building</h2>
+        <div class="about-calculator-card">
+          <p><strong>Fictional Worked Example:</strong></p>
+          <ul>
+            <li><strong>Profile:</strong> Alex, 165 lbs (75 kg), 5 ft 10 in (178 cm), age 26, male, intermediate lifter.</li>
+            <li><strong>Estimated BMR:</strong> ~1,720 kcal/day.</li>
+            <li><strong>Activity Factor:</strong> 1.55 (Moderately Active, 4x/week lifting).</li>
+            <li><strong>Estimated TDEE (Maintenance Baseline):</strong> ~2,666 kcal/day.</li>
+            <li><strong>Chosen Hypertrophy Surplus:</strong> +250 kcal/day.</li>
+            <li><strong>Starting Calorie Target:</strong> ~2,916 kcal/day (~0.75 lb gain per week).</li>
+          </ul>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);">Note: This worked example is an educational illustration and not individualized medical advice.</p>
+        </div>
+
+        <h2>Optimal Nutrition for Muscle Building</h2>
+        <h3>Protein Intake & Timing</h3>
+        <p>Consume 1.6 to 2.2 grams of protein per kilogram of body weight (0.7 to 1.0 g/lb) daily. Distribute protein across 3 to 5 meals to stimulate muscle protein synthesis throughout the day.</p>
+
+        <h3>Carbohydrates for Performance & Recovery</h3>
+        <p>Carbohydrates fuel high-intensity resistance workouts and replenish muscle glycogen reserves. Aim for 3 to 6 g/kg of body weight depending on workout volume.</p>
+
+        <h3>Fats for Hormonal Balance</h3>
+        <p>Healthy fats support testosterone production and cell membrane integrity. Allocate 20% to 35% of total daily energy intake to fats.</p>
+
+        <h2>How to Track Muscle Growth Progress</h2>
+        <h3>Track 7-Day Scale Weight Averages</h3>
+        <p>Weigh yourself 3 to 5 mornings per week under identical conditions. Compare 7-day average trends to assess actual body-mass changes.</p>
+
+        <h3>Track Strength & Gym Performance</h3>
+        <p>Log your progressive overload in the gym. Continual improvements in strength and volume over time strongly indicate that new muscle tissue is being built.</p>
+
+        <h3>Track Progress Photos & Body Measurements</h3>
+        <p>Take monthly progress photos and measure chest, arm, thigh, and waist circumferences to evaluate muscle-to-fat gain ratio visually.</p>
+
+        <h2>When to Adjust Your Calories</h2>
+        <h3>If Weight & Strength Are Stalled for 3–4 Weeks</h3>
+        <p>If scale weight and gym performance remain flat for 3 to 4 consecutive weeks, add 150 to 200 calories per day to overcome the plateau.</p>
+
+        <h3>If Weight Is Rising Faster Than Intended</h3>
+        <p>If body weight increases faster than 1.5 to 2.0 lbs per week (outside early beginner phases), reduce daily intake by 150 calories to keep fat gain under control.</p>
+
+        <h2>Progress Interpretation Framework</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">What you're seeing</th>
+                <th scope="col">What to consider</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Weight is relatively stable</td>
+                <td>Check whether intake is actually near the estimated maintenance level</td>
+              </tr>
+              <tr>
+                <td>Weight is increasing as expected</td>
+                <td>Keep daily calories and activity consistent</td>
+              </tr>
+              <tr>
+                <td>Weight is increasing much faster than intended</td>
+                <td>Re-evaluate calorie intake and activity level tracking</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is TDEE the same as maintenance calories?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">TDEE is a calculated mathematical estimate of daily energy expenditure, whereas maintenance calories represent the real-world daily calorie intake that keeps your body weight stable over time.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How many calories above TDEE should I eat to build muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">For most lifters, a modest surplus of 200 to 400 calories per day above estimated TDEE is optimal for maximizing muscle hypertrophy while minimizing fat accumulation.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Can I build muscle without a calorie surplus?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Training beginners, individuals returning after a break, or those with higher body fat can build muscle at maintenance calories or in a mild deficit through body recomposition.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How often should I recalculate TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Recalculate TDEE after meaningful body-weight changes (5–10 lbs), major shifts in daily activity level, or when your strength progress plateaus for several weeks.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">What if I am not gaining weight above my TDEE?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">If scale weight is stable over 3–4 weeks, your estimated TDEE may have underestimated your true maintenance needs. Increase daily calories by 150–200 kcal.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Does TDEE increase when you gain muscle?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Yes. Muscle tissue is metabolically active, slightly increasing your BMR. Furthermore, moving a heavier body during workouts burns more total energy.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Is a bigger calorie surplus better for muscle growth?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">No. Muscle protein synthesis has an upper physiological limit. Calorie surpluses beyond what is needed to maximize muscle synthesis are stored as body fat.</p>
+          </details>
+        </div>
+
+        <h2>Scientific Evidence & References</h2>
+        <p>Guidance in this article is supported by peer-reviewed sports nutrition and energy balance literature indexed in PubMed and NCBI.</p>
+        <ul>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+        </ul>
+
+        <h2>Educational Disclaimer</h2>
+        <div class="about-calculator-card">
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Disclaimer:</strong> This calculator and guide provide general educational information, not individualized medical or nutrition advice. Individual calorie and nutrition needs vary. If you have a medical condition, follow a prescribed diet, or have specific health concerns, consult an appropriately qualified healthcare professional.</p>
+        </div>`
+    },
+
     // ==========================================
     // SILO 1: TDEE CORE & KNOWLEDGE GUIDES
     // ==========================================
@@ -186,244 +382,39 @@ window.TDEEContent = {
         </ul>
 
         <h2>Related Guides and Calculators</h2>
-        <div class="about-calculator-card">
-          <ul>
-            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Step-by-Step</a> &ndash; Practical math formula breakdown and worked examples to calculate your daily energy burn.</li>
-            <li><a href="/blog/tdee-vs-bmr/">TDEE vs BMR Comparison Guide</a> &ndash; Understand key differences between resting metabolic rate and total daily expenditure.</li>
-            <li><a href="/bmr-calculator/">Scientific BMR Calculator</a> &ndash; Estimate your Basal Metabolic Rate using the Mifflin-St Jeor clinical equation.</li>
-            <li><a href="/blog/tdee-for-weight-loss/">TDEE for Weight Loss Guide</a> &ndash; Learn how to calculate a sustainable calorie deficit to burn body fat effectively.</li>
-          </ul>
-        </div>
+        <p>Explore tools and resources tailored for weight gain and muscle building:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/blog/what-is-tdee/" style="color:var(--text-main); text-decoration:none;">What Is TDEE &amp; Energy Balance?</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Understand how total daily energy expenditure forms the foundation for setting a weight-gain calorie target.</p>
+            </div>
+            <a href="/blog/what-is-tdee/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Read Guide &rarr;</a>
+          </div>
 
-        <h2>A Word From Our Team</h2>
-        <div class="about-calculator-card">
-          <p>Understanding your energy expenditure is the foundation of scientific body composition management. Our platform uses evidence-based equations to provide transparent, accurate estimates without unrealistic claims. Calculate your TDEE, track your real-world progress, and adjust your plan as your body adapts.</p>
-          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This guide is for informational and educational purposes only and does not constitute medical advice.</p>
-        </div>`
-    },
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/calorie-surplus-calculator/" style="color:var(--text-main); text-decoration:none;">Calorie Surplus Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Calculate your specific daily calorie surplus and projected weekly rate of weight gain.</p>
+            </div>
+            <a href="/calorie-surplus-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Use Calculator &rarr;</a>
+          </div>
 
-    '/blog/how-to-calculate-tdee/': {
-      title: 'How to Calculate Your TDEE: Formula, Steps, and Examples (2026)',
-      metaDescription: 'Learn how to calculate your TDEE step-by-step using the Mifflin-St Jeor formula, activity multipliers, unit conversions, and worked examples.',
-      category: 'TDEE Guides',
-      readTime: '8 min read',
-      h1: 'How to Calculate Your TDEE: Formula, Steps, and Examples',
-      content: `<p class="lead-paragraph">Have you ever entered your age, weight, and activity level into a calorie calculator and received a number that did not seem right? One calculator may show 2,200 calories while another gives you 2,600.</p>
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/macro-calculator/" style="color:var(--text-main); text-decoration:none;">Macro Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Determine optimal protein, carbohydrate, and fat targets to maximize muscle growth during weight gain.</p>
+            </div>
+            <a href="/macro-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Calculate Macros &rarr;</a>
+          </div>
 
-        <p>That can make it difficult to choose a realistic calorie target.</p>
-
-        <p>Your daily energy needs depend on more than exercise. Resting energy expenditure, daily movement, exercise, digestion, body size, and lifestyle all play a role. Fortunately, learning <strong>how to calculate your TDEE</strong> is easier once you understand the formula and the activity factor.</p>
-
-        <p>This guide explains the calculation step by step, shows real-world examples, and explains how to check whether your estimate makes sense.</p>
-
-        <h2>What Is TDEE?</h2>
-        <p>TDEE stands for <strong>Total Daily Energy Expenditure</strong>. It represents the estimated amount of energy your body uses throughout a typical 24-hour day.</p>
-
-        <div class="about-calculator-card">
-          <p><strong>TDEE includes several energy components:</strong></p>
-          <ul>
-            <li>Resting energy expenditure (REE/BMR)</li>
-            <li>Exercise activity thermogenesis (EAT)</li>
-            <li>Non-exercise activity thermogenesis (NEAT)</li>
-            <li>Thermic effect of food (TEF)</li>
-          </ul>
-        </div>
-
-        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
-
-        <p>Most TDEE calculations are estimates rather than direct laboratory measurements.</p>
-
-        <h2>TDEE Formula</h2>
-        <p>The basic formula is:</p>
-
-        <div class="formula-callout-box">
-          <p><strong>Basic TDEE Formula:</strong> TDEE = BMR &times; Activity Factor</p>
-        </div>
-
-        <p>First, estimate your resting energy needs (BMR). Next, select an activity factor that matches your normal lifestyle. Finally, multiply the two numbers.</p>
-
-        <div class="worked-example-card">
-          <p><strong>Formula Calculation Example:</strong></p>
-          <p class="calc-step-line"><strong>Estimated BMR = 1,780 calories/day</strong></p>
-          <p class="calc-step-line"><strong>Selected Activity Factor = 1.55 (Moderately Active)</strong></p>
-          <p class="calc-step-line"><strong>TDEE = 1,780 &times; 1.55 = 2,759 calories/day</strong></p>
-        </div>
-
-        <p>This means the estimated daily energy requirement is about <strong>2,760 calories per day</strong>.</p>
-
-        <h2>How to Calculate Your TDEE</h2>
-        <p>The process has three main steps:</p>
-
-        <div class="comparison-summary-box">
-          <p><strong>3-Step TDEE Calculation Process:</strong></p>
-          <ol>
-            <li>Calculate your BMR or estimated resting energy expenditure.</li>
-            <li>Choose the activity factor that best matches your routine.</li>
-            <li>Multiply your resting estimate by that activity factor.</li>
-          </ol>
-        </div>
-
-        <h3>Step 1: Calculate Your BMR</h3>
-        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
-
-        <div class="equation-box">
-          <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
-          <p style="margin-top:0.5rem;"><strong>For Women:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) − 161</p>
-        </div>
-
-        <p>For example, consider a 30-year-old man who weighs 80 kg and is 180 cm tall:</p>
-
-        <div class="worked-example-card">
-          <p class="calc-step-line"><strong>Step 1 (Weight):</strong> 10 &times; 80 kg = 800</p>
-          <p class="calc-step-line"><strong>Step 2 (Height):</strong> 6.25 &times; 180 cm = 1,125</p>
-          <p class="calc-step-line"><strong>Step 3 (Age penalty):</strong> 5 &times; 30 years = 150</p>
-          <p class="calc-step-line"><strong>Step 4 (Male Constant):</strong> +5</p>
-          <p class="calc-step-line"><strong>BMR = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
-        </div>
-
-        <p>Strictly speaking, the Mifflin-St Jeor equation predicts resting energy expenditure rather than measuring BMR under laboratory conditions. However, many online calculators use “BMR” as a simple label for this estimate. Estimate your baseline resting floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
-
-        <p>You can review the <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">original Mifflin-St Jeor study</a> here.</p>
-
-        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
-
-        <h3>Step 2: Choose Your Activity Factor</h3>
-        <p>The next step is selecting an activity multiplier:</p>
-
-        <div class="table-responsive">
-          <table class="styled-table">
-            <thead>
-              <tr>
-                <th>Activity Level Category</th>
-                <th style="text-align: right;">Factor</th>
-                <th>General Routine Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Sedentary</strong></td>
-                <td style="text-align: right;"><strong>1.200</strong></td>
-                <td>Little to no structured exercise, desk job</td>
-              </tr>
-              <tr>
-                <td><strong>Lightly Active</strong></td>
-                <td style="text-align: right;"><strong>1.375</strong></td>
-                <td>Light exercise or regular movement 1–3 days/week</td>
-              </tr>
-              <tr>
-                <td><strong>Moderately Active</strong></td>
-                <td style="text-align: right;"><strong>1.550</strong></td>
-                <td>Moderate exercise or an active daily routine 3–5 days/week</td>
-              </tr>
-              <tr>
-                <td><strong>Very Active</strong></td>
-                <td style="text-align: right;"><strong>1.725</strong></td>
-                <td>Hard training or a physically active lifestyle 6–7 days/week</td>
-              </tr>
-              <tr>
-                <td><strong>Extra Active</strong></td>
-                <td style="text-align: right;"><strong>1.900</strong></td>
-                <td>Very demanding physical labor work + daily intense training</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>These categories are estimates. Your exercise schedule is only one part of the decision.</p>
-        <p>For instance, someone who trains three times a week but sits for most of the day may have different energy needs from someone who trains three times a week and also walks, stands, and performs physical work throughout the day.</p>
-        <p>Therefore, consider your <strong>whole routine</strong>, not only your workouts.</p>
-
-        <h3>Step 3: Multiply BMR by Your Activity Factor</h3>
-        <p>Now apply the selected factor.</p>
-        <p>Using the example above:</p>
-
-        <div class="worked-example-card">
-          <p class="calc-step-line"><strong>BMR = 1,780 calories/day</strong></p>
-          <p class="calc-step-line"><strong>Activity Factor = 1.55</strong></p>
-          <p class="calc-step-line"><strong>TDEE = 1,780 &times; 1.55 = 2,759 calories/day</strong></p>
-        </div>
-
-        <p>So, the estimated TDEE is approximately <strong>2,760 calories per day</strong>.</p>
-        <p>That number represents an estimated maintenance level, not a guaranteed daily calorie burn.</p>
-
-        <h2>TDEE Calculation Example for a Woman</h2>
-        <p>Consider a 30-year-old woman who weighs <strong>65 kg</strong> and is <strong>165 cm</strong> tall.</p>
-        <p>Using the Mifflin-St Jeor equation:</p>
-
-        <div class="worked-example-card">
-          <p class="calc-step-line"><strong>BMR = (10 &times; 65) + (6.25 &times; 165) − (5 &times; 30) − 161</strong></p>
-          <p class="calc-step-line"><strong>BMR = 650 + 1,031.25 − 150 − 161 &approx; 1,370 calories/day</strong></p>
-          <p>If she is moderately active (1.55 multiplier):</p>
-          <p class="calc-step-line"><strong>TDEE = 1,370 &times; 1.55 &approx; 2,124 calories/day</strong></p>
-        </div>
-
-        <p>Her estimated daily energy expenditure would therefore be about <strong>2,124 calories per day</strong>.</p>
-
-        <h2>How to Calculate TDEE With Pounds and Inches</h2>
-        <p>The Mifflin-St Jeor equation uses metric units (kilograms and centimeters).</p>
-        <p>If your measurements are in pounds and inches, convert them first:</p>
-
-        <div class="about-calculator-card">
-          <ul>
-            <li><strong>Weight Conversion:</strong> Kilograms = Pounds &divide; 2.205</li>
-            <li><strong>Height Conversion:</strong> Centimeters = Inches &times; 2.54</li>
-          </ul>
-        </div>
-
-        <p>For example, 176 pounds is approximately <strong>79.8 kg</strong> (176 &divide; 2.205).</p>
-        <p>Likewise, 70 inches is approximately <strong>177.8 cm</strong> (70 &times; 2.54).</p>
-        <p>After conversion, enter the metric values into the equation.</p>
-
-        <h2>Why Do TDEE Calculators Give Different Results?</h2>
-        <p>Different calculators can produce different numbers because they may use different equations, activity assumptions, rounding methods, or definitions of activity.</p>
-        <p>More importantly, prediction equations cannot capture every factor affecting an individual's energy expenditure.</p>
-        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
-        <p>For this reason, a difference of a few hundred calories between calculators does not automatically mean that one calculator is broken.</p>
-
-        <h2>How Accurate Is a TDEE Calculation?</h2>
-        <p>A calculated TDEE should be treated as a <strong>starting estimate</strong>, not an exact measurement.</p>
-        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
-        <p>Direct measurement of energy expenditure requires specialized clinical methods like indirect calorimetry or doubly labeled water. Most people therefore use a calculated estimate and then compare it with real-world changes.</p>
-
-        <h3>How to Check Your Estimated TDEE</h3>
-        <p>Track your calorie intake and body weight consistently over several weeks.</p>
-        <p>If your average body weight remains relatively stable, your average calorie intake may be close to your actual maintenance requirement.</p>
-        <p>If your weight consistently changes, your real maintenance level may differ from the original estimate.</p>
-        <p>This empirical approach is far more useful than treating a calculator result as an exact, permanent number.</p>
-
-        <h2>Is TDEE the Same as Maintenance Calories?</h2>
-        <p>TDEE and maintenance calories are closely related, but they are not always used in exactly the same way.</p>
-        <ul>
-          <li><strong>TDEE</strong> is an estimate of your total daily energy expenditure.</li>
-          <li><strong>Maintenance calories</strong> generally refer to the average calorie intake that maintains your body weight over time. See our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a>.</li>
-        </ul>
-        <p>In practice, your estimated TDEE is often used as a starting point for estimating maintenance calories.</p>
-
-        <h2>Common TDEE Calculation Mistakes</h2>
-        <div class="question-callout-box">
-          <ul>
-            <li>Using pounds directly in a metric equation</li>
-            <li>Entering height in inches instead of centimeters</li>
-            <li>Choosing an activity level based only on gym sessions</li>
-            <li>Treating TDEE as an exact measurement</li>
-            <li>Changing calorie targets too quickly based on 1 day's weigh-in</li>
-            <li>Comparing calculators without checking their underlying formulas</li>
-            <li>Ignoring changes in body weight and daily activity (NEAT)</li>
-          </ul>
-        </div>
-
-        <p>Instead, use consistent inputs and validate the estimate against your real-world results.</p>
-
-        <h2>How to Use Your TDEE for Weight Goals</h2>
-        <p>Once you know your estimated TDEE, you can use it as a starting baseline for different goals:</p>
-
-        <div class="about-calculator-card">
-          <ul>
-            <li>For <strong>weight maintenance</strong>, your calorie intake generally aims to stay around your maintenance level (TDEE).</li>
-            <li>For <strong>weight loss</strong>, calorie intake is set lower than maintenance. Calculate targets on our <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</li>
-            <li>For <strong>weight gain</strong>, calorie intake is set higher than maintenance. Calculate targets on our <a href="/calorie-surplus-calculator/">Calorie Surplus Calculator</a>.</li>
-            <li>For <strong>macronutrient planning</strong>, split your calories into protein, carbs, and fat with our <a href="/macro-calculator/">Macro Calculator</a>.</li>
-          </ul>
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/tdee-for-muscle-building/" style="color:var(--text-main); text-decoration:none;">TDEE for Muscle Building</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Learn how to align your calorie surplus with hypertrophy training to minimize excess fat gain.</p>
+            </div>
+            <a href="/tdee-for-muscle-building/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Read Guide &rarr;</a>
+          </div>
         </div>
 
         <p>The appropriate calorie target depends on the individual and the goal. A calculated TDEE should therefore guide your starting point rather than act as a fixed prescription.</p>
@@ -934,7 +925,7 @@ window.TDEEContent = {
       metaDescription: 'Learn how to use your TDEE to set a starting calorie target for healthy weight gain, track your progress, adjust calories, and build body mass safely.',
       category: 'Weight Gain',
       readTime: '9 min read',
-      h1: 'TDEE for Weight Gain: How to Set Your Calories for Healthy Weight Gain',
+      h1: 'TDEE for Weight Gain: How to Set Calories for Healthy Weight Gain',
       content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
           <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>TDEE for Weight Gain</span>
         </div>
@@ -969,7 +960,7 @@ window.TDEEContent = {
         <p>Your Total Daily Energy Expenditure (TDEE) is an estimate of the total daily energy your body expends to support resting metabolism, digest food, and power physical movement. It combines your Basal Metabolic Rate (BMR), Thermic Effect of Food (TEF), Non-Exercise Activity Thermogenesis (NEAT), and Exercise Activity Thermogenesis (EAT).</p>
 
         <h3>Why TDEE Is Only a Starting Point</h3>
-        <p>Predictive metabolic formulas cannot capture daily shifts in fidgeting, digestive capacity, or stress. For this reason, calculated TDEE represents a baseline starting estimate rather than an exact biological prescription. Use it as an initial baseline to test in the real world.</p>
+        <p>Predictive metabolic formulas cannot capture daily shifts in fidgeting, digestive capacity, or stress. Read more about our equation accuracy in <a href="/how-we-calculate/" data-link>how we calculate TDEE</a>. For this reason, calculated TDEE represents a baseline starting estimate rather than an exact biological prescription. Use it as an initial baseline to test in the real world.</p>
 
         <h2>TDEE vs. Maintenance Calories vs. Weight Gain Calories</h2>
         <h3>Is TDEE the Same as Maintenance Calories?</h3>
@@ -989,11 +980,11 @@ window.TDEEContent = {
         <p>Multiplying BMR by your activity factor yields your estimated TDEE. This number represents your baseline energy expenditure.</p>
 
         <h3>Step 4: Select Your Target Weight Gain Surplus</h3>
-        <p>Add a calibrated calorie surplus to your estimated TDEE based on your target rate of weight gain.</p>
+        <p>Add a calibrated calorie surplus to your estimated TDEE based on your target rate of weight gain using our dedicated <a href="/calorie-surplus-calculator/" data-link>calorie surplus calculator</a>.</p>
 
         <h2>How Many Calories Above TDEE Should You Eat?</h2>
         <h3>Conservative Surplus (+200 to +300 kcal/day)</h3>
-        <p>Ideal for gradual weight gain (~0.5 lb / 0.25 kg per week) while keeping fat gain minimal.</p>
+        <p>Ideal for gradual weight gain (~0.5 lb / 0.25 kg per week) while keeping fat gain minimal. Use our <a href="/macro-calculator/" data-link>macro calculator</a> to balance your protein and carbohydrates.</p>
 
         <h3>Moderate Surplus (+350 to +500 kcal/day)</h3>
         <p>Great for general weight restoration and active individuals (~1.0 lb / 0.5 kg per week).</p>
@@ -1152,13 +1143,39 @@ window.TDEEContent = {
         </ul>
 
         <h2>Related Guides and Calculators</h2>
-        <div class="about-calculator-card">
-          <ul>
-            <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a> &ndash; Determine exact daily calorie targets and timelines for fat loss.</li>
-            <li><a href="/blog/what-is-tdee/">What Is TDEE & Energy Balance?</a> &ndash; Understand how daily movement and workout burn impact fat loss.</li>
-            <li><a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Step-by-Step</a> &ndash; Learn the math behind estimating maintenance expenditure before subtracting a deficit.</li>
-            <li><a href="/macro-calculator/">Macro Distribution Calculator</a> &ndash; Set protein and fat ratios to preserve muscle mass during a calorie deficit.</li>
-          </ul>
+        <p>Explore tools and resources tailored for weight gain and muscle building:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/blog/what-is-tdee/" style="color:var(--text-main); text-decoration:none;">What Is TDEE &amp; Energy Balance?</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Understand how total daily energy expenditure forms the foundation for setting a weight-gain calorie target.</p>
+            </div>
+            <a href="/blog/what-is-tdee/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Read Guide &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/calorie-surplus-calculator/" style="color:var(--text-main); text-decoration:none;">Calorie Surplus Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Calculate your specific daily calorie surplus and projected weekly rate of weight gain.</p>
+            </div>
+            <a href="/calorie-surplus-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Use Calculator &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/macro-calculator/" style="color:var(--text-main); text-decoration:none;">Macro Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Determine optimal protein, carbohydrate, and fat targets to maximize muscle growth during weight gain.</p>
+            </div>
+            <a href="/macro-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Calculate Macros &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/tdee-for-muscle-building/" style="color:var(--text-main); text-decoration:none;">TDEE for Muscle Building</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Learn how to align your calorie surplus with hypertrophy training to minimize excess fat gain.</p>
+            </div>
+            <a href="/tdee-for-muscle-building/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;">Read Guide &rarr;</a>
+          </div>
         </div>
 
         <h2>Educational Disclaimer</h2>

@@ -140,13 +140,27 @@ window.TDEEExtras = (function() {
       age: inputs.age, gender: inputs.gender, heightCm: m.heightCm,
       weightKg: m.weightKg, bodyFat: inputs.bodyFat, activityKey: inputs.activity
     });
+    var goalMult = parseFloat(inputs.goalPct);
+    if (isNaN(goalMult)) goalMult = 1.10;
+    var primaryCals = Math.round(res.tdee * goalMult);
     var leanBulkCals = Math.round(res.tdee * 1.10);
     var moderateSurplusCals = Math.round(res.tdee * 1.15);
     var aggressiveSurplusCals = Math.round(res.tdee * 1.20);
+
+    var goalNames = {
+      '1': 'Maintain weight',
+      '1.1': 'Lean Surplus (+10%)',
+      '1.10': 'Lean Surplus (+10%)',
+      '1.15': 'Moderate Surplus (+15%)',
+      '1.2': 'Aggressive Surplus (+20%)',
+      '1.20': 'Aggressive Surplus (+20%)'
+    };
+    var selectedGoalLabel = goalNames[inputs.goalPct] || (goalMult === 1 ? 'Maintain weight' : 'Surplus');
+
     return {
-      primary: leanBulkCals,
-      unitLabel: 'kcal/day target for lean muscle gain',
-      formulaName: 'Based on ' + res.formula,
+      primary: primaryCals,
+      unitLabel: 'kcal/day (' + selectedGoalLabel + ')',
+      formulaName: 'Based on ' + (res.formulaName || 'Mifflin-St Jeor') + ' · ' + selectedGoalLabel,
       rows: [
         { label: 'Maintenance (TDEE)', value: res.tdee + ' kcal', show: true },
         { label: 'Lean Surplus (+10%) · +0.2 kg/wk', value: leanBulkCals + ' kcal', show: true },
@@ -283,11 +297,21 @@ window.TDEEExtras = (function() {
             ? '<div class="form-group">' +
                 '<label class="form-label" for="ex-select-goal">Goal</label>' +
                 '<select id="ex-select-goal" class="select-field ex-goal" aria-label="Fitness Goal">' +
-                  '<option value="1" selected>Maintain weight</option>' +
-                  '<option value="0.85">Slow fat loss (−15%)</option>' +
-                  '<option value="0.78">Optimal fat loss (−22%)</option>' +
-                  '<option value="0.70">Aggressive fat loss (−30%)</option>' +
-                  '<option value="1.10">Lean bulk (+10%)</option>' +
+                  (calcKey === 'surplus'
+                    ? '<option value="1">Maintain weight</option>' +
+                      '<option value="1.10" selected>Lean Surplus (+10%)</option>' +
+                      '<option value="1.15">Moderate Surplus (+15%)</option>' +
+                      '<option value="1.20">Aggressive Surplus (+20%)</option>'
+                    : calcKey === 'deficit'
+                    ? '<option value="1">Maintain weight</option>' +
+                      '<option value="0.85">Slow fat loss (−15%)</option>' +
+                      '<option value="0.78" selected>Optimal fat loss (−22%)</option>' +
+                      '<option value="0.70">Aggressive fat loss (−30%)</option>'
+                    : '<option value="1" selected>Maintain weight</option>' +
+                      '<option value="0.85">Slow fat loss (−15%)</option>' +
+                      '<option value="0.78">Optimal fat loss (−22%)</option>' +
+                      '<option value="0.70">Aggressive fat loss (−30%)</option>' +
+                      '<option value="1.10">Lean bulk (+10%)</option>') +
                 '</select>' +
               '</div>'
             : '') +
@@ -314,7 +338,15 @@ window.TDEEExtras = (function() {
             : '') +
         '</div>' +
         '<div style="margin: 1.25rem 0 1rem;">' +
-          '<button type="button" class="btn-primary ex-calc-btn" style="width:100%; padding: 0.85rem 1.5rem; font-size: 1.05rem; font-weight: 700; border-radius: 8px; cursor: pointer; background: var(--accent-rose); color: #fff; border: none; transition: transform 0.15s ease, background 0.15s ease;">Calculate My Muscle Bulking Calories</button>' +
+          '<button type="button" class="btn-primary ex-calc-btn" style="width:100%; padding: 0.85rem 1.5rem; font-size: 1.05rem; font-weight: 700; border-radius: 8px; cursor: pointer; background: var(--accent-rose); color: #fff; border: none; transition: transform 0.15s ease, background 0.15s ease;">' +
+            (calcKey === 'surplus' ? 'Calculate My Weight Gain Calories' :
+             calcKey === 'muscle' ? 'Calculate My Muscle Bulking Calories' :
+             calcKey === 'deficit' ? 'Calculate My Calorie Deficit' :
+             calcKey === 'bmr' ? 'Calculate My BMR' :
+             calcKey === 'maintenance' ? 'Calculate My Maintenance Calories' :
+             calcKey === 'macro' ? 'Calculate My Macros' :
+             calcKey === 'burned' ? 'Calculate Calories Burned' : 'Calculate My Daily Calories') +
+          '</button>' +
         '</div>' +
         '<div class="extras-result">' +
           '<div class="ex-result-label">' + (isMuscle ? 'Your Target Muscle Building Energy Intake' : 'Your Estimated Daily Calorie Needs') + '</div>' +

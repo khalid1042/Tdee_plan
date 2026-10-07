@@ -14,12 +14,12 @@
   <meta property="og:description" content="Calculate your ideal calorie deficit for weight loss based on age, height, weight, and activity. Learn safe fat loss rates and BMR limits.">
   <meta property="og:url" content="https://tdeecalculater.com/calorie-deficit-calculator/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta property="og:image" content="https://tdeecalculater.com/images/og-calorie-deficit-calculator.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
   <meta name="twitter:title" content="Calorie Deficit Calculator: Calculate Your Daily Calorie Target">
   <meta name="twitter:description" content="Calculate your ideal calorie deficit for weight loss based on age, height, weight, and activity. Learn safe fat loss rates and BMR limits.">
-  <meta name="twitter:image" content="https://tdeecalculater.com/mobile-final.png">
+  <meta name="twitter:image" content="https://tdeecalculater.com/images/og-calorie-deficit-calculator.png">
   
   <!-- Sitemap Link for Crawlers -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -99,6 +99,68 @@
                 "price": "0",
                 "priceCurrency": "USD"
             }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://tdeecalculater.com/calorie-deficit-calculator/#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How to be in a calorie deficit?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "First, estimate your maintenance calories. Then, choose a realistic calorie reduction (e.g. 15% to 25% below maintenance) and track your food intake. Afterward, monitor your longer-term weight trend over 2 to 4 weeks instead of reacting to individual daily scale fluctuations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much of a calorie deficit to lose weight?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no single deficit that is appropriate for everyone. A moderate reduction (300 to 500 calories below maintenance) is usually easier to maintain than a highly restrictive approach. Your starting point, lifestyle, and ability to follow the plan consistently should all be considered."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does it take to see results in a calorie deficit?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The timeline varies between individuals. Water retention, glycogen shifts, and digestion can temporarily hide changes in body fat, so daily scale readings can be misleading. Instead, look at your weekly average weight trend over 3 to 4 weeks."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you build muscle on a calorie deficit?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "It can happen in specific situations, particularly for beginners to resistance training, individuals returning after a break, or those with higher starting body fat. Results depend on progressive strength training, high protein intake, adequate sleep, and keeping the deficit moderate."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is a calorie deficit diet?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A calorie deficit diet is any eating pattern that provides fewer calories than your body expends over time. The specific foods and meal structure can vary widely based on personal preference."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is it okay to eat less than 1,200 calories a day?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no universal calorie target that is appropriate for every adult. Very low calorie intakes (under 1,200 kcal/day) can make it difficult to meet essential micronutrient needs and may cause muscle loss and fatigue unless medically supervised. Therefore, 1,200 calories should not be treated as an automatic weight-loss target."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I calculate calorie deficit with BMR?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "BMR alone does not represent your complete daily energy expenditure. First estimate your TDEE or maintenance calories by multiplying BMR by an activity factor. Then compare estimated maintenance with your actual calorie intake. For example, if maintenance is 2,200 calories and intake is 1,800 calories, the estimated deficit is 400 calories."
+                    }
+                }
+            ]
         }
     ]
 }
@@ -385,30 +447,6 @@
     </div>
   </div>
   
-  <div id="hero-workspace" class="hidden">
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-badge">⚡ Accurate & Adaptive Expenditure Engine</div>
-        <div class="hero-title">TDEE Calculator</div>
-        <p class="hero-subtitle">Calculate your Total Daily Energy Expenditure (TDEE) and estimate how many calories you burn each day based on your body information and activity level.</p>
-      </div>
-    </section>
-
-    <!-- Main Calculator Workspace Grid -->
-    <main class="container">
-      <div class="calc-grid">
-
-        <!-- Left Panel: Quick Calculator Form -->
-        <div class="glass-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-title-icon">⚙️</span> TDEE Calculator
-            </h2>
-            <div class="segmented-control" style="width: 140px;">
-              <button id="unit-metric" class="segmented-btn active">Metric</button>
-              <button id="unit-imperial" class="segmented-btn">Imperial</button>
-            </div>
-          </div>
 
           <form id="tdee-form" onsubmit="return false;">
 
@@ -790,7 +828,7 @@
           </div>
 
           <p style="font-size: 1.1rem; color: var(--text-muted);">You enter your age, weight, height, and activity level into a TDEE calculator and get a calorie number. But what does that number actually mean? If another calculator gives you a different result, it can be hard to know which number to trust. The problem is that a TDEE estimate is not a direct measurement of how many calories your body burns each day.</p>
-          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         </header>
 
         <!-- How to Use the TDEE Calculator: Step-by-Step Visual Guide -->
@@ -834,7 +872,7 @@
         </section>
 
         <h2>What Is TDEE?</h2>
-        <p><strong>TDEE stands for Total Daily Energy Expenditure.</strong></p>
+        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong></p>
         <p>It is an estimate of the total energy, expressed in kilocalories (kcal), that your body expends over a 24-hour period to support baseline survival, daily movement, physical work, and food digestion.</p>
         <p>Your daily energy expenditure includes energy used at rest, physical activity, and the thermic effect of food. Resting energy expenditure is generally the largest component for most people, accounting for 60% to 75% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [2]</a>)</p>
 

@@ -164,8 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!routeData) {
       ensureSiloContainer();
       // Safety Check: If the page ALREADY contains static pre-rendered article content, do NOT overwrite it!
-      if (siloBody && siloBody.innerHTML && siloBody.innerHTML.trim().length > 100 && heroWorkspace.classList.contains('hidden')) {
+      if (siloBody && siloBody.innerHTML && siloBody.innerHTML.trim().length > 100 && (!heroWorkspace || heroWorkspace.classList.contains('hidden'))) {
         console.log('Preserving static pre-rendered content for:', path);
+        var staticCalcMount = document.getElementById('silo-calculator-mount');
+        if (staticCalcMount && staticCalcMount.children.length === 0 && window.TDEEExtras) {
+          window.TDEEExtras.mount(path, staticCalcMount);
+        }
         return;
       }
 
