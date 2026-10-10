@@ -83,9 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function normalizeRoutePath(rawPath) {
     if (!rawPath) return '/';
     var p = rawPath.replace(/\?.*$/, '').replace(/#.*$/, '');
+    p = p.toLowerCase();
     p = p.replace(/\/index\.html$/, '');
     p = p.replace(/^\/[^\/]+\.github\.io/i, '');
-    if (p.toLowerCase().startsWith('/tdee_plan')) {
+    if (p.startsWith('/tdee_plan')) {
       p = p.substring('/tdee_plan'.length);
     }
     if (p === '' || p === '/') return '/';
@@ -117,7 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
       '/blog/tdee-for-weight-gain/': '/tdee-for-weight-gain/',
       '/weight-gain/': '/tdee-for-weight-gain/',
       '/tdee-calculator-for-women-to-gain-weight/': '/tdee-for-weight-gain/',
-      '/blog/tdee-for-muscle-building/': '/tdee-for-muscle-building/'
+      '/blog/tdee-for-muscle-building/': '/tdee-for-muscle-building/',
+      '/blog/healthy-food-and-healthy-life/': '/healthy-food-and-healthy-life/',
+      '/healthy-food/': '/healthy-food-and-healthy-life/',
+      '/healthy-life/': '/healthy-food-and-healthy-life/',
+      '/healthy-food-healthy-life/': '/healthy-food-and-healthy-life/'
     };
     if (spaRedirects[normPath]) {
       navigateTo(spaRedirects[normPath]);
@@ -143,10 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var routes = (window.TDEEContent && window.TDEEContent.routes) ? window.TDEEContent.routes : {};
     var routeData = routes[normPath] || routes[path];
 
-    // Fallback: search for matching route key
+    // Fallback: search for matching route key (case insensitive & flexible prefix/suffix)
     if (!routeData) {
+      var cleanNorm = normPath.toLowerCase().replace(/^\/|\/$/g, '');
       for (var key in routes) {
-        if (normPath !== '/' && (normPath.endsWith(key) || key.endsWith(normPath))) {
+        var cleanKey = key.toLowerCase().replace(/^\/|\/$/g, '');
+        if (cleanNorm === cleanKey || cleanNorm.endsWith(cleanKey) || cleanKey.endsWith(cleanNorm)) {
           routeData = routes[key];
           break;
         }
@@ -162,18 +169,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (!routeData) {
-      ensureSiloContainer();
-      // Safety Check: If the page ALREADY contains static pre-rendered article content, do NOT overwrite it!
-      if (siloBody && siloBody.innerHTML && siloBody.innerHTML.trim().length > 100 && (!heroWorkspace || heroWorkspace.classList.contains('hidden'))) {
+      // Safety Check: If the DOM ALREADY contains static pre-rendered article content, DO NOT show 404!
+      var existingSiloBody = document.getElementById('silo-body');
+      var existingHeroWorkspace = document.getElementById('hero-workspace');
+      if (existingSiloBody && existingSiloBody.innerHTML && existingSiloBody.innerHTML.trim().length > 100 && (!existingHeroWorkspace || existingHeroWorkspace.classList.contains('hidden'))) {
         console.log('Preserving static pre-rendered content for:', path);
+        ensureSiloContainer();
+        if (heroWorkspace) heroWorkspace.classList.add('hidden');
+        if (siloContainer) siloContainer.classList.remove('hidden');
         var staticCalcMount = document.getElementById('silo-calculator-mount');
         if (staticCalcMount && staticCalcMount.children.length === 0 && window.TDEEExtras) {
           window.TDEEExtras.mount(path, staticCalcMount);
+        }
+        if (window.TDEEHealthyLife && window.TDEEHealthyLife.init) {
+          setTimeout(function() { window.TDEEHealthyLife.init(); }, 20);
         }
         return;
       }
 
       // Show Custom 404 Error Page
+      ensureSiloContainer();
       if (heroWorkspace) heroWorkspace.classList.add('hidden');
       if (siloContainer) siloContainer.classList.remove('hidden');
 
