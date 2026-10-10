@@ -243,6 +243,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.TDEEExtras.mount(path, calcMount);
       }
     }
+
+    // Initialize Healthy Life interactive modules if present
+    if (window.TDEEHealthyLife && window.TDEEHealthyLife.init) {
+      setTimeout(function() {
+        window.TDEEHealthyLife.init();
+      }, 20);
+    }
   }
 
   // Intercept click on internal links for smooth SPA navigation and hash jumping
@@ -282,6 +289,8 @@ document.addEventListener('DOMContentLoaded', function() {
      2. CORE RECALCULATION & UI UPDATE
      ========================================================================== */
   function updateCalculation() {
+    if (!displayTdee || !inputAge || !inputHeight || !inputWeight || !selectActivity) return;
+
     // Read Inputs
     state.age = parseFloat(inputAge.value) || 28;
 
@@ -297,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
       state.weightKg = weightVal;
     }
 
-    state.bodyFat = inputBodyFat.value;
+    state.bodyFat = inputBodyFat ? inputBodyFat.value : '';
     state.activityKey = selectActivity.value;
 
     // Calculate TDEE
@@ -312,36 +321,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Update Main Hero Output
-    displayTdee.textContent = calcResult.tdee.toLocaleString();
-    displayBmr.textContent = calcResult.bmr.toLocaleString();
-    displayFormula.textContent = calcResult.formulaName;
-    displayMinRange.textContent = calcResult.minRange.toLocaleString() + ' kcal';
-    displayMaxRange.textContent = calcResult.maxRange.toLocaleString() + ' kcal';
+    if (displayTdee) displayTdee.textContent = calcResult.tdee.toLocaleString();
+    if (displayBmr) displayBmr.textContent = calcResult.bmr.toLocaleString();
+    if (displayFormula) displayFormula.textContent = calcResult.formulaName;
+    if (displayMinRange) displayMinRange.textContent = calcResult.minRange.toLocaleString() + ' kcal';
+    if (displayMaxRange) displayMaxRange.textContent = calcResult.maxRange.toLocaleString() + ' kcal';
 
     try { localStorage.setItem('tdee_last_result', calcResult.tdee); } catch (e) {}
 
     // Update Goals & Targets
     var goals = window.TDEECalculator.calculateGoals(calcResult.tdee, state.weightKg);
     var activeGoalObj = goals[state.activeGoal] || goals.maintain;
-    targetCalNum.textContent = activeGoalObj.calories.toLocaleString() + ' kcal/day';
-    targetPaceText.textContent = activeGoalObj.paceText;
+    if (targetCalNum) targetCalNum.textContent = activeGoalObj.calories.toLocaleString() + ' kcal/day';
+    if (targetPaceText) targetPaceText.textContent = activeGoalObj.paceText;
 
     // Update Rest vs Training Split
     var split = window.TDEECalculator.calculateRestTrainingSplit(activeGoalObj.calories, state.trainingDays);
-    valTrainingCals.textContent = split.trainingDayCals.toLocaleString() + ' kcal';
-    valRestCals.textContent = split.restDayCals.toLocaleString() + ' kcal';
+    if (valTrainingCals) valTrainingCals.textContent = split.trainingDayCals.toLocaleString() + ' kcal';
+    if (valRestCals) valRestCals.textContent = split.restDayCals.toLocaleString() + ' kcal';
 
     // Update Macros
     var macros = window.TDEECalculator.calculateMacros(activeGoalObj.calories, state.weightKg, state.macroPreset);
-    gramProtein.textContent = macros.protein.grams + 'g (' + macros.protein.pct + '%)';
-    gramCarbs.textContent = macros.carbs.grams + 'g (' + macros.carbs.pct + '%)';
-    gramFat.textContent = macros.fat.grams + 'g (' + macros.fat.pct + '%)';
+    if (gramProtein) gramProtein.textContent = macros.protein.grams + 'g (' + macros.protein.pct + '%)';
+    if (gramCarbs) gramCarbs.textContent = macros.carbs.grams + 'g (' + macros.carbs.pct + '%)';
+    if (gramFat) gramFat.textContent = macros.fat.grams + 'g (' + macros.fat.pct + '%)';
 
     // Update Activity Scenario Simulator
-    var extraSteps = parseInt(inputExtraSteps.value) || 3000;
-    var sim = window.TDEECalculator.simulateStepIncrease(calcResult.tdee, extraSteps);
-    displaySimExtraBurn.textContent = '+' + sim.extraBurn + ' kcal/day';
-    displaySimNewTdee.textContent = sim.newTdee.toLocaleString() + ' kcal/day';
+    if (inputExtraSteps && displaySimExtraBurn && displaySimNewTdee) {
+      var extraSteps = parseInt(inputExtraSteps.value) || 3000;
+      var sim = window.TDEECalculator.simulateStepIncrease(calcResult.tdee, extraSteps);
+      displaySimExtraBurn.textContent = '+' + sim.extraBurn + ' kcal/day';
+      displaySimNewTdee.textContent = sim.newTdee.toLocaleString() + ' kcal/day';
+    }
   }
 
   /* ==========================================================================
@@ -359,48 +370,54 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Unit Toggle
-  unitBtnMetric.addEventListener('click', function() {
-    if (state.unit === 'imperial') {
-      state.unit = 'metric';
-      unitBtnMetric.classList.add('active');
-      unitBtnImperial.classList.remove('active');
-      heightUnitLabel.textContent = 'cm';
-      weightUnitLabel.textContent = 'kg';
-      // Convert values visually
-      inputHeight.value = Math.round(parseFloat(inputHeight.value) * 2.54);
-      inputWeight.value = Math.round(parseFloat(inputWeight.value) * 0.453592);
-      updateCalculation();
-    }
-  });
+  if (unitBtnMetric) {
+    unitBtnMetric.addEventListener('click', function() {
+      if (state.unit === 'imperial') {
+        state.unit = 'metric';
+        unitBtnMetric.classList.add('active');
+        if (unitBtnImperial) unitBtnImperial.classList.remove('active');
+        if (heightUnitLabel) heightUnitLabel.textContent = 'cm';
+        if (weightUnitLabel) weightUnitLabel.textContent = 'kg';
+        if (inputHeight) inputHeight.value = Math.round(parseFloat(inputHeight.value) * 2.54);
+        if (inputWeight) inputWeight.value = Math.round(parseFloat(inputWeight.value) * 0.453592);
+        updateCalculation();
+      }
+    });
+  }
 
-  unitBtnImperial.addEventListener('click', function() {
-    if (state.unit === 'metric') {
-      state.unit = 'imperial';
-      unitBtnImperial.classList.add('active');
-      unitBtnMetric.classList.remove('active');
-      heightUnitLabel.textContent = 'in';
-      weightUnitLabel.textContent = 'lbs';
-      // Convert values visually
-      inputHeight.value = Math.round(parseFloat(inputHeight.value) / 2.54);
-      inputWeight.value = Math.round(parseFloat(inputWeight.value) / 0.453592);
-      updateCalculation();
-    }
-  });
+  if (unitBtnImperial) {
+    unitBtnImperial.addEventListener('click', function() {
+      if (state.unit === 'metric') {
+        state.unit = 'imperial';
+        unitBtnImperial.classList.add('active');
+        if (unitBtnMetric) unitBtnMetric.classList.remove('active');
+        if (heightUnitLabel) heightUnitLabel.textContent = 'in';
+        if (weightUnitLabel) weightUnitLabel.textContent = 'lbs';
+        if (inputHeight) inputHeight.value = Math.round(parseFloat(inputHeight.value) / 2.54);
+        if (inputWeight) inputWeight.value = Math.round(parseFloat(inputWeight.value) / 0.453592);
+        updateCalculation();
+      }
+    });
+  }
 
   // Gender Toggle
-  genderBtnMale.addEventListener('click', function() {
-    state.gender = 'male';
-    genderBtnMale.classList.add('active');
-    genderBtnFemale.classList.remove('active');
-    updateCalculation();
-  });
+  if (genderBtnMale) {
+    genderBtnMale.addEventListener('click', function() {
+      state.gender = 'male';
+      genderBtnMale.classList.add('active');
+      if (genderBtnFemale) genderBtnFemale.classList.remove('active');
+      updateCalculation();
+    });
+  }
 
-  genderBtnFemale.addEventListener('click', function() {
-    state.gender = 'female';
-    genderBtnFemale.classList.add('active');
-    genderBtnMale.classList.remove('active');
-    updateCalculation();
-  });
+  if (genderBtnFemale) {
+    genderBtnFemale.addEventListener('click', function() {
+      state.gender = 'female';
+      genderBtnFemale.classList.add('active');
+      if (genderBtnMale) genderBtnMale.classList.remove('active');
+      updateCalculation();
+    });
+  }
 
   // Live Input Observers
   [inputAge, inputHeight, inputWeight, inputBodyFat, selectActivity, inputExtraSteps].forEach(function(elem) {

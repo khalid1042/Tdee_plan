@@ -213,6 +213,270 @@ window.TDEEContent = {
 
 
 
+    '/healthy-food-and-healthy-life/': {
+      title: 'Healthy Food and Healthy Life: Practical Nutrition & Daily Lifestyle Guide',
+      metaDescription: 'Discover practical guidance on healthy food choices, balanced meal planning, healthy lifestyle habits, interactive meal planners, and daily habit tracking.',
+      category: 'Nutrition & Lifestyle',
+      readTime: '8 min read',
+      h1: 'Healthy Food and Healthy Life',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>Healthy Food and Healthy Life</span>
+        </div>
+
+        <p class="lead-paragraph">Building a healthy life isn't about rigid diets, extreme restrictions, or temporary fixes. Instead, it is rooted in nourishable daily choices, a balanced relationship with food, and consistent habits that support your long-term energy, health, and metabolic wellness.</p>
+
+        <div class="takeaway-callout-box">
+          <p><strong>Core Philosophy:</strong></p>
+          <p>Nutrition and health thrive on balance, variety, and sustainability. Prioritize whole nutrient-dense foods, stay active, listen to your body's hunger signals, and build daily routines you genuinely enjoy.</p>
+        </div>
+
+        <h2>1. Healthy Food Groups</h2>
+        <p>A nutritious diet combines foods from diverse nutrient groups to supply essential vitamins, minerals, fiber, healthy fats, and protein needed for optimal organ function, physical energy, and cell maintenance.</p>
+
+        <div class="food-groups-grid">
+          <div class="food-group-card">
+            <div class="food-group-icon">🥬</div>
+            <h3 class="food-group-title">Fruits & Vegetables</h3>
+            <p>Packed with dietary fiber, essential vitamins (C, A, folate), antioxidants, and key minerals. They aid digestion, support immune function, and reduce chronic disease risk.</p>
+            <div class="food-group-examples">Examples: Spinach, kale, berries, apples, broccoli, carrots, bell peppers.</div>
+          </div>
+
+          <div class="food-group-card">
+            <div class="food-group-icon">🌾</div>
+            <h3 class="food-group-title">Whole Grains</h3>
+            <p>Rich in complex carbohydrates, fiber, B vitamins, and trace minerals. They release steady energy slowly into the bloodstream, sustaining focus and fullness.</p>
+            <div class="food-group-examples">Examples: Quinoa, brown rice, rolled oats, whole wheat sourdough, barley.</div>
+          </div>
+
+          <div class="food-group-card">
+            <div class="food-group-icon">🍗</div>
+            <h3 class="food-group-title">Protein-Rich Foods</h3>
+            <p>Essential for repairing tissues, synthesizing enzymes, building muscle mass, and promoting satiety across long workdays and workouts.</p>
+            <div class="food-group-examples">Examples: Poultry, wild salmon, eggs, tofu, lentils, chickpeas, lean meats.</div>
+          </div>
+
+          <div class="food-group-card">
+            <div class="food-group-icon">🥑</div>
+            <h3 class="food-group-title">Healthy Fats</h3>
+            <p>Crucial for hormone production, brain health, cellular membrane integrity, and absorbing fat-soluble vitamins (A, D, E, K).</p>
+            <div class="food-group-examples">Examples: Extra virgin olive oil, avocados, almonds, walnuts, chia seeds.</div>
+          </div>
+
+          <div class="food-group-card">
+            <div class="food-group-icon">🥛</div>
+            <h3 class="food-group-title">Calcium-Rich Foods</h3>
+            <p>Support strong bone density, teeth integrity, muscular contraction, and vascular health throughout all stages of life.</p>
+            <div class="food-group-examples">Examples: Unsweetened Greek yogurt, milk, fortifed plant milks, sesame seeds, leafy greens.</div>
+          </div>
+        </div>
+
+        <h2>2. Foods to Limit (Balanced Approach)</h2>
+        <p>Achieving a healthy diet does not require cutting out entire food groups or labeling foods as "good" or "bad." A sustainable strategy involves moderating ultra-processed options while keeping your overall diet enjoyable.</p>
+
+        <div class="about-calculator-card">
+          <ul style="margin-bottom:0;">
+            <li style="margin-bottom:0.75rem;"><strong>Sugary Beverages:</strong> Soft drinks, energy drinks, and heavily sweetened coffees provide fast liquid sugars without satiety. Enjoy water, herbal tea, or sparkling water as your default daily beverages.</li>
+            <li style="margin-bottom:0.75rem;"><strong>Foods High in Added Sugars:</strong> Commercial pastries, candies, and refined desserts are fine as occasional treats, but keeping daily added sugars under 10% of total calories promotes stable energy levels.</li>
+            <li style="margin-bottom:0.75rem;"><strong>Excessively Salty Foods:</strong> High sodium consumption in heavily packaged snacks or instant soups can affect blood pressure over time. Balance higher-salt meals with potassium-rich fruits and veggies.</li>
+            <li style="margin-bottom:0;"><strong>Frequent Deep-Fried Snacks:</strong> Deep-fried fast foods often contain oxidized oils and dense calorie loads. Enjoying baked, roasted, or air-fried alternatives keeps meals light and nutrient-rich.</li>
+          </ul>
+        </div>
+
+        <h2>3. The Balanced Plate Visual Guide</h2>
+        <p>The Balanced Plate is a flexible visual framework to help you construct balanced meals without needing a food scale or complex formulas for every plate.</p>
+
+        <div class="balanced-plate-card">
+          <h3 style="text-align:center; color:var(--text-main); margin-bottom:0.5rem;">The Proportional Meal Plate</h3>
+          <p style="text-align:center; font-size:0.9rem; color:var(--text-muted);">A simple blueprint for building satisfying, nutrient-dense main meals.</p>
+
+          <div class="plate-visual-wrapper">
+            <div class="plate-graphic">
+              <div class="plate-section plate-veg">50%<br>Vegetables &amp; Fruits</div>
+              <div class="plate-section plate-protein">25%<br>Protein</div>
+              <div class="plate-section plate-carbs">25%<br>Whole Grains</div>
+            </div>
+
+            <div class="plate-legend">
+              <div class="legend-item">
+                <div class="legend-color veg"></div>
+                <div>
+                  <strong>50% Vegetables &amp; Fruits:</strong> Fills half your plate with color, volume, water, and micro-nutrients while keeping total calorie density balanced.
+                </div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color protein"></div>
+                <div>
+                  <strong>25% Lean Protein:</strong> Fills a quarter with lean meats, poultry, fish, eggs, tofu, or legumes to preserve muscle mass and keep hunger satisfied.
+                </div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color carbs"></div>
+                <div>
+                  <strong>25% Whole Grains &amp; Starches:</strong> Fills a quarter with quinoa, brown rice, oats, potatoes, or whole grain pasta to power brain and muscular energy.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>4. Healthy Lifestyle Habits</h2>
+        <p>Healthy eating works hand-in-hand with daily lifestyle choices. Nourishing your body goes beyond what is on your plate.</p>
+
+        <div class="lifestyle-tips-grid">
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">🏃‍♀️</div>
+            <h4>Regular Physical Activity</h4>
+            <p>Aim for at least 150 minutes of moderate physical activity or brisk walking per week, combined with 2 resistance training sessions to support muscle and metabolic strength.</p>
+          </div>
+
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">😴</div>
+            <h4>Restful Sleep</h4>
+            <p>Prioritize 7 to 9 hours of quality sleep every night. Adequate sleep regulates appetite-controlling hormones like ghrelin and leptin, reducing cravings.</p>
+          </div>
+
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">💧</div>
+            <h4>Daily Hydration</h4>
+            <p>Drink roughly 8 to 10 cups (2 to 2.5 liters) of water daily. Staying hydrated supports metabolic efficiency, digestion, physical performance, and mental clarity.</p>
+          </div>
+
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">🧘‍♂️</div>
+            <h4>Stress Management</h4>
+            <p>Chronic stress elevates cortisol levels, which can impact sleep and food choices. Incorporate mindfulness, nature walks, deep breathing, or hobbies into your routine.</p>
+          </div>
+
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">📅</div>
+            <h4>Smart Meal Planning</h4>
+            <p>Planning meals a few days in advance reduces decision fatigue and helps you keep wholesome ingredients ready when hunger strikes.</p>
+          </div>
+
+          <div class="lifestyle-card">
+            <div class="lifestyle-icon">⏰</div>
+            <h4>Consistent Routines</h4>
+            <p>Maintaining stable meal times and consistent sleep-wake cycles stabilizes your body's circadian rhythm and digestive patterns.</p>
+          </div>
+        </div>
+
+        <h2>5. Sample Healthy Day Menu</h2>
+        <p>Here is an example of what a balanced, realistic, and delicious day of healthy eating can look like:</p>
+
+        <div class="about-calculator-card">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
+            <div>
+              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🌅 Breakfast</h4>
+              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Oatmeal with Berries &amp; Almonds</p>
+              <p style="font-size:0.85rem; margin:0;">Rolled oats cooked with water or plant milk, topped with fresh blueberries, chia seeds, and chopped almonds.</p>
+            </div>
+            <div>
+              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">☀️ Lunch</h4>
+              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Quinoa &amp; Grilled Chicken Bowl</p>
+              <p style="font-size:0.85rem; margin:0;">Fluffy quinoa with sliced grilled chicken breast, cucumber, cherry tomatoes, and olive oil dressing.</p>
+            </div>
+            <div>
+              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🌙 Dinner</h4>
+              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Baked Salmon &amp; Sweet Potato</p>
+              <p style="font-size:0.85rem; margin:0;">Wild salmon fillet baked with garlic and lemon, served alongside roasted sweet potato and steamed asparagus.</p>
+            </div>
+            <div>
+              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🍎 Snacks</h4>
+              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Apple Slices &amp; Cottage Cheese</p>
+              <p style="font-size:0.85rem; margin:0;">Sliced crisp apple with 2 tbsp almond butter, or low-fat cottage cheese with a handful of raw walnuts.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>6. Interactive Daily Meal Planner</h2>
+        <p>Use our interactive tool below to design your own balanced meal plan for today. Choose from built-in healthy ideas or type in custom meals, then print or copy your plan!</p>
+
+        <!-- Functional Feature 1 Mount Point -->
+        <div id="interactive-meal-planner" style="margin: 2rem 0;"></div>
+
+        <h2>7. Daily Healthy Habit Checklist</h2>
+        <p>Track your core health habits throughout the day. Checking off habits helps build long-term momentum and consistency!</p>
+
+        <!-- Functional Feature 2 Mount Point -->
+        <div id="interactive-habit-checklist" style="margin: 2rem 0;"></div>
+
+        <h2>8. Meal Idea Explorer</h2>
+        <p>Need inspiration for your next meal? Browse our collection of healthy meal ideas filtered by meal time or dietary focus.</p>
+
+        <!-- Functional Feature 3 Mount Point -->
+        <div id="meal-idea-explorer" style="margin: 2rem 0;"></div>
+
+        <h2>9. Connect Nutrition to Your Energy Needs</h2>
+        <p>Healthy food works best when paired with an understanding of your personal energy requirements. Explore our evidence-based calculators to fine-tune your target intake:</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; margin-bottom: 2rem;">
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/" style="color:var(--text-main); text-decoration:none;" data-link>Main TDEE Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Calculate your baseline Total Daily Energy Expenditure based on age, height, weight, and activity level.</p>
+            </div>
+            <a href="/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;" data-link>Calculate TDEE &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/macro-calculator/" style="color:var(--text-main); text-decoration:none;" data-link>Macro Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Determine your exact daily target grams of protein, carbohydrates, and healthy fats.</p>
+            </div>
+            <a href="/macro-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;" data-link>Calculate Macros &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/maintenance-calorie-calculator/" style="color:var(--text-main); text-decoration:none;" data-link>Maintenance Calorie Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Find the intake needed to maintain your body weight and keep daily energy balanced.</p>
+            </div>
+            <a href="/maintenance-calorie-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;" data-link>View Maintenance &rarr;</a>
+          </div>
+
+          <div class="glass-card" style="display:flex; flex-direction:column; justify-between:space-between; height:100%;">
+            <div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/calorie-deficit-calculator/" style="color:var(--text-main); text-decoration:none;" data-link>Calorie Deficit Calculator</a></h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Calculate a safe, sustainable calorie deficit for fat loss without sacrificing energy.</p>
+            </div>
+            <a href="/calorie-deficit-calculator/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;" data-link>Calculate Deficit &rarr;</a>
+          </div>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">What defines a balanced diet?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">A balanced diet emphasizes nutrient-dense whole foods including fruits, vegetables, whole grains, lean proteins, and healthy fats, while allowing flexibility for personal preferences and social meals.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How can I eat healthy on a busy daily schedule?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Batch-cook staple grains and proteins on weekends, keep quick healthy options available (like canned beans, Greek yogurt, and frozen veggies), and use our interactive Daily Meal Planner to organize your day.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">Do I have to stop eating processed foods completely?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">No. Rigid prohibition often leads to food guilt and binge cycles. Focus on filling 80% to 90% of your diet with whole foods, leaving room for enjoyment without stress.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How much water should I drink every day?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">A general guideline is roughly 2 to 2.5 liters (8 to 10 cups) daily, adjusting for your body size, exercise level, and climate.</p>
+          </details>
+
+          <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
+            <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How do I know how many calories I should eat?</summary>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Calculate your Total Daily Energy Expenditure using our <a href="/" data-link>TDEE Calculator</a>, which estimates your daily burn based on age, height, weight, and activity level.</p>
+          </details>
+        </div>
+
+        <h2>Educational Disclaimer</h2>
+        <div class="about-calculator-card">
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Disclaimer:</strong> Content on this page is for general educational information and self-management support, not individualized medical or dietary advice. If you have specific dietary needs, allergies, or health conditions, consult a registered dietitian or medical healthcare professional.</p>
+        </div>`
+    },
+
     '/blog/what-is-tdee/': {
       title: 'What Is TDEE? Meaning, 4 Components & Complete Guide (2026)',
       metaDescription: 'Discover what Total Daily Energy Expenditure (TDEE) means, its 4 energy components (BMR, NEAT, TEF, EAT), and how metabolism burns daily calories.',
