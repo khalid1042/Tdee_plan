@@ -5,9 +5,8 @@
  */
 
 window.TDEEContent = {
-  author: 'Dr. Michael Chen, PhD in Nutritional Sciences',
-  reviewer: 'Dr. Sarah Jenkins, MD, Board Certified Endocrinologist',
-  lastUpdated: 'September 2026',
+  author: 'TDEE Calculator Editorial Team',
+  lastUpdated: 'October 2026',
   routes: {
 
     '/tdee-for-muscle-building/': {
@@ -214,23 +213,33 @@ window.TDEEContent = {
 
 
     '/healthy-food-and-healthy-life/': {
-      title: 'Healthy Food and Healthy Life: Practical Nutrition & Daily Lifestyle Guide',
-      metaDescription: 'Discover practical guidance on healthy food choices, balanced meal planning, healthy lifestyle habits, interactive meal planners, and daily habit tracking.',
+      title: 'Healthy Food and Healthy Life: A Practical Guide to Everyday Eating',
+      metaDescription: 'Learn how to eat healthy with balanced meals, nutritious food choices, budget-friendly grocery tips, and practical habits for everyday life.',
       category: 'Nutrition & Lifestyle',
       readTime: '8 min read',
-      h1: 'Healthy Food and Healthy Life',
+      h1: 'Healthy Food and Healthy Life: A Practical Guide to Everyday Eating',
       content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
           <a href="/" data-link>Home</a> &rsaquo; <span>Guides</span> &rsaquo; <span>Healthy Food and Healthy Life</span>
         </div>
 
-        <p class="lead-paragraph">Building a healthy life isn't about rigid diets, extreme restrictions, or temporary fixes. Instead, it is rooted in nourishable daily choices, a balanced relationship with food, and consistent habits that support your long-term energy, health, and metabolic wellness.</p>
+        <p class="subtitle-text" style="font-size:1.15rem; color:var(--accent-cyan); font-weight:600; margin-bottom:1.5rem; line-height:1.5;">Learn how to build balanced meals, choose nutritious foods, save on groceries, and develop healthy eating habits that fit your daily routine.</p>
+
+        <p class="lead-paragraph">Building a healthy life isn't about rigid diets, extreme restrictions, or temporary fixes. Instead, it is rooted in nourishable daily choices, a balanced relationship with food, and consistent habits that support your long-term energy, health, and metabolic wellness, in alignment with <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">WHO's healthy diet guidance</a>.</p>
 
         <div class="takeaway-callout-box">
           <p><strong>Core Philosophy:</strong></p>
           <p>Nutrition and health thrive on balance, variety, and sustainability. Prioritize whole nutrient-dense foods, stay active, listen to your body's hunger signals, and build daily routines you genuinely enjoy.</p>
         </div>
 
-        <h2>1. Healthy Food Groups</h2>
+        <!-- Featured Image -->
+        <figure class="guide-image-card" style="margin: 2rem 0; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="/images/healthy-food-and-healthy-life.png" alt="Balanced meal with vegetables, whole grains, protein, and fresh fruit" width="1100" height="620" loading="eager" style="width: 100%; height: auto; display: block;">
+          <figcaption style="padding: 1rem 1.25rem; background: var(--bg-tertiary); font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid var(--border-color);">
+            A variety of nutritious foods can help make everyday meals more balanced.
+          </figcaption>
+        </figure>
+
+        <h2>1. What Does Healthy Eating Mean?</h2>
         <p>A nutritious diet combines foods from diverse nutrient groups to supply essential vitamins, minerals, fiber, healthy fats, and protein needed for optimal organ function, physical energy, and cell maintenance.</p>
 
         <div class="food-groups-grid">
@@ -266,12 +275,12 @@ window.TDEEContent = {
             <div class="food-group-icon">🥛</div>
             <h3 class="food-group-title">Calcium-Rich Foods</h3>
             <p>Support strong bone density, teeth integrity, muscular contraction, and vascular health throughout all stages of life.</p>
-            <div class="food-group-examples">Examples: Unsweetened Greek yogurt, milk, fortifed plant milks, sesame seeds, leafy greens.</div>
+            <div class="food-group-examples">Examples: Unsweetened Greek yogurt, milk, fortified plant milks, sesame seeds, leafy greens.</div>
           </div>
         </div>
 
-        <h2>2. Foods to Limit (Balanced Approach)</h2>
-        <p>Achieving a healthy diet does not require cutting out entire food groups or labeling foods as "good" or "bad." A sustainable strategy involves moderating ultra-processed options while keeping your overall diet enjoyable.</p>
+        <h2>2. Foods to Limit and How to Compare Them</h2>
+        <p>Achieving a healthy diet does not require cutting out entire food groups or labeling foods as "good" or "bad." Following <a href="https://www.cdc.gov/nutrition/features/healthy-eating-tips.html" target="_blank" rel="noopener">CDC's healthy eating tips</a>, a sustainable strategy involves moderating ultra-processed options while keeping your overall diet enjoyable.</p>
 
         <div class="about-calculator-card">
           <ul style="margin-bottom:0;">
@@ -282,11 +291,19 @@ window.TDEEContent = {
           </ul>
         </div>
 
-        <h2>3. The Balanced Plate Visual Guide</h2>
-        <p>The Balanced Plate is a flexible visual framework to help you construct balanced meals without needing a food scale or complex formulas for every plate.</p>
+        <h2>3. How to Build a Balanced Meal</h2>
+        <p>Building a meal around balanced proportions ensures you get steady energy and essential nutrients. This approach aligns with <a href="https://www.myplate.gov/" target="_blank" rel="noopener">USDA's MyPlate recommendations</a> to create satisfying everyday plates without complex weighing.</p>
+
+        <!-- In-Content Image 2: Balanced Meal -->
+        <figure class="guide-image-card" style="margin: 1.5rem 0 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="/images/balanced-meal-example.png" alt="Example of a balanced meal with vegetables, protein, whole grains, and fruit" width="800" height="600" loading="lazy" style="width: 100%; height: auto; display: block;">
+          <figcaption style="padding: 0.85rem 1.25rem; background: var(--bg-tertiary); font-size: 0.88rem; color: var(--text-muted); border-top: 1px solid var(--border-color);">
+            A balanced meal can combine vegetables, protein, and whole grains or other carbohydrate foods.
+          </figcaption>
+        </figure>
 
         <div class="balanced-plate-card">
-          <h3 style="text-align:center; color:var(--text-main); margin-bottom:0.5rem;">The Proportional Meal Plate</h3>
+          <h3 style="text-align:center; color:var(--text-main); margin-bottom:0.5rem;">The Proportional Meal Plate Blueprint</h3>
           <p style="text-align:center; font-size:0.9rem; color:var(--text-muted);">A simple blueprint for building satisfying, nutrient-dense main meals.</p>
 
           <div class="plate-visual-wrapper">
@@ -319,7 +336,27 @@ window.TDEEContent = {
           </div>
         </div>
 
-        <h2>4. Healthy Lifestyle Habits</h2>
+        <h2>4. How to Plan Healthy Meals on a Budget</h2>
+        <p>Healthy eating does not have to be expensive. Planning meals around affordable shelf-stable staples and seasonal produce helps manage grocery costs while maintaining high nutritional quality.</p>
+
+        <!-- In-Content Image 3: Affordable Meal Prep -->
+        <figure class="guide-image-card" style="margin: 1.5rem 0 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm);">
+          <img src="/images/affordable-healthy-meal-prep.png" alt="Affordable meal-preparation ingredients including oats, beans, vegetables, eggs, and fruit" width="800" height="600" loading="lazy" style="width: 100%; height: auto; display: block;">
+          <figcaption style="padding: 0.85rem 1.25rem; background: var(--bg-tertiary); font-size: 0.88rem; color: var(--text-muted); border-top: 1px solid var(--border-color);">
+            Planning meals around versatile staples can help manage grocery costs and reduce food waste.
+          </figcaption>
+        </figure>
+
+        <div class="about-calculator-card">
+          <ol style="margin-bottom:0; padding-left:1.2rem;">
+            <li style="margin-bottom:0.75rem;"><strong>Check What You Already Have:</strong> Audit your pantry and fridge before shopping to avoid duplicate purchases.</li>
+            <li style="margin-bottom:0.75rem;"><strong>Buy Versatile Bulk Staples:</strong> Dried beans, lentils, brown rice, oats, and canned tomatoes offer high nutrition per dollar.</li>
+            <li style="margin-bottom:0.75rem;"><strong>Embrace Frozen Produce:</strong> Frozen berries, spinach, and broccoli are picked at peak ripeness, cost less, and last for months without spoiling.</li>
+            <li style="margin-bottom:0;"><strong>Batch-Cook Meals:</strong> Preparing large batches of soup, grain bowls, or chili saves time and reduces takeout reliance.</li>
+          </ol>
+        </div>
+
+        <h2>5. Healthy Habits That Support Everyday Well-Being</h2>
         <p>Healthy eating works hand-in-hand with daily lifestyle choices. Nourishing your body goes beyond what is on your plate.</p>
 
         <div class="lifestyle-tips-grid">
@@ -360,41 +397,13 @@ window.TDEEContent = {
           </div>
         </div>
 
-        <h2>5. Sample Healthy Day Menu</h2>
-        <p>Here is an example of what a balanced, realistic, and delicious day of healthy eating can look like:</p>
-
-        <div class="about-calculator-card">
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
-            <div>
-              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🌅 Breakfast</h4>
-              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Oatmeal with Berries &amp; Almonds</p>
-              <p style="font-size:0.85rem; margin:0;">Rolled oats cooked with water or plant milk, topped with fresh blueberries, chia seeds, and chopped almonds.</p>
-            </div>
-            <div>
-              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">☀️ Lunch</h4>
-              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Quinoa &amp; Grilled Chicken Bowl</p>
-              <p style="font-size:0.85rem; margin:0;">Fluffy quinoa with sliced grilled chicken breast, cucumber, cherry tomatoes, and olive oil dressing.</p>
-            </div>
-            <div>
-              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🌙 Dinner</h4>
-              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Baked Salmon &amp; Sweet Potato</p>
-              <p style="font-size:0.85rem; margin:0;">Wild salmon fillet baked with garlic and lemon, served alongside roasted sweet potato and steamed asparagus.</p>
-            </div>
-            <div>
-              <h4 style="color:var(--accent-cyan); margin-bottom:0.4rem;">🍎 Snacks</h4>
-              <p style="margin-bottom:0.4rem; font-weight:600; color:var(--text-main);">Apple Slices &amp; Cottage Cheese</p>
-              <p style="font-size:0.85rem; margin:0;">Sliced crisp apple with 2 tbsp almond butter, or low-fat cottage cheese with a handful of raw walnuts.</p>
-            </div>
-          </div>
-        </div>
-
-        <h2>6. Interactive Daily Meal Planner</h2>
+        <h2>6. Plan Your Meals for Today</h2>
         <p>Use our interactive tool below to design your own balanced meal plan for today. Choose from built-in healthy ideas or type in custom meals, then print or copy your plan!</p>
 
         <!-- Functional Feature 1 Mount Point -->
         <div id="interactive-meal-planner" style="margin: 2rem 0;"></div>
 
-        <h2>7. Daily Healthy Habit Checklist</h2>
+        <h2>7. Track Your Daily Healthy Habits</h2>
         <p>Track your core health habits throughout the day. Checking off habits helps build long-term momentum and consistency!</p>
 
         <!-- Functional Feature 2 Mount Point -->
@@ -406,13 +415,14 @@ window.TDEEContent = {
         <!-- Functional Feature 3 Mount Point -->
         <div id="meal-idea-explorer" style="margin: 2rem 0;"></div>
 
-        <h2>9. Connect Nutrition to Your Energy Needs</h2>
-        <p>Healthy food works best when paired with an understanding of your personal energy requirements. Explore our evidence-based calculators to fine-tune your target intake:</p>
+        <h2>9. How Calories Fit Into Healthy Eating</h2>
+        <p>Healthy food selection provides high-quality nutrients, while total energy intake governs body weight management. You can use the <a href="/" data-link>TDEE calculator</a> to estimate your daily energy needs based on your age, height, weight, and physical activity level.</p>
+        <p>Try the <a href="/maintenance-calorie-calculator/" data-link>maintenance calorie calculator</a> for an estimate of the calories needed to maintain your current weight while following a balanced diet pattern. For broader nutrition standards, refer to the <a href="https://www.dietaryguidelines.gov/" target="_blank" rel="noopener">Dietary Guidelines for Americans</a>.</p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; margin-bottom: 2rem;">
           <div class="glass-card" style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
-              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/" style="color:var(--text-main); text-decoration:none;" data-link>Main TDEE Calculator</a></h3>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="/" style="color:var(--text-main); text-decoration:none;" data-link>TDEE Calculator</a></h3>
               <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Calculate your baseline Total Daily Energy Expenditure based on age, height, weight, and activity level.</p>
             </div>
             <a href="/" class="btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.8rem; text-align:center; text-decoration:none;" data-link>Calculate TDEE &rarr;</a>
@@ -467,7 +477,7 @@ window.TDEEContent = {
 
           <details style="margin-bottom:1rem; padding:1rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg);">
             <summary style="font-weight:600; cursor:pointer; color:var(--text-main);">How do I know how many calories I should eat?</summary>
-            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Calculate your Total Daily Energy Expenditure using our <a href="/" data-link>TDEE Calculator</a>, which estimates your daily burn based on age, height, weight, and activity level.</p>
+            <p style="margin-top:0.75rem; margin-bottom:0; color:var(--text-muted);">Calculate your Total Daily Energy Expenditure using our <a href="/" data-link>TDEE calculator</a>, which estimates your daily burn based on age, height, weight, and activity level.</p>
           </details>
         </div>
 
@@ -728,6 +738,246 @@ window.TDEEContent = {
             <li><a href="/blog/tdee-for-weight-loss/">TDEE for Weight Loss Guide</a> &ndash; Set up a realistic calorie deficit based on your calculated energy expenditure.</li>
           </ul>
         </div>
+
+        <h2>A Word From Our Team</h2>
+        <div class="about-calculator-card">
+          <p>Our goal is to bring scientific clarity to daily energy calculations. By explaining the exact math, equations, activity factors, and individual limitations, we help you replace dietary guesswork with actionable baseline estimates.</p>
+          <p style="margin-bottom:0; font-size:0.85rem; color:var(--text-muted);"><strong>Important:</strong> This article is for general educational purposes and does not replace individualized medical or nutrition advice.</p>
+        </div>`
+    },
+
+    '/blog/how-to-calculate-tdee/': {
+      title: 'How to Calculate Your TDEE: Formula, Steps, and Examples',
+      metaDescription: 'Learn how to calculate your TDEE step-by-step using the Mifflin-St Jeor formula, activity multipliers, unit conversions, and worked examples.',
+      category: 'TDEE Guides',
+      readTime: '8 min read',
+      h1: 'How to Calculate Your TDEE: Formula, Steps, and Examples',
+      content: `<p class="lead-paragraph">Have you ever entered your age, weight, and activity level into a calorie calculator and received a number that did not seem right? One calculator may show 2,200 calories while another gives you 2,600.</p>
+
+        <p>That can make it difficult to choose a realistic calorie target.</p>
+
+        <p>Your daily energy needs depend on more than exercise. Resting energy expenditure, daily movement, exercise, digestion, body size, and lifestyle all play a role. Fortunately, learning <strong>how to calculate your TDEE</strong> is easier once you understand the formula and the activity factor.</p>
+
+        <p>This guide explains the calculation step by step, shows real-world examples, and explains how to check whether your estimate makes sense.</p>
+
+        <h2>What Is TDEE?</h2>
+        <p>TDEE stands for <strong>Total Daily Energy Expenditure</strong>. It represents the estimated amount of energy your body uses throughout a typical 24-hour day.</p>
+
+        <div class="about-calculator-card">
+          <p><strong>TDEE includes several energy components:</strong></p>
+          <ul>
+            <li>Resting energy expenditure (REE/BMR)</li>
+            <li>Exercise activity thermogenesis (EAT)</li>
+            <li>Non-exercise activity thermogenesis (NEAT)</li>
+            <li>Thermic effect of food (TEF)</li>
+          </ul>
+        </div>
+
+        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
+
+        <p>Most TDEE calculations are estimates rather than direct laboratory measurements.</p>
+
+        <h2>TDEE Formula</h2>
+        <p>The basic formula is:</p>
+
+        <div class="formula-callout-box">
+          <p><strong>Basic TDEE Formula:</strong> TDEE = BMR &times; Activity Factor</p>
+        </div>
+
+        <p>First, estimate your resting energy needs (BMR). Next, select an activity factor that matches your normal lifestyle. Finally, multiply the two numbers.</p>
+
+        <div class="worked-example-card">
+          <p><strong>Formula Calculation Example:</strong></p>
+          <p class="calc-step-line"><strong>Estimated BMR = 1,780 calories/day</strong></p>
+          <p class="calc-step-line"><strong>Selected Activity Factor = 1.55 (Moderately Active)</strong></p>
+          <p class="calc-step-line"><strong>TDEE = 1,780 &times; 1.55 = 2,759 calories/day</strong></p>
+        </div>
+
+        <p>This means the estimated daily energy requirement is about <strong>2,760 calories per day</strong>.</p>
+
+        <h2>How to Calculate Your TDEE</h2>
+        <p>The process has three main steps:</p>
+
+        <div class="comparison-summary-box">
+          <p><strong>3-Step TDEE Calculation Process:</strong></p>
+          <ol>
+            <li>Calculate your BMR or estimated resting energy expenditure.</li>
+            <li>Choose the activity factor that best matches your routine.</li>
+            <li>Multiply your resting estimate by that activity factor.</li>
+          </ol>
+        </div>
+
+        <h3>Step 1: Calculate Your BMR</h3>
+        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
+
+        <div class="equation-box">
+          <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
+          <p style="margin-top:0.5rem;"><strong>For Women:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) − 161</p>
+        </div>
+
+        <p>For example, consider a 30-year-old man who weighs 80 kg and is 180 cm tall:</p>
+
+        <div class="worked-example-card">
+          <p class="calc-step-line"><strong>Step 1 (Weight):</strong> 10 &times; 80 kg = 800</p>
+          <p class="calc-step-line"><strong>Step 2 (Height):</strong> 6.25 &times; 180 cm = 1,125</p>
+          <p class="calc-step-line"><strong>Step 3 (Age penalty):</strong> 5 &times; 30 years = 150</p>
+          <p class="calc-step-line"><strong>Step 4 (Male Constant):</strong> +5</p>
+          <p class="calc-step-line"><strong>BMR = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
+        </div>
+
+        <p>Strictly speaking, the Mifflin-St Jeor equation predicts resting energy expenditure rather than measuring BMR under laboratory conditions. However, many online calculators use “BMR” as a simple label for this estimate. Estimate your baseline resting floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+
+        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
+
+        <h3>Step 2: Choose Your Activity Factor</h3>
+        <p>The next step is selecting an activity multiplier:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level Category</th>
+                <th style="text-align: right;">Factor</th>
+                <th>General Routine Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td style="text-align: right;"><strong>1.200</strong></td>
+                <td>Little to no structured exercise, desk job</td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td style="text-align: right;"><strong>1.375</strong></td>
+                <td>Light exercise or regular movement 1–3 days/week</td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td style="text-align: right;"><strong>1.550</strong></td>
+                <td>Moderate exercise or an active daily routine 3–5 days/week</td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td style="text-align: right;"><strong>1.725</strong></td>
+                <td>Hard training or a physically active lifestyle 6–7 days/week</td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong></td>
+                <td style="text-align: right;"><strong>1.900</strong></td>
+                <td>Very demanding physical labor work + daily intense training</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These categories are estimates. Your exercise schedule is only one part of the decision.</p>
+        <p>For instance, someone who trains three times a week but sits for most of the day may have different energy needs from someone who trains three times a week and also walks, stands, and performs physical work throughout the day.</p>
+        <p>Therefore, consider your <strong>whole routine</strong>, not only your workouts.</p>
+
+        <h3>Step 3: Multiply BMR by Your Activity Factor</h3>
+        <p>Now apply the selected factor.</p>
+        <p>Using the example above:</p>
+
+        <div class="worked-example-card">
+          <p class="calc-step-line"><strong>BMR = 1,780 calories/day</strong></p>
+          <p class="calc-step-line"><strong>Activity Factor = 1.55</strong></p>
+          <p class="calc-step-line"><strong>TDEE = 1,780 &times; 1.55 = 2,759 calories/day</strong></p>
+        </div>
+
+        <p>So, the estimated TDEE is approximately <strong>2,760 calories per day</strong>.</p>
+        <p>That number represents an estimated maintenance level, not a guaranteed daily calorie burn.</p>
+
+        <h2>TDEE Calculation Example for a Woman</h2>
+        <p>Consider a 30-year-old woman who weighs <strong>65 kg</strong> and is <strong>165 cm</strong> tall.</p>
+        <p>Using the Mifflin-St Jeor equation:</p>
+
+        <div class="worked-example-card">
+          <p class="calc-step-line"><strong>BMR = (10 &times; 65) + (6.25 &times; 165) − (5 &times; 30) − 161</strong></p>
+          <p class="calc-step-line"><strong>BMR = 650 + 1,031.25 − 150 − 161 &approx; 1,370 calories/day</strong></p>
+          <p>If she is moderately active (1.55 multiplier):</p>
+          <p class="calc-step-line"><strong>TDEE = 1,370 &times; 1.55 &approx; 2,124 calories/day</strong></p>
+        </div>
+
+        <p>Her estimated daily energy expenditure would therefore be about <strong>2,124 calories per day</strong>.</p>
+
+        <h2>How to Calculate TDEE With Pounds and Inches</h2>
+        <p>The Mifflin-St Jeor equation uses metric units (kilograms and centimeters).</p>
+        <p>If your measurements are in pounds and inches, convert them first:</p>
+
+        <div class="about-calculator-card">
+          <ul>
+            <li><strong>Weight Conversion:</strong> Kilograms = Pounds &divide; 2.205</li>
+            <li><strong>Height Conversion:</strong> Centimeters = Inches &times; 2.54</li>
+          </ul>
+        </div>
+
+        <p>For example, 176 pounds is approximately <strong>79.8 kg</strong> (176 &divide; 2.205).</p>
+        <p>Likewise, 70 inches is approximately <strong>177.8 cm</strong> (70 &times; 2.54).</p>
+        <p>After conversion, enter the metric values into the equation.</p>
+
+        <h2>Why Do TDEE Calculators Give Different Results?</h2>
+        <p>Different calculators can produce different numbers because they may use different equations, activity assumptions, rounding methods, or definitions of activity.</p>
+        <p>More importantly, prediction equations cannot capture every factor affecting an individual's energy expenditure.</p>
+        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+
+        <h2>How Accurate Is a TDEE Calculation?</h2>
+        <p>A calculated TDEE should be treated as a <strong>starting estimate</strong>, not an exact measurement.</p>
+        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
+
+        <h3>How to Check Your Estimated TDEE</h3>
+        <p>Track your calorie intake and body weight consistently over several weeks.</p>
+        <p>If your average body weight remains relatively stable, your average calorie intake may be close to your actual maintenance requirement.</p>
+        <p>If your weight consistently changes, your real maintenance level may differ from the original estimate.</p>
+
+        <h2>Is TDEE the Same as Maintenance Calories?</h2>
+        <p>TDEE and maintenance calories are closely related, but they are not always used in exactly the same way.</p>
+        <ul>
+          <li><strong>TDEE</strong> is an estimate of your total daily energy expenditure.</li>
+          <li><strong>Maintenance calories</strong> generally refer to the average calorie intake that maintains your body weight over time. See our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a>.</li>
+        </ul>
+
+        <h2>Common TDEE Calculation Mistakes</h2>
+        <div class="question-callout-box">
+          <ul>
+            <li>Using pounds directly in a metric equation</li>
+            <li>Entering height in inches instead of centimeters</li>
+            <li>Choosing an activity level based only on gym sessions</li>
+            <li>Treating TDEE as an exact measurement</li>
+            <li>Changing calorie targets too quickly based on 1 day's weigh-in</li>
+          </ul>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <h3>What is the formula for calculating TDEE?</h3>
+          <p>The basic formula is <strong>TDEE = BMR &times; activity factor</strong>. First estimate resting energy expenditure (Mifflin-St Jeor), then multiply it by the activity factor that best represents your normal lifestyle.</p>
+
+          <h3>What is the most accurate way to calculate TDEE?</h3>
+          <p>There is no single equation that gives an exact TDEE for every person. Prediction equations provide estimates, while actual maintenance can be evaluated by consistently tracking calorie intake and body-weight trends over time.</p>
+
+          <h3>How accurate is a TDEE calculator?</h3>
+          <p>A TDEE calculator provides an estimate. Prediction equations can have individual errors, so your calculated number should be treated as a starting point and adjusted based on real-world results.</p>
+
+          <h3>How often should I recalculate my TDEE?</h3>
+          <p>Recalculate when your body weight, activity level, or routine changes significantly (e.g. &plusmn;3 to 5 kg weight change). Otherwise, you can continue monitoring your results and adjust your calorie target when needed.</p>
+        </div>
+
+        <h2>Calculate Your TDEE</h2>
+        <p>If you do not want to calculate each step manually, use our <a href="/">homepage TDEE Calculator</a> to estimate your daily energy needs from your age, sex, height, weight, and activity level.</p>
+
+        <h2>Key Takeaways</h2>
+        <p>Learning <strong>how to calculate your TDEE</strong> comes down to three steps: estimate your resting energy needs, select an appropriate activity factor, and multiply the two values.</p>
+
+        <h2>Methodology & Scientific References</h2>
+        <ul>
+          <li>Levine JA. Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure. <em>Work</em>. 2007. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+          <li>Jagim AR, et al. Estimation of energy expenditure using prediction equations in overweight and obese adults. <em>Res Sports Med</em>. 2016. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
+        </ul>
+
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-top:1rem;"><strong>Last reviewed:</strong> October 2026</p>
 
         <h2>A Word From Our Team</h2>
         <div class="about-calculator-card">

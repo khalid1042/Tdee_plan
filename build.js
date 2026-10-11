@@ -96,14 +96,13 @@ function updateHtmlForRoute(html, route, routeData) {
   updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculater.com${route}">`);
   updatedHtml = updatedHtml.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="https://tdeecalculater.com${route}">`);
 
-  const author = window.TDEEContent.author || 'Dr. Michael Chen, PhD in Nutritional Sciences';
-  const reviewer = window.TDEEContent.reviewer || 'Dr. Sarah Jenkins, MD, Board Certified Endocrinologist';
-  const lastUpdated = window.TDEEContent.lastUpdated || '2026-10-02';
+  const author = window.TDEEContent.author || 'TDEE Calculator Editorial Team';
+  const lastUpdated = window.TDEEContent.lastUpdated || 'October 2026';
 
   const trustMetaHTML = `
-      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-rose);">
-        <div style="margin-bottom: 0.5rem;"><strong>✍️ Written by:</strong> ${author}</div>
-        <div style="margin-bottom: 0.5rem;"><strong>🩺 Medically Reviewed by:</strong> ${reviewer}</div>
+      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
+        <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> ${author}</div>
+        <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
         <div><strong>📅 Last Updated:</strong> ${lastUpdated}</div>
       </div>
   `;
@@ -127,15 +126,18 @@ ${routeData.content}
   </div>
   `;
 
-  // PROMPT 2 FIX: Remove hidden #hero-workspace div completely from subpages so no duplicate homepage content exists in DOM!
-  updatedHtml = updatedHtml.replace(/<div id="hero-workspace">[\s\S]*?<\/div>\s*<\/div>\s*(?=\s*<!-- Footer|\s*<footer)/, siloContainerHTML + '\n');
-  if (updatedHtml.includes('<div id="hero-workspace">')) {
-    // Fallback replace if footer pattern matched differently
-    updatedHtml = updatedHtml.replace(/<div id="hero-workspace">[\s\S]*?<\/div>\s*<\/div>/, siloContainerHTML);
+  // ISSUE A FIX: Completely remove #hero-workspace div and all homepage body content between header and footer for subpages!
+  const heroStartIndex = updatedHtml.indexOf('<div id="hero-workspace">');
+  const footerStartIndex = updatedHtml.indexOf('<!-- Footer');
+  const footerTagIndex = updatedHtml.indexOf('<footer');
+  const targetFooterIndex = footerStartIndex !== -1 ? footerStartIndex : footerTagIndex;
+
+  if (heroStartIndex !== -1 && targetFooterIndex !== -1) {
+    updatedHtml = updatedHtml.substring(0, heroStartIndex) + siloContainerHTML + '\n' + updatedHtml.substring(targetFooterIndex);
   }
 
   // Inject Route-Specific Structured Data (JSON-LD)
-  const isArticlePage = route.startsWith('/blog/') || route === '/tdee-for-weight-gain/' || route === '/tdee-for-muscle-building/' || route === '/weight-gain/' || route === '/tdee-calculator-for-women-to-gain-weight/' || route === '/how-we-calculate/' || route === '/about/';
+  const isArticlePage = route.startsWith('/blog/') || route === '/tdee-for-weight-gain/' || route === '/tdee-for-muscle-building/' || route === '/weight-gain/' || route === '/tdee-calculator-for-women-to-gain-weight/' || route === '/how-we-calculate/' || route === '/about/' || route === '/what-is-tdee/' || route === '/how-to-calculate-tdee/' || route === '/healthy-food-and-healthy-life/';
   const isCalcPage = route.includes('calculator');
   const fullUrl = `https://tdeecalculater.com${route}`;
   const pageTitle = (routeData.h1 || routeData.title);
@@ -194,7 +196,7 @@ ${routeData.content}
     });
   }
 
-  // PROMPT 1 FIX: Add Article node to every guide/article page
+  // ISSUE B FIX: Use truthful neutral Organization attribution without unverified degrees or medical reviewer claims
   if (isArticlePage) {
     graphNodes.push({
       "@type": "Article",
@@ -204,21 +206,18 @@ ${routeData.content}
       "description": pageDesc,
       "mainEntityOfPage": fullUrl,
       "datePublished": "2026-10-02",
-      "dateModified": "2026-10-02",
+      "dateModified": "2026-10-11",
       "author": {
-        "@type": "Person",
-        "name": "Dr. Michael Chen, PhD in Nutritional Sciences"
-      },
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Dr. Sarah Jenkins, MD, Board Certified Endocrinologist"
+        "@type": "Organization",
+        "name": "TDEE Calculator Editorial Team",
+        "url": "https://tdeecalculater.com/about/"
       },
       "publisher": { "@id": "https://tdeecalculater.com/#organization" },
       "image": ogImageUrl
     });
   }
 
-  // PROMPT 1 FIX: Add FAQPage node for all visible FAQs on page
+  // Add FAQPage node for all visible FAQs on page
   const extractedFaqs = extractFaqsFromContent(routeData.content);
   if (extractedFaqs.length > 0) {
     graphNodes.push({
@@ -245,9 +244,15 @@ ${routeData.content}
   return updatedHtml;
 }
 
-// 4. Generate static files for each route
-for (const [route, routeData] of Object.entries(routes)) {
-  if (route === '/') continue; // Homepage is handled by main index.html
+// 4. Generate static files for each route and alias
+const allBuildRoutes = {
+  ...routes,
+  '/what-is-tdee/': routes['/blog/what-is-tdee/'],
+  '/how-to-calculate-tdee/': routes['/blog/how-to-calculate-tdee/']
+};
+
+for (const [route, routeData] of Object.entries(allBuildRoutes)) {
+  if (route === '/' || !routeData) continue; // Homepage is handled by main index.html
 
   const dirPath = path.join(__dirname, route);
   fs.mkdirSync(dirPath, { recursive: true });

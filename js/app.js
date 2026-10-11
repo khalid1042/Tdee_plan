@@ -122,7 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
       '/blog/healthy-food-and-healthy-life/': '/healthy-food-and-healthy-life/',
       '/healthy-food/': '/healthy-food-and-healthy-life/',
       '/healthy-life/': '/healthy-food-and-healthy-life/',
-      '/healthy-food-healthy-life/': '/healthy-food-and-healthy-life/'
+      '/healthy-food-healthy-life/': '/healthy-food-and-healthy-life/',
+      '/what-is-tdee/': '/blog/what-is-tdee/',
+      '/how-to-calculate-tdee/': '/blog/how-to-calculate-tdee/'
     };
     if (spaRedirects[normPath]) {
       navigateTo(spaRedirects[normPath]);
@@ -131,6 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (normPath === '/') {
       // Show Homepage Calculator Workspace
+      if (!heroWorkspace) {
+        window.location.href = '/';
+        return;
+      }
       if (heroWorkspace) heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
       document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
@@ -225,13 +231,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var trustMeta = document.getElementById('silo-trust-meta');
     if (trustMeta) {
-      var author = window.TDEEContent.author || '';
-      var reviewer = window.TDEEContent.reviewer || '';
-      var lastUpdated = window.TDEEContent.lastUpdated || '';
+      var author = window.TDEEContent.author || 'TDEE Calculator Editorial Team';
+      var lastUpdated = window.TDEEContent.lastUpdated || 'October 2026';
       trustMeta.innerHTML = `
-        <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-rose);">
-          <div style="margin-bottom: 0.5rem;"><strong>✍️ Written by:</strong> ${author}</div>
-          <div style="margin-bottom: 0.5rem;"><strong>🩺 Medically Reviewed by:</strong> ${reviewer}</div>
+        <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
+          <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> ${author}</div>
+          <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
           <div><strong>📅 Last Updated:</strong> ${lastUpdated}</div>
         </div>
       `;
