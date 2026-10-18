@@ -27,11 +27,13 @@ function extractFaqsFromContent(content) {
   const faqs = [];
   if (!content) return faqs;
 
-  const faqHeaderIdx = content.search(/<h2[^>]*>[\s\S]*?Frequently Asked Questions[\s\S]*?<\/h2>/i);
-  let searchSpace = content;
-  if (faqHeaderIdx !== -1) {
-    searchSpace = content.substring(faqHeaderIdx);
-  }
+  // Match only the h2 that specifically contains Frequently Asked Questions
+  const faqHeaderMatch = content.match(/<h2[^>]*>[^<]*Frequently Asked Questions[^<]*<\/h2>/i);
+  if (!faqHeaderMatch) return faqs;
+
+  const startIdx = faqHeaderMatch.index + faqHeaderMatch[0].length;
+  const nextH2 = content.substring(startIdx).search(/<h2[^>]*>/i);
+  const searchSpace = nextH2 !== -1 ? content.substring(startIdx, startIdx + nextH2) : content.substring(startIdx);
 
   // Pattern 1: <details><summary>Q</summary>...<p>A</p>...</details>
   const detailsRegex = /<details[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi;
@@ -39,29 +41,16 @@ function extractFaqsFromContent(content) {
   while ((match = detailsRegex.exec(searchSpace)) !== null) {
     const question = match[1].replace(/<[^>]+>/g, '').trim();
     const answer = match[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-    if (question && answer) {
-      faqs.push({ question, answer });
-    }
+    if (question && answer) faqs.push({ question, answer });
   }
   if (faqs.length > 0) return faqs;
 
-  // Pattern 2: faq-item with h3 & p
-  const itemRegex = /<div class="faq-item">[\s\S]*?<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/gi;
-  while ((match = itemRegex.exec(searchSpace)) !== null) {
-    const question = match[1].replace(/<[^>]+>/g, '').trim();
-    const answer = match[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-    if (question && answer) {
-      faqs.push({ question, answer });
-    }
-  }
-  if (faqs.length > 0) return faqs;
-
-  // Pattern 3: <h3>Q</h3> <p>A</p>
+  // Pattern 2: faq-item or faq-container with h3 & p
   const h3pRegex = /<h3[^>]*>([\s\S]*?)<\/h3>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/gi;
   while ((match = h3pRegex.exec(searchSpace)) !== null) {
     const question = match[1].replace(/<[^>]+>/g, '').trim();
     const answer = match[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-    if (question && answer && (question.includes('?') || faqHeaderIdx !== -1)) {
+    if (question && answer && (question.includes('?') || question.length < 120)) {
       faqs.push({ question, answer });
     }
   }

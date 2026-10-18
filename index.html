@@ -72,7 +72,17 @@
         "name": "TDEE Calculator & Metabolic Calibrator",
         "url": "https://tdeecalculater.com/",
         "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Metabolic Energy Calculator",
         "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "featureList": [
+          "Mifflin-St Jeor Resting Energy Expenditure Formula",
+          "Katch-McArdle Lean Body Mass Formula",
+          "Interactive 60-Second Activity Level Wizard",
+          "Adaptive Real-World Expenditure Calibration Lab",
+          "Macronutrient Distribution Allocation",
+          "Why Am I Not Losing Weight Diagnostic Troubleshooter"
+        ],
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -89,7 +99,15 @@
         "description": "Calculate your Total Daily Energy Expenditure (TDEE) with our science-based calculator. Estimate daily calories for maintenance, fat loss, or muscle gain.",
         "mainEntityOfPage": "https://tdeecalculater.com/",
         "datePublished": "2026-09-01",
-        "dateModified": "2026-10-06",
+        "dateModified": "2026-10-18",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".quick-answer-card",
+            ".takeaway-callout-box",
+            ".equation-box"
+          ]
+        },
         "author": {
           "@type": "Organization",
           "name": "TDEE Calculator Editorial Team",
@@ -740,28 +758,133 @@
         </section>
 
         <h2>What Is TDEE?</h2>
-        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong> It is an estimate of the total energy, expressed in kilocalories (kcal), that your body burns over a 24-hour period — including energy used at rest, during physical activity, and to digest food.</p>
+
+        <!-- GEO Direct Answer Block for Gemini / AI Overviews -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ Quick Definition:</strong> <strong>TDEE</strong> (Total Daily Energy Expenditure) is the total number of kilocalories your body burns in 24 hours. It is calculated by multiplying your <strong>Basal Metabolic Rate (BMR)</strong> by your <strong>Physical Activity Level (PAL)</strong> factor:</p>
+          <div class="calc-step-line" style="margin-top:0.75rem;"><strong>TDEE = BMR &times; Activity Factor</strong></div>
+        </div>
+
+        <p><strong>TDEE stands for <a href="/blog/what-is-tdee/">Total Daily Energy Expenditure</a>.</strong> It is an estimate of the total energy, expressed in kilocalories (kcal), that your body burns over a 24-hour period &mdash; including energy used at rest, during physical activity, and to digest food.</p>
 
         <p>Your daily energy expenditure is made up of four components:</p>
         <ul>
-          <li><strong>BMR (Basal Metabolic Rate):</strong> Energy used at rest to keep essential body functions running — breathing, circulation, brain activity. This accounts for 60%–70% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [2]</a>)</li>
-          <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> Energy used for everyday movement — walking, standing, household chores, commuting. NEAT can vary by 800+ kcal/day between individuals.</li>
-          <li><strong>TEF (Thermic Effect of Food):</strong> Energy required to digest and process food (roughly 10% of daily intake). Protein has the highest thermic cost (20%–30%).</li>
-          <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Energy burned during planned workouts — running, strength training, cycling, and sports.</li>
+          <li><strong>BMR (Basal Metabolic Rate):</strong> Energy used at rest to keep essential body functions running &mdash; breathing, circulation, brain activity. This accounts for 60%&ndash;70% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [2]</a>)</li>
+          <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> Energy used for everyday movement &mdash; walking, standing, household chores, commuting. NEAT can vary by 800+ kcal/day between individuals.</li>
+          <li><strong>TEF (Thermic Effect of Food):</strong> Energy required to digest and process food (roughly 10% of daily intake). Protein has the highest thermic cost (20%&ndash;30%).</li>
+          <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Energy burned during planned workouts &mdash; running, strength training, cycling, and sports.</li>
         </ul>
+
+        <h2>Standard TDEE Activity Level Multipliers</h2>
+        <p>Physical Activity Level (PAL) multipliers adjust your resting metabolic floor to account for non-exercise movement (NEAT) and structured exercise (EAT):</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Activity Level</th>
+                <th style="text-align:right;">Multiplier</th>
+                <th>Weekly Exercise Routine</th>
+                <th>Daily Step Equivalent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sedentary</strong></td>
+                <td style="text-align:right;"><strong>1.200</strong></td>
+                <td>Little to no structured exercise, desk job</td>
+                <td>Under 5,000 steps/day</td>
+              </tr>
+              <tr>
+                <td><strong>Lightly Active</strong></td>
+                <td style="text-align:right;"><strong>1.375</strong></td>
+                <td>Light exercise or sports 1&ndash;3 days/week</td>
+                <td>5,000 &ndash; 8,000 steps/day</td>
+              </tr>
+              <tr>
+                <td><strong>Moderately Active</strong></td>
+                <td style="text-align:right;"><strong>1.550</strong></td>
+                <td>Moderate exercise or gym sessions 3&ndash;5 days/week</td>
+                <td>8,000 &ndash; 12,000 steps/day</td>
+              </tr>
+              <tr>
+                <td><strong>Very Active</strong></td>
+                <td style="text-align:right;"><strong>1.725</strong></td>
+                <td>Hard training or heavy lifting 6&ndash;7 days/week</td>
+                <td>12,000 &ndash; 15,000 steps/day</td>
+              </tr>
+              <tr>
+                <td><strong>Extra Active</strong></td>
+                <td style="text-align:right;"><strong>1.900</strong></td>
+                <td>Physical job (construction, nurse) + daily intense workouts</td>
+                <td>15,000+ steps/day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Calorie Goals: Maintenance, Deficit &amp; Surplus Targets</h2>
+        <p>Once you calculate your TDEE, apply evidence-based calorie targets tailored to your specific fitness objective:</p>
+
+        <div class="table-responsive">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Goal Strategy</th>
+                <th style="text-align:right;">Calorie Adjustment</th>
+                <th>Expected Rate of Change</th>
+                <th>Recommended For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Maintenance</strong></td>
+                <td style="text-align:right;"><strong>100% of TDEE (&plusmn;0 kcal)</strong></td>
+                <td>Weight stable</td>
+                <td>Weight retention, athletic performance, diet breaks</td>
+              </tr>
+              <tr>
+                <td><strong>Mild Deficit</strong></td>
+                <td style="text-align:right;"><strong>85% of TDEE (&minus;15%)</strong></td>
+                <td>&minus;0.25 kg (~0.5 lb) / week</td>
+                <td>Lean individuals, maximum muscle &amp; strength retention</td>
+              </tr>
+              <tr>
+                <td><strong>Optimal Deficit</strong></td>
+                <td style="text-align:right;"><strong>78% of TDEE (&minus;22%)</strong></td>
+                <td>&minus;0.50 kg (~1.1 lb) / week</td>
+                <td>Standard sustainable fat loss for most healthy adults</td>
+              </tr>
+              <tr>
+                <td><strong>Aggressive Deficit</strong></td>
+                <td style="text-align:right;"><strong>70% of TDEE (&minus;30%)</strong></td>
+                <td>&minus;0.80 kg (~1.75 lb) / week</td>
+                <td>Higher body fat levels or short-term rapid fat loss</td>
+              </tr>
+              <tr>
+                <td><strong>Lean Muscle Surplus</strong></td>
+                <td style="text-align:right;"><strong>110% of TDEE (+10%)</strong></td>
+                <td>+0.20 kg (~0.4 lb) / week</td>
+                <td>Resistance trained lifters maximizing hypertrophy with minimal fat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Worked Clinical Math Example</h2>
+        <div class="worked-example-card">
+          <p><strong>Example Profile:</strong> 30-year-old male, 80 kg (176 lbs), 180 cm (5 ft 11 in), moderately active (lifts weights 4 days/week).</p>
+          <div class="calc-step-line"><strong>Step 1: Calculate BMR (Mifflin-St Jeor)</strong><br>BMR = (10 &times; 80) + (6.25 &times; 180) &minus; (5 &times; 30) + 5 = 800 + 1,125 &minus; 150 + 5 = 1,780 kcal/day</div>
+          <div class="calc-step-line"><strong>Step 2: Apply Activity Multiplier</strong><br>TDEE = 1,780 &times; 1.55 (Moderately Active) = 2,759 kcal/day</div>
+          <div class="calc-step-line"><strong>Step 3: Calculate Fat Loss Calorie Target (-22% Optimal Deficit)</strong><br>Target Calories = 2,759 &times; 0.78 = 2,152 kcal/day (~0.5 kg loss/week)</div>
+          <p style="margin-top:0.75rem; margin-bottom:0; font-size:0.9rem; color:var(--text-muted);">Use the interactive calculator above to instantly compute custom targets with full macronutrient gram breakdowns.</p>
+        </div>
 
         <p>This calculator estimates your TDEE using the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to predict resting energy expenditure, then multiplies it by an activity factor. The result is a <strong>starting estimate</strong>, not an exact measurement of your personal metabolism. Two people with the same height and weight can have meaningfully different energy needs based on muscle mass, daily movement, and lifestyle.</p>
 
-        <p>Your estimated TDEE gives you a practical starting point for calorie planning:</p>
-        <ul>
-          <li><strong>Maintenance:</strong> Eat around your TDEE to keep weight stable.</li>
-          <li><strong>Fat loss:</strong> Create a calorie deficit below your TDEE.</li>
-          <li><strong>Muscle gain:</strong> Eat in a calorie surplus above your TDEE.</li>
-        </ul>
-
         <p>The most important step is comparing your calculator estimate against your real-world weight trend over several weeks, then adjusting if needed. Use our <a href="#calibration-lab">Adaptive Calibration Lab</a> above to track actual intake vs. body weight.</p>
 
-        <p style="margin-top: 1.5rem;"><a href="/blog/what-is-tdee/" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none;">Read the complete guide: What Is TDEE? — Meaning, 4 Components &amp; Full Explanation →</a></p>
+        <p style="margin-top: 1.5rem;"><a href="/blog/what-is-tdee/" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none;">Read the complete guide: What Is TDEE? &mdash; Meaning, 4 Components &amp; Full Explanation &rarr;</a></p>
 
         <h2>Frequently Asked Questions</h2>
         <div class="faq-grid">
