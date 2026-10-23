@@ -368,11 +368,11 @@ function updateHtmlForRoute(html, route, routeData) {
   }
 
   let preMountedCalcHTML = '';
-  if (route === '/how-to-calibrate-tdee-with-weight-trends/') {
+  if (route === '/calibrate-tdee-weight-trends/' || route === '/how-to-calibrate-tdee-with-weight-trends/') {
     preMountedCalcHTML = getCalibrationLabStaticHtml();
-  } else if (route === '/activity-factor-questionnaire-for-lifting/') {
+  } else if (route === '/accurate-activity-factor-questionnaire/' || route === '/activity-factor-questionnaire-for-lifting/') {
     preMountedCalcHTML = getQuestionnaireWizardStaticHtml();
-  } else if (route === '/tdee-calculator-with-rest-and-training-day-macros/') {
+  } else if (route === '/tdee-calculator-rest-training-day-macros/' || route === '/tdee-calculator-with-rest-and-training-day-macros/') {
     preMountedCalcHTML = getRestTrainingSplitStaticHtml();
   }
 
@@ -406,8 +406,8 @@ ${routeData.content}
   }
 
   // Inject Route-Specific Structured Data (JSON-LD)
-  const isArticlePage = route.startsWith('/blog/') || route === '/tdee-for-weight-gain/' || route === '/tdee-for-muscle-building/' || route === '/weight-gain/' || route === '/tdee-calculator-for-women-to-gain-weight/' || route === '/how-we-calculate/' || route === '/about/' || route === '/what-is-tdee/' || route === '/how-to-calculate-tdee/' || route === '/healthy-food-and-healthy-life/' || route === '/how-to-calibrate-tdee-with-weight-trends/' || route === '/activity-factor-questionnaire-for-lifting/' || route === '/tdee-calculator-with-rest-and-training-day-macros/';
-  const isCalcPage = route.includes('calculator') || route === '/how-to-calibrate-tdee-with-weight-trends/' || route === '/activity-factor-questionnaire-for-lifting/';
+  const isArticlePage = route.startsWith('/blog/') || route === '/tdee-for-weight-gain/' || route === '/tdee-for-muscle-building/' || route === '/weight-gain/' || route === '/tdee-calculator-for-women-to-gain-weight/' || route === '/how-we-calculate/' || route === '/about/' || route === '/what-is-tdee/' || route === '/how-to-calculate-tdee/' || route === '/healthy-food-and-healthy-life/' || route === '/calibrate-tdee-weight-trends/' || route === '/accurate-activity-factor-questionnaire/' || route === '/tdee-calculator-rest-training-day-macros/' || route === '/how-to-calibrate-tdee-with-weight-trends/' || route === '/activity-factor-questionnaire-for-lifting/' || route === '/tdee-calculator-with-rest-and-training-day-macros/';
+  const isCalcPage = route.includes('calculator') || route.includes('questionnaire') || route.includes('calibrate') || route === '/calibrate-tdee-weight-trends/' || route === '/accurate-activity-factor-questionnaire/' || route === '/tdee-calculator-rest-training-day-macros/' || route === '/how-to-calibrate-tdee-with-weight-trends/' || route === '/activity-factor-questionnaire-for-lifting/';
   const fullUrl = `https://tdeecalculater.com${route}`;
   const pageTitle = (routeData.h1 || routeData.title);
   const pageDesc = routeData.metaDescription || '';
@@ -566,6 +566,35 @@ for (const [route, routeData] of Object.entries(routes)) {
   fs.writeFileSync(filePath, routeHtml, 'utf-8');
   
   console.log(`Generated static file for route: ${route}`);
+}
+
+// 5. Generate 301 static redirect files for legacy URLs to prevent broken links
+const legacyRedirects = {
+  '/how-to-calibrate-tdee-with-weight-trends/': '/calibrate-tdee-weight-trends/',
+  '/activity-factor-questionnaire-for-lifting/': '/accurate-activity-factor-questionnaire/',
+  '/tdee-calculator-with-rest-and-training-day-macros/': '/tdee-calculator-rest-training-day-macros/',
+  '/what-is-tdee/': '/blog/what-is-tdee/',
+  '/how-to-calculate-tdee/': '/blog/how-to-calculate-tdee/'
+};
+
+for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
+  const dirPath = path.join(__dirname, oldPath);
+  fs.mkdirSync(dirPath, { recursive: true });
+  const redirectHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <link rel="canonical" href="https://tdeecalculater.com${newPath}">
+  <meta http-equiv="refresh" content="0; url=${newPath}">
+  <script>window.location.replace('${newPath}');</script>
+</head>
+<body>
+  <p>Redirecting to <a href="${newPath}">${newPath}</a>...</p>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(dirPath, 'index.html'), redirectHtml, 'utf-8');
+  console.log(`Generated redirect stub for legacy path: ${oldPath} -> ${newPath}`);
 }
 
 console.log('Static pre-rendering complete!');

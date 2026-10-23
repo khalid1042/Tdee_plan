@@ -2,50 +2,46 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+const root = path.join(__dirname, '..');
 const PORT = 8089;
-const MIME_TYPES = {
+
+const mime = {
   '.html': 'text/html',
   '.css': 'text/css',
   '.js': 'text/javascript',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.svg': 'image/svg+xml',
-  '.json': 'application/json'
+  '.json': 'application/json',
+  '.png': 'image/png'
 };
 
 const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
-  if (reqPath.endsWith('/')) reqPath += 'index.html';
-  let filePath = path.join(__dirname, '..', reqPath);
+  let p = decodeURIComponent(req.url.split('?')[0]);
+  let f = path.join(root, p === '/' ? 'index.html' : p);
 
-  if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
-    filePath = path.join(__dirname, '..', reqPath.replace(/\/index\.html$/, ''), 'index.html');
-  }
-
-  if (!fs.existsSync(filePath)) {
-    filePath = path.join(__dirname, '..', 'index.html');
-  }
-
-  const ext = path.extname(filePath).toLowerCase();
-  const contentType = MIME_TYPES[ext] || 'text/plain';
-
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      res.writeHead(500);
-      res.end('Server Error');
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(data);
+  try {
+    if (fs.existsSync(f) && fs.statSync(f).isDirectory()) {
+      f = path.join(f, 'index.html');
     }
-  });
+    const d = fs.readFileSync(f);
+    res.writeHead(200, { 'Content-Type': mime[path.extname(f)] || 'text/html' });
+    res.end(d);
+  } catch (e) {
+    try {
+      const d = fs.readFileSync(path.join(root, 'index.html'));
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(d);
+    } catch (e2) {
+      res.writeHead(404);
+      res.end('nf');
+    }
+  }
 });
 
-function fetchUrl(urlPath) {
+function fetchUrl(pathname) {
   return new Promise((resolve, reject) => {
-    http.get(`http://localhost:${PORT}${urlPath}`, (res) => {
-      let body = '';
-      res.on('data', chunk => body += chunk);
-      res.on('end', () => resolve({ statusCode: res.statusCode, body }));
+    http.get(`http://localhost:${PORT}${pathname}`, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve({ statusCode: res.statusCode, body: data }));
     }).on('error', reject);
   });
 }
@@ -60,8 +56,11 @@ server.listen(PORT, async () => {
     '/blog/how-to-calculate-tdee/',
     '/how-to-calculate-tdee/',
     '/healthy-food-and-healthy-life/',
+    '/calibrate-tdee-weight-trends/',
     '/how-to-calibrate-tdee-with-weight-trends/',
+    '/accurate-activity-factor-questionnaire/',
     '/activity-factor-questionnaire-for-lifting/',
+    '/tdee-calculator-rest-training-day-macros/',
     '/tdee-calculator-with-rest-and-training-day-macros/'
   ];
 
@@ -83,7 +82,13 @@ server.listen(PORT, async () => {
           console.error(`  FAIL: Homepage missing hero-workspace`);
           passed = false;
         }
-      } else if (r === '/what-is-tdee/' || r === '/how-to-calculate-tdee/') {
+      } else if (
+        r === '/what-is-tdee/' ||
+        r === '/how-to-calculate-tdee/' ||
+        r === '/how-to-calibrate-tdee-with-weight-trends/' ||
+        r === '/activity-factor-questionnaire-for-lifting/' ||
+        r === '/tdee-calculator-with-rest-and-training-day-macros/'
+      ) {
         // Redirect stubs
         if (!body.includes('http-equiv="refresh"') || !body.includes('rel="canonical"')) {
           console.error(`  FAIL: Redirect stub ${r} missing canonical or refresh directive!`);
@@ -124,7 +129,7 @@ server.listen(PORT, async () => {
     console.log('\n✅ ALL INTEGRATION TESTS PASSED 100% CLEAN!');
     process.exit(0);
   } else {
-    console.error('\n❌ SOME TESTS FAILED.');
+    console.error('\n❌ INTEGRATION TESTS FAILED');
     process.exit(1);
   }
 });

@@ -3753,12 +3753,12 @@ window.TDEEContent = {
       `
     },
 
-    '/how-to-calibrate-tdee-with-weight-trends/': {
-      title: 'How to Calibrate TDEE With Real-World Weight Trends',
-      metaDescription: 'Learn how to calibrate TDEE with real-world weight trends using our Adaptive Calibration Lab and 14–28 day rolling averages to defeat water weight noise.',
+    '/calibrate-tdee-weight-trends/': {
+      title: 'How to Calibrate TDEE with Real-World Weight Trends',
+      metaDescription: 'Ditch inaccurate online estimates. Learn how to track rolling daily calorie intake and morning weight averages over 14-28 days to calculate your true observed metabolic rate.',
       category: 'Metabolic Calibration',
       readTime: '8 min read',
-      h1: 'How to Calibrate TDEE With Real-World Weight Trends',
+      h1: 'How to Calibrate TDEE with Real-World Weight Trends',
       content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
           <a href="/" data-link>Home</a> &rsaquo; <span>Tools &amp; Labs</span> &rsaquo; <span>Calibrate TDEE With Weight Trends</span>
         </div>
@@ -3848,8 +3848,8 @@ window.TDEEContent = {
         <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(6,182,212,0.3);">
           <h3 style="margin-bottom:0.5rem; color:var(--accent-cyan);">Explore Related Advanced Tools:</h3>
           <ul style="line-height: 1.8; margin-bottom: 0;">
-            <li>Need to establish an accurate multiplier before tracking? Take our <a href="/activity-factor-questionnaire-for-lifting/">Accurate Activity Factor Questionnaire for Lifting</a>.</li>
-            <li>Ready to cycle your calories between gym days and recovery days? Use our <a href="/tdee-calculator-with-rest-and-training-day-macros/">TDEE Calculator With Rest and Training Day Macros</a>.</li>
+            <li>Need to establish an accurate multiplier before tracking? Take our <a href="/accurate-activity-factor-questionnaire/">Accurate Activity Factor Questionnaire for Lifting &amp; Fitness</a>.</li>
+            <li>Ready to cycle your calories between gym days and recovery days? Use our <a href="/tdee-calculator-rest-training-day-macros/">TDEE Calculator with Rest and Training Day Macros Split</a>.</li>
           </ul>
         </div>
 
@@ -3862,14 +3862,14 @@ window.TDEEContent = {
         </div>`
     },
 
-    '/activity-factor-questionnaire-for-lifting/': {
-      title: 'Accurate Activity Factor Questionnaire for Lifting & Workouts',
-      metaDescription: 'Take our accurate activity factor questionnaire for lifting weights. Separate daily NEAT steps from workout intensity to avoid calorie overestimation.',
+    '/accurate-activity-factor-questionnaire/': {
+      title: 'Accurate Activity Factor Questionnaire for Lifting & Fitness',
+      metaDescription: 'Calculate your custom metabolic multiplier. Our 60-second wizard cross-references daily occupational NEAT steps and workout routines to prevent accidental calorie overestimation.',
       category: 'Activity Multipliers',
       readTime: '7 min read',
-      h1: 'Accurate Activity Factor Questionnaire for Lifting',
+      h1: 'Accurate Activity Factor Questionnaire for Lifting & Fitness',
       content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
-          <a href="/" data-link>Home</a> &rsaquo; <span>Questionnaires</span> &rsaquo; <span>Activity Factor for Lifting</span>
+          <a href="/" data-link>Home</a> &rsaquo; <span>Questionnaires</span> &rsaquo; <span>Activity Factor Questionnaire</span>
         </div>
 
         <p class="lead-paragraph">Most people who lift weights choose the wrong activity multiplier on standard TDEE calculators. Selecting "Very Active" simply because you train with heavy weights 4 days a week can easily cause a 300 to 500 kcal/day overestimation if you work a desk job. Our <strong>accurate activity factor questionnaire for lifting</strong> isolates your true occupational movement from your gym sessions to determine your precise Physical Activity Level (PAL).</p>
@@ -3970,8 +3970,8 @@ window.TDEEContent = {
         <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(168,85,247,0.3);">
           <h3 style="margin-bottom:0.5rem; color:var(--accent-purple);">Explore Related Advanced Tools:</h3>
           <ul style="line-height: 1.8; margin-bottom: 0;">
-            <li>Validate your multiplier against real scale data: <a href="/how-to-calibrate-tdee-with-weight-trends/">How to Calibrate TDEE With Real-World Weight Trends</a>.</li>
-            <li>Allocate carbohydrates and calories around your lifting schedule: <a href="/tdee-calculator-with-rest-and-training-day-macros/">TDEE Calculator With Rest and Training Day Macros</a>.</li>
+            <li>Validate your multiplier against real scale data: <a href="/calibrate-tdee-weight-trends/">How to Calibrate TDEE with Real-World Weight Trends</a>.</li>
+            <li>Allocate carbohydrates and calories around your lifting schedule: <a href="/tdee-calculator-rest-training-day-macros/">TDEE Calculator with Rest and Training Day Macros Split</a>.</li>
           </ul>
         </div>
 
@@ -3984,12 +3984,12 @@ window.TDEEContent = {
         </div>`
     },
 
-    '/tdee-calculator-with-rest-and-training-day-macros/': {
-      title: 'TDEE Calculator With Rest and Training Day Macros',
-      metaDescription: 'Use our accurate TDEE calculator with rest and training day macros to cycle calories, optimize protein, and adjust carbohydrates around your workout schedule.',
+    '/tdee-calculator-rest-training-day-macros/': {
+      title: 'TDEE Calculator with Rest and Training Day Macros Split',
+      metaDescription: 'Optimize your nutrition strategy. View custom protein, carbohydrate, and fat breakdowns designed specifically to fuel hard workout sessions and maximize active recovery rest days.',
       category: 'Calorie & Macro Cycling',
       readTime: '9 min read',
-      h1: 'TDEE Calculator With Rest and Training Day Macros',
+      h1: 'TDEE Calculator with Rest and Training Day Macros Split',
       content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
           <a href="/" data-link>Home</a> &rsaquo; <span>Calculators</span> &rsaquo; <span>Rest &amp; Training Day Macros</span>
         </div>
@@ -4099,8 +4099,8 @@ window.TDEEContent = {
         <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(16,185,129,0.3);">
           <h3 style="margin-bottom:0.5rem; color:var(--accent-emerald);">Explore Related Advanced Tools:</h3>
           <ul style="line-height: 1.8; margin-bottom: 0;">
-            <li>Not sure which activity baseline to select? Use our <a href="/activity-factor-questionnaire-for-lifting/">Accurate Activity Factor Questionnaire for Lifting</a>.</li>
-            <li>Weighing yourself to verify fat loss progress? Read our guide on <a href="/how-to-calibrate-tdee-with-weight-trends/">How to Calibrate TDEE With Real-World Weight Trends</a>.</li>
+            <li>Not sure which activity baseline to select? Use our <a href="/accurate-activity-factor-questionnaire/">Accurate Activity Factor Questionnaire for Lifting &amp; Fitness</a>.</li>
+            <li>Weighing yourself to verify fat loss progress? Read our guide on <a href="/calibrate-tdee-weight-trends/">How to Calibrate TDEE with Real-World Weight Trends</a>.</li>
           </ul>
         </div>
 

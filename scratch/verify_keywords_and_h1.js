@@ -3,19 +3,22 @@ const path = require('path');
 
 const checks = [
   {
-    route: '/how-to-calibrate-tdee-with-weight-trends/',
-    expectedKeyword: 'how to calibrate tdee with real-world weight trends',
-    expectedH1: 'How to Calibrate TDEE With Real-World Weight Trends'
+    route: '/calibrate-tdee-weight-trends/',
+    expectedTitle: 'How to Calibrate TDEE with Real-World Weight Trends',
+    expectedDesc: 'Ditch inaccurate online estimates. Learn how to track rolling daily calorie intake and morning weight averages over 14-28 days to calculate your true observed metabolic rate.',
+    expectedH1: 'How to Calibrate TDEE with Real-World Weight Trends'
   },
   {
-    route: '/activity-factor-questionnaire-for-lifting/',
-    expectedKeyword: 'accurate activity factor questionnaire for lifting',
-    expectedH1: 'Accurate Activity Factor Questionnaire for Lifting'
+    route: '/accurate-activity-factor-questionnaire/',
+    expectedTitle: 'Accurate Activity Factor Questionnaire for Lifting & Fitness',
+    expectedDesc: 'Calculate your custom metabolic multiplier. Our 60-second wizard cross-references daily occupational NEAT steps and workout routines to prevent accidental calorie overestimation.',
+    expectedH1: 'Accurate Activity Factor Questionnaire for Lifting & Fitness'
   },
   {
-    route: '/tdee-calculator-with-rest-and-training-day-macros/',
-    expectedKeyword: 'tdee calculator with rest and training day macros',
-    expectedH1: 'TDEE Calculator With Rest and Training Day Macros'
+    route: '/tdee-calculator-rest-training-day-macros/',
+    expectedTitle: 'TDEE Calculator with Rest and Training Day Macros Split',
+    expectedDesc: 'Optimize your nutrition strategy. View custom protein, carbohydrate, and fat breakdowns designed specifically to fuel hard workout sessions and maximize active recovery rest days.',
+    expectedH1: 'TDEE Calculator with Rest and Training Day Macros Split'
   }
 ];
 
@@ -31,6 +34,15 @@ checks.forEach(c => {
 
   const html = fs.readFileSync(filePath, 'utf8');
 
+  // Check Title
+  const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+  if (!titleMatch || titleMatch[1].trim() !== c.expectedTitle) {
+    console.error(`[FAIL] ${c.route} title mismatch. Expected: "${c.expectedTitle}", Found: "${titleMatch ? titleMatch[1].trim() : 'none'}"`);
+    allPassed = false;
+  } else {
+    console.log(`[PASS] ${c.route} title matches exactly: "${titleMatch[1].trim()}"`);
+  }
+
   // Check H1
   const h1Matches = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/gi)];
   if (h1Matches.length !== 1) {
@@ -38,10 +50,10 @@ checks.forEach(c => {
     allPassed = false;
   } else {
     const h1Text = h1Matches[0][1].replace(/<[^>]+>/g, '').trim();
-    if (h1Text.toLowerCase().includes(c.expectedKeyword.toLowerCase())) {
-      console.log(`[PASS] ${c.route} has single <h1> matching target keyword: "${h1Text}"`);
+    if (h1Text === c.expectedH1) {
+      console.log(`[PASS] ${c.route} has single <h1> matching expected: "${h1Text}"`);
     } else {
-      console.error(`[FAIL] ${c.route} <h1> does not match expected keyword. Found: "${h1Text}"`);
+      console.error(`[FAIL] ${c.route} <h1> mismatch. Expected: "${c.expectedH1}", Found: "${h1Text}"`);
       allPassed = false;
     }
   }
@@ -53,12 +65,22 @@ checks.forEach(c => {
     allPassed = false;
   } else {
     const metaDesc = metaDescMatch[1];
-    if (metaDesc.toLowerCase().includes(c.expectedKeyword.toLowerCase())) {
-      console.log(`[PASS] ${c.route} meta description contains keyword: "${metaDesc}"`);
+    if (metaDesc === c.expectedDesc) {
+      console.log(`[PASS] ${c.route} meta description matches exactly: "${metaDesc}"`);
     } else {
-      console.error(`[FAIL] ${c.route} meta description does not contain target keyword: "${metaDesc}"`);
+      console.error(`[FAIL] ${c.route} meta description mismatch. Expected: "${c.expectedDesc}", Found: "${metaDesc}"`);
       allPassed = false;
     }
+  }
+
+  // Check Canonical Link
+  const canonicalMatch = html.match(/<link rel="canonical"\s+href="([^"]*)"/i);
+  const expectedCanonical = `https://tdeecalculater.com${c.route}`;
+  if (!canonicalMatch || canonicalMatch[1] !== expectedCanonical) {
+    console.error(`[FAIL] ${c.route} canonical mismatch. Expected: "${expectedCanonical}", Found: "${canonicalMatch ? canonicalMatch[1] : 'none'}"`);
+    allPassed = false;
+  } else {
+    console.log(`[PASS] ${c.route} canonical link matches: "${canonicalMatch[1]}"`);
   }
 
   // Check Calculator Mount Content
@@ -89,7 +111,7 @@ allRoutes.forEach(r => {
 });
 
 if (allPassed) {
-  console.log('\n🌟 ALL KEYWORD, H1, AND PRE-RENDER CHECKS PASSED PERFECTLY!');
+  console.log('\n🌟 ALL METADATA, TITLE, H1, CANONICAL, AND PRE-RENDER CHECKS PASSED PERFECTLY!');
   process.exit(0);
 } else {
   console.error('\n❌ ISSUES DETECTED');

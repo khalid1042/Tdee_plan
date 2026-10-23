@@ -1106,6 +1106,9 @@ window.TDEEExtras = (function() {
     '/blog/how-to-calculate-tdee/': 'maintenance',
     '/blog/tdee-vs-bmr/': 'bmr',
     '/blog/mifflin-st-jeor-equation/': 'bmr',
+    '/calibrate-tdee-weight-trends/': 'calibration_lab',
+    '/accurate-activity-factor-questionnaire/': 'questionnaire_wizard',
+    '/tdee-calculator-rest-training-day-macros/': 'rest_training_split',
     '/how-to-calibrate-tdee-with-weight-trends/': 'calibration_lab',
     '/activity-factor-questionnaire-for-lifting/': 'questionnaire_wizard',
     '/tdee-calculator-with-rest-and-training-day-macros/': 'rest_training_split'

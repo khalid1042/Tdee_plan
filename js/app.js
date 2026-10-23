@@ -151,6 +151,21 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
+    var ROUTE_REDIRECTS = {
+      '/how-to-calibrate-tdee-with-weight-trends/': '/calibrate-tdee-weight-trends/',
+      '/how-to-calibrate-tdee-with-weight-trends': '/calibrate-tdee-weight-trends/',
+      '/activity-factor-questionnaire-for-lifting/': '/accurate-activity-factor-questionnaire/',
+      '/activity-factor-questionnaire-for-lifting': '/accurate-activity-factor-questionnaire/',
+      '/tdee-calculator-with-rest-and-training-day-macros/': '/tdee-calculator-rest-training-day-macros/',
+      '/tdee-calculator-with-rest-and-training-day-macros': '/tdee-calculator-rest-training-day-macros/'
+    };
+    if (ROUTE_REDIRECTS[path] || ROUTE_REDIRECTS[normPath]) {
+      var target = ROUTE_REDIRECTS[path] || ROUTE_REDIRECTS[normPath];
+      history.replaceState(null, '', target);
+      path = target;
+      normPath = target;
+    }
+
     var routes = (window.TDEEContent && window.TDEEContent.routes) ? window.TDEEContent.routes : {};
     var routeData = routes[normPath] || routes[path];
 
@@ -279,6 +294,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update meta description
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', routeData.metaDescription || '');
+
+    // Update Open Graph and Twitter tags dynamically
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', routeData.title || '');
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', routeData.metaDescription || '');
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://tdeecalculater.com' + (path === '/' ? '/' : path));
+
+    var twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', routeData.title || '');
+    var twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', routeData.metaDescription || '');
 
     // Update canonical link
     var canonicalLink = document.querySelector('link[rel="canonical"]');
