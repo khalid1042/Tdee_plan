@@ -80,6 +80,14 @@ server.listen(PORT, async () => {
           console.error(`  FAIL: Homepage missing hero-workspace`);
           passed = false;
         }
+      } else if (r === '/what-is-tdee/' || r === '/how-to-calculate-tdee/') {
+        // Redirect stubs
+        if (!body.includes('http-equiv="refresh"') || !body.includes('rel="canonical"')) {
+          console.error(`  FAIL: Redirect stub ${r} missing canonical or refresh directive!`);
+          passed = false;
+        } else {
+          console.log(`  PASS: Redirect stub ${r} cleanly points to canonical destination.`);
+        }
       } else {
         if (body.includes('id="hero-workspace"')) {
           console.error(`  FAIL: Subpage ${r} contains hero-workspace! (Duplication bug)`);

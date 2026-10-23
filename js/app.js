@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       if (heroWorkspace) heroWorkspace.classList.remove('hidden');
       if (siloContainer) siloContainer.classList.add('hidden');
-      document.title = 'TDEE Calculator — Total Daily Energy Expenditure & Adaptive Calibrator';
+      document.title = 'TDEE Calculator: Estimate Your Daily Calorie Needs';
       
       // Ensure hero-title is an H1 on the homepage
       if (heroTitle && heroTitle.tagName.toLowerCase() !== 'h1') {
@@ -279,7 +279,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var href = target.getAttribute('href');
     if (!href) return;
 
-    if (href.startsWith('/')) {
+    // Do not intercept links with target="_blank" or static file extensions / image paths
+    var isStaticAsset = href.startsWith('/images/') || href.startsWith('/css/') || href.startsWith('/js/') || href.match(/\.(png|jpg|jpeg|webp|gif|svg|xml|txt|pdf)$/i);
+    var isBlankTarget = target.getAttribute('target') === '_blank';
+
+    if (href.startsWith('/') && !isStaticAsset && !isBlankTarget) {
       e.preventDefault();
       navigateTo(href);
     } else if (href.startsWith('#')) {
@@ -503,6 +507,16 @@ document.addEventListener('DOMContentLoaded', function() {
       var score = window.TDEECalculator.calculateWizardMultiplier(wizardAnswers);
       state.customMultiplier = score;
       displayWizardMult.textContent = score.toFixed(2);
+      
+      var summaryEl = document.getElementById('display-wizard-summary');
+      if (summaryEl) {
+        var categoryMatch = 'Sedentary';
+        if (score >= 1.85) categoryMatch = 'Extra Active (Heavy physical work + training)';
+        else if (score >= 1.68) categoryMatch = 'Very Active (High training volume or high daily movement)';
+        else if (score >= 1.48) categoryMatch = 'Moderately Active (Moderate steps + consistent workouts)';
+        else if (score >= 1.35) categoryMatch = 'Lightly Active (Light walking + occasional exercise)';
+        summaryEl.textContent = 'Matches ' + categoryMatch + ' (combines job movement & workouts without double-counting)';
+      }
       wizardResult.classList.remove('hidden');
     });
   });
@@ -533,6 +547,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var tableBody = document.getElementById('tracker-table-body');
   var calibrationOutput = document.getElementById('calibration-output');
 
+  // Load saved local calibration logs if present
+  try {
+    var savedCalib = localStorage.getItem('tdee_calibration_entries');
+    if (savedCalib) {
+      state.calibrationEntries = JSON.parse(savedCalib);
+    }
+  } catch(e) {}
+
   function renderTrackerTable(entries) {
     if (!entries || entries.length === 0) {
       tableBody.innerHTML = '<tr><td colspan="3" style="text-align:center; color:var(--text-dim); padding: 1.5rem;">Click "+ Add Day" or "Fill 14-Day Sample Data" to start logging!</td></tr>';
@@ -547,19 +569,35 @@ document.addEventListener('DOMContentLoaded', function() {
       tableBody.appendChild(tr);
     });
 
+    // Save locally
+    try {
+      localStorage.setItem('tdee_calibration_entries', JSON.stringify(entries));
+    } catch(e) {}
+
     // Wire input edits
     tableBody.querySelectorAll('.cal-input').forEach(function(inp) {
       inp.addEventListener('input', function() {
         var idx = parseInt(inp.getAttribute('data-idx'));
-        if (state.calibrationEntries[idx]) state.calibrationEntries[idx].cals = parseFloat(inp.value) || 0;
+        if (state.calibrationEntries[idx]) {
+          state.calibrationEntries[idx].cals = parseFloat(inp.value) || 0;
+          try { localStorage.setItem('tdee_calibration_entries', JSON.stringify(state.calibrationEntries)); } catch(e) {}
+        }
       });
     });
     tableBody.querySelectorAll('.weight-input').forEach(function(inp) {
       inp.addEventListener('input', function() {
         var idx = parseInt(inp.getAttribute('data-idx'));
-        if (state.calibrationEntries[idx]) state.calibrationEntries[idx].weight = parseFloat(inp.value) || 0;
+        if (state.calibrationEntries[idx]) {
+          state.calibrationEntries[idx].weight = parseFloat(inp.value) || 0;
+          try { localStorage.setItem('tdee_calibration_entries', JSON.stringify(state.calibrationEntries)); } catch(e) {}
+        }
       });
     });
+  }
+
+  // Initial render if saved data exists
+  if (state.calibrationEntries && state.calibrationEntries.length > 0) {
+    renderTrackerTable(state.calibrationEntries);
   }
 
   if (btnAddDay) {
@@ -576,6 +614,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (btnClearTable) {
     btnClearTable.addEventListener('click', function() {
       state.calibrationEntries = [];
+      try { localStorage.removeItem('tdee_calibration_entries'); } catch(e) {}
       renderTrackerTable(state.calibrationEntries);
       if (calibrationOutput) calibrationOutput.classList.add('hidden');
     });
@@ -609,11 +648,17 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      var diffSign = result.formulaDifference > 0 ? '+' : '';
+      var diffText = result.formulaDifference !== 0 
+        ? diffSign + result.formulaDifference + ' kcal vs Formula Baseline'
+        : 'Exact match with formula estimate';
+
       // Restore the result card layout and populate
       calibrationOutput.innerHTML = '' +
         '<div>' +
           '<div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Observed Real-World TDEE</div>' +
           '<div id="calib-observed-tdee" style="font-size:2.2rem; font-weight:900; color:var(--accent-purple);"></div>' +
+          '<div id="calib-formula-delta" style="font-size:0.85rem; font-weight:600; color:var(--accent-cyan); margin-top:0.25rem;"></div>' +
         '</div>' +
         '<div>' +
           '<div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Average Daily Intake</div>' +
@@ -630,6 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       calibrationOutput.classList.remove('hidden');
       document.getElementById('calib-observed-tdee').textContent = result.observedTdee.toLocaleString() + ' kcal/day';
+      document.getElementById('calib-formula-delta').textContent = diffText;
       document.getElementById('calib-avg-cals').textContent = result.avgDailyCals.toLocaleString() + ' kcal';
       document.getElementById('calib-weight-delta').textContent = (result.weightChangePerWeekKg > 0 ? '+' : '') + result.weightChangePerWeekKg + ' kg/week';
       document.getElementById('calib-confidence').textContent = result.confidence + ' — ' + result.confidenceReason;

@@ -213,7 +213,7 @@ window.TDEEContent = {
 
 
     '/healthy-food-and-healthy-life/': {
-      title: 'Healthy Food and Healthy Life: A Practical Guide to Everyday Eating',
+      title: 'Healthy Food and Healthy Life: Practical Everyday Nutrition',
       metaDescription: 'Learn how to eat healthy with balanced meals, nutritious food choices, budget-friendly grocery tips, and practical habits for everyday life.',
       category: 'Nutrition & Lifestyle',
       readTime: '8 min read',
@@ -1549,7 +1549,7 @@ window.TDEEContent = {
 
 
     '/blog/mifflin-st-jeor-equation/': {
-      title: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
+      title: 'Mifflin-St Jeor Equation: Formula, Accuracy & Calculation',
       metaDescription: 'Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and TDEE examples.',
       category: 'Scientific Formulas',
       readTime: '6 min read',
@@ -2645,7 +2645,7 @@ window.TDEEContent = {
     },
 
     '/calorie-surplus-calculator/': {
-      title: 'Calorie Surplus Calculator: Calculate Calories for Weight Gain and Muscle Gain',
+      title: 'Calorie Surplus Calculator: Estimate Lean Bulk Calories',
       metaDescription: 'Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training. Learn bulking formulas.',
       category: 'Calculator',
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
@@ -3141,7 +3141,7 @@ window.TDEEContent = {
     },
 
     '/calories-burned-calculator/': {
-      title: 'Calories Burned Calculator: How to Estimate Daily Workout & Activity Burn',
+      title: 'Calories Burned Calculator: Estimate Workout & Step Burn',
       metaDescription: 'Calculate calories burned from exercise, daily steps, and workouts. Understand MET values, activity expenditure, and avoid double-counting.',
       category: 'Calculator',
       readTime: '7 min read',

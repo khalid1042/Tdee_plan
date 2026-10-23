@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TDEE Calculator – Calculate Your Total Daily Energy Expenditure</title>
+  <title>TDEE Calculator: Estimate Your Daily Calorie Needs</title>
   <meta name="description"
-    content="Calculate your Total Daily Energy Expenditure (TDEE) with our science-based calculator. Estimate daily calories for maintenance, fat loss, or muscle gain.">
+    content="Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.">
   <link rel="canonical" href="https://tdeecalculater.com/">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="TDEE Calculator – Calculate Your Total Daily Energy Expenditure">
-  <meta property="og:description" content="Calculate your Total Daily Energy Expenditure (TDEE) with our science-based calculator. Estimate daily calories for maintenance, fat loss, or muscle gain.">
+  <meta property="og:title" content="TDEE Calculator: Estimate Your Daily Calorie Needs">
+  <meta property="og:description" content="Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.">
   <meta property="og:url" content="https://tdeecalculater.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://tdeecalculater.com/mobile-final.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@tdeecalculator">
-  <meta name="twitter:title" content="TDEE Calculator – Calculate Your Total Daily Energy Expenditure">
-  <meta name="twitter:description" content="Calculate your Total Daily Energy Expenditure (TDEE) with our science-based calculator. Estimate daily calories for maintenance, fat loss, or muscle gain.">
+  <meta name="twitter:title" content="TDEE Calculator: Estimate Your Daily Calorie Needs">
+  <meta name="twitter:description" content="Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.">
   <meta name="twitter:image" content="https://tdeecalculater.com/mobile-final.png">
   
   <!-- Sitemap Link for Crawlers -->
@@ -95,8 +95,8 @@
         "isPartOf": {
           "@id": "https://tdeecalculater.com/#website"
         },
-        "headline": "TDEE Calculator: Calculate Your Total Daily Energy Expenditure",
-        "description": "Calculate your Total Daily Energy Expenditure (TDEE) with our science-based calculator. Estimate daily calories for maintenance, fat loss, or muscle gain.",
+        "headline": "TDEE Calculator: Estimate Your Daily Calorie Needs",
+        "description": "Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.",
         "mainEntityOfPage": "https://tdeecalculater.com/",
         "datePublished": "2026-09-01",
         "dateModified": "2026-10-18",
@@ -522,44 +522,81 @@
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
           <div>
             <h2 style="font-size:1.5rem; margin-bottom:0.25rem;">Unsure Which Activity Level You Are?</h2>
-            <p style="font-size:0.95rem; margin:0;">Take our 60-second Movement Questionnaire to calculate your custom
-              multiplier.</p>
+            <p style="font-size:0.95rem; margin:0;">Take our 60-second Movement Questionnaire to calculate your custom multiplier based on work, steps, and exercise.</p>
           </div>
-          <button id="btn-start-wizard" class="btn-primary" style="width:auto; padding:0.6rem 1.5rem;">Start Activity
-            Wizard</button>
+          <button id="btn-start-wizard" class="btn-primary" style="width:auto; padding:0.6rem 1.5rem;">Start Activity Wizard</button>
         </div>
 
         <div id="wizard-step-1" class="quiz-step" style="margin-top:1.5rem;">
-          <h4 style="margin-bottom:0.5rem;">Step 1: What is your average daily step count?</h4>
+          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Step 1: Daily Occupational Movement &amp; Step Baseline</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem;">How much non-exercise movement (NEAT) do you perform during a typical workday?</p>
           <div class="options-grid">
             <div class="option-card wizard-option" data-group="steps" data-val="under_5k">
               <div class="option-title">Under 5,000 steps</div>
-              <div class="option-desc">Mostly sitting, desk job, minimal walking.</div>
+              <div class="option-desc">Desk job, remote worker, driving, mostly seated.</div>
             </div>
             <div class="option-card wizard-option selected" data-group="steps" data-val="5k_8k">
               <div class="option-title">5,000 – 8,000 steps</div>
-              <div class="option-desc">Light daily walking, typical office worker.</div>
+              <div class="option-desc">Office worker with daily errands, light commuting, or lunch walk.</div>
             </div>
             <div class="option-card wizard-option" data-group="steps" data-val="8k_12k">
               <div class="option-title">8,000 – 12,000 steps</div>
-              <div class="option-desc">Active lifestyle, regular walks & movement.</div>
+              <div class="option-desc">Active job: teacher, hospitality, sales floor, retail.</div>
             </div>
             <div class="option-card wizard-option" data-group="steps" data-val="over_12k">
               <div class="option-title">12,000+ steps</div>
-              <div class="option-desc">Standing job, waiter, nurse, tradesperson.</div>
+              <div class="option-desc">Physically demanding: nurse, construction, warehouse, trades.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="wizard-step-2" class="quiz-step" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Step 2: Structured Workout &amp; Exercise Frequency</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem;">How many days per week do you engage in planned fitness training (gym, running, cycling, sports)?</p>
+          <div class="options-grid">
+            <div class="option-card wizard-option" data-group="workoutDays" data-val="0">
+              <div class="option-title">0 – 1 days / week</div>
+              <div class="option-desc">Little to no dedicated gym or sports sessions.</div>
+            </div>
+            <div class="option-card wizard-option" data-group="workoutDays" data-val="2">
+              <div class="option-title">2 – 3 days / week</div>
+              <div class="option-desc">Consistent light-to-moderate training or weekend sports.</div>
+            </div>
+            <div class="option-card wizard-option selected" data-group="workoutDays" data-val="4">
+              <div class="option-title">4 – 5 days / week</div>
+              <div class="option-desc">Dedicated lifting, running, or training schedule.</div>
+            </div>
+            <div class="option-card wizard-option" data-group="workoutDays" data-val="6">
+              <div class="option-title">6 – 7 days / week</div>
+              <div class="option-desc">High-frequency athletic training or two-a-days.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="wizard-step-3" class="quiz-step" style="margin-top:1.5rem;">
+          <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Step 3: Training Intensity &amp; Session Demands</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem;">What is the typical intensity of your workout sessions?</p>
+          <div class="options-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+            <div class="option-card wizard-option selected" data-group="intensity" data-val="moderate">
+              <div class="option-title">Moderate Intensity</div>
+              <div class="option-desc">Standard strength training, jogging, yoga, steady-state cardio (moderate heart rate).</div>
+            </div>
+            <div class="option-card wizard-option" data-group="intensity" data-val="high">
+              <div class="option-title">High / Vigorous Intensity</div>
+              <div class="option-desc">Heavy compound powerlifting, HIIT, CrossFit, sprinting, competitive endurance.</div>
             </div>
           </div>
         </div>
 
         <div id="wizard-result" class="hidden"
-          style="margin-top:1.5rem; padding:1.25rem; background:rgba(6,182,212,0.1); border:1px solid var(--accent-cyan); border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
+          style="margin-top:1.5rem; padding:1.25rem; background:rgba(6,182,212,0.1); border:1px solid var(--accent-cyan); border-radius:12px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
           <div>
             <div style="font-weight:700; color:#fff;">Calculated Activity Factor: <span id="display-wizard-mult"
-                style="color:var(--accent-cyan); font-size:1.3rem;">1.48</span></div>
-            <div style="font-size:0.85rem; color:var(--text-muted);">Matches Moderately Active baseline</div>
+                style="color:var(--accent-cyan); font-size:1.4rem;">1.51</span></div>
+            <div id="display-wizard-summary" style="font-size:0.85rem; color:var(--text-muted);">Matches Moderately Active baseline (combines daily steps and workouts without double-counting)</div>
           </div>
           <button id="btn-apply-wizard" class="btn-primary"
-            style="width:auto; padding:0.5rem 1rem; font-size:0.9rem;">Apply to Calculator</button>
+            style="width:auto; padding:0.6rem 1.25rem; font-size:0.95rem;">Apply Multiplier to Calculator &rarr;</button>
         </div>
       </div>
     </section>
@@ -573,6 +610,10 @@
           daily calories and morning body weight to calculate your <strong>Observed Real-World TDEE</strong> based on
           your weight trend.</p>
 
+        <div class="water-weight-explainer" style="margin-top: 1rem; margin-bottom: 1.25rem; padding: 1rem 1.25rem; background: var(--bg-tertiary); border-radius: 8px; border-left: 4px solid var(--accent-indigo); font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+          💡 <strong>Why Multi-Day Trends Matter:</strong> Short-term body weight shifts of 0.5–1.5 kg (1–3 lbs) over 24–48 hours are driven by fluctuations in hydration, muscle glycogen storage (each gram of glycogen holds ~3g of water), digestive tract volume, and sodium balance—not immediate loss or gain of body fat. Our adaptive model analyzes rolling averages over 14 to 28 days to isolate true caloric expenditure.
+        </div>
+
         <div style="display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap; align-items:center;">
           <button id="btn-load-sample-data" class="btn-primary"
             style="width:auto; background:linear-gradient(135deg, var(--accent-purple), var(--accent-indigo)); margin-top:0;">⚡ Fill
@@ -582,7 +623,11 @@
           <button id="btn-clear-table" class="btn-secondary" style="width:auto; color:var(--accent-rose); border-color:rgba(244,63,94,0.3);">Clear Data</button>
         </div>
 
-        <div class="tracker-table-wrapper">
+        <div style="margin-top: 0.85rem; font-size: 0.82rem; color: var(--text-dim); display: flex; align-items: center; gap: 0.5rem;">
+          <span>🔒 <strong>Local Privacy Guarantee:</strong> Your calorie and weight entries are calculated entirely client-side in your web browser. No personal health metrics or tracking entries are ever transmitted to or stored on external servers.</span>
+        </div>
+
+        <div class="tracker-table-wrapper" style="margin-top: 1.25rem;">
           <table class="tracker-table">
             <thead>
               <tr>
@@ -602,10 +647,9 @@
 
         <div id="calibration-output" class="calibration-result-card hidden">
           <div>
-            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Observed Real-World TDEE
-            </div>
-            <div id="calib-observed-tdee" style="font-size:2.2rem; font-weight:900; color:var(--accent-purple);">2,545
-              kcal/day</div>
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Observed Real-World TDEE</div>
+            <div id="calib-observed-tdee" style="font-size:2.2rem; font-weight:900; color:var(--accent-purple);">2,545 kcal/day</div>
+            <div id="calib-formula-delta" style="font-size:0.85rem; font-weight:600; color:var(--accent-cyan); margin-top:0.25rem;">+95 kcal vs Formula Baseline</div>
           </div>
           <div>
             <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Average Daily Intake</div>
@@ -613,14 +657,11 @@
           </div>
           <div>
             <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Weight Change Rate</div>
-            <div id="calib-weight-delta" style="font-size:1.4rem; font-weight:700; color:var(--accent-emerald);">-0.22
-              kg/week</div>
+            <div id="calib-weight-delta" style="font-size:1.4rem; font-weight:700; color:var(--accent-emerald);">-0.22 kg/week</div>
           </div>
           <div>
-            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Calibration Confidence
-            </div>
-            <div id="calib-confidence" style="font-size:0.95rem; font-weight:600; color:var(--text-main);">High (14
-              Days)</div>
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-muted);">Calibration Confidence</div>
+            <div id="calib-confidence" style="font-size:0.95rem; font-weight:600; color:var(--text-main);">High (14 Days)</div>
           </div>
         </div>
       </div>

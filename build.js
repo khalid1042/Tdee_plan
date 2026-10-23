@@ -173,7 +173,7 @@ ${routeData.content}
     }
   ];
 
-  if (isCalcPage || !isArticlePage) {
+  if (isCalcPage) {
     graphNodes.push({
       "@type": "WebApplication",
       "@id": `${fullUrl}#webapp`,
@@ -182,6 +182,30 @@ ${routeData.content}
       "applicationCategory": "HealthApplication",
       "operatingSystem": "All",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    });
+  } else if (route === '/about/') {
+    graphNodes.push({
+      "@type": "AboutPage",
+      "@id": `${fullUrl}#aboutpage`,
+      "name": pageTitle,
+      "url": fullUrl,
+      "description": pageDesc
+    });
+  } else if (route === '/contact/') {
+    graphNodes.push({
+      "@type": "ContactPage",
+      "@id": `${fullUrl}#contactpage`,
+      "name": pageTitle,
+      "url": fullUrl,
+      "description": pageDesc
+    });
+  } else if (!isArticlePage) {
+    graphNodes.push({
+      "@type": "WebPage",
+      "@id": `${fullUrl}#webpage`,
+      "name": pageTitle,
+      "url": fullUrl,
+      "description": pageDesc
     });
   }
 
@@ -233,14 +257,8 @@ ${routeData.content}
   return updatedHtml;
 }
 
-// 4. Generate static files for each route and alias
-const allBuildRoutes = {
-  ...routes,
-  '/what-is-tdee/': routes['/blog/what-is-tdee/'],
-  '/how-to-calculate-tdee/': routes['/blog/how-to-calculate-tdee/']
-};
-
-for (const [route, routeData] of Object.entries(allBuildRoutes)) {
+// 4. Generate static files for each canonical route
+for (const [route, routeData] of Object.entries(routes)) {
   if (route === '/' || !routeData) continue; // Homepage is handled by main index.html
 
   const dirPath = path.join(__dirname, route);
