@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (heroWorkspace) heroWorkspace.classList.add('hidden');
         if (siloContainer) siloContainer.classList.remove('hidden');
         var staticCalcMount = document.getElementById('silo-calculator-mount');
-        if (staticCalcMount && staticCalcMount.children.length === 0 && window.TDEEExtras) {
+        if (staticCalcMount && window.TDEEExtras) {
           window.TDEEExtras.mount(path, staticCalcMount);
         }
         if (window.TDEEHealthyLife && window.TDEEHealthyLife.init) {

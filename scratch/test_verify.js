@@ -59,7 +59,10 @@ server.listen(PORT, async () => {
     '/what-is-tdee/',
     '/blog/how-to-calculate-tdee/',
     '/how-to-calculate-tdee/',
-    '/healthy-food-and-healthy-life/'
+    '/healthy-food-and-healthy-life/',
+    '/how-to-calibrate-tdee-with-weight-trends/',
+    '/activity-factor-questionnaire-for-lifting/',
+    '/tdee-calculator-with-rest-and-training-day-macros/'
   ];
 
   let passed = true;

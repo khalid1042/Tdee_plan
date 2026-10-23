@@ -59,3 +59,31 @@ To safeguard topical authority and avoid self-competing pages:
 - **Rule 1: Homepage `/` owns "TDEE Calculator".** No `/tdee-calculator/`, `/free-tdee-calculator/`, or `/online-tdee-calculator/` URLs shall ever be generated.
 - **Rule 2: One Primary Search Intent Per Canonical URL.** Informational guides must not attempt to duplicate the primary calculator, and calculators must not pad pages with redundant 3,000-word generic definitions.
 - **Rule 3: Clean Canonical Mapping.** Subpage aliases must redirect with HTTP 301 rather than generating self-canonical duplicate static pages.
+
+---
+
+## 5. Feature Tool Landing Pages (Launched October 2026)
+
+To capture deep long-tail user intents and highlight proprietary differentiators, three dedicated feature routing sections were deployed:
+
+1. **"how to calibrate TDEE with real-world weight trends"**
+   - **Canonical URL:** `/how-to-calibrate-tdee-with-weight-trends/`
+   - **Target Query:** `how to calibrate TDEE with real-world weight trends`
+   - **Interactive Component:** Dedicated **Adaptive TDEE Calibration Lab** pre-mounted and dynamically hydrated.
+   - **Core Educational Value:** Details why 14–28 day rolling average splits defeat high-frequency scale noise caused by glycogen storage hydration (~3–4g water per gram of carb), sodium fluid shifts, and digestive transit mass.
+   - **Schema:** `WebApplication` + `Article` + `BreadcrumbList` + `FAQPage`
+
+2. **"accurate activity factor questionnaire for lifting"**
+   - **Canonical URL:** `/activity-factor-questionnaire-for-lifting/`
+   - **Target Query:** `accurate activity factor questionnaire for lifting`
+   - **Interactive Component:** **60-Second Movement Questionnaire / Activity Wizard** with real-time PAL computation and Avoided Overestimation Shield.
+   - **Core Educational Value:** Separates daily occupational NEAT steps from structured workout frequency (EAT), preventing the common 350–500 kcal/day overestimation lifters make by picking textbook "Very Active" categories.
+   - **Schema:** `WebApplication` + `Article` + `BreadcrumbList` + `FAQPage`
+
+3. **"TDEE calculator with rest and training day macros"**
+   - **Canonical URL:** `/tdee-calculator-with-rest-and-training-day-macros/`
+   - **Target Query:** `TDEE calculator with rest and training day macros`
+   - **Interactive Component:** **Calorie & Macro Cycling Calculator / Goal Target Simulator** with side-by-side Training Day and Rest Day cards.
+   - **Core Educational Value:** Solves the weekly energy budget problem (`TDEE × 7`), providing high-carb workout fueling and identical 2.0–2.2g/kg protein protection on rest days while guaranteeing mathematical weekly energy conservation.
+   - **Schema:** `WebApplication` + `Article` + `BreadcrumbList` + `FAQPage`
+

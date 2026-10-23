@@ -3751,6 +3751,366 @@ window.TDEEContent = {
       content: `
         <p>This website utilizes local storage to save your preferred units (metric/imperial) and temporary calibration data locally on your device.</p>
       `
+    },
+
+    '/how-to-calibrate-tdee-with-weight-trends/': {
+      title: 'How to Calibrate TDEE With Real-World Weight Trends',
+      metaDescription: 'Learn how to calibrate TDEE with real-world weight trends using our Adaptive Calibration Lab and 14–28 day rolling averages to defeat water weight noise.',
+      category: 'Metabolic Calibration',
+      readTime: '8 min read',
+      h1: 'How to Calibrate TDEE With Real-World Weight Trends',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Tools &amp; Labs</span> &rsaquo; <span>Calibrate TDEE With Weight Trends</span>
+        </div>
+
+        <p class="lead-paragraph">Online TDEE formulas give you a useful starting baseline, but your personal metabolism is not a static mathematical formula. Learning <strong>how to calibrate TDEE with real-world weight trends</strong> allows you to replace theoretical predictions with your actual observed daily calorie expenditure.</p>
+
+        <!-- GEO Direct Answer Block -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ Direct Answer: How to Calibrate TDEE With Real-World Weight Trends</strong></p>
+          <p>To calibrate your true TDEE, log your daily calorie intake and morning scale weight over <strong>14 to 28 consecutive days</strong>. Calculate your rolling average weight change per week, multiply by <strong>7,700 kcal</strong> (the energy value of 1 kg body mass change), divide by 7 to determine your daily energy imbalance, and adjust your average caloric intake:</p>
+          <div class="calc-step-line" style="margin-top:0.75rem;"><strong>Observed Real-World TDEE = Average Daily Calories &minus; Daily Weight Imbalance (kcal)</strong></div>
+        </div>
+
+        <h2>Why Static TDEE Formulas Are Only Rough Baselines</h2>
+        <p>Popular metabolic formulas such as the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> and Katch-McArdle formula calculate your resting metabolic floor with reasonable population-level accuracy. However, peer-reviewed clinical research confirms that standard predictive equations carry an individual error rate of <strong>&plusmn;8% to &plusmn;10%</strong> in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+
+        <p>A formula cannot account for:</p>
+        <ul>
+          <li><strong>Individual NEAT Variance:</strong> Non-Exercise Activity Thermogenesis (fidgeting, pacing, posture, involuntary movement) can cause daily energy expenditure to differ by up to 800 kcal between individuals of identical height and weight.</li>
+          <li><strong>Adaptive Thermogenesis:</strong> During prolonged calorie deficits, the human body downregulates metabolic rate beyond what is predicted by tissue loss alone.</li>
+          <li><strong>Digestive Efficiency &amp; Microbiome:</strong> The actual metabolizable energy extracted from complex dietary fiber, starches, and whole protein varies between digestive tracts.</li>
+        </ul>
+
+        <h2>The Mathematics of Water Weight vs. True Tissue Change</h2>
+        <p>The single greatest obstacle to determining true maintenance calories is scale weight volatility. It is biologically common for body weight to swing by <strong>0.5 kg to 1.8 kg (1 to 4 lbs)</strong> over a 24-hour period. Searchers often mistake these temporary spikes for rapid body fat accumulation or stalls, prompting unnecessary and extreme calorie cuts.</p>
+
+        <div class="about-calculator-card" style="margin: 1.5rem 0;">
+          <h3 style="margin-bottom: 0.75rem; color: var(--accent-cyan);">The Physiology Behind Daily Scale Noise</h3>
+          <ul>
+            <li><strong>Glycogen Storage Hydration:</strong> The human liver and skeletal muscle store approximately 400 to 600 grams of glycogen. Each gram of stored glycogen binds approximately <strong>3 to 4 grams of cellular water</strong>. Eating a high-carbohydrate meal can temporarily increase total body water by 1.5 to 2.0 kg without adding an ounce of adipose tissue.</li>
+            <li><strong>Sodium &amp; Extracellular Fluid:</strong> High-sodium meals trigger immediate renal water retention to maintain physiological serum osmolarity.</li>
+            <li><strong>Food Mass in the Gastrointestinal Tract:</strong> The physical weight of uneliminated dietary fiber and water in your intestinal transit can account for 1 to 2 kg of scale weight.</li>
+            <li><strong>Cortisol &amp; Exercise Inflammation:</strong> Intense resistance training causes localized muscle microtrauma, triggering a temporary inflammatory healing response that pools extracellular water in muscle tissue for 48 to 72 hours.</li>
+          </ul>
+        </div>
+
+        <h2>Why 14–28 Day Rolling Averages Defeat Scale Noise</h2>
+        <p>Single-day weigh-ins are statistically meaningless. To defeat daily water weight fluctuations, you must smooth out high-frequency noise using multi-day trendlines.</p>
+
+        <p>Our Adaptive Calibration Lab uses a <strong>split rolling average model</strong>: it calculates the arithmetic mean of your body weight during the first half of your tracking block (e.g. Days 1–7) and compares it against the arithmetic mean of the concluding block (e.g. Days 8–14 or Days 15–28). By evaluating the difference between baseline rolling averages rather than isolated daily extremes, temporary fluid spikes are statistically neutralized.</p>
+
+        <h2>Worked Calibration Math Example</h2>
+        <div class="worked-example-card">
+          <p><strong>Case Study Profile:</strong> 30-year-old female, initial formula TDEE estimate = 2,200 kcal/day.</p>
+          <div class="calc-step-line"><strong>Step 1: Track Intake for 14 Days</strong><br>Total Calories Consumed over 14 Days = 26,600 kcal<br>Average Daily Intake = 26,600 &divide; 14 = <strong>1,900 kcal/day</strong></div>
+          <div class="calc-step-line"><strong>Step 2: Compare 7-Day Rolling Weight Averages</strong><br>Days 1–7 Average Weight = 68.4 kg<br>Days 8–14 Average Weight = 68.0 kg<br>Net Weight Change = &minus;0.4 kg over 2 weeks (&minus;0.2 kg/week rate)</div>
+          <div class="calc-step-line"><strong>Step 3: Convert Weight Delta to Caloric Imbalance</strong><br>Weekly Imbalance = &minus;0.2 kg/week &times; 7,700 kcal/kg = &minus;1,540 kcal/week<br>Daily Calorie Deficit = &minus;1,540 &divide; 7 = <strong>&minus;220 kcal/day</strong></div>
+          <div class="calc-step-line"><strong>Step 4: Calculate Observed Real-World TDEE</strong><br>Observed TDEE = 1,900 kcal (eaten) &minus; (&minus;220 kcal deficit) = <strong>2,120 kcal/day</strong><br><em>Comparison: Formula was within 80 kcal (High Confidence result).</em></div>
+        </div>
+
+        <h2>Step-by-Step Protocol to Calibrate Your Expenditure</h2>
+        <ol style="line-height: 1.8; margin-left: 1.25rem;">
+          <li><strong>Weigh In Every Morning Under Identical Conditions:</strong> Step on the scale immediately upon waking, post-urination, barefoot, and prior to consuming any food or water.</li>
+          <li><strong>Weigh Your Food With a Digital Gram Scale:</strong> Eyeballing food portions introduces a documented 20% to 40% underreporting error. Use a digital kitchen scale to measure oils, condiments, and calorie-dense staples.</li>
+          <li><strong>Log for a Minimum of 14 Consecutive Days:</strong> 7 days is the absolute statistical minimum, but 14 to 28 days provides maximum calibration precision.</li>
+          <li><strong>Review Formula Difference &amp; Adjust Targets:</strong> Use the interactive calibration lab above to see your exact observed calorie burn and recalibrate your targets accordingly.</li>
+        </ol>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details>
+            <summary>How long does it take to accurately calibrate TDEE with weight trends?</summary>
+            <p>A reliable calibration requires a minimum of 14 consecutive days of consistent tracking. A 21 to 28-day tracking window provides optimal accuracy, particularly for individuals experiencing hormonal shifts, irregular work schedules, or frequent social dining.</p>
+          </details>
+
+          <details>
+            <summary>Why is my calibrated TDEE different from the formula calculator?</summary>
+            <p>Calculators use population-average equations (such as Mifflin-St Jeor). Individual variations in Non-Exercise Activity Thermogenesis (NEAT), biological sex hormone levels, thyroid function, muscle density, and occupational pacing mean your true expenditure will naturally sit slightly above or below the theoretical average.</p>
+          </details>
+
+          <details>
+            <summary>Does eating more food increase my calibrated TDEE?</summary>
+            <p>Yes, to a degree. Consuming more food increases the Thermic Effect of Food (TEF) by roughly 10% of ingested calories and frequently causes an unconscious upward surge in NEAT (fidgeting, standing, spontaneous walking), slightly elevating your observed daily energy expenditure.</p>
+          </details>
+
+          <details>
+            <summary>How do menstrual cycle phases affect TDEE calibration in women?</summary>
+            <p>During the luteal phase (the 10–14 days preceding menstruation), progesterone increases body temperature and resting energy expenditure by approximately 100 to 200 kcal/day. However, premenstrual water retention can temporarily mask fat loss on the scale. Comparing weight trends across a complete 28-day cycle eliminates this hormonal noise.</p>
+          </details>
+
+          <details>
+            <summary>Is my logged data stored privately on this website?</summary>
+            <p>Yes. All weight and calorie calculations are executed entirely on client-side JavaScript in your browser. No personal body metrics or diary entries are ever transmitted to external servers or third-party databases.</p>
+          </details>
+        </div>
+
+        <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(6,182,212,0.3);">
+          <h3 style="margin-bottom:0.5rem; color:var(--accent-cyan);">Explore Related Advanced Tools:</h3>
+          <ul style="line-height: 1.8; margin-bottom: 0;">
+            <li>Need to establish an accurate multiplier before tracking? Take our <a href="/activity-factor-questionnaire-for-lifting/">Accurate Activity Factor Questionnaire for Lifting</a>.</li>
+            <li>Ready to cycle your calories between gym days and recovery days? Use our <a href="/tdee-calculator-with-rest-and-training-day-macros/">TDEE Calculator With Rest and Training Day Macros</a>.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding: 1.25rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem;">Want to test your baseline first?</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Calculate your theoretical baseline floor before running adaptive calibration.</p>
+          </div>
+          <a href="/" class="btn-primary" style="width: auto; padding: 0.6rem 1.5rem;">Go to Main TDEE Calculator &rarr;</a>
+        </div>`
+    },
+
+    '/activity-factor-questionnaire-for-lifting/': {
+      title: 'Accurate Activity Factor Questionnaire for Lifting & Workouts',
+      metaDescription: 'Take our accurate activity factor questionnaire for lifting weights. Separate daily NEAT steps from workout intensity to avoid calorie overestimation.',
+      category: 'Activity Multipliers',
+      readTime: '7 min read',
+      h1: 'Accurate Activity Factor Questionnaire for Lifting',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Questionnaires</span> &rsaquo; <span>Activity Factor for Lifting</span>
+        </div>
+
+        <p class="lead-paragraph">Most people who lift weights choose the wrong activity multiplier on standard TDEE calculators. Selecting "Very Active" simply because you train with heavy weights 4 days a week can easily cause a 300 to 500 kcal/day overestimation if you work a desk job. Our <strong>accurate activity factor questionnaire for lifting</strong> isolates your true occupational movement from your gym sessions to determine your precise Physical Activity Level (PAL).</p>
+
+        <!-- GEO Direct Answer Block -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ The Lifter's Energy Expenditure Rule:</strong></p>
+          <p>Weightlifting is metabolically demanding, but burns only <strong>200 to 350 kcal per 60-minute session</strong>. In contrast, occupational non-exercise movement (NEAT) accounts for up to <strong>15% to 30% of total daily burn</strong>. An accurate activity factor requires adding your occupational baseline steps to your structured lifting frequency, rather than relying on generic textbook categories.</p>
+        </div>
+
+        <h2>The #1 Mistake Lifters Make When Choosing an Activity Level</h2>
+        <p>When lifters open a traditional calorie calculator, they are presented with 5 vague options:</p>
+        <ul>
+          <li><em>Sedentary: Little or no exercise</em></li>
+          <li><em>Lightly Active: Exercise 1–3 times/week</em></li>
+          <li><em>Moderately Active: Exercise 3–5 times/week</em></li>
+          <li><em>Very Active: Hard exercise 6–7 times/week</em></li>
+          <li><em>Extra Active: Very hard exercise &amp; physical job</em></li>
+        </ul>
+
+        <p>Because resistance training is intensely fatiguing and mentally demanding, a lifter training 4 days per week almost invariably selects <strong>"Moderately Active" (1.55)</strong> or <strong>"Very Active" (1.725)</strong>. However, if that lifter sits at a computer for 8 to 9 hours a day, drives to work, and takes only 3,500 total steps per day, their actual daily energy expenditure is dramatically closer to <strong>Sedentary (1.30 to 1.35)</strong>.</p>
+
+        <p>Overestimating your activity multiplier by just 0.20 can inflate your calculated maintenance intake by <strong>350 to 450 calories every single day</strong>—completely wiping out a planned fat-loss deficit.</p>
+
+        <h2>Deconstructing PAL: Occupational NEAT vs. Weightlifting EAT</h2>
+        <p>Your total daily physical activity consists of two distinct components that must never be conflated:</p>
+
+        <div class="table-responsive" style="margin: 1.5rem 0;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Energy Source</th>
+                <th>Typical Daily Calories</th>
+                <th>Primary Determinant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>NEAT (Non-Exercise Activity)</strong></td>
+                <td>Walking, standing, chores, fidgeting, occupational pacing</td>
+                <td>300 &ndash; 1,000+ kcal/day</td>
+                <td>Daily step count &amp; job type (desk vs. on-feet)</td>
+              </tr>
+              <tr>
+                <td><strong>EAT (Exercise Activity)</strong></td>
+                <td>Structured gym lifting, barbell sets, HIIT, running</td>
+                <td>150 &ndash; 400 kcal/session</td>
+                <td>Workout duration, active rest intervals, heart rate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Because weight training consists largely of rest intervals between high-intensity sets (e.g. 2–3 minutes of resting between heavy squats or bench presses), the actual time under tension in a 60-minute lifting workout is often only 12 to 18 minutes. Clinical metabolic chamber studies indicate that moderate-to-heavy resistance training burns approximately <strong>6 to 9 kcal per minute of active lifting</strong>, depending on body mass.</p>
+
+        <h2>How the 3-Step Questionnaire Prevents Calorie Overestimation</h2>
+        <p>Our interactive Activity Wizard prevents double-counting by using an evidence-based additive model:</p>
+        <div class="about-calculator-card" style="margin: 1.5rem 0;">
+          <div class="calc-step-line"><strong>Baseline Floor:</strong> 1.200 (True physiological resting &amp; metabolic baseline)</div>
+          <div class="calc-step-line"><strong>+ Step 1 (Occupational NEAT Factor):</strong> +0.05 (&lt;5k steps), +0.15 (5k–8k steps), +0.28 (8k–12k steps), +0.42 (12k+ physical labor)</div>
+          <div class="calc-step-line"><strong>+ Step 2 (Lifting Frequency Factor):</strong> +0.04 per weekly dedicated lifting day (e.g. 4 days = +0.16)</div>
+          <div class="calc-step-line"><strong>+ Step 3 (Intensity / Volume Buffer):</strong> +0.00 for moderate lifting; +0.08 for vigorous competitive powerlifting or CrossFit</div>
+        </div>
+
+        <h2>Worked Example: Desk Worker Who Lifts 4 Days Per Week</h2>
+        <div class="worked-example-card">
+          <p><strong>Lifter Profile:</strong> 28-year-old male, 80 kg, 180 cm, desk job (average 4,500 daily steps), lifts weights 4 days per week for 60 minutes.</p>
+          <div class="calc-step-line"><strong>Step 1: Calculate BMR (Mifflin-St Jeor)</strong><br>BMR = (10 &times; 80) + (6.25 &times; 180) &minus; (5 &times; 28) + 5 = <strong>1,790 kcal/day</strong></div>
+          <div class="calc-step-line"><strong>The Flawed Generic Selection (Very Active 1.725)</strong><br>TDEE = 1,790 &times; 1.725 = <strong>3,088 kcal/day</strong> <em>(Severely inflated!)</em></div>
+          <div class="calc-step-line"><strong>The Calibrated Questionnaire Selection (Score: 1.41)</strong><br>Base (1.20) + Under 5k steps (+0.05) + 4 Lifting Days (+0.16) = <strong>1.41</strong><br>Accurate TDEE = 1,790 &times; 1.41 = <strong>2,524 kcal/day</strong></div>
+          <p style="margin-top:0.75rem; color:var(--accent-amber); font-weight:600;">Resulting Overestimation Avoided: 564 calories per day! By using the questionnaire, this lifter sets an accurate calorie target that delivers steady, predictable fat loss.</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details>
+            <summary>Which activity multiplier should I pick if I lift weights 4 days a week?</summary>
+            <p>If you have a sedentary desk job (&lt;5,000 steps), your true multiplier is between 1.35 and 1.45. If you average 8,000–10,000 steps daily outside the gym, choose 1.50 to 1.55 (Moderately Active). Only lifters with physical jobs (trades, nursing, construction) or who perform daily two-a-days should choose 1.70+.</p>
+          </details>
+
+          <details>
+            <summary>Does lifting weights burn more calories than cardio?</summary>
+            <p>During the session itself, steady-state cardio (such as running or cycling) typically burns more calories per minute than resistance training because your heart rate and oxygen consumption remain constantly elevated. However, weight training builds and preserves lean muscle mass, which prevents long-term drops in resting metabolic rate during a diet.</p>
+          </details>
+
+          <details>
+            <summary>What about EPOC ("afterburn effect") from heavy strength training?</summary>
+            <p>Excess Post-Exercise Oxygen Consumption (EPOC) from intense weight training is real, but frequently exaggerated. Scientific reviews demonstrate that EPOC adds approximately 6% to 15% of the total calories expended during the workout (roughly 20 to 50 additional calories over 24 hours), not hundreds of calories as popular fitness marketing claims.</p>
+          </details>
+
+          <details>
+            <summary>Should I eat back the calories my Apple Watch or fitness tracker says I burned?</summary>
+            <p>No. Commercial wrist wearables have documented error rates of 15% to 30% when estimating active caloric expenditure from resistance training. Instead of eating back wearable calories, use your questionnaire multiplier as a fixed baseline and calibrate your results using weekly scale trends.</p>
+          </details>
+        </div>
+
+        <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(168,85,247,0.3);">
+          <h3 style="margin-bottom:0.5rem; color:var(--accent-purple);">Explore Related Advanced Tools:</h3>
+          <ul style="line-height: 1.8; margin-bottom: 0;">
+            <li>Validate your multiplier against real scale data: <a href="/how-to-calibrate-tdee-with-weight-trends/">How to Calibrate TDEE With Real-World Weight Trends</a>.</li>
+            <li>Allocate carbohydrates and calories around your lifting schedule: <a href="/tdee-calculator-with-rest-and-training-day-macros/">TDEE Calculator With Rest and Training Day Macros</a>.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding: 1.25rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem;">Ready to compute your complete macro targets?</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Take your calibrated multiplier to our primary calculator for protein and carb splits.</p>
+          </div>
+          <a href="/" class="btn-primary" style="width: auto; padding: 0.6rem 1.5rem;">Calculate Daily Macros &rarr;</a>
+        </div>`
+    },
+
+    '/tdee-calculator-with-rest-and-training-day-macros/': {
+      title: 'TDEE Calculator With Rest and Training Day Macros',
+      metaDescription: 'Use our accurate TDEE calculator with rest and training day macros to cycle calories, optimize protein, and adjust carbohydrates around your workout schedule.',
+      category: 'Calorie & Macro Cycling',
+      readTime: '9 min read',
+      h1: 'TDEE Calculator With Rest and Training Day Macros',
+      content: `<div class="breadcrumbs" style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="/" data-link>Home</a> &rsaquo; <span>Calculators</span> &rsaquo; <span>Rest &amp; Training Day Macros</span>
+        </div>
+
+        <p class="lead-paragraph">Eating the exact same number of calories and carbohydrates on a grueling lower-body training day as you do while sitting on the couch on a rest day is rarely optimal for performance or recovery. Our <strong>TDEE calculator with rest and training day macros</strong> allows you to calculate customized energy splits that allocate more fuel when training demands are highest while maintaining your exact weekly calorie target.</p>
+
+        <!-- GEO Direct Answer Block -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ The Weekly Energy Budget Rule:</strong></p>
+          <p>Rest and training day macro cycling operates on a <strong>weekly matched energy budget (TDEE &times; 7)</strong>. Rather than changing total weekly calories, energy is redistributed: Training days receive a calculated caloric buffer (+200 to +300 kcal, heavily weighted toward carbohydrates), while rest days receive a modest deficit with elevated healthy fats and identical protein floors (2.0–2.2g/kg).</p>
+        </div>
+
+        <h2>What Is Calorie &amp; Macronutrient Cycling?</h2>
+        <p>Calorie and carbohydrate cycling is a nutritional strategy that synchronizes energy availability with physiological workload. On days when you lift weights or perform high-intensity conditioning, muscle glycogen depletion, muscle protein synthesis, and cellular insulin sensitivity are at their highest.</p>
+
+        <p>By shifting carbohydrates and calories to workout days, you:</p>
+        <ul>
+          <li><strong>Fuel Maximal Barbell Power &amp; Training Volume:</strong> Higher pre-workout glycogen stores allow for greater reps in reserve and higher training quality.</li>
+          <li><strong>Enhance Post-Workout Recovery:</strong> Adequate carbohydrate availability elevates post-exercise glycogen replenishment and suppresses muscle protein breakdown.</li>
+          <li><strong>Promote Satiety and Metabolic Health on Rest Days:</strong> Reducing carbohydrates and slightly increasing healthy dietary fats on non-training days optimizes insulin sensitivity and supports cellular hormone synthesis.</li>
+        </ul>
+
+        <h2>The Golden Rule: Weekly Caloric Balance Must Remain Constant</h2>
+        <p>A critical misunderstanding among lifters is treating training-day calorie increases as "bonus eating" without balancing rest days. Fat gain and fat loss are governed by net energy balance over time. If your weekly expenditure is 17,500 kcal (2,500 kcal/day &times; 7 days), your weekly consumption across all 7 days must match that budget to remain weight-stable.</p>
+
+        <div class="about-calculator-card" style="margin: 1.5rem 0;">
+          <h3 style="margin-bottom:0.75rem; color:var(--accent-cyan);">The Mathematical Weekly Conservation Formula</h3>
+          <div class="calc-step-line"><strong>Weekly Calorie Budget = Baseline Daily TDEE &times; 7 Days</strong></div>
+          <div class="calc-step-line"><strong>Training Day Calories = TDEE + Surplus Delta (e.g. +220 kcal)</strong></div>
+          <div class="calc-step-line"><strong>Rest Day Calories = [Weekly Budget &minus; (Training Day Calories &times; Training Days)] &divide; Rest Days</strong></div>
+        </div>
+
+        <h2>Macronutrient Distribution: Training Days vs. Rest Days</h2>
+        <p>While total calories change between training and rest days, each individual macronutrient plays a distinct role:</p>
+
+        <div class="table-responsive" style="margin: 1.5rem 0;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Macronutrient</th>
+                <th>Training Days Strategy</th>
+                <th>Rest Days Strategy</th>
+                <th>Scientific Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Protein</strong></td>
+                <td><strong>2.0 &ndash; 2.2 g/kg body weight</strong></td>
+                <td><strong>2.0 &ndash; 2.2 g/kg body weight</strong></td>
+                <td>Muscle protein synthesis (MPS) remains elevated for 24–48 hours post-workout. Keep protein strictly constant every single day.</td>
+              </tr>
+              <tr>
+                <td><strong>Carbohydrates</strong></td>
+                <td><strong>High (40% &ndash; 50% of calories)</strong></td>
+                <td><strong>Moderate / Low (25% &ndash; 30% of calories)</strong></td>
+                <td>Carbohydrates drive anaerobic glycolysis during lifting sets. Lower rest-day carbs prevent excess fat storage when glucose uptake is lower.</td>
+              </tr>
+              <tr>
+                <td><strong>Healthy Fats</strong></td>
+                <td><strong>Moderate / Low (20% &ndash; 25% of calories)</strong></td>
+                <td><strong>Elevated (30% &ndash; 35% of calories)</strong></td>
+                <td>Dietary fats provide essential fatty acids and support testosterone and estrogen synthesis without blunting post-workout digestion.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Worked Clinical Math Example: 80 kg Lifter Training 4 Days/Week</h2>
+        <div class="worked-example-card">
+          <p><strong>Lifter Profile:</strong> 80 kg male, maintenance TDEE = 2,500 kcal/day, trains 4 days per week (e.g., Monday, Tuesday, Thursday, Friday), rests 3 days (Wednesday, Saturday, Sunday).</p>
+          <div class="calc-step-line"><strong>Weekly Calorie Budget:</strong> 2,500 &times; 7 = <strong>17,500 kcal/week</strong></div>
+          <div class="calc-step-line"><strong>Training Days (4 Days):</strong><br>Target = 2,500 + 220 = <strong>2,720 kcal/day</strong> (Weekly subtotal = 10,880 kcal)<br>
+          &bull; <strong>Protein:</strong> 176g (704 kcal · 26%)<br>
+          &bull; <strong>Carbs:</strong> 352g (1,408 kcal · 52%)<br>
+          &bull; <strong>Fats:</strong> 68g (608 kcal · 22%)</div>
+          <div class="calc-step-line"><strong>Rest Days (3 Days):</strong><br>Remaining Weekly Budget = 17,500 &minus; 10,880 = 6,620 kcal &divide; 3 = <strong>2,207 kcal/day</strong><br>
+          &bull; <strong>Protein:</strong> 176g (704 kcal · 32%)<br>
+          &bull; <strong>Carbs:</strong> 188g (752 kcal · 34%)<br>
+          &bull; <strong>Fats:</strong> 83g (751 kcal · 34%)</div>
+          <p style="margin-top:0.75rem; color:var(--accent-emerald); font-weight:600;">Weekly Check: (2,720 &times; 4) + (2,207 &times; 3) = 10,880 + 6,621 = 17,501 kcal. Perfect weekly energy balance achieved!</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <details>
+            <summary>Does calorie cycling burn more fat than eating the same calories every day?</summary>
+            <p>From a purely thermodynamic standpoint, if total weekly calories and protein intake are identical, overall rate of fat loss is nearly equivalent. However, calorie cycling offers significant practical benefits: higher training performance, greater dietary flexibility, reduced diet fatigue, and improved social compliance on weekend rest or workout days.</p>
+          </details>
+
+          <details>
+            <summary>Should I lower my protein intake on rest days?</summary>
+            <p>No. Muscle tissue remodeling, cellular repair, and protein turnover continue for up to 48 hours following a resistance training session. Maintaining a constant protein intake of 1.6 to 2.2 grams per kilogram of body weight on rest days protects your muscle mass and keeps you satiated.</p>
+          </details>
+
+          <details>
+            <summary>What should I do if I do light cardio on a rest day?</summary>
+            <p>If your rest day involves low-intensity steady-state cardio (such as a 30-minute walk or gentle recovery cycling), you do not need to change your rest-day calorie target. If you perform an intense 60-minute endurance session, treat that day as a training day or log the extra activity in our <a href="/calories-burned-calculator/">Calories Burned Calculator</a>.</p>
+          </details>
+
+          <details>
+            <summary>Can I use rest and training day macro splits while in a calorie deficit?</summary>
+            <p>Yes, absolutely. In a fat-loss phase, training-day calories are typically set at your maintenance TDEE (creating high workout energy), while rest-day calories are reduced by 25% to 30%, producing the necessary weekly deficit while protecting your gym strength.</p>
+          </details>
+        </div>
+
+        <div class="about-calculator-card" style="margin: 2rem 0 1rem; border-color: rgba(16,185,129,0.3);">
+          <h3 style="margin-bottom:0.5rem; color:var(--accent-emerald);">Explore Related Advanced Tools:</h3>
+          <ul style="line-height: 1.8; margin-bottom: 0;">
+            <li>Not sure which activity baseline to select? Use our <a href="/activity-factor-questionnaire-for-lifting/">Accurate Activity Factor Questionnaire for Lifting</a>.</li>
+            <li>Weighing yourself to verify fat loss progress? Read our guide on <a href="/how-to-calibrate-tdee-with-weight-trends/">How to Calibrate TDEE With Real-World Weight Trends</a>.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding: 1.25rem; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="margin: 0 0 0.25rem;">Looking for flat daily macro percentages?</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Explore standard non-cycling macro ratios (Balanced, Low Carb, Keto) on our primary macro tool.</p>
+          </div>
+          <a href="/macro-calculator/" class="btn-primary" style="width: auto; padding: 0.6rem 1.5rem;">View Standard Macro Calculator &rarr;</a>
+        </div>`
     }
   }
 };
