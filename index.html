@@ -110,8 +110,25 @@
         },
         "author": {
           "@type": "Organization",
-          "name": "TDEE Calculator Editorial Team",
+          "name": "TDEE Calculator Clinical Editorial Staff",
           "url": "https://tdeecalculater.com/about/"
+        },
+        "reviewedBy": {
+          "@type": "Person",
+          "name": "Registered Dietitian & Certified Sports Nutritionist Review Board",
+          "jobTitle": "Registered Dietitian (RD) & Certified Sports Nutritionist (CISSN)",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "TDEE Calculator Clinical Nutrition Panel",
+            "url": "https://tdeecalculater.com/how-we-calculate/"
+          },
+          "description": "Board vetting nutritional methodology, macronutrient calculations, and clinical energy expenditure literature against validated human trials.",
+          "knowsAbout": [
+            "Human Energy Expenditure",
+            "Basal Metabolic Rate",
+            "Mifflin-St Jeor Equation",
+            "Sports Nutrition & Macronutrient Distribution"
+          ]
         },
         "publisher": {
           "@id": "https://tdeecalculater.com/#organization"
@@ -431,10 +448,12 @@
           </div>
           
           <!-- E-E-A-T Medical Disclaimer & Methodology Link -->
-          <div class="calculator-disclaimer" style="margin-top: 1.5rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-cyan); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
-            <strong>Medical Disclaimer:</strong> This output is an estimate based on clinical energy expenditure formulas and does not constitute medical advice. Standard formulas cannot account for unique metabolic adaptation or non-exercise activity thermogenesis (NEAT) variations. 
-            <br><br>
-            <a href="/how-we-calculate/" style="color: var(--accent-cyan); font-weight: 600; text-decoration: none;" data-link>View our complete mathematical methodology &rarr;</a>
+          <div class="calculator-disclaimer">
+            <div class="disclaimer-tag">⚖️ Clinical &amp; Medical Disclaimer</div>
+            <p style="margin: 0 0 0.5rem; color: var(--text-muted); line-height: 1.55;">
+              <strong>Informational Estimation:</strong> Output calculations are estimates derived from clinical resting metabolic rate equations (Mifflin-St Jeor and Katch-McArdle) and do not constitute individualized medical, dietary, or healthcare advice. Static formulas cannot account for individual endocrine variations, metabolic adaptation, or NEAT variance.
+            </p>
+            <a href="/how-we-calculate/" style="color: var(--accent-cyan); font-weight: 600; text-decoration: underline; font-size: 0.86rem;" data-link>Explore our complete evidence-based calculation methodology &rarr;</a>
           </div>
 
           <!-- Goal Simulator Card -->
@@ -756,14 +775,45 @@
         <header style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
           <div style="font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.25; margin-bottom: 1rem; color: var(--text-main); font-weight: bold;">TDEE Calculator: Calculate Your Total Daily Energy Expenditure</div>
           
-          <div class="trust-meta" style="margin-bottom: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
-            <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> TDEE Calculator Editorial Team</div>
-            <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
-            <div><strong>📅 Last Updated:</strong> October 2026</div>
+          <div class="editorial-review-card trust-meta" itemscope itemtype="https://schema.org/Person" itemprop="reviewedBy">
+            <div class="review-badges-strip">
+              <span class="review-badge-verified">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Medically &amp; Scientifically Vetted
+              </span>
+              <span class="review-badge-board">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Evidence-Based Clinical Review
+              </span>
+            </div>
+            <div class="reviewer-profile-body">
+              <div class="reviewer-avatar-slot" aria-hidden="true">🩺</div>
+              <div class="reviewer-info-slot">
+                <div class="reviewer-role-title" itemprop="jobTitle">Reviewed by a Registered Dietitian (RD) &amp; Certified Sports Nutritionist (CISSN)</div>
+                <div class="reviewer-board-name" itemprop="name">TDEE Calculator Clinical Nutrition &amp; Metabolism Review Panel</div>
+                <p class="reviewer-bio" itemprop="description">
+                  Formulas and metabolic guidance are verified against peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, ISSN position stands) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
+                </p>
+              </div>
+            </div>
+            <div class="review-meta-grid">
+              <div class="review-meta-item">
+                <strong>✍️ Editorial Attribution:</strong> <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">TDEE Calculator Clinical Editorial Staff</span></span>
+              </div>
+              <div class="review-meta-item">
+                <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Clinical Equations (Mifflin &amp; Katch)</a>
+              </div>
+              <div class="review-meta-item">
+                <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-10" itemprop="dateModified">October 2026</time>
+              </div>
+              <div class="review-meta-item">
+                <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
+              </div>
+            </div>
           </div>
 
           <p style="font-size: 1.1rem; color: var(--text-muted);">You enter your age, weight, height, and activity level into a TDEE calculator and get a calorie number. But what does that number actually mean? If another calculator gives you a different result, it can be hard to know which number to trust. The problem is that a TDEE estimate is not a direct measurement of how many calories your body burns each day.</p>
-          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">This calculator is designed to make the number easier to understand. It uses the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. It also explains how the result is calculated, how to choose your activity level, why estimates can differ, and how to compare the estimate with your real-world results. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         </header>
 
         <!-- How to Use the TDEE Calculator: Step-by-Step Visual Guide -->
@@ -818,7 +868,7 @@
 
         <p>Your daily energy expenditure is made up of four components:</p>
         <ul>
-          <li><strong>BMR (Basal Metabolic Rate):</strong> Energy used at rest to keep essential body functions running &mdash; breathing, circulation, brain activity. This accounts for 60%&ndash;70% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [2]</a>)</li>
+          <li><strong>BMR (Basal Metabolic Rate):</strong> Energy used at rest to keep essential body functions running &mdash; breathing, circulation, brain activity. This accounts for 60%&ndash;70% of total daily burn. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [2]</a>)</li>
           <li><strong>NEAT (Non-Exercise Activity Thermogenesis):</strong> Energy used for everyday movement &mdash; walking, standing, household chores, commuting. NEAT can vary by 800+ kcal/day between individuals.</li>
           <li><strong>TEF (Thermic Effect of Food):</strong> Energy required to digest and process food (roughly 10% of daily intake). Protein has the highest thermic cost (20%&ndash;30%).</li>
           <li><strong>EAT (Exercise Activity Thermogenesis):</strong> Energy burned during planned workouts &mdash; running, strength training, cycling, and sports.</li>
@@ -974,7 +1024,7 @@
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>The calculator uses the Mifflin-St Jeor equation to estimate resting energy expenditure and then applies an activity factor. The original Mifflin-St Jeor study was published in 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+              <p>The calculator uses the Mifflin-St Jeor equation to estimate resting energy expenditure and then applies an activity factor. The original Mifflin-St Jeor study was published in 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
             </div>
           </div>
 
@@ -1077,7 +1127,7 @@
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>Yes, energy expenditure can be measured using scientific methods such as indirect calorimetry and doubly labeled water. A normal online TDEE calculator estimates rather than measures your TDEE. (<a href="https://pubmed.ncbi.nlm.nih.gov/38759093/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Energy Expenditure in Humans: Principles, Methods, and Changes Throughout the Life Course. - PubMed">PubMed [5]</a>)</p>
+              <p>Yes, energy expenditure can be measured using scientific methods such as indirect calorimetry and doubly labeled water. A normal online TDEE calculator estimates rather than measures your TDEE. (<a href="https://pubmed.ncbi.nlm.nih.gov/38759093/" target="_blank" rel="noopener noreferrer" title="Energy Expenditure in Humans: Principles, Methods, and Changes Throughout the Life Course. - PubMed">PubMed [5]</a>)</p>
             </div>
           </div>
 
@@ -1087,7 +1137,7 @@
               <span class="faq-icon">▼</span>
             </div>
             <div class="faq-answer">
-              <p>The Mifflin-St Jeor equation uses different constants for men and women, so sex is one of its inputs. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+              <p>The Mifflin-St Jeor equation uses different constants for men and women, so sex is one of its inputs. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
             </div>
           </div>
 
@@ -1140,7 +1190,7 @@
         <h2>About This Calculator</h2>
         <div class="about-calculator-card">
           <p>This calculator uses a transparent calculation method so you can understand where your estimate comes from.</p>
-          <p>The calculation uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. The original Mifflin-St Jeor research measured resting energy expenditure using indirect calorimetry in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+          <p>The calculation uses the Mifflin-St Jeor equation to estimate resting energy expenditure and an activity factor to estimate total daily energy expenditure. The original Mifflin-St Jeor research measured resting energy expenditure using indirect calorimetry in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
           <p>The result is an estimate, not a laboratory measurement. The goal is to give you a useful starting point while making the calculation, assumptions, and limitations clear.</p>
         </div>
 

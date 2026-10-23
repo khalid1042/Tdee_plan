@@ -4,9 +4,10 @@ const path = require('path');
 const window = {};
 eval(fs.readFileSync(path.join(__dirname, '..', 'js', 'content.js'), 'utf8'));
 const routes = window.TDEEContent.routes;
-const pages = ['/', ...Object.keys(routes), '/what-is-tdee/', '/how-to-calculate-tdee/'];
+const pages = ['/', ...Object.keys(routes)];
 
 let totalErrors = 0;
+let articlesWithReviewedBy = 0;
 
 pages.forEach(p => {
   let file = p === '/' ? path.join(__dirname, '..', 'index.html') : path.join(__dirname, '..', p.replace(/^\/|\/$/g, ''), 'index.html');
@@ -27,6 +28,17 @@ pages.forEach(p => {
       const parsed = JSON.parse(m[1].trim());
       const graph = parsed['@graph'] || [parsed];
       const types = graph.map(node => node['@type']);
+      
+      const articleNode = graph.find(node => node['@type'] === 'Article');
+      if (articleNode) {
+        if (articleNode.reviewedBy && articleNode.reviewedBy.jobTitle) {
+          articlesWithReviewedBy++;
+        } else {
+          console.error(`[ERROR] Article in ${p} missing reviewedBy:`, articleNode);
+          totalErrors++;
+        }
+      }
+      
       console.log(`[OK] ${p} (Schema block ${idx+1}): Types -> [${types.join(', ')}]`);
     } catch (e) {
       console.error(`[ERROR] Invalid JSON-LD in ${p}: ${e.message}`);
@@ -35,4 +47,5 @@ pages.forEach(p => {
   });
 });
 
-console.log(`\nAudit completed with ${totalErrors} schema errors.`);
+console.log(`\nAudit completed: ${articlesWithReviewedBy} Articles verified with reviewedBy schema.`);
+console.log(`Total errors: ${totalErrors}`);

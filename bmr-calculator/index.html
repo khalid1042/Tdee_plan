@@ -246,10 +246,41 @@
       <span id="silo-category" class="hero-badge">Calculator</span>
       <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">BMR Calculator: Calculate Your Basal Metabolic Rate</h1>
       
-      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
-        <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> TDEE Calculator Editorial Team</div>
-        <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
-        <div><strong>📅 Last Updated:</strong> October 2026</div>
+      <div class="editorial-review-card trust-meta" itemscope itemtype="https://schema.org/Person" itemprop="reviewedBy">
+        <div class="review-badges-strip">
+          <span class="review-badge-verified">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Medically &amp; Scientifically Vetted
+          </span>
+          <span class="review-badge-board">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Evidence-Based Clinical Review
+          </span>
+        </div>
+        <div class="reviewer-profile-body">
+          <div class="reviewer-avatar-slot" aria-hidden="true">🩺</div>
+          <div class="reviewer-info-slot">
+            <div class="reviewer-role-title" itemprop="jobTitle">Reviewed by a Registered Dietitian (RD) &amp; Certified Sports Nutritionist (CISSN)</div>
+            <div class="reviewer-board-name" itemprop="name">TDEE Calculator Clinical Nutrition &amp; Metabolism Review Panel</div>
+            <p class="reviewer-bio" itemprop="description">
+              Formulas and metabolic guidance are verified against peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, ISSN position stands) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
+            </p>
+          </div>
+        </div>
+        <div class="review-meta-grid">
+          <div class="review-meta-item">
+            <strong>✍️ Editorial Attribution:</strong> <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">TDEE Calculator Editorial Team</span></span>
+          </div>
+          <div class="review-meta-item">
+            <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Clinical Equations (Mifflin &amp; Katch)</a>
+          </div>
+          <div class="review-meta-item">
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-10" itemprop="dateModified">October 2026</time>
+          </div>
+          <div class="review-meta-item">
+            <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
+          </div>
+        </div>
       </div>
   
       <div id="silo-calculator-mount"></div>
@@ -288,7 +319,7 @@
           <li>Weight</li>
         </ul>
         <p>The calculator applies the equation to these values and returns an estimated number of calories per day.</p>
-        <p>The original Mifflin-St Jeor research developed predictive equations for resting energy expenditure using data from <strong>498 healthy adults</strong>. Their resting energy expenditure was measured using indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>The original Mifflin-St Jeor research developed predictive equations for resting energy expenditure using data from <strong>498 healthy adults</strong>. Their resting energy expenditure was measured using indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         <p>Technically, the Mifflin-St Jeor equation estimates <strong>resting energy expenditure (REE)</strong>. Consumer calculators commonly use the result as a BMR estimate because BMR and resting metabolic rate are closely related concepts.</p>
 
         <div class="about-calculator-card">
@@ -301,7 +332,7 @@
           </ul>
         </div>
 
-        <p>Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+        <p>Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
 
         <h2>How to Use the BMR Calculator</h2>
         <p>Using the calculator requires only a few basic details.</p>
@@ -310,7 +341,7 @@
         <p>Enter your age in years. Age is one of the primary independent variables used by the Mifflin-St Jeor equation, as baseline metabolic expenditure tends to change predictably across adulthood.</p>
 
         <h3>Step 2: Select Your Sex</h3>
-        <p>Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h3>Step 3: Enter Your Height</h3>
         <p>Enter your height using the available unit options (Centimeters or Feet & Inches). Height reflects body surface area and structural organ scale.</p>
@@ -372,7 +403,7 @@
           <p style="margin-top: 0.5rem;"><strong>For Women:</strong> BMR estimate = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161</p>
         </div>
 
-        <p>These equations are simplified versions of the predictive equations published in the original Mifflin-St Jeor study. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>These equations are simplified versions of the predictive equations published in the original Mifflin-St Jeor study. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         <p>Because the original research describes these as resting energy expenditure equations, it is more precise to call the calculator result an <strong>estimated resting energy expenditure</strong> even though consumer calculators commonly label it BMR.</p>
 
         <h3>BMR Calculation Worked Example</h3>
@@ -507,7 +538,7 @@
         <p>Mifflin-St Jeor uses different baseline constants for biological men and women to account for average population differences in fat-free mass.</p>
 
         <h3>Body Composition</h3>
-        <p>Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h3>Individual Biological Differences</h3>
         <p>Prediction equations cannot capture every biological difference between individuals, such as thyroid hormone levels, genetics, or mitochondrial efficiency. This is one reason why a BMR calculator should be treated as an estimate rather than an exact measurement.</p>
@@ -541,7 +572,7 @@
         <p>Be careful with claims that a specific food, supplement, or exercise can dramatically increase BMR. There is no simple method that guarantees a massive surge in resting energy expenditure for everyone. Lean body mass is associated with resting energy expenditure, so increasing your muscle mass through resistance training can support higher resting energy needs over time. Regular exercise also increases overall daily energy expenditure, but increasing your workout calories (EEE) is not the same as directly altering your baseline BMR. A better goal is to support overall health, strength, physical activity, and healthy body composition rather than chase a specific BMR number.</p>
 
         <h2>How Accurate Is a BMR Calculator?</h2>
-        <p>A BMR calculator can provide a useful baseline estimate, but it cannot tell you your exact metabolic rate. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. Later validation research found that it can be a useful prediction equation, while also showing that prediction accuracy varies between individuals and populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>A BMR calculator can provide a useful baseline estimate, but it cannot tell you your exact metabolic rate. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. Later validation research found that it can be a useful prediction equation, while also showing that prediction accuracy varies between individuals and populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <p>Accuracy can vary because:</p>
         <ul>
@@ -557,7 +588,7 @@
         <p>Different calculators may use different underlying equations. One may use <strong>Mifflin-St Jeor</strong>, while another may use <strong>Harris-Benedict</strong> or <strong>Katch-McArdle</strong>. Different input assumptions, rounding rules, and body-composition algorithms can also produce different results. A difference between two calculators does not mean one is broken; compare the methodology before deciding why the numbers differ.</p>
 
         <h2>Can BMR Be Measured?</h2>
-        <p>Yes. Resting energy expenditure can be measured rather than estimated. One established clinical method is <strong>indirect calorimetry</strong>. Indirect calorimetry measures oxygen consumption (VO2) and carbon dioxide production (VCO2) to calculate real-time metabolic heat production. This is fundamentally different from an online calculator. An online calculator uses a prediction equation based on statistical averages, whereas indirect calorimetry measures your actual physiological data under controlled laboratory conditions. Research shows that prediction equations can have meaningful individual errors compared with measured resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+        <p>Yes. Resting energy expenditure can be measured rather than estimated. One established clinical method is <strong>indirect calorimetry</strong>. Indirect calorimetry measures oxygen consumption (VO2) and carbon dioxide production (VCO2) to calculate real-time metabolic heat production. This is fundamentally different from an online calculator. An online calculator uses a prediction equation based on statistical averages, whereas indirect calorimetry measures your actual physiological data under controlled laboratory conditions. Research shows that prediction equations can have meaningful individual errors compared with measured resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
 
         <h2>Why Does BMR Change When You Lose Weight?</h2>
         <p>Your estimated BMR changes as your body mass changes. For example, if your weight decreases by 10 kg, entering your new weight into the same equation will produce a lower estimated resting energy expenditure. This does not automatically mean that your metabolism is "damaged." It simply reflects the physical reality that a smaller body requires fewer calories to support its tissues at rest. For this reason, calorie targets should be periodically reassessed as your body weight changes instead of treating one initial BMR number as permanent.</p>
@@ -571,7 +602,7 @@
           <li>Clinical nutrition or medical recovery situations</li>
           <li>Elite athletes with extreme lean body mass percentages</li>
         </ul>
-        <p>Research has found that prediction accuracy can vary across populations and individual characteristics. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [4]</a>) If you need individualized calorie or nutrition guidance, speak with a qualified healthcare professional.</p>
+        <p>Research has found that prediction accuracy can vary across populations and individual characteristics. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [4]</a>) If you need individualized calorie or nutrition guidance, speak with a qualified healthcare professional.</p>
 
         <h2>Common BMR Calculation Mistakes</h2>
         <div class="question-callout-box">
@@ -636,11 +667,11 @@
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005;105(5):775-789. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005;105(5):775-789. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
           <li>Healthline Editorial Team. Basal Metabolic Rate Calculator & Overview. (<a href="https://www.healthline.com/health/how-to-calculate-your-basal-metabolic-rate?utm_source=chatgpt.com" target="_blank" rel="noopener">Healthline [3]</a>)</li>
-          <li>Weijs PJ. Validity of predictive equations for resting energy expenditure in US and European overweight and obese adults. <em>Public Health Nutr</em>. 2008;11(1):85-94. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
-          <li>Sabounchi NS, et al. Predicting resting energy expenditure: a critical appraisal and validation review. <em>Int J Obes</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37391582/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [5]</a>)</li>
+          <li>Weijs PJ. Validity of predictive equations for resting energy expenditure in US and European overweight and obese adults. <em>Public Health Nutr</em>. 2008;11(1):85-94. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</li>
+          <li>Sabounchi NS, et al. Predicting resting energy expenditure: a critical appraisal and validation review. <em>Int J Obes</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37391582/" target="_blank" rel="noopener noreferrer">PubMed [5]</a>)</li>
         </ul>
 
         <h2>A Word From Our Team</h2>

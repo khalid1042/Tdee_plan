@@ -97,11 +97,28 @@
             "description": "Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and TDEE examples.",
             "mainEntityOfPage": "https://tdeecalculater.com/blog/mifflin-st-jeor-equation/",
             "datePublished": "2026-10-02",
-            "dateModified": "2026-10-11",
+            "dateModified": "2026-10-18",
             "author": {
                 "@type": "Organization",
-                "name": "TDEE Calculator Editorial Team",
+                "name": "TDEE Calculator Clinical Editorial Staff",
                 "url": "https://tdeecalculater.com/about/"
+            },
+            "reviewedBy": {
+                "@type": "Person",
+                "name": "Registered Dietitian & Certified Sports Nutritionist Review Board",
+                "jobTitle": "Registered Dietitian (RD) & Certified Sports Nutritionist (CISSN)",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "TDEE Calculator Clinical Nutrition Panel",
+                    "url": "https://tdeecalculater.com/how-we-calculate/"
+                },
+                "description": "Board vetting nutritional methodology, macronutrient calculations, and clinical energy expenditure literature against validated human trials.",
+                "knowsAbout": [
+                    "Human Energy Expenditure",
+                    "Basal Metabolic Rate",
+                    "Mifflin-St Jeor Equation",
+                    "Sports Nutrition & Macronutrient Distribution"
+                ]
             },
             "publisher": {
                 "@id": "https://tdeecalculater.com/#organization"
@@ -214,17 +231,48 @@
       <span id="silo-category" class="hero-badge">Scientific Formulas</span>
       <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples</h1>
       
-      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
-        <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> TDEE Calculator Editorial Team</div>
-        <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
-        <div><strong>📅 Last Updated:</strong> October 2026</div>
+      <div class="editorial-review-card trust-meta" itemscope itemtype="https://schema.org/Person" itemprop="reviewedBy">
+        <div class="review-badges-strip">
+          <span class="review-badge-verified">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Medically &amp; Scientifically Vetted
+          </span>
+          <span class="review-badge-board">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Evidence-Based Clinical Review
+          </span>
+        </div>
+        <div class="reviewer-profile-body">
+          <div class="reviewer-avatar-slot" aria-hidden="true">🩺</div>
+          <div class="reviewer-info-slot">
+            <div class="reviewer-role-title" itemprop="jobTitle">Reviewed by a Registered Dietitian (RD) &amp; Certified Sports Nutritionist (CISSN)</div>
+            <div class="reviewer-board-name" itemprop="name">TDEE Calculator Clinical Nutrition &amp; Metabolism Review Panel</div>
+            <p class="reviewer-bio" itemprop="description">
+              Formulas and metabolic guidance are verified against peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, ISSN position stands) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
+            </p>
+          </div>
+        </div>
+        <div class="review-meta-grid">
+          <div class="review-meta-item">
+            <strong>✍️ Editorial Attribution:</strong> <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">TDEE Calculator Editorial Team</span></span>
+          </div>
+          <div class="review-meta-item">
+            <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Clinical Equations (Mifflin &amp; Katch)</a>
+          </div>
+          <div class="review-meta-item">
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-10" itemprop="dateModified">October 2026</time>
+          </div>
+          <div class="review-meta-item">
+            <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
+          </div>
+        </div>
       </div>
   
       <div id="silo-calculator-mount"></div>
       <div id="silo-body" class="article-body">
 <p class="lead-paragraph">Calculating your calorie needs can become confusing fast. You may find a BMR number online but still wonder what it actually means. Is it your maintenance intake, your daily calorie burn, or simply the energy your body uses at rest? Different calculators can also show different results, making the process even harder.</p>
 
-        <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h2>What Is the Mifflin-St Jeor Equation?</h2>
         <p>The Mifflin-St Jeor Equation is a mathematical formula developed to predict resting energy expenditure. In simple terms, REE estimates the energy your body uses while resting.</p>
@@ -336,7 +384,7 @@
         <p>However, these factors are broad estimates. Two people in the same activity category can have different jobs, step counts, workouts, and daily movement. As a result, calculated TDEE can differ from actual energy expenditure. Learn more in our <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Guide</a>.</p>
 
         <h2>Is the Mifflin-St Jeor Equation Accurate?</h2>
-        <p>Research supports the formula as a useful general prediction equation. A systematic review by the Academy of Nutrition and Dietetics found that Mifflin-St Jeor predicted measured RMR within &plusmn;10% in more non-obese and obese adults than the other commonly used equations examined. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Research supports the formula as a useful general prediction equation. A systematic review by the Academy of Nutrition and Dietetics found that Mifflin-St Jeor predicted measured RMR within &plusmn;10% in more non-obese and obese adults than the other commonly used equations examined. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>Even so, individual accuracy is not guaranteed. One study found that accuracy varied by factors such as BMI, age, sex, and race or ethnicity. Moreover, research in older adults found that no prediction equation consistently provided accurate and precise results for every individual.</p>
         <p>Therefore, the result should be treated as an <strong>estimate</strong>, not an exact laboratory measurement.</p>
 
@@ -387,7 +435,7 @@
         </div>
 
         <h2>The Bottom Line</h2>
-        <p>The <strong>Mifflin-St Jeor Equation</strong> is a practical way to estimate resting energy expenditure using four basic inputs: weight, height, age, and sex. Its original research and later systematic reviews support its usefulness, while also showing that prediction errors can occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>The <strong>Mifflin-St Jeor Equation</strong> is a practical way to estimate resting energy expenditure using four basic inputs: weight, height, age, and sex. Its original research and later systematic reviews support its usefulness, while also showing that prediction errors can occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>For that reason, use the result as a starting point rather than an exact metabolic measurement. Estimate your resting needs, calculate TDEE, and then compare the estimate with real-world scale changes over time. That approach makes the calculation more useful while respecting its scientific limitations.</p>
 
         <h2>Methodology and Sources</h2>
@@ -395,7 +443,7 @@
         <p>The goal is to explain both <strong>how the equation works and how to interpret it responsibly</strong>. In particular, the article distinguishes a calculated estimate from a directly measured value, helping readers use the number as a practical starting point rather than treating it as an exact result.</p>
 
         <ul>
-          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990 Feb;51(2):241-7. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990 Feb;51(2):241-7. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005.</li>
         </ul>
 

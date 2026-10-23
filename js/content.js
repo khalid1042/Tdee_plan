@@ -194,8 +194,8 @@ window.TDEEContent = {
         <h2>Scientific Evidence & References</h2>
         <p>Guidance in this article is supported by peer-reviewed sports nutrition and energy balance literature indexed in PubMed and NCBI.</p>
         <ul>
-          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
-          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</li>
+          <li>Morton RW, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. <em>Br J Sports Med</em>. 2018. (<a href="https://pubmed.ncbi.nlm.nih.gov/28698222/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
         </ul>
 
         <h2>Educational Disclaimer</h2>
@@ -523,7 +523,7 @@ window.TDEEContent = {
         </div>
 
         <h2>How Is TDEE Calculated?</h2>
-        <p>A common approach begins by estimating BMR and then accounting for daily physical activity. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed from measured resting energy expenditure data in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>A common approach begins by estimating BMR and then accounting for daily physical activity. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed from measured resting energy expenditure data in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <div class="formula-callout-box">
           <p><strong>TDEE Formula:</strong> TDEE = Estimated BMR &times; Activity Multiplier</p>
@@ -579,7 +579,7 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>Levine JA. Non-exercise activity thermogenesis (NEAT). <em>Best Pract Res Clin Endocrinol Metab</em>. 2002;16(4):679-702.</li>
         </ul>
 
@@ -621,7 +621,7 @@ window.TDEEContent = {
           </ul>
         </div>
 
-        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
+        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
 
         <p>Most TDEE calculations are estimates rather than direct laboratory measurements.</p>
 
@@ -656,7 +656,7 @@ window.TDEEContent = {
         </div>
 
         <h3>Step 1: Calculate Your BMR</h3>
-        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
+        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
 
         <div class="equation-box">
           <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
@@ -675,7 +675,7 @@ window.TDEEContent = {
 
         <p>Strictly speaking, the Mifflin-St Jeor equation predicts resting energy expenditure rather than measuring BMR under laboratory conditions. However, many online calculators use “BMR” as a simple label for this estimate. Estimate your baseline resting floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
 
-        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
+        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
 
         <h3>Step 2: Choose Your Activity Factor</h3>
         <p>The next step is selecting an activity multiplier:</p>
@@ -767,11 +767,11 @@ window.TDEEContent = {
         <h2>Why Do TDEE Calculators Give Different Results?</h2>
         <p>Different calculators can produce different numbers because they may use different equations, activity assumptions, rounding methods, or definitions of activity.</p>
         <p>More importantly, prediction equations cannot capture every factor affecting an individual's energy expenditure.</p>
-        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>How Accurate Is a TDEE Calculation?</h2>
         <p>A calculated TDEE should be treated as a <strong>starting estimate</strong>, not an exact measurement.</p>
-        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
+        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/" target="_blank" rel="noopener noreferrer" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
 
         <h3>How to Check Your Estimated TDEE</h3>
         <p>Track your calorie intake and body weight consistently over several weeks.</p>
@@ -819,10 +819,10 @@ window.TDEEContent = {
 
         <h2>Methodology & Scientific References</h2>
         <ul>
-          <li>Levine JA. Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure. <em>Work</em>. 2007. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
-          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
-          <li>Jagim AR, et al. Estimation of energy expenditure using prediction equations in overweight and obese adults. <em>Res Sports Med</em>. 2016. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
+          <li>Levine JA. Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure. <em>Work</em>. 2007. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
+          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</li>
+          <li>Jagim AR, et al. Estimation of energy expenditure using prediction equations in overweight and obese adults. <em>Res Sports Med</em>. 2016. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</li>
         </ul>
 
         <p style="font-size:0.9rem; color:var(--text-muted); margin-top:1rem;"><strong>Last reviewed:</strong> October 2026</p>
@@ -842,7 +842,7 @@ window.TDEEContent = {
       h1: 'TDEE vs BMR: What’s the Difference and Which One Should You Use?',
       content: `<p class="lead-paragraph">You enter your age, height, weight, and activity level into a calorie calculator. Then two numbers appear: BMR and TDEE. One may show 1,600 calories while the other shows 2,400, leaving you unsure which number represents your actual calorie needs.</p>
 
-        <p>That confusion is understandable. <strong>TDEE vs BMR</strong> becomes much easier to understand once you know what each number measures. BMR estimates your resting energy needs, whereas TDEE estimates your total daily energy expenditure, including resting energy, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [1]</a>)</p>
+        <p>That confusion is understandable. <strong>TDEE vs BMR</strong> becomes much easier to understand once you know what each number measures. BMR estimates your resting energy needs, whereas TDEE estimates your total daily energy expenditure, including resting energy, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer" title="Factors Affecting Energy Expenditure and Requirements - NCBI Bookshelf">NCBI [1]</a>)</p>
 
         <h2>TDEE vs BMR: Quick Comparison</h2>
         <div class="table-responsive">
@@ -895,10 +895,10 @@ window.TDEEContent = {
 
         <h2>What Is BMR?</h2>
         <p>BMR stands for <strong>Basal Metabolic Rate</strong>. It refers to the energy your body uses to maintain essential physiological functions under strict laboratory resting conditions.</p>
-        <p>For example, your body continues to use energy for respiration, blood circulation, brain signaling, cellular repair, and organ activity even when you are completely at rest. However, BMR should not be confused with the total calories you use during a normal active day. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Energy - Recommended Dietary Allowances - NCBI Bookshelf">NCBI [2]</a>)</p>
+        <p>For example, your body continues to use energy for respiration, blood circulation, brain signaling, cellular repair, and organ activity even when you are completely at rest. However, BMR should not be confused with the total calories you use during a normal active day. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/" target="_blank" rel="noopener noreferrer" title="Energy - Recommended Dietary Allowances - NCBI Bookshelf">NCBI [2]</a>)</p>
 
         <h3>How Is BMR Calculated?</h3>
-        <p>Many online calculators estimate resting energy expenditure with predictive equations. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed to predict resting energy expenditure in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [3]</a>)</p>
+        <p>Many online calculators estimate resting energy expenditure with predictive equations. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed to predict resting energy expenditure in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [3]</a>)</p>
 
         <div class="equation-box">
           <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
@@ -909,7 +909,7 @@ window.TDEEContent = {
 
         <h2>What Is TDEE?</h2>
         <p>TDEE means <strong>Total Daily Energy Expenditure</strong>. It estimates the total energy your body uses during a typical 24-hour period.</p>
-        <p>Unlike BMR, TDEE includes resting energy, physical activity, non-exercise daily movement (NEAT), and the thermic effect of food (TEF). Therefore, it is far more useful when your goal is to estimate daily calorie expenditure for weight loss, maintenance, or muscle gain. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>Unlike BMR, TDEE includes resting energy, physical activity, non-exercise daily movement (NEAT), and the thermic effect of food (TEF). Therefore, it is far more useful when your goal is to estimate daily calorie expenditure for weight loss, maintenance, or muscle gain. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
         <p>Physical activity includes more than formal gym workouts. For instance, walking, standing, cleaning, working at a desk, and other everyday movements also require energy.</p>
 
         <h2>What Makes Up TDEE?</h2>
@@ -929,7 +929,7 @@ window.TDEEContent = {
           </ul>
         </div>
 
-        <p>Moreover, physical activity is one of the most variable parts of total daily energy expenditure. NEAT can also differ considerably (by up to 800+ kcal/day) between people with similar exercise routines. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?report=reader&utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [4]</a>)</p>
+        <p>Moreover, physical activity is one of the most variable parts of total daily energy expenditure. NEAT can also differ considerably (by up to 800+ kcal/day) between people with similar exercise routines. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [4]</a>)</p>
 
         <h2>How Are BMR and TDEE Related?</h2>
         <p>BMR is the single largest component of your total daily energy expenditure (accounting for 60%–70% of total burn). Meanwhile, physical activity and food digestion add to the daily total.</p>
@@ -1002,7 +1002,7 @@ window.TDEEContent = {
 
         <h2>Why Is TDEE Higher Than BMR?</h2>
         <p>Your body uses energy for far more than basic resting functions. During the day, you walk, stand, exercise, work, clean, cook, and digest food.</p>
-        <p>As a result, total daily expenditure is normally greater than resting expenditure. The exact difference varies because physical activity, body size, body composition, food intake, and other factors differ between people. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>As a result, total daily expenditure is normally greater than resting expenditure. The exact difference varies because physical activity, body size, body composition, food intake, and other factors differ between people. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
         <h2>TDEE vs BMR for Weight Loss</h2>
         <p>For calorie planning, TDEE is generally the far more useful starting point because it estimates your total daily expenditure.</p>
@@ -1029,7 +1029,7 @@ window.TDEEContent = {
 
         <h2>BMR vs RMR</h2>
         <p>BMR and <strong>RMR (Resting Metabolic Rate)</strong> are closely related but technically different.</p>
-        <p>BMR is measured under stricter laboratory basal conditions (immediately upon waking after 8 hours of sleep and 12 hours of fasting). RMR is measured under less restrictive resting conditions. In everyday calculator use, however, the terms are often used interchangeably because their practical values can be relatively close. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [2]</a>)</p>
+        <p>BMR is measured under stricter laboratory basal conditions (immediately upon waking after 8 hours of sleep and 12 hours of fasting). RMR is measured under less restrictive resting conditions. In everyday calculator use, however, the terms are often used interchangeably because their practical values can be relatively close. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234938/" target="_blank" rel="noopener noreferrer">NCBI [2]</a>)</p>
         <p>This distinction matters when discussing scientific laboratory measurements, although it usually does not change the basic explanation needed by someone comparing BMR with TDEE.</p>
 
         <h2>Why Do TDEE Calculators Give Different Results?</h2>
@@ -1041,12 +1041,12 @@ window.TDEEContent = {
           <li>Predictive equations cannot perfectly measure an individual's unique metabolism.</li>
         </ul>
 
-        <p>Research on Mifflin-St Jeor supports its usefulness as a resting-energy prediction equation, but individual prediction errors still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>) Therefore, a calculator should provide a <strong>starting estimate</strong>, not a guaranteed measurement.</p>
+        <p>Research on Mifflin-St Jeor supports its usefulness as a resting-energy prediction equation, but individual prediction errors still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>) Therefore, a calculator should provide a <strong>starting estimate</strong>, not a guaranteed measurement.</p>
 
         <h2>How to Check Your Estimated TDEE</h2>
         <p>Start with your estimated TDEE from our <a href="/">homepage TDEE Calculator</a> and use it as a practical reference. Then keep your calorie intake and daily routine reasonably consistent while monitoring your weight trend over several weeks.</p>
         <p>Afterward, compare the real-world trend with your expectations. If your results consistently differ, your estimated calorie needs may need adjustment.</p>
-        <p>This empirical approach is useful because real-life energy expenditure changes with activity, body composition, food intake, and other factors. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>This empirical approach is useful because real-life energy expenditure changes with activity, body composition, food intake, and other factors. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
         <h2>Common BMR and TDEE Mistakes</h2>
         <div class="question-callout-box">
@@ -1068,7 +1068,7 @@ window.TDEEContent = {
           <p>Usually, yes. TDEE includes resting energy expenditure (BMR) plus additional expenditure from physical activity, daily movement, and the thermic effect of food digestion.</p>
 
           <h3>Is BMR included in TDEE?</h3>
-          <p>Yes. Resting energy expenditure (BMR) is the single largest component (60%–70%) of total daily energy expenditure. TDEE also includes physical activity and food digestion. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+          <p>Yes. Resting energy expenditure (BMR) is the single largest component (60%–70%) of total daily energy expenditure. TDEE also includes physical activity and food digestion. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
           <h3>Should I use BMR or TDEE for weight loss?</h3>
           <p>TDEE is generally the more relevant starting estimate because weight-loss calorie planning considers total daily expenditure rather than resting expenditure alone.</p>
@@ -1078,18 +1078,18 @@ window.TDEEContent = {
         </div>
 
         <h2>Final Takeaway</h2>
-        <p>The key to understanding <strong>TDEE vs BMR</strong> is simple: BMR estimates resting energy expenditure, whereas TDEE estimates total daily energy expenditure. Therefore, BMR helps explain your resting baseline, while TDEE provides a more practical starting point for estimating daily calorie needs. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>The key to understanding <strong>TDEE vs BMR</strong> is simple: BMR estimates resting energy expenditure, whereas TDEE estimates total daily energy expenditure. Therefore, BMR helps explain your resting baseline, while TDEE provides a more practical starting point for estimating daily calorie needs. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
-        <p>From an evidence-based perspective, calculator results should be treated as estimates rather than exact measurements. Mifflin-St Jeor provides a practical method for estimating resting energy expenditure, but individual results can vary. For that reason, understand the formula, choose your activity level carefully, and compare the estimate with your real-world trend over time. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+        <p>From an evidence-based perspective, calculator results should be treated as estimates rather than exact measurements. Mifflin-St Jeor provides a practical method for estimating resting energy expenditure, but individual results can vary. For that reason, understand the formula, choose your activity level carefully, and compare the estimate with your real-world trend over time. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</p>
 
         <h2>Methodology and Sources</h2>
-        <p>This article uses established energy-expenditure concepts from the <strong>National Academies of Sciences, Engineering, and Medicine</strong> and NCBI resources. The Mifflin-St Jeor equation is identified as a predictive equation for resting energy expenditure, while TDEE is explained through resting energy expenditure, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>This article uses established energy-expenditure concepts from the <strong>National Academies of Sciences, Engineering, and Medicine</strong> and NCBI resources. The Mifflin-St Jeor equation is identified as a predictive equation for resting energy expenditure, while TDEE is explained through resting energy expenditure, physical activity, and the thermic effect of food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
         <p>Because predictive equations have individual limitations, this article does not present a calculator result as a laboratory measurement or guaranteed maintenance intake. The goal is to provide a transparent, practical explanation that helps readers understand what their BMR and TDEE estimates mean and how to use them responsibly.</p>
 
         <ul>
-          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</li>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</li>
         </ul>
 
         <h2>Related Guides and Calculators</h2>
@@ -1120,7 +1120,7 @@ window.TDEEContent = {
         <p>The key is to treat your TDEE as a <strong>starting estimate</strong>, not a perfect number. Instead, combine the estimate with your actual weight trend, activity, and progress over time. This guide explains how to use TDEE for sustainable fat loss without relying on extreme calorie cuts or unrealistic expectations.</p>
 
         <h2>What Is TDEE and Why Does It Matter for Fat Loss?</h2>
-        <p>TDEE means <strong>Total Daily Energy Expenditure</strong>. It represents the energy your body uses throughout the day. This includes resting energy expenditure, the energy used to process food, and physical activity. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [1]</a>)</p>
+        <p>TDEE means <strong>Total Daily Energy Expenditure</strong>. It represents the energy your body uses throughout the day. This includes resting energy expenditure, the energy used to process food, and physical activity. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer" title="Factors Affecting Energy Expenditure and Requirements - Dietary Reference Intakes for Energy - NCBI Bookshelf">NCBI [1]</a>)</p>
         <p>Therefore, TDEE gives you a practical estimate of how many calories you may need to maintain your current body weight. For fat loss, your calorie intake generally needs to be below your energy expenditure over time.</p>
 
         <h2>How TDEE Becomes Your Fat-Loss Calorie Target</h2>
@@ -1173,13 +1173,13 @@ window.TDEEContent = {
         <p>For instance, someone who trains three times per week may not have the same daily energy expenditure as another person who also trains three times but walks much more during the day. Therefore, consider your overall movement, work routine, exercise, and daily activity instead of focusing only on gym sessions.</p>
 
         <h2>TDEE vs BMR: Which Should You Use for Fat Loss?</h2>
-        <p>BMR refers to <strong>Basal Metabolic Rate</strong>, while TDEE represents total daily energy expenditure. BMR focuses on energy required to support basic body functions under specific resting conditions. TDEE also accounts for activity and the energy used to process food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?report=printable&utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [2]</a>)</p>
+        <p>BMR refers to <strong>Basal Metabolic Rate</strong>, while TDEE represents total daily energy expenditure. BMR focuses on energy required to support basic body functions under specific resting conditions. TDEE also accounts for activity and the energy used to process food. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [2]</a>)</p>
         <p>For calorie planning, TDEE is usually the more useful estimate because your daily calorie needs involve more than resting metabolism. Explore the detailed comparison in our <a href="/blog/tdee-vs-bmr/">TDEE vs BMR Guide</a>.</p>
-        <p>It is also worth noting that many calculators use equations that predict <strong>resting energy expenditure</strong> rather than directly measuring BMR. The Mifflin-St Jeor equation, for example, was developed as a predictive equation for resting energy expenditure. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234932/pdf/Bookshelf_NBK234932.pdf?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [3]</a>) Check your resting baseline on our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
+        <p>It is also worth noting that many calculators use equations that predict <strong>resting energy expenditure</strong> rather than directly measuring BMR. The Mifflin-St Jeor equation, for example, was developed as a predictive equation for resting energy expenditure. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK234932/pdf/Bookshelf_NBK234932.pdf" target="_blank" rel="noopener noreferrer">NCBI [3]</a>) Check your resting baseline on our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
 
         <h2>How Is TDEE Calculated?</h2>
         <p>Many online calculators first estimate resting energy expenditure and then apply an activity factor. This is a practical estimation method, not a direct measurement of your total daily energy expenditure.</p>
-        <p>The actual components of daily energy expenditure include resting energy expenditure, the thermic effect of food, and physical activity. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>) Learn the full formula in our step-by-step guide on <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE</a>.</p>
+        <p>The actual components of daily energy expenditure include resting energy expenditure, the thermic effect of food, and physical activity. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>) Learn the full formula in our step-by-step guide on <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE</a>.</p>
         <p>Because these factors vary between people, two people with similar height and weight can still have different real-world energy needs.</p>
 
         <h2>How to Lose Fat While Preserving Muscle</h2>
@@ -1199,7 +1199,7 @@ window.TDEEContent = {
 
         <h2>Why Your TDEE Changes During Weight Loss</h2>
         <p>Your energy needs can change as your body weight decreases. A smaller body generally requires less energy to move and maintain.</p>
-        <p>In addition, some people experience metabolic adaptation during energy restriction and weight loss. Research shows that this response varies considerably between individuals, and higher-quality studies have sometimes found smaller or non-significant effects. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Does adaptive thermogenesis occur after weight loss in adults? A systematic review - PubMed">PubMed [4]</a>)</p>
+        <p>In addition, some people experience metabolic adaptation during energy restriction and weight loss. Research shows that this response varies considerably between individuals, and higher-quality studies have sometimes found smaller or non-significant effects. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/" target="_blank" rel="noopener noreferrer" title="Does adaptive thermogenesis occur after weight loss in adults? A systematic review - PubMed">PubMed [4]</a>)</p>
         <p>Thus, your original TDEE estimate should not be treated as a permanent number.</p>
 
         <h2>How to Check Whether Your TDEE Estimate Is Working</h2>
@@ -1256,23 +1256,23 @@ window.TDEEContent = {
           <p>TDEE is generally more useful for setting a calorie target because it accounts for daily energy expenditure beyond resting needs.</p>
 
           <h3>Does TDEE decrease when you lose weight?</h3>
-          <p>It can. A lower body weight usually changes energy requirements, while metabolic and activity-related adaptations may also contribute. The size of these changes varies between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</p>
+          <p>It can. A lower body weight usually changes energy requirements, while metabolic and activity-related adaptations may also contribute. The size of these changes varies between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</p>
 
           <h3>Can I lose fat without a calorie deficit?</h3>
           <p>For sustained loss of stored body fat, energy intake generally needs to remain below energy expenditure over time. However, short-term scale changes can occur for reasons unrelated to body-fat change.</p>
         </div>
 
         <h2>Final Takeaway</h2>
-        <p>The most useful way to approach TDEE for sustainable fat loss is to treat the calculator result as a <strong>starting estimate rather than a perfect prescription</strong>. Energy expenditure has several components, and predictive equations cannot capture every individual difference. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>The most useful way to approach TDEE for sustainable fat loss is to treat the calculator result as a <strong>starting estimate rather than a perfect prescription</strong>. Energy expenditure has several components, and predictive equations cannot capture every individual difference. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
         <p>A practical method is therefore simple: <strong>estimate your TDEE, choose a manageable deficit, track your real-world trend, and adjust when the evidence shows that an adjustment is needed</strong>. This approach avoids extreme assumptions while giving you a repeatable framework for making informed calorie decisions as your body weight and activity change.</p>
 
         <h2>Methodology and Sources</h2>
-        <p>This article uses established energy-expenditure research and guidance from the National Academies and peer-reviewed research indexed by PubMed. The key limitation is that calculator-based TDEE values are estimates; individual energy expenditure can differ from a prediction equation. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</p>
+        <p>This article uses established energy-expenditure research and guidance from the National Academies and peer-reviewed research indexed by PubMed. The key limitation is that calculator-based TDEE values are estimates; individual energy expenditure can differ from a prediction equation. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
         <p>For that reason, TDEE should be used as a practical starting point and then evaluated against real-world progress. This transparent approach helps separate what a calculator <strong>estimates</strong> from what your own tracking data <strong>shows</strong>.</p>
 
         <ul>
-          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/?utm_source=chatgpt.com" target="_blank" rel="noopener">NCBI [1]</a>)</li>
-          <li>Martins C, et al. Does adaptive thermogenesis occur after weight loss in adults? A systematic review. <em>Int J Obes</em>. 2021. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
+          <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</li>
+          <li>Martins C, et al. Does adaptive thermogenesis occur after weight loss in adults? A systematic review. <em>Int J Obes</em>. 2021. (<a href="https://pubmed.ncbi.nlm.nih.gov/33762040/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</li>
         </ul>
 
         <h2>A Word From Our Team</h2>
@@ -1500,8 +1500,8 @@ window.TDEEContent = {
         <h2>Scientific Evidence & References</h2>
         <p>Guidance in this article is supported by peer-reviewed sports nutrition and energy balance literature indexed in PubMed and NCBI.</p>
         <ul>
-          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener">NCBI [1]</a>)</li>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Slater GJ, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy in Resistance-Trained Individuals? <em>Front Nutr</em>. 2019. (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6710320/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
         </ul>
 
         <h2>Related Guides and Calculators</h2>
@@ -1556,7 +1556,7 @@ window.TDEEContent = {
       h1: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
       content: `<p class="lead-paragraph">Calculating your calorie needs can become confusing fast. You may find a BMR number online but still wonder what it actually means. Is it your maintenance intake, your daily calorie burn, or simply the energy your body uses at rest? Different calculators can also show different results, making the process even harder.</p>
 
-        <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h2>What Is the Mifflin-St Jeor Equation?</h2>
         <p>The Mifflin-St Jeor Equation is a mathematical formula developed to predict resting energy expenditure. In simple terms, REE estimates the energy your body uses while resting.</p>
@@ -1668,7 +1668,7 @@ window.TDEEContent = {
         <p>However, these factors are broad estimates. Two people in the same activity category can have different jobs, step counts, workouts, and daily movement. As a result, calculated TDEE can differ from actual energy expenditure. Learn more in our <a href="/blog/how-to-calculate-tdee/">How to Calculate TDEE Guide</a>.</p>
 
         <h2>Is the Mifflin-St Jeor Equation Accurate?</h2>
-        <p>Research supports the formula as a useful general prediction equation. A systematic review by the Academy of Nutrition and Dietetics found that Mifflin-St Jeor predicted measured RMR within &plusmn;10% in more non-obese and obese adults than the other commonly used equations examined. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Research supports the formula as a useful general prediction equation. A systematic review by the Academy of Nutrition and Dietetics found that Mifflin-St Jeor predicted measured RMR within &plusmn;10% in more non-obese and obese adults than the other commonly used equations examined. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>Even so, individual accuracy is not guaranteed. One study found that accuracy varied by factors such as BMI, age, sex, and race or ethnicity. Moreover, research in older adults found that no prediction equation consistently provided accurate and precise results for every individual.</p>
         <p>Therefore, the result should be treated as an <strong>estimate</strong>, not an exact laboratory measurement.</p>
 
@@ -1719,7 +1719,7 @@ window.TDEEContent = {
         </div>
 
         <h2>The Bottom Line</h2>
-        <p>The <strong>Mifflin-St Jeor Equation</strong> is a practical way to estimate resting energy expenditure using four basic inputs: weight, height, age, and sex. Its original research and later systematic reviews support its usefulness, while also showing that prediction errors can occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>The <strong>Mifflin-St Jeor Equation</strong> is a practical way to estimate resting energy expenditure using four basic inputs: weight, height, age, and sex. Its original research and later systematic reviews support its usefulness, while also showing that prediction errors can occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>For that reason, use the result as a starting point rather than an exact metabolic measurement. Estimate your resting needs, calculate TDEE, and then compare the estimate with real-world scale changes over time. That approach makes the calculation more useful while respecting its scientific limitations.</p>
 
         <h2>Methodology and Sources</h2>
@@ -1727,7 +1727,7 @@ window.TDEEContent = {
         <p>The goal is to explain both <strong>how the equation works and how to interpret it responsibly</strong>. In particular, the article distinguishes a calculated estimate from a directly measured value, helping readers use the number as a practical starting point rather than treating it as an exact result.</p>
 
         <ul>
-          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990 Feb;51(2):241-7. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990 Feb;51(2):241-7. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005.</li>
         </ul>
 
@@ -1781,7 +1781,7 @@ window.TDEEContent = {
           <li>Weight</li>
         </ul>
         <p>The calculator applies the equation to these values and returns an estimated number of calories per day.</p>
-        <p>The original Mifflin-St Jeor research developed predictive equations for resting energy expenditure using data from <strong>498 healthy adults</strong>. Their resting energy expenditure was measured using indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>The original Mifflin-St Jeor research developed predictive equations for resting energy expenditure using data from <strong>498 healthy adults</strong>. Their resting energy expenditure was measured using indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         <p>Technically, the Mifflin-St Jeor equation estimates <strong>resting energy expenditure (REE)</strong>. Consumer calculators commonly use the result as a BMR estimate because BMR and resting metabolic rate are closely related concepts.</p>
 
         <div class="about-calculator-card">
@@ -1794,7 +1794,7 @@ window.TDEEContent = {
           </ul>
         </div>
 
-        <p>Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+        <p>Research comparing prediction equations with indirect calorimetry shows that Mifflin-St Jeor can be useful, but prediction errors still occur at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
 
         <h2>How to Use the BMR Calculator</h2>
         <p>Using the calculator requires only a few basic details.</p>
@@ -1803,7 +1803,7 @@ window.TDEEContent = {
         <p>Enter your age in years. Age is one of the primary independent variables used by the Mifflin-St Jeor equation, as baseline metabolic expenditure tends to change predictably across adulthood.</p>
 
         <h3>Step 2: Select Your Sex</h3>
-        <p>Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Select the option that matches the equation you want the calculator to use. The Mifflin-St Jeor equation applies different baseline constants for biological men and women due to average differences in lean mass distribution. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h3>Step 3: Enter Your Height</h3>
         <p>Enter your height using the available unit options (Centimeters or Feet & Inches). Height reflects body surface area and structural organ scale.</p>
@@ -1865,7 +1865,7 @@ window.TDEEContent = {
           <p style="margin-top: 0.5rem;"><strong>For Women:</strong> BMR estimate = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161</p>
         </div>
 
-        <p>These equations are simplified versions of the predictive equations published in the original Mifflin-St Jeor study. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>These equations are simplified versions of the predictive equations published in the original Mifflin-St Jeor study. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
         <p>Because the original research describes these as resting energy expenditure equations, it is more precise to call the calculator result an <strong>estimated resting energy expenditure</strong> even though consumer calculators commonly label it BMR.</p>
 
         <h3>BMR Calculation Worked Example</h3>
@@ -2000,7 +2000,7 @@ window.TDEEContent = {
         <p>Mifflin-St Jeor uses different baseline constants for biological men and women to account for average population differences in fat-free mass.</p>
 
         <h3>Body Composition</h3>
-        <p>Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Lean body mass (muscle, organ, bone tissue) is an important factor in resting energy expenditure. Two people can have identical body weight but different body compositions and therefore different resting energy needs. The original Mifflin-St Jeor research found fat-free mass to be a strong predictor of resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h3>Individual Biological Differences</h3>
         <p>Prediction equations cannot capture every biological difference between individuals, such as thyroid hormone levels, genetics, or mitochondrial efficiency. This is one reason why a BMR calculator should be treated as an estimate rather than an exact measurement.</p>
@@ -2034,7 +2034,7 @@ window.TDEEContent = {
         <p>Be careful with claims that a specific food, supplement, or exercise can dramatically increase BMR. There is no simple method that guarantees a massive surge in resting energy expenditure for everyone. Lean body mass is associated with resting energy expenditure, so increasing your muscle mass through resistance training can support higher resting energy needs over time. Regular exercise also increases overall daily energy expenditure, but increasing your workout calories (EEE) is not the same as directly altering your baseline BMR. A better goal is to support overall health, strength, physical activity, and healthy body composition rather than chase a specific BMR number.</p>
 
         <h2>How Accurate Is a BMR Calculator?</h2>
-        <p>A BMR calculator can provide a useful baseline estimate, but it cannot tell you your exact metabolic rate. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. Later validation research found that it can be a useful prediction equation, while also showing that prediction accuracy varies between individuals and populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>A BMR calculator can provide a useful baseline estimate, but it cannot tell you your exact metabolic rate. The Mifflin-St Jeor equation was developed from measured resting energy expenditure in 498 healthy adults. Later validation research found that it can be a useful prediction equation, while also showing that prediction accuracy varies between individuals and populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <p>Accuracy can vary because:</p>
         <ul>
@@ -2050,7 +2050,7 @@ window.TDEEContent = {
         <p>Different calculators may use different underlying equations. One may use <strong>Mifflin-St Jeor</strong>, while another may use <strong>Harris-Benedict</strong> or <strong>Katch-McArdle</strong>. Different input assumptions, rounding rules, and body-composition algorithms can also produce different results. A difference between two calculators does not mean one is broken; compare the methodology before deciding why the numbers differ.</p>
 
         <h2>Can BMR Be Measured?</h2>
-        <p>Yes. Resting energy expenditure can be measured rather than estimated. One established clinical method is <strong>indirect calorimetry</strong>. Indirect calorimetry measures oxygen consumption (VO2) and carbon dioxide production (VCO2) to calculate real-time metabolic heat production. This is fundamentally different from an online calculator. An online calculator uses a prediction equation based on statistical averages, whereas indirect calorimetry measures your actual physiological data under controlled laboratory conditions. Research shows that prediction equations can have meaningful individual errors compared with measured resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
+        <p>Yes. Resting energy expenditure can be measured rather than estimated. One established clinical method is <strong>indirect calorimetry</strong>. Indirect calorimetry measures oxygen consumption (VO2) and carbon dioxide production (VCO2) to calculate real-time metabolic heat production. This is fundamentally different from an online calculator. An online calculator uses a prediction equation based on statistical averages, whereas indirect calorimetry measures your actual physiological data under controlled laboratory conditions. Research shows that prediction equations can have meaningful individual errors compared with measured resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer" title="Bias and accuracy of resting metabolic rate equations in non-obese and obese adults - PubMed">PubMed [2]</a>)</p>
 
         <h2>Why Does BMR Change When You Lose Weight?</h2>
         <p>Your estimated BMR changes as your body mass changes. For example, if your weight decreases by 10 kg, entering your new weight into the same equation will produce a lower estimated resting energy expenditure. This does not automatically mean that your metabolism is "damaged." It simply reflects the physical reality that a smaller body requires fewer calories to support its tissues at rest. For this reason, calorie targets should be periodically reassessed as your body weight changes instead of treating one initial BMR number as permanent.</p>
@@ -2064,7 +2064,7 @@ window.TDEEContent = {
           <li>Clinical nutrition or medical recovery situations</li>
           <li>Elite athletes with extreme lean body mass percentages</li>
         </ul>
-        <p>Research has found that prediction accuracy can vary across populations and individual characteristics. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [4]</a>) If you need individualized calorie or nutrition guidance, speak with a qualified healthcare professional.</p>
+        <p>Research has found that prediction accuracy can vary across populations and individual characteristics. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [4]</a>) If you need individualized calorie or nutrition guidance, speak with a qualified healthcare professional.</p>
 
         <h2>Common BMR Calculation Mistakes</h2>
         <div class="question-callout-box">
@@ -2129,11 +2129,11 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005;105(5):775-789. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005;105(5):775-789. (<a href="https://pubmed.ncbi.nlm.nih.gov/23631843/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
           <li>Healthline Editorial Team. Basal Metabolic Rate Calculator & Overview. (<a href="https://www.healthline.com/health/how-to-calculate-your-basal-metabolic-rate?utm_source=chatgpt.com" target="_blank" rel="noopener">Healthline [3]</a>)</li>
-          <li>Weijs PJ. Validity of predictive equations for resting energy expenditure in US and European overweight and obese adults. <em>Public Health Nutr</em>. 2008;11(1):85-94. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
-          <li>Sabounchi NS, et al. Predicting resting energy expenditure: a critical appraisal and validation review. <em>Int J Obes</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37391582/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [5]</a>)</li>
+          <li>Weijs PJ. Validity of predictive equations for resting energy expenditure in US and European overweight and obese adults. <em>Public Health Nutr</em>. 2008;11(1):85-94. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</li>
+          <li>Sabounchi NS, et al. Predicting resting energy expenditure: a critical appraisal and validation review. <em>Int J Obes</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37391582/" target="_blank" rel="noopener noreferrer">PubMed [5]</a>)</li>
         </ul>
 
         <h2>A Word From Our Team</h2>
@@ -2183,7 +2183,7 @@ window.TDEEContent = {
         </ul>
 
         <p>First, the calculator estimates your resting energy needs. Next, it accounts for your activity level to estimate your total daily energy expenditure.</p>
-        <p>A commonly used method is the <strong>Mifflin-St Jeor equation</strong>. Importantly, the original 1990 research described this as a predictive equation for resting energy expenditure, rather than a direct laboratory measurement of metabolism. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>A commonly used method is the <strong>Mifflin-St Jeor equation</strong>. Importantly, the original 1990 research described this as a predictive equation for resting energy expenditure, rather than a direct laboratory measurement of metabolism. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h3>Mifflin-St Jeor Equation Formulas</h3>
         <div class="equation-box">
@@ -2416,7 +2416,7 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific Methodology</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). Food Portions: Choosing Just Enough for You. (<a href="https://www.niddk.nih.gov/health-information/weight-management/just-enough-food-portions?utm_source=chatgpt.com" target="_blank" rel="noopener">NIDDK [2]</a>)</li>
           <li>National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). Eating & Physical Activity to Lose or Maintain Weight. (<a href="https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/eating-physical-activity?utm_source=chatgpt.com" target="_blank" rel="noopener">NIDDK [3]</a>)</li>
           <li>National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). About the Body Weight Planner. (<a href="https://www.niddk.nih.gov/health-information/weight-management/body-weight-planner?utm_source=chatgpt.com" target="_blank" rel="noopener">NIDDK [4]</a>)</li>
@@ -2632,9 +2632,9 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). Eating & Physical Activity to Lose or Maintain Weight. (<a href="https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/eating-physical-activity?utm_source=chatgpt.com" target="_blank" rel="noopener">NIDDK [2]</a>)</li>
-          <li>Hall KD, et al. Quantification of the effect of energy imbalance on bodyweight. <em>Lancet</em>. 2011;378(9793):826-837. (<a href="https://pubmed.ncbi.nlm.nih.gov/21872751/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+          <li>Hall KD, et al. Quantification of the effect of energy imbalance on bodyweight. <em>Lancet</em>. 2011;378(9793):826-837. (<a href="https://pubmed.ncbi.nlm.nih.gov/21872751/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</li>
         </ul>
 
         <h2>A Word From Our Team</h2>
@@ -2651,7 +2651,7 @@ window.TDEEContent = {
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
       content: `<p class="lead-paragraph">Trying to gain weight can become frustrating when you do not know how many calories you actually need. Perhaps you eat more but see little change, or you increase food too quickly and gain more fat than expected. The real problem is not simply eating more. Instead, you need a sensible calorie target and a way to check whether that target is working.</p>
 
-        <p>A <strong>calorie surplus calculator</strong> provides a practical starting estimate using factors such as your estimated energy needs, activity level, and chosen surplus. However, the result is not a guarantee of muscle or weight gain. Research shows that the exact energy surplus needed to maximize muscle growth is still uncertain. Therefore, the best approach is to calculate a starting target, eat consistently, train properly, track your progress, and adjust when necessary. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training - PubMed">PubMed [1]</a>)</p>
+        <p>A <strong>calorie surplus calculator</strong> provides a practical starting estimate using factors such as your estimated energy needs, activity level, and chosen surplus. However, the result is not a guarantee of muscle or weight gain. Research shows that the exact energy surplus needed to maximize muscle growth is still uncertain. Therefore, the best approach is to calculate a starting target, eat consistently, train properly, track your progress, and adjust when necessary. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/" target="_blank" rel="noopener noreferrer" title="Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training - PubMed">PubMed [1]</a>)</p>
 
         <h2>What Is a Calorie Surplus and How Does It Build Muscle?</h2>
         <p>A calorie surplus means consuming more energy than your body uses over time. Your estimated maintenance calories represent the intake that would generally maintain your body weight under similar conditions.</p>
@@ -2663,7 +2663,7 @@ window.TDEEContent = {
         </div>
 
         <p>Consequently, a surplus can support weight gain, although the amount and type of weight gained (lean muscle vs. fat tissue) vary between people.</p>
-        <p>Muscle growth also depends on progressive resistance training, sufficient protein, recovery, sleep quality, training experience, and other individual biological factors. In fact, research has not established one universal surplus that maximizes muscle growth while minimizing fat gain. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Muscle growth also depends on progressive resistance training, sufficient protein, recovery, sleep quality, training experience, and other individual biological factors. In fact, research has not established one universal surplus that maximizes muscle growth while minimizing fat gain. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>How to Use It</h2>
         <p>Start by entering your basic information into our tool, such as age, sex, height, current weight, and activity level. Depending on your specific goals, you may also enter your target weight, resistance training experience, or desired rate of gain.</p>
@@ -2755,13 +2755,13 @@ window.TDEEContent = {
         </div>
 
         <p>These numbers should not be treated as fixed scientific rules. For example, the same 300-calorie surplus represents a different percentage increase for different body sizes.</p>
-        <p>Research in resistance-trained individuals found that larger surpluses can increase total body mass and skinfold fat thickness without consistently producing greater muscle mass or strength gains. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals - PubMed">PubMed [2]</a>) Therefore, a controlled, moderate approach is often more appropriate when limiting unnecessary fat gain is important.</p>
+        <p>Research in resistance-trained individuals found that larger surpluses can increase total body mass and skinfold fat thickness without consistently producing greater muscle mass or strength gains. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/" target="_blank" rel="noopener noreferrer" title="Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals - PubMed">PubMed [2]</a>) Therefore, a controlled, moderate approach is often more appropriate when limiting unnecessary fat gain is important.</p>
 
         <h2>Calories to Gain Weight Per Week</h2>
         <p>A daily surplus can be multiplied by seven to estimate the weekly energy difference. Thus, a 300-calorie daily surplus equals:</p>
         <p class="calc-step-line"><strong>300 × 7 = 2,100 extra calories per week</strong></p>
         <p>Nevertheless, this does not predict exact weekly weight gain. Changes in scale weight also reflect water retention, muscle glycogen storage, food volume in digestion, activity fluctuations, and changes in energy expenditure.</p>
-        <p>For that reason, use calorie calculations as planning tools rather than promises. A review of energy-surplus research notes that simple mathematical estimates cannot fully capture the complex biological processes involved in gaining skeletal muscle. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>For that reason, use calorie calculations as planning tools rather than promises. A review of energy-surplus research notes that simple mathematical estimates cannot fully capture the complex biological processes involved in gaining skeletal muscle. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>Surplus Scenarios Compared</h2>
         <p>A smaller surplus (+150 to +250 kcal) may suit someone who wants slower, more controlled weight gain while keeping body fat levels low. Conversely, a larger surplus (+400 to +500 kcal) may be useful when faster weight gain is the priority (e.g. underweight individuals or hardgainers), although it can also increase the potential for additional fat gain.</p>
@@ -2773,7 +2773,7 @@ window.TDEEContent = {
         <div class="about-calculator-card">
           <p><strong>Macronutrient Distribution Guidelines:</strong></p>
           <ul>
-            <li><strong>Protein:</strong> Especially important during resistance training. The International Society of Sports Nutrition (ISSN) position stand states that approximately <strong>1.4–2.0 grams of protein per kilogram of body weight per day</strong> is sufficient for most exercising individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="ISSN Position Stand: protein and exercise - PubMed">PubMed [3]</a>)</li>
+            <li><strong>Protein:</strong> Especially important during resistance training. The International Society of Sports Nutrition (ISSN) position stand states that approximately <strong>1.4–2.0 grams of protein per kilogram of body weight per day</strong> is sufficient for most exercising individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener noreferrer" title="ISSN Position Stand: protein and exercise - PubMed">PubMed [3]</a>)</li>
             <li><strong>Carbohydrates:</strong> Provide high-intensity workout energy and replenish muscle glycogen stores for progressive overload.</li>
             <li><strong>Dietary Fats:</strong> Support hormone production (testosterone, growth factors) and overall physiological health.</li>
           </ul>
@@ -2791,11 +2791,11 @@ window.TDEEContent = {
         </div>
 
         <p>A better approach is to establish a reasonable starting target, consume adequate protein (1.6–2.2 g/kg), follow consistent progressive resistance training, and monitor progress over time. In addition, sleep and recovery matter because muscle tissue adaptation depends on more than calorie intake alone.</p>
-        <p>Most importantly, a calorie surplus does not replace hard training. Resistance exercise provides the mechanical stimulus for muscle adaptation, while adequate nutrition helps support that biological process. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+        <p>Most importantly, a calorie surplus does not replace hard training. Resistance exercise provides the mechanical stimulus for muscle adaptation, while adequate nutrition helps support that biological process. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</p>
 
         <h2>Why Bigger Surpluses Aren't Better for Muscle</h2>
         <p>More calories do not automatically translate into more muscle synthesis. Once energy intake is sufficient to support maximum Muscle Protein Synthesis (MPS), substantially increasing the surplus primarily increases body weight and adipose fat gain without producing proportional muscle gains.</p>
-        <p>A controlled study of resistance-trained individuals compared maintenance, moderate-surplus, and high-surplus groups. Faster body-weight gain in the high-surplus group was associated primarily with greater increases in skinfold thickness, while muscle thickness and strength outcomes did not clearly favor the larger surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+        <p>A controlled study of resistance-trained individuals compared maintenance, moderate-surplus, and high-surplus groups. Faster body-weight gain in the high-surplus group was associated primarily with greater increases in skinfold thickness, while muscle thickness and strength outcomes did not clearly favor the larger surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</p>
         <p>However, that study was relatively small and lasted eight weeks. Therefore, its results should inform—not dictate—individual training and nutrition decisions.</p>
 
         <h2>Tracking Your Intake Accurately</h2>
@@ -2824,13 +2824,13 @@ window.TDEEContent = {
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
           <h3>How big should a calorie surplus be to build muscle?</h3>
-          <p>There is no single universally proven surplus for everyone. A smaller or moderate surplus (+200 to +300 kcal/day) is an excellent starting point for lean bulking, followed by real-world progress tracking. Research continues to show uncertainty around the exact optimal surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+          <p>There is no single universally proven surplus for everyone. A smaller or moderate surplus (+200 to +300 kcal/day) is an excellent starting point for lean bulking, followed by real-world progress tracking. Research continues to show uncertainty around the exact optimal surplus. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
           <h3>Will I gain fat in a calorie surplus?</h3>
-          <p>Some minor fat gain can occur during a bulking phase, but the amount varies. Generally, larger surpluses increase the proportion of fat gained. Monitoring your weight trend and keeping the rate of gain controlled helps limit fat accretion. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+          <p>Some minor fat gain can occur during a bulking phase, but the amount varies. Generally, larger surpluses increase the proportion of fat gained. Monitoring your weight trend and keeping the rate of gain controlled helps limit fat accretion. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</p>
 
           <h3>How much protein do I need in a calorie surplus?</h3>
-          <p>For most exercising individuals, approximately <strong>1.4–2.0 g/kg of body weight per day</strong> (or up to 2.2 g/kg for intense lifters) is a well-supported range for supporting muscle recovery and growth. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</p>
+          <p>For most exercising individuals, approximately <strong>1.4–2.0 g/kg of body weight per day</strong> (or up to 2.2 g/kg for intense lifters) is a well-supported range for supporting muscle recovery and growth. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</p>
 
           <h3>Why am I not gaining weight even though I am eating more?</h3>
           <p>Your estimated maintenance may be higher than expected, your actual intake may be lower than tracked, or your daily movement (NEAT) may have spontaneously increased. Check portion sizes, sauces, and tracking consistency before increasing your target.</p>
@@ -2862,9 +2862,9 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Slater GJ, Dieter BP, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training. <em>Front Nutr</em>. 2019;6:131. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Garthe I, et al. Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals. <em>Int J Sport Nutr Exerc Metab</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
-          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
+          <li>Slater GJ, Dieter BP, et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training. <em>Front Nutr</em>. 2019;6:131. (<a href="https://pubmed.ncbi.nlm.nih.gov/31482093/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Garthe I, et al. Effect of Small and Large Energy Surpluses on Strength, Muscle, and Skinfold Thickness in Resistance-Trained Individuals. <em>Int J Sport Nutr Exerc Metab</em>. 2023. (<a href="https://pubmed.ncbi.nlm.nih.gov/37914977/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
+          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</li>
         </ul>
 
         <h2>A Word From Our Team</h2>
@@ -3128,8 +3128,8 @@ window.TDEEContent = {
 
         <h2>Sources & Scientific References</h2>
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990;51(2):241-247. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Jäger R, Kerksick CM, et al. International Society of Sports Nutrition Position Stand: protein and exercise. <em>J Int Soc Sports Nutr</em>. 2017;14:20. (<a href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
           <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. Dietary Guidelines for Americans, 2020-2025.</li>
         </ul>
 
@@ -3148,12 +3148,12 @@ window.TDEEContent = {
       h1: 'Calories Burned Calculator: How to Estimate Daily Activity & Workout Burn',
       content: `<p class="lead-paragraph">Estimating how many calories you burn during a workout or throughout your active day can be surprisingly difficult. Fitness trackers, cardio machines, and online tools often provide wildly different numbers. As a result, relying on inaccurate energy burn numbers can throw off your calorie deficit or lead to accidental overeating.</p>
 
-        <p>The <strong>Calories Burned Calculator</strong> provides a practical, evidence-based method for estimating activity energy expenditure. By utilizing clinical Metabolic Equivalent of Task (MET) values and physical activity level multipliers, you can calculate exercise burn accurately without double-counting your resting baseline. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="2011 Compendium of Physical Activities - PubMed">PubMed [1]</a>)</p>
+        <p>The <strong>Calories Burned Calculator</strong> provides a practical, evidence-based method for estimating activity energy expenditure. By utilizing clinical Metabolic Equivalent of Task (MET) values and physical activity level multipliers, you can calculate exercise burn accurately without double-counting your resting baseline. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer" title="2011 Compendium of Physical Activities - PubMed">PubMed [1]</a>)</p>
 
         <h2>What Is a Calories Burned Calculator?</h2>
         <p>A calories burned calculator estimates the energy your body expends during specific physical activities, structured workouts, or general daily movement.</p>
 
-        <p>Unlike Basal Metabolic Rate (BMR), which measures energy expended while resting, activity burn accounts for body mass, exercise duration, and movement intensity. These calculations are grounded in the <strong>Compendium of Physical Activities</strong>, a standard reference established by exercise physiologists to quantify activity cost. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Unlike Basal Metabolic Rate (BMR), which measures energy expended while resting, activity burn accounts for body mass, exercise duration, and movement intensity. These calculations are grounded in the <strong>Compendium of Physical Activities</strong>, a standard reference established by exercise physiologists to quantify activity cost. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>How Calories Burned Are Calculated (The MET Formula)</h2>
         <p>Exercise scientists measure activity intensity using <strong>METs (Metabolic Equivalent of Task)</strong>. One MET represents your resting metabolic rate—the energy burned while sitting quietly (approximately 1 kcal per kilogram of body weight per hour).</p>
@@ -3166,7 +3166,7 @@ window.TDEEContent = {
         <p>For example, an activity with a MET rating of 6.0 burns six times more energy per minute than sitting at rest. Because body mass directly affects the energy required to move, heavier individuals burn more total calories performing the same physical task for the same duration.</p>
 
         <h2>Common Activity MET Values</h2>
-        <p>The table below highlights standard MET values established in exercise physiology research for popular workouts and daily activities: (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>The table below highlights standard MET values established in exercise physiology research for popular workouts and daily activities: (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <div class="table-responsive">
           <table class="styled-table">
@@ -3296,15 +3296,15 @@ window.TDEEContent = {
         </div>
 
         <h2>Final Takeaway</h2>
-        <p>A <strong>Calories Burned Calculator</strong> provides a reliable, evidence-backed methodology for measuring workout and movement energy expenditure based on clinical MET values. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>A <strong>Calories Burned Calculator</strong> provides a reliable, evidence-backed methodology for measuring workout and movement energy expenditure based on clinical MET values. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <p>Rather than treating tracker readings as perfect measurements, use calculated activity burn as a practical reference. Combine your estimated TDEE with consistent daily step habits, structured training, and real-world weight trends to manage your fitness goals with scientific clarity.</p>
 
         <h2>Methodology and Sources</h2>
-        <p>This article utilizes standard metabolic equivalent data from the <em>Compendium of Physical Activities</em> and peer-reviewed exercise science literature indexed by PubMed. Calculated estimates serve as baseline models rather than direct laboratory calorimetry measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>This article utilizes standard metabolic equivalent data from the <em>Compendium of Physical Activities</em> and peer-reviewed exercise science literature indexed by PubMed. Calculated estimates serve as baseline models rather than direct laboratory calorimetry measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <ul>
-          <li>Ainsworth BE, Haskell WL, Herrmann SD, et al. 2011 Compendium of Physical Activities: a second update of codes and MET values. <em>Med Sci Sports Exerc</em>. 2011. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Ainsworth BE, Haskell WL, Herrmann SD, et al. 2011 Compendium of Physical Activities: a second update of codes and MET values. <em>Med Sci Sports Exerc</em>. 2011. (<a href="https://pubmed.ncbi.nlm.nih.gov/21681120/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Energy. NCBI Bookshelf.</li>
         </ul>
 
@@ -3332,7 +3332,7 @@ window.TDEEContent = {
         <h2>The Premise</h2>
         <p>A TDEE calculator estimates how much energy a person may use during a typical day. It does not directly measure metabolism. Instead, a predictive equation estimates resting energy expenditure, and an activity factor is then used to estimate total daily energy expenditure.</p>
 
-        <p>Therefore, <strong>About Our TDEE Platform</strong> treats TDEE as an estimate rather than an exact biological measurement. Research supports predictive equations as useful tools, but individual differences can still produce meaningful errors. A systematic review found Mifflin-St Jeor to be the most reliable among several commonly used equations examined, while also noting important individual limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [1]</a>)</p>
+        <p>Therefore, <strong>About Our TDEE Platform</strong> treats TDEE as an estimate rather than an exact biological measurement. Research supports predictive equations as useful tools, but individual differences can still produce meaningful errors. A systematic review found Mifflin-St Jeor to be the most reliable among several commonly used equations examined, while also noting important individual limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer" title="Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults - PubMed">PubMed [1]</a>)</p>
 
         <h2>What TDEECalculator Does</h2>
         <p>TDEECalculator brings related calorie and nutrition tools together in one platform. These tools include:</p>
@@ -3361,8 +3361,8 @@ window.TDEEContent = {
         <p>First, information such as age, sex, height, and weight is entered into the selected equation. Next, the resulting resting-energy estimate is adjusted for activity. Finally, the calculation produces an estimated TDEE. Read our full technical engine breakdown on <a href="/how-we-calculate/">How We Calculate</a>.</p>
 
         <h3>Choosing a Formula</h3>
-        <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original 1990 study developed this predictive equation using data from 498 healthy adults, with resting energy expenditure measured through indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
-        <p>The published equation uses weight, height, age, and sex. Furthermore, later research found Mifflin-St Jeor performed well compared with several commonly used alternatives, although it is not equally accurate for every individual or population. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original 1990 study developed this predictive equation using data from 498 healthy adults, with resting energy expenditure measured through indirect calorimetry. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
+        <p>The published equation uses weight, height, age, and sex. Furthermore, later research found Mifflin-St Jeor performed well compared with several commonly used alternatives, although it is not equally accurate for every individual or population. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h3>Activity Matters</h3>
         <p>Resting energy is only one part of total daily expenditure. Physical activity must also be considered when estimating TDEE. Therefore, two people with identical basic measurements can receive different results when their activity levels differ.</p>
@@ -3370,7 +3370,7 @@ window.TDEEContent = {
 
         <h2>Where Our Numbers Come From</h2>
         <p>A transparent calculator should separate research-based information from practical assumptions. Formula coefficients can be traced to published research, while activity categories represent estimates used to model daily energy expenditure.</p>
-        <p>In addition, scientific evidence should be interpreted carefully. The original Mifflin-St Jeor research provides the equation's foundation, whereas later reviews show that predictive equations can still have meaningful errors at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>In addition, scientific evidence should be interpreted carefully. The original Mifflin-St Jeor research provides the equation's foundation, whereas later reviews show that predictive equations can still have meaningful errors at the individual level. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>Why TDEE Results Can Differ</h2>
         <p>Different TDEE calculators may produce different numbers even when similar information is entered. One calculator may use another equation, while a second may use different activity factors or rounding methods.</p>
@@ -3404,23 +3404,23 @@ window.TDEEContent = {
         <p>Likewise, <strong>About Our TDEE Platform</strong> identifies the team responsible for maintaining our suite of tools. Clear ownership, genuine contact channels, documented sources, and an accessible correction process all contribute to stronger trust.</p>
 
         <h2>Sources We Use</h2>
-        <p>The Mifflin-St Jeor equation has a documented primary research source, while later systematic reviews provide additional evidence about its strengths and limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+        <p>The Mifflin-St Jeor equation has a documented primary research source, while later systematic reviews provide additional evidence about its strengths and limitations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</p>
 
         <ul>
-          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
+          <li>Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
         </ul>
 
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
           <h3>Is a TDEE calculator accurate?</h3>
-          <p>A TDEE calculator provides an estimate rather than a direct measurement. Mifflin-St Jeor has performed well among commonly used equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+          <p>A TDEE calculator provides an estimate rather than a direct measurement. Mifflin-St Jeor has performed well among commonly used equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
           <h3>Why do different TDEE calculators show different numbers?</h3>
           <p>Different equations, activity factors, input values, unit conversions, and rounding methods can produce different results. Therefore, methodology matters when comparing calculators.</p>
 
           <h3>What formula does TDEECalculator use?</h3>
-          <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+          <p>TDEECalculator uses the Mifflin-St Jeor equation for its primary resting-energy estimate. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</p>
 
           <h3>Is TDEE the same as BMR?</h3>
           <p>No. BMR or resting energy expenditure represents energy used at rest, while TDEE estimates total daily energy expenditure after physical activity and food digestion are considered.</p>
@@ -3429,7 +3429,7 @@ window.TDEEContent = {
         <h2>Conclusion</h2>
         <p><strong>About Our TDEE Platform</strong> is ultimately about transparency rather than promising a perfect calorie number. A useful calculator should explain its formula, identify important assumptions, use credible references, and clearly communicate the limits of prediction.</p>
 
-        <p>From an evidence-based perspective, that distinction matters. The original Mifflin-St Jeor research provides a documented foundation, while later research shows why predictive equations should still be interpreted as estimates rather than exact measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</p>
+        <p>From an evidence-based perspective, that distinction matters. The original Mifflin-St Jeor research provides a documented foundation, while later research shows why predictive equations should still be interpreted as estimates rather than exact measurements. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</p>
 
         <p>Ultimately, the goal is simple: users should understand the number they receive. Clear methodology, credible sources, transparent assumptions, and honest limitations provide a stronger foundation for trust than unsupported claims of perfect accuracy.</p>
 
@@ -3504,7 +3504,7 @@ window.TDEEContent = {
 
         <h2>How We Choose the Formula</h2>
         <p>Formula selection matters because different equations can produce different results.</p>
-        <p>For resting energy expenditure, the <strong>Mifflin-St Jeor Equation</strong> is a widely used, clinically validated predictive equation. The original 1990 study included 498 healthy adults (251 men and 247 women aged 19–78) and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>For resting energy expenditure, the <strong>Mifflin-St Jeor Equation</strong> is a widely used, clinically validated predictive equation. The original 1990 study included 498 healthy adults (251 men and 247 women aged 19–78) and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <div class="equation-box">
           <p><strong>Men:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
@@ -3631,7 +3631,7 @@ window.TDEEContent = {
 
         <h2>How Accurate Is a TDEE Calculation?</h2>
         <p>A TDEE calculator is a prediction tool.</p>
-        <p>Research shows that predictive energy equations can have individual errors (&plusmn;10% in ~82% of people), and accuracy can vary across different populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Research shows that predictive energy equations can have individual errors (&plusmn;10% in ~82% of people), and accuracy can vary across different populations. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>Consequently, a calculated TDEE should be treated as a <strong>starting estimate</strong>.</p>
         <p>It cannot directly measure your metabolism. Likewise, it cannot guarantee a specific change in body weight from a particular calorie intake on our <a href="/maintenance-calorie-calculator/">Maintenance Calorie Calculator</a> or <a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a>.</p>
 
@@ -3645,12 +3645,12 @@ window.TDEEContent = {
         <p>Therefore, the result should be used as a practical estimate rather than an exact measurement.</p>
 
         <h2>Our Sources and Methodology</h2>
-        <p>The Mifflin-St Jeor Equation was published in the <em>American Journal of Clinical Nutrition</em> in 1990. The original study included 498 healthy subjects and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>The Mifflin-St Jeor Equation was published in the <em>American Journal of Clinical Nutrition</em> in 1990. The original study included 498 healthy subjects and used indirect calorimetry to measure resting energy expenditure. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
         <p>Later research has also evaluated predictive energy equations and their limitations. These findings support using such formulas as estimates while recognizing that individual accuracy can vary.</p>
         <p>For that reason, our methodology focuses on clear formulas, transparent calculations, documented sources, and honest limitations.</p>
 
         <ul>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?dopt=Abstract&utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
           <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005.</li>
         </ul>
 
@@ -3773,7 +3773,7 @@ window.TDEEContent = {
         </div>
 
         <h2>Why Static TDEE Formulas Are Only Rough Baselines</h2>
-        <p>Popular metabolic formulas such as the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> and Katch-McArdle formula calculate your resting metabolic floor with reasonable population-level accuracy. However, peer-reviewed clinical research confirms that standard predictive equations carry an individual error rate of <strong>&plusmn;8% to &plusmn;10%</strong> in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
+        <p>Popular metabolic formulas such as the <a href="/blog/mifflin-st-jeor-equation/">Mifflin-St Jeor equation</a> and Katch-McArdle formula calculate your resting metabolic floor with reasonable population-level accuracy. However, peer-reviewed clinical research confirms that standard predictive equations carry an individual error rate of <strong>&plusmn;8% to &plusmn;10%</strong> in healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <p>A formula cannot account for:</p>
         <ul>

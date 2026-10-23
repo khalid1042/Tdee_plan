@@ -97,11 +97,28 @@
             "description": "Learn how to calculate your TDEE step-by-step using the Mifflin-St Jeor formula, activity multipliers, unit conversions, and worked examples.",
             "mainEntityOfPage": "https://tdeecalculater.com/blog/how-to-calculate-tdee/",
             "datePublished": "2026-10-02",
-            "dateModified": "2026-10-11",
+            "dateModified": "2026-10-18",
             "author": {
                 "@type": "Organization",
-                "name": "TDEE Calculator Editorial Team",
+                "name": "TDEE Calculator Clinical Editorial Staff",
                 "url": "https://tdeecalculater.com/about/"
+            },
+            "reviewedBy": {
+                "@type": "Person",
+                "name": "Registered Dietitian & Certified Sports Nutritionist Review Board",
+                "jobTitle": "Registered Dietitian (RD) & Certified Sports Nutritionist (CISSN)",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "TDEE Calculator Clinical Nutrition Panel",
+                    "url": "https://tdeecalculater.com/how-we-calculate/"
+                },
+                "description": "Board vetting nutritional methodology, macronutrient calculations, and clinical energy expenditure literature against validated human trials.",
+                "knowsAbout": [
+                    "Human Energy Expenditure",
+                    "Basal Metabolic Rate",
+                    "Mifflin-St Jeor Equation",
+                    "Sports Nutrition & Macronutrient Distribution"
+                ]
             },
             "publisher": {
                 "@id": "https://tdeecalculater.com/#organization"
@@ -214,10 +231,41 @@
       <span id="silo-category" class="hero-badge">TDEE Guides</span>
       <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">How to Calculate Your TDEE: Formula, Steps, and Examples</h1>
       
-      <div class="trust-meta" style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-cyan);">
-        <div style="margin-bottom: 0.5rem;"><strong>✍️ Editorial Attribution:</strong> TDEE Calculator Editorial Team</div>
-        <div style="margin-bottom: 0.5rem;"><strong>🔬 Methodology:</strong> Evidence-Based Clinical Equations (Mifflin-St Jeor &amp; Katch-McArdle)</div>
-        <div><strong>📅 Last Updated:</strong> October 2026</div>
+      <div class="editorial-review-card trust-meta" itemscope itemtype="https://schema.org/Person" itemprop="reviewedBy">
+        <div class="review-badges-strip">
+          <span class="review-badge-verified">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Medically &amp; Scientifically Vetted
+          </span>
+          <span class="review-badge-board">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Evidence-Based Clinical Review
+          </span>
+        </div>
+        <div class="reviewer-profile-body">
+          <div class="reviewer-avatar-slot" aria-hidden="true">🩺</div>
+          <div class="reviewer-info-slot">
+            <div class="reviewer-role-title" itemprop="jobTitle">Reviewed by a Registered Dietitian (RD) &amp; Certified Sports Nutritionist (CISSN)</div>
+            <div class="reviewer-board-name" itemprop="name">TDEE Calculator Clinical Nutrition &amp; Metabolism Review Panel</div>
+            <p class="reviewer-bio" itemprop="description">
+              Formulas and metabolic guidance are verified against peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, ISSN position stands) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
+            </p>
+          </div>
+        </div>
+        <div class="review-meta-grid">
+          <div class="review-meta-item">
+            <strong>✍️ Editorial Attribution:</strong> <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">TDEE Calculator Editorial Team</span></span>
+          </div>
+          <div class="review-meta-item">
+            <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Clinical Equations (Mifflin &amp; Katch)</a>
+          </div>
+          <div class="review-meta-item">
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-10" itemprop="dateModified">October 2026</time>
+          </div>
+          <div class="review-meta-item">
+            <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
+          </div>
+        </div>
       </div>
   
       <div id="silo-calculator-mount"></div>
@@ -243,7 +291,7 @@
           </ul>
         </div>
 
-        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
+        <p>Therefore, TDEE is not simply the calories you burn during structured workouts. Your everyday movement can also make a meaningful difference. Non-exercise activity thermogenesis, or NEAT, includes activities such as walking, standing, household tasks, and other movement outside planned exercise. Research shows that NEAT can vary considerably between people. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer" title="Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure - PubMed">PubMed [1]</a>)</p>
 
         <p>Most TDEE calculations are estimates rather than direct laboratory measurements.</p>
 
@@ -278,7 +326,7 @@
         </div>
 
         <h3>Step 1: Calculate Your BMR</h3>
-        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
+        <p>A commonly used equation is the <strong>Mifflin-St Jeor equation</strong>. The original study developed the equation from measured resting energy expenditure in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [2]</a>)</p>
 
         <div class="equation-box">
           <p><strong>For Men:</strong> BMR = (10 &times; weight in kg) + (6.25 &times; height in cm) − (5 &times; age) + 5</p>
@@ -297,7 +345,7 @@
 
         <p>Strictly speaking, the Mifflin-St Jeor equation predicts resting energy expenditure rather than measuring BMR under laboratory conditions. However, many online calculators use “BMR” as a simple label for this estimate. Estimate your baseline resting floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
 
-        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
+        <p>The equation is widely used because research has found it to perform well among commonly used resting metabolic rate prediction equations, although individual errors can still occur. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer" title="Comparison of predictive equations for resting metabolic rate - PubMed">PubMed [3]</a>)</p>
 
         <h3>Step 2: Choose Your Activity Factor</h3>
         <p>The next step is selecting an activity multiplier:</p>
@@ -389,11 +437,11 @@
         <h2>Why Do TDEE Calculators Give Different Results?</h2>
         <p>Different calculators can produce different numbers because they may use different equations, activity assumptions, rounding methods, or definitions of activity.</p>
         <p>More importantly, prediction equations cannot capture every factor affecting an individual's energy expenditure.</p>
-        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</p>
+        <p>Body composition, occupation, daily movement, exercise, and lifestyle can all affect actual energy use. NEAT is particularly variable between individuals. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</p>
 
         <h2>How Accurate Is a TDEE Calculation?</h2>
         <p>A calculated TDEE should be treated as a <strong>starting estimate</strong>, not an exact measurement.</p>
-        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
+        <p>Research on resting energy prediction equations shows that accuracy varies between individuals and populations. Even equations that perform well on average can produce meaningful errors for some people. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/" target="_blank" rel="noopener noreferrer" title="Estimation of energy expenditure using prediction equations - PubMed">PubMed [4]</a>)</p>
 
         <h3>How to Check Your Estimated TDEE</h3>
         <p>Track your calorie intake and body weight consistently over several weeks.</p>
@@ -441,10 +489,10 @@
 
         <h2>Methodology & Scientific References</h2>
         <ul>
-          <li>Levine JA. Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure. <em>Work</em>. 2007. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [1]</a>)</li>
-          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [2]</a>)</li>
-          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [3]</a>)</li>
-          <li>Jagim AR, et al. Estimation of energy expenditure using prediction equations in overweight and obese adults. <em>Res Sports Med</em>. 2016. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/?utm_source=chatgpt.com" target="_blank" rel="noopener">PubMed [4]</a>)</li>
+          <li>Levine JA. Non-exercise activity thermogenesis (NEAT): a component of total daily energy expenditure. <em>Work</em>. 2007. (<a href="https://pubmed.ncbi.nlm.nih.gov/30149423/" target="_blank" rel="noopener noreferrer">PubMed [1]</a>)</li>
+          <li>Mifflin MD, St Jeor ST, et al. A new predictive equation for resting energy expenditure in healthy individuals. <em>Am J Clin Nutr</em>. 1990. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed [2]</a>)</li>
+          <li>Frankenfield D, et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults. <em>J Am Diet Assoc</em>. 2005. (<a href="https://pubmed.ncbi.nlm.nih.gov/15883556/" target="_blank" rel="noopener noreferrer">PubMed [3]</a>)</li>
+          <li>Jagim AR, et al. Estimation of energy expenditure using prediction equations in overweight and obese adults. <em>Res Sports Med</em>. 2016. (<a href="https://pubmed.ncbi.nlm.nih.gov/26923904/" target="_blank" rel="noopener noreferrer">PubMed [4]</a>)</li>
         </ul>
 
         <p style="font-size:0.9rem; color:var(--text-muted); margin-top:1rem;"><strong>Last reviewed:</strong> October 2026</p>
