@@ -2,7 +2,19 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const root = __dirname;
-const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png' };
+const mime = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'text/javascript',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.ico': 'image/x-icon',
+  '.svg': 'image/svg+xml',
+  '.webmanifest': 'application/manifest+json',
+  '.webp': 'image/webp',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain'
+};
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]);
   let f = path.join(root, p === '/' ? 'index.html' : p);

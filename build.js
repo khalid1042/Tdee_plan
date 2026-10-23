@@ -585,6 +585,9 @@ for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
 <head>
   <meta charset="utf-8">
   <title>Redirecting...</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://tdeecalculater.com${newPath}">
   <meta http-equiv="refresh" content="0; url=${newPath}">
   <script>window.location.replace('${newPath}');</script>

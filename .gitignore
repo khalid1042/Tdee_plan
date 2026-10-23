@@ -2,3 +2,4 @@ node_modules/
 *.log
 capture_homepage_images.js
 enhance_homepage_images.js
+scratch/
