@@ -1,8 +1,29 @@
+# https://tdeecalculater.com robots.txt
+# Optimized for Googlebot, Bingbot, and AI Search discovery
+
 User-agent: *
 Allow: /
 
+# Core functional routes to crawl
+Allow: /bmr-calculator/
+Allow: /maintenance-calorie-calculator/
+Allow: /calorie-deficit-calculator/
+Allow: /calorie-surplus-calculator/
+Allow: /macro-calculator/
+Allow: /calories-burned-calculator/
+Allow: /calibrate-tdee-weight-trends/
+Allow: /accurate-activity-factor-questionnaire/
+Allow: /tdee-calculator-rest-training-day-macros/
+
+# Disallow system files or administrative setups if any
+Disallow: /_next/
+Disallow: /static/
+
 # Explicit Search & AI Discovery Crawlers
 User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: OAI-SearchBot
@@ -20,6 +41,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Explicit Sitemap declaration to force indexing engines directly to your mapping file
 Sitemap: https://tdeecalculater.com/sitemap.xml
-
-
