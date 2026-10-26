@@ -48,7 +48,7 @@ All identified fixes were executed incrementally and verified without:
 ### Phase P1 — High-Impact On-Page Improvements
 1. **Homepage Title & Meta Description:**
    - **Title:** `TDEE Calculator: Estimate Your Daily Calorie Needs` (48 characters · optimal for mobile & desktop SERP snippets).
-   - **Meta Description:** `Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.` (150 characters · user-centric value proposition).
+   - **Meta Description:** `Estimate your total daily energy expenditure (TDEE), find maintenance calories, and explore calorie targets based on your activity level and goals.` (147 characters · user-centric value proposition).
 2. **Subpage Title Optimization:**
    - Trimmed long titles to <60 characters to prevent Google truncation on mobile SERPs.
 3. **Structured Data Realignment:**

@@ -3755,7 +3755,7 @@ window.TDEEContent = {
 
     '/calibrate-tdee-weight-trends/': {
       title: 'How to Calibrate TDEE with Real-World Weight Trends',
-      metaDescription: 'Ditch inaccurate online estimates. Learn how to track rolling daily calorie intake and morning weight averages over 14-28 days to calculate your true observed metabolic rate.',
+      metaDescription: 'Track daily calories and morning weight averages over 14-28 days to calculate your true observed metabolic rate and eliminate water weight noise.',
       category: 'Metabolic Calibration',
       readTime: '8 min read',
       h1: 'How to Calibrate TDEE with Real-World Weight Trends',
@@ -3864,7 +3864,7 @@ window.TDEEContent = {
 
     '/accurate-activity-factor-questionnaire/': {
       title: 'Accurate Activity Factor Questionnaire for Lifting & Fitness',
-      metaDescription: 'Calculate your custom metabolic multiplier. Our 60-second wizard cross-references daily occupational NEAT steps and workout routines to prevent accidental calorie overestimation.',
+      metaDescription: 'Calculate your custom metabolic multiplier. Our 60-second wizard cross-references daily NEAT steps and workouts to prevent calorie overestimation.',
       category: 'Activity Multipliers',
       readTime: '7 min read',
       h1: 'Accurate Activity Factor Questionnaire for Lifting & Fitness',
@@ -3986,7 +3986,7 @@ window.TDEEContent = {
 
     '/tdee-calculator-rest-training-day-macros/': {
       title: 'TDEE Calculator with Rest and Training Day Macros Split',
-      metaDescription: 'Optimize your nutrition strategy. View custom protein, carbohydrate, and fat breakdowns designed specifically to fuel hard workout sessions and maximize active recovery rest days.',
+      metaDescription: 'View custom protein, carb, and fat macro targets designed specifically to fuel hard workout sessions and maximize recovery on active rest days.',
       category: 'Calorie & Macro Cycling',
       readTime: '9 min read',
       h1: 'TDEE Calculator with Rest and Training Day Macros Split',

@@ -152,7 +152,7 @@ Crucially, **no competing `/tdee-calculator/` page exists**—the homepage `/` p
   3. Both repeat "Calculate" multiple times and lack the user-benefit angle recommended in PRD 6.1 & 6.2.
 * **Recommended Correction:**
   - Update Title to: `TDEE Calculator: Estimate Your Daily Calorie Needs` (48 characters — optimal for SERP display without truncation).
-  - Update Meta Description to: `Estimate your total daily energy expenditure (TDEE), understand your maintenance calories, and explore calorie targets based on your activity level and goals.` (150 characters — natural language, CTR-focused).
+  - Update Meta Description to: `Estimate your total daily energy expenditure (TDEE), find maintenance calories, and explore calorie targets based on your activity level and goals.` (147 characters — natural language, CTR-focused).
 
 ---
 
