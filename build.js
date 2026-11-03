@@ -583,4 +583,59 @@ for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
   console.log(`Generated redirect stub for legacy path: ${oldPath} -> ${newPath}`);
 }
 
+
+// Generate dynamic sitemap.xml synchronized with build
+function generateSitemapXml() {
+  const today = new Date().toISOString().split('T')[0];
+  
+  const sitemapConfig = {
+    '/': { priority: '1.0', changefreq: 'daily' },
+    '/bmr-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/maintenance-calorie-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/calorie-deficit-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/calorie-surplus-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/macro-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/calories-burned-calculator/': { priority: '0.8', changefreq: 'weekly' },
+    '/calibrate-tdee-weight-trends/': { priority: '0.8', changefreq: 'weekly' },
+    '/accurate-activity-factor-questionnaire/': { priority: '0.8', changefreq: 'weekly' },
+    '/tdee-calculator-rest-training-day-macros/': { priority: '0.8', changefreq: 'weekly' },
+    '/blog/what-is-tdee/': { priority: '0.7', changefreq: 'monthly' },
+    '/blog/how-to-calculate-tdee/': { priority: '0.7', changefreq: 'monthly' },
+    '/blog/tdee-vs-bmr/': { priority: '0.7', changefreq: 'monthly' },
+    '/blog/tdee-for-weight-loss/': { priority: '0.7', changefreq: 'monthly' },
+    '/tdee-for-weight-gain/': { priority: '0.8', changefreq: 'monthly' },
+    '/tdee-for-muscle-building/': { priority: '0.8', changefreq: 'monthly' },
+    '/healthy-food-and-healthy-life/': { priority: '0.8', changefreq: 'monthly' },
+    '/blog/mifflin-st-jeor-equation/': { priority: '0.7', changefreq: 'monthly' },
+    '/how-we-calculate/': { priority: '0.5', changefreq: 'monthly' },
+    '/about/': { priority: '0.5', changefreq: 'monthly' },
+    '/contact/': { priority: '0.5', changefreq: 'monthly' },
+    '/editorial-policy/': { priority: '0.3', changefreq: 'yearly' },
+    '/sources/': { priority: '0.3', changefreq: 'yearly' },
+    '/privacy-policy/': { priority: '0.3', changefreq: 'yearly' },
+    '/terms/': { priority: '0.3', changefreq: 'yearly' },
+    '/disclaimer/': { priority: '0.3', changefreq: 'yearly' },
+    '/cookie-policy/': { priority: '0.3', changefreq: 'yearly' }
+  };
+
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+  for (const [route, conf] of Object.entries(sitemapConfig)) {
+    xml += '  <url>\n';
+    xml += `    <loc>https://tdeecalculater.com${route}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <changefreq>${conf.changefreq}</changefreq>\n`;
+    xml += `    <priority>${conf.priority}</priority>\n`;
+    xml += '  </url>\n';
+  }
+
+  xml += '</urlset>\n';
+
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), xml, 'utf-8');
+  console.log(`Generated dynamic sitemap.xml with ${Object.keys(sitemapConfig).length} canonical URLs (lastmod: ${today})`);
+}
+
+generateSitemapXml();
+
 console.log('Static pre-rendering complete!');
