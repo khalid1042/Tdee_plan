@@ -43,9 +43,11 @@ window.TDEECalculator = {
       mifflinBmr = (10 * weightKg) + (6.25 * heightCm) - (5 * age) - 161;
     }
 
+    var calculatedRee = Math.round(mifflinBmr);
     return {
-      bmr: Math.round(mifflinBmr),
-      formula: 'Mifflin-St Jeor',
+      ree: calculatedRee,
+      bmr: calculatedRee,
+      formula: 'Mifflin-St Jeor (REE)',
       lbmKg: null
     };
   },
@@ -129,22 +131,22 @@ window.TDEECalculator = {
       },
       mildDeficit: {
         calories: Math.round(tdee * 0.85), // -15%
-        paceText: 'Slow Fat Loss (-0.25 kg / ~0.5 lb per week)',
+        paceText: 'Gradual Fat Loss (~0.5 lb / 0.25 kg/wk initial estimate; rate adjusts dynamically with metabolic adaptation)',
         label: 'Mild Deficit (-15%)'
       },
       moderateDeficit: {
         calories: Math.round(tdee * 0.78), // -22%
-        paceText: 'Moderate Fat Loss (-0.5 kg / ~1.1 lb per week)',
+        paceText: 'Optimal Fat Loss (~1.0 lb / 0.5 kg/wk initial estimate; rate adjusts dynamically with metabolic adaptation)',
         label: 'Optimal Fat Loss (-22%)'
       },
       aggressiveDeficit: {
         calories: Math.round(tdee * 0.70), // -30%
-        paceText: 'Aggressive Fat Loss (-0.8 kg / ~1.7 lb per week)',
+        paceText: 'Aggressive Deficit (~1.5–1.7 lb / 0.7–0.8 kg/wk; monitor lean mass retention)',
         label: 'Aggressive Deficit (-30%)'
       },
       leanBulk: {
         calories: Math.round(tdee * 1.10), // +10%
-        paceText: 'Lean Muscle Gain (+0.2 kg / ~0.4 lb per week)',
+        paceText: 'Lean Muscle Gain (~0.25–0.5 lb / 0.1–0.2 kg/wk with progressive resistance training)',
         label: 'Lean Surplus (+10%)'
       }
     };

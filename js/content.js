@@ -512,8 +512,8 @@ window.TDEEContent = {
           <h3>1. BMR — Basal Metabolic Rate (60% – 70% of TDEE)</h3>
           <p>BMR is the baseline energy your body needs to support basic physiological functions while at complete rest. These functions include breathing, circulation, brain signaling, cellular repair, and maintaining body temperature. Estimate your biological floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
 
-          <h3>2. NEAT — Non-Exercise Activity Thermogenesis (15% – 20% of TDEE)</h3>
-          <p>NEAT refers to energy used for everyday movement that is not planned exercise. For example, walking around the house, standing, typing, doing household chores, commuting, and fidgeting during the day all contribute to NEAT. NEAT can vary considerably between people (by up to 800+ kcal/day).</p>
+          <h3>2. NEAT — Non-Exercise Activity Thermogenesis (15% – 50% of TDEE)</h3>
+          <p>NEAT refers to energy expended for everyday movement outside of planned, structured exercise. Walking, standing at a desk, commuting, household chores, and postural fidgeting all comprise NEAT. According to clinical energy balance research by Dr. James Levine (Mayo Clinic; <em>Science</em> 1999, <em>Best Pract Res Clin Endocrinol Metab</em> 2002), NEAT exhibits greater variance than any other component between individuals of similar weight&mdash;ranging from roughly 15% in sedentary desk workers up to 50% of total daily burn in active occupational workers, representing differences of up to 1,000&ndash;2,000 kcal/day.</p>
 
           <h3>3. TEF — Thermic Effect of Food (~10% of TDEE)</h3>
           <p>Your body also uses energy to digest, absorb, breakdown, and process the food you eat. Protein requires the highest digestion energy (20%–30% of consumed protein calories), carbohydrates require 5%–10%, and fats require 0%–3%.</p>
@@ -1574,49 +1574,55 @@ window.TDEEContent = {
         <p>These simplified formulas come directly from the original research. The researchers found that simplifying the original coefficients did not reduce predictive value. Estimate your baseline instantly with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
 
         <h3>What the Coefficients Mean</h3>
+        <p>In multiple linear regression modeling (Mifflin et al., 1990; <em>n</em> = 498 healthy subjects), the numbers in the equation represent <strong>empirical regression weights</strong> that mathematically minimize prediction error across the measured population, rather than direct physiological meters of organ surface area or endocrine decline:</p>
         <div class="table-responsive">
           <table class="styled-table">
             <thead>
               <tr>
-                <th>Input Term</th>
-                <th>Role in the Formula</th>
+                <th>Equation Term</th>
+                <th>Regression Role &amp; Statistical Context</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Weight &times; 10</strong></td>
-                <td>Adds to the estimated resting energy need based on body mass</td>
+                <td>Statistical weighting factor for total body mass in kilograms. Reflects the proportional relationship between body weight and metabolic tissue.</td>
               </tr>
               <tr>
                 <td><strong>Height &times; 6.25</strong></td>
-                <td>Accounts for body height and surface area</td>
+                <td>Statistical weighting factor for standing height in centimeters, capturing skeletal size and stature across the 1990 cohort.</td>
               </tr>
               <tr>
                 <td><strong>Age &times; &minus;5</strong></td>
-                <td>Lowers the estimate as age increases to reflect age-related metabolic decline</td>
+                <td>Statistical rate adjustment for chronological age (years), capturing the observed average decline in resting metabolic rate across adult populations.</td>
               </tr>
               <tr>
-                <td><strong>+5 / &minus;161</strong></td>
-                <td>Sex-specific constant adjustment</td>
+                <td><strong>+5 (Men) / &minus;161 (Women)</strong></td>
+                <td>Sex-specific constant terms that align the regression plane with observed indirect calorimetry baselines between biological sexes.</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>These numbers are <strong>regression coefficients</strong>. They should not be interpreted as direct measurements of muscle, hormones, or metabolism.</p>
+        <p>Because these numbers are <strong>statistical regression coefficients</strong>, individual metabolic variance (such as high athletic muscularity or endocrine factors) can cause actual measured REE to deviate from calculated estimates by approximately &plusmn;8% to 10%.</p>
 
         <h2>How to Calculate It</h2>
         <p>First, make sure your measurements use the correct units. Weight must be in kilograms (kg), while height must be in centimeters (cm).</p>
 
         <div class="worked-example-card">
-          <p><strong>Male Worked Example:</strong> Consider a 30-year-old man weighing <strong>80 kg</strong> and measuring <strong>180 cm</strong>:</p>
-          <p class="calc-step-line"><strong>REE = (10 &times; 80) + (6.25 &times; 180) − (5 &times; 30) + 5</strong></p>
-          <p class="calc-step-line"><strong>REE = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
-          <p>Therefore, his estimated resting energy expenditure is about <strong>1,780 calories per day</strong>.</p>
+          <p><strong>Metric Worked Example (Male):</strong> 30-year-old male, <strong>80 kg</strong>, <strong>180 cm</strong>:</p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 80) + (6.25 &times; 180) − (5 &times; 30) + 5 = 800 + 1,125 − 150 + 5 = 1,780 calories/day</strong></p>
           <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
-          <p><strong>Female Worked Example:</strong> Consider a 30-year-old woman weighing <strong>65 kg</strong> and measuring <strong>165 cm</strong>:</p>
-          <p class="calc-step-line"><strong>REE = (10 &times; 65) + (6.25 &times; 165) − (5 &times; 30) − 161</strong></p>
-          <p class="calc-step-line"><strong>REE = 650 + 1,031.25 − 150 − 161 = 1,370 calories/day</strong></p>
+          <p><strong>US / Imperial Worked Example (Male):</strong> 30-year-old male, <strong>176 lbs</strong>, <strong>5&prime;11&Prime;</strong> (71 inches):</p>
+          <p class="calc-step-line">Weight in kg: 176 &divide; 2.20462 = <strong>79.8 kg</strong> | Height in cm: 71 &times; 2.54 = <strong>180.3 cm</strong></p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 79.8) + (6.25 &times; 180.3) − (5 &times; 30) + 5 = 798 + 1,126.9 − 150 + 5 &approx; 1,780 calories/day</strong></p>
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+          <p><strong>Metric Worked Example (Female):</strong> 30-year-old female, <strong>65 kg</strong>, <strong>165 cm</strong>:</p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 65) + (6.25 &times; 165) − (5 &times; 30) − 161 = 650 + 1,031.25 − 150 − 161 = 1,370 calories/day</strong></p>
+          <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;" />
+          <p><strong>US / Imperial Worked Example (Female):</strong> 30-year-old female, <strong>143 lbs</strong>, <strong>5&prime;5&Prime;</strong> (65 inches):</p>
+          <p class="calc-step-line">Weight in kg: 143 &divide; 2.20462 = <strong>64.9 kg</strong> | Height in cm: 65 &times; 2.54 = <strong>165.1 cm</strong></p>
+          <p class="calc-step-line"><strong>REE = (10 &times; 64.9) + (6.25 &times; 165.1) − (5 &times; 30) − 161 = 649 + 1,031.9 − 150 − 161 &approx; 1,370 calories/day</strong></p>
         </div>
 
         <p>Importantly, neither number represents maintenance calories. Instead, both are resting estimates.</p>

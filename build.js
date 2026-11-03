@@ -89,36 +89,36 @@ function updateHtmlForRoute(html, route, routeData) {
   const lastUpdated = window.TDEEContent.lastUpdated || 'October 2026';
 
   const trustMetaHTML = `
-      <div class="editorial-review-card trust-meta" itemscope itemtype="https://schema.org/Person" itemprop="reviewedBy">
+      <div class="editorial-review-card trust-meta">
         <div class="review-badges-strip">
           <span class="review-badge-verified">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Medically &amp; Scientifically Vetted
+            Evidence-Based Methodology
           </span>
           <span class="review-badge-board">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            Evidence-Based Clinical Review
+            Peer-Reviewed Literature Cited
           </span>
         </div>
         <div class="reviewer-profile-body">
-          <div class="reviewer-avatar-slot" aria-hidden="true">🩺</div>
+          <div class="reviewer-avatar-slot" aria-hidden="true">🔬</div>
           <div class="reviewer-info-slot">
-            <div class="reviewer-role-title" itemprop="jobTitle">Reviewed by a Registered Dietitian (RD) &amp; Certified Sports Nutritionist (CISSN)</div>
-            <div class="reviewer-board-name" itemprop="name">TDEE Calculator Clinical Nutrition &amp; Metabolism Review Panel</div>
-            <p class="reviewer-bio" itemprop="description">
-              Formulas and metabolic guidance are verified against peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, ISSN position stands) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
+            <div class="reviewer-role-title">Clinical &amp; Evidence-Based Methodology</div>
+            <div class="reviewer-board-name">TDEE Calculator Scientific &amp; Editorial Methodology</div>
+            <p class="reviewer-bio">
+              Formulas, metabolic equations, and macronutrient algorithms are developed strictly from peer-reviewed clinical energy expenditure literature (Mifflin-St Jeor 1990, Katch-McArdle, Levine NEAT research) and indirect calorimetry human trials indexed in PubMed and NCBI Bookshelf.
             </p>
           </div>
         </div>
         <div class="review-meta-grid">
           <div class="review-meta-item">
-            <strong>✍️ Editorial Attribution:</strong> <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">${author}</span></span>
+            <strong>✍️ Editorial Attribution:</strong> <span>${author}</span>
           </div>
           <div class="review-meta-item">
-            <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Clinical Equations (Mifflin &amp; Katch)</a>
+            <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Peer-Reviewed Equations (Mifflin &amp; Katch)</a>
           </div>
           <div class="review-meta-item">
-            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-10" itemprop="dateModified">${lastUpdated}</time>
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-11">${lastUpdated}</time>
           </div>
           <div class="review-meta-item">
             <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
@@ -504,23 +504,6 @@ ${routeData.content}
         "@type": "Organization",
         "name": "TDEE Calculator Clinical Editorial Staff",
         "url": "https://tdeecalculater.com/about/"
-      },
-      "reviewedBy": {
-        "@type": "Person",
-        "name": "Registered Dietitian & Certified Sports Nutritionist Review Board",
-        "jobTitle": "Registered Dietitian (RD) & Certified Sports Nutritionist (CISSN)",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "TDEE Calculator Clinical Nutrition Panel",
-          "url": "https://tdeecalculater.com/how-we-calculate/"
-        },
-        "description": "Board vetting nutritional methodology, macronutrient calculations, and clinical energy expenditure literature against validated human trials.",
-        "knowsAbout": [
-          "Human Energy Expenditure",
-          "Basal Metabolic Rate",
-          "Mifflin-St Jeor Equation",
-          "Sports Nutrition & Macronutrient Distribution"
-        ]
       },
       "publisher": { "@id": "https://tdeecalculater.com/#organization" },
       "image": ogImageUrl
