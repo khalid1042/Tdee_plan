@@ -238,6 +238,12 @@ routes.forEach(route => {
 assert(schemasParsedCleanly, 'All JSON-LD structured data scripts parse with 100% valid JSON syntax');
 assert(zeroFakeReviewBoards, 'Zero unverified RD/CISSN claims or fake review boards exist in HTML or Schema across all 27 pages');
 
+const appJsContent = fs.readFileSync(path.join(ROOT_DIR, 'js', 'app.js'), 'utf8');
+const buildJsContent = fs.readFileSync(path.join(ROOT_DIR, 'build.js'), 'utf8');
+const noJsFakeReview = !/Reviewed by a Registered Dietitian|CISSN|itemprop="reviewedBy"/i.test(appJsContent) &&
+                       !/Reviewed by a Registered Dietitian|CISSN|itemprop="reviewedBy"/i.test(buildJsContent);
+assert(noJsFakeReview, 'Zero unverified RD/CISSN claims exist in js/app.js client SPA router or build.js');
+
 // -----------------------------------------------------------------------------
 // SUITE 4: INTERNAL LINK INTEGRITY & 404 PREVENTION
 // -----------------------------------------------------------------------------
