@@ -40,7 +40,7 @@ Every outreach opportunity is tagged with the specific high-converting asset on 
    * *Tactic:* Pitch our PubMed MSJ guide + Calibration Lab as a resource addition (not replacement).
 4. **HARO / Connectively + Source of Sources (`[MSJ]`, `[LOSS]`, `[HP]`):**
    * *Why Start Here:* 15-minute setup gives daily inbound media queries (3x/day each).
-   * *Tactic:* Monitor weight loss / GLP-1 / calorie deficit queries; quote our Clinical Nutrition Review Panel.
+   * *Tactic:* Monitor weight loss / GLP-1 / calorie deficit queries; pitch with an evidence-based expert quote.
 5. **WellnessFeeds Guest Post (`[CAL]`, `[MSJ]`, `[LOSS]`):**
    * *Why Start Here:* 800+ words, 1–2 relevant links permitted, 2-day reply turnaround.
    * *Tactic:* Pitch *"Why your TDEE calculator was 300 calories too high — and how 14 days of weigh-ins fix it"*.
@@ -133,7 +133,7 @@ Before investing hours into content writing or outreach, all 25 targets have bee
 > Would you be open to testing it as a 6th entry in your comparison guide? We can provide our own before/after calibration datasets if helpful.
 > 
 > Best regards,  
-> **Editorial Team, TDEE Calculator**  
+> **TDEE Calculator Team**  
 > https://tdeecalculater.com/
 
 ---
@@ -156,7 +156,7 @@ Before investing hours into content writing or outreach, all 25 targets have bee
 > Keep up the great educational content!
 > 
 > Warm regards,  
-> **TDEE Calculator Clinical Review Panel**  
+> **TDEE Calculator Team**  
 > https://tdeecalculater.com/
 
 ---
@@ -202,7 +202,7 @@ Before investing hours into content writing or outreach, all 25 targets have bee
 > Looking forward to your thoughts!
 > 
 > Best regards,  
-> **TDEE Calculator Clinical Nutrition Panel**  
+> **TDEE Calculator Team**  
 > https://tdeecalculater.com/
 
 ---

@@ -21,13 +21,13 @@
 Use these pre-written responses when pitching queries on **HARO / Connectively**, **Source of Sources**, **Featured.com**, or **Qwoted**.
 
 ### Angle A: Weight Loss Plateaus & Calorie Deficits
-> **Expert Attribution:** Clinical Nutrition Review Panel, TDEECalculator.com  
+> **Expert Attribution:** TDEE Calculator Team, TDEECalculator.com  
 > **Source URL:** https://tdeecalculater.com/blog/mifflin-st-jeor-equation/
 > 
 > "Most dieters believe a weight stall means their metabolism is damaged, but in over 80% of cases, the math has simply shifted. As body mass decreases, resting energy expenditure drops because there is less tissue to oxygenate and move. An individual who calculates a 500-calorie deficit at 200 lbs will see that deficit shrink to under 200 calories after losing 25 lbs unless calories are recalibrated against real-world 14-day weight trends."
 
 ### Angle B: Water Weight vs. True Fat Loss
-> **Expert Attribution:** Clinical Nutrition Review Panel, TDEECalculator.com  
+> **Expert Attribution:** TDEE Calculator Team, TDEECalculator.com  
 > **Source URL:** https://tdeecalculater.com/calibrate-tdee-weight-trends/
 > 
 > "The scale cannot distinguish between fat, muscle, and intracellular water. Because each gram of stored muscle glycogen binds approximately 3 to 4 grams of water, a single higher-carbohydrate meal can swing scale weight by 2 to 4 pounds overnight without adding an ounce of body fat. Dieters who adjust their calories daily based on scale fluctuations are chasing hydration noise rather than metabolic reality."
@@ -47,7 +47,7 @@ Use these pre-written responses when pitching queries on **HARO / Connectively**
 
 # Why Standard TDEE Calculators Fail Active Lifters (And How 14 Days of Weigh-Ins Fix It)
 
-**By TDEE Calculator Clinical Nutrition & Metabolism Editorial Panel**
+**By the TDEE Calculator Team**
 
 You step onto the scale on Monday morning, open an online calorie calculator, punch in your age, height, weight, and select “Moderately Active.” The screen flashes an authoritative number: *2,650 calories per day to maintain your weight*. 
 
