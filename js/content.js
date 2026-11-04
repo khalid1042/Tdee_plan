@@ -1549,8 +1549,8 @@ window.TDEEContent = {
 
 
     '/blog/mifflin-st-jeor-equation/': {
-      title: 'Mifflin-St Jeor Equation: Formula, Accuracy & Calculation',
-      metaDescription: 'Learn how the Mifflin-St Jeor Equation works, how to calculate REE for men and women, its accuracy vs Harris-Benedict, and TDEE examples.',
+      title: 'Mifflin-St Jeor Equation: Formula (Men & Women) & Calculator',
+      metaDescription: 'Mifflin-St Jeor Formula: Men = 10×wt + 6.25×ht - 5×age + 5. Women = 10×wt + 6.25×ht - 5×age - 161. Calculate resting energy expenditure (REE) & TDEE.',
       category: 'Scientific Formulas',
       readTime: '6 min read',
       h1: 'Mifflin-St Jeor Equation: Formula, Calculation, Accuracy, and Examples',
@@ -2151,10 +2151,10 @@ window.TDEEContent = {
     },
 
     '/maintenance-calorie-calculator/': {
-      title: 'Calorie Calculator: Calculate Your Daily Calorie Needs',
-      metaDescription: 'Calculate your daily calorie needs with our Calorie Calculator. Estimate BMR, maintenance calories, and calorie targets for weight loss or gain.',
+      title: 'Maintenance Calorie Calculator: Find Exact Daily Maintenance',
+      metaDescription: 'Calculate your exact maintenance calories. Find the daily caloric baseline needed to maintain your weight, based on your activity level and body metrics.',
       category: 'Calculator',
-      h1: 'Calorie Calculator',
+      h1: 'Maintenance Calorie Calculator',
       content: `<p class="lead-paragraph">You calculate your maintenance calories and get a number. But then a bigger question appears: <strong>Can you actually trust that number?</strong> Your weight may still move up or down, while another calculator gives you a different result. As a result, calorie planning can become confusing, especially when you are still learning about BMR, TDEE, and energy balance.</p>
 
         <p>Our <strong>maintenance calorie calculator</strong> gives you a practical starting estimate based on established energy-expenditure methods. Instead of presenting the result as a perfect measurement, this guide explains how the estimate is calculated, what the number means, why results can vary, and how to compare the estimate with your real-world weight trends.</p>
@@ -2651,8 +2651,8 @@ window.TDEEContent = {
     },
 
     '/calorie-surplus-calculator/': {
-      title: 'Calorie Surplus Calculator: Estimate Lean Bulk Calories',
-      metaDescription: 'Calculate your optimal calorie surplus for muscle gain and lean bulking based on TDEE, protein targets, and training. Learn bulking formulas.',
+      title: 'Calorie Surplus Calculator: Lean Bulking & Muscle Gain Target',
+      metaDescription: 'Calculate your optimal calorie surplus for lean muscle gain without excess fat. Set custom bulking calories, protein grams, and training day splits.',
       category: 'Calculator',
       h1: 'Calorie Surplus Calculator (Lean Bulk Target)',
       content: `<p class="lead-paragraph">Trying to gain weight can become frustrating when you do not know how many calories you actually need. Perhaps you eat more but see little change, or you increase food too quickly and gain more fat than expected. The real problem is not simply eating more. Instead, you need a sensible calorie target and a way to check whether that target is working.</p>
