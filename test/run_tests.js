@@ -307,6 +307,68 @@ assert(fs.existsSync(robotsPath), 'robots.txt exists in root directory');
 const robotsContent = fs.readFileSync(robotsPath, 'utf8');
 assert(robotsContent.includes('Sitemap: https://tdeecalculater.com/sitemap.xml'), 'robots.txt contains correct sitemap directive');
 
+
+// -----------------------------------------------------------------------------
+// SUITE 6: GA4 ANALYTICS & PRIVACY COMPLIANCE
+// -----------------------------------------------------------------------------
+console.log('\n--- Suite 6: GA4 Analytics & Privacy Compliance ---');
+
+const indexHtmlForGA4 = fs.readFileSync(path.join(ROOT_DIR, 'index.html'), 'utf8');
+const appJsForGA4 = fs.readFileSync(path.join(ROOT_DIR, 'js', 'app.js'), 'utf8');
+
+// 6.1 GA4 script tag present in index.html
+assert(
+  indexHtmlForGA4.includes('googletagmanager.com/gtag/js'),
+  'GA4 gtag.js script tag is present in index.html'
+);
+
+// 6.2 anonymize_ip is enabled
+assert(
+  indexHtmlForGA4.includes("'anonymize_ip': true"),
+  'GA4 config has anonymize_ip: true (privacy requirement)'
+);
+
+// 6.3 Placeholder ID present — warns user to replace it
+assert(
+  indexHtmlForGA4.includes('G-XXXXXXXXXX'),
+  'GA4 placeholder Measurement ID present (user must replace with real ID)'
+);
+
+// 6.4 tdeeTrack() helper present in app.js
+assert(
+  appJsForGA4.includes('function tdeeTrack('),
+  'tdeeTrack() privacy-safe analytics helper present in js/app.js'
+);
+
+// 6.5 All 6 anonymous events wired
+const expectedEvents = [
+  "tdeeTrack('calculator_submit'",
+  "tdeeTrack('goal_select'",
+  "tdeeTrack('unit_toggle'",
+  "tdeeTrack('activity_wizard_complete'",
+  "tdeeTrack('calibration_run'",
+  "tdeeTrack('macro_view'"
+];
+expectedEvents.forEach(function(evt) {
+  assert(appJsForGA4.includes(evt), `Anonymous event wired: ${evt.replace("tdeeTrack('", '').replace("'", '')}`);
+});
+
+// 6.6 Zero PII policy — no raw personal health values in event params
+const piiParams = ['age:', 'weight:', 'height:', 'body_fat:', 'calories:'];
+piiParams.forEach(function(param) {
+  // Check only inside tdeeTrack() calls — look for the pattern in event call blocks
+  const trackCalls = appJsForGA4.match(/tdeeTrack\([\s\S]*?\);/g) || [];
+  const hasPii = trackCalls.some(call => call.includes(param));
+  assert(!hasPii, `Zero PII: no "${param}" value in any tdeeTrack() call`);
+});
+
+// 6.7 GA4 present in a pre-rendered subpage (confirms build.js propagation)
+const subpageHtml = fs.readFileSync(path.join(ROOT_DIR, 'bmr-calculator', 'index.html'), 'utf8');
+assert(
+  subpageHtml.includes('googletagmanager.com/gtag/js'),
+  'GA4 script tag propagated to pre-rendered subpages (bmr-calculator/index.html)'
+);
+
 // -----------------------------------------------------------------------------
 // SUMMARY
 // -----------------------------------------------------------------------------

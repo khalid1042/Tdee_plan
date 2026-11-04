@@ -2,6 +2,17 @@
  * Main Application Orchestrator, UI Event Listeners, State Management & SPA Router.
  */
 
+/**
+ * Privacy-safe analytics helper (Batch 2).
+ * Wraps window.gtag so events are silently dropped when GA4 is not loaded.
+ * ZERO PII policy: never pass age, weight, height, body-fat, or calorie values.
+ */
+function tdeeTrack(eventName, params) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params || {});
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Global State
   var state = {
@@ -436,6 +447,11 @@ document.addEventListener('DOMContentLoaded', function() {
       displaySimExtraBurn.textContent = '+' + sim.extraBurn + ' kcal/day';
       displaySimNewTdee.textContent = sim.newTdee.toLocaleString() + ' kcal/day';
     }
+    // Anonymous analytics — zero PII (no age/weight/height/calories)
+    tdeeTrack('calculator_submit', {
+      formula: calcResult.formulaName,
+      unit_system: state.unit
+    });
   }
 
   /* ==========================================================================
@@ -463,6 +479,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (weightUnitLabel) weightUnitLabel.textContent = 'kg';
         if (inputHeight) inputHeight.value = Math.round(parseFloat(inputHeight.value) * 2.54);
         if (inputWeight) inputWeight.value = Math.round(parseFloat(inputWeight.value) * 0.453592);
+        tdeeTrack('unit_toggle', { unit_system: 'metric' });
         updateCalculation();
       }
     });
@@ -478,6 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (weightUnitLabel) weightUnitLabel.textContent = 'lbs';
         if (inputHeight) inputHeight.value = Math.round(parseFloat(inputHeight.value) / 2.54);
         if (inputWeight) inputWeight.value = Math.round(parseFloat(inputWeight.value) / 0.453592);
+        tdeeTrack('unit_toggle', { unit_system: 'imperial' });
         updateCalculation();
       }
     });
@@ -517,6 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
       goalTabs.forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
       state.activeGoal = btn.getAttribute('data-goal');
+      tdeeTrack('goal_select', { goal: state.activeGoal });
       updateCalculation();
     });
   });
@@ -526,6 +545,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (macroSelect) {
     macroSelect.addEventListener('change', function() {
       state.macroPreset = macroSelect.value;
+      tdeeTrack('macro_view', { macro_preset: macroSelect.value });
       updateCalculation();
     });
   }
@@ -582,6 +602,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (btnApplyWizard) {
     btnApplyWizard.addEventListener('click', function() {
+      var palTier = 'Sedentary';
+      if (state.customMultiplier >= 1.85) palTier = 'Extra Active';
+      else if (state.customMultiplier >= 1.68) palTier = 'Very Active';
+      else if (state.customMultiplier >= 1.48) palTier = 'Moderately Active';
+      else if (state.customMultiplier >= 1.35) palTier = 'Lightly Active';
+      tdeeTrack('activity_wizard_complete', { pal_tier: palTier });
       updateCalculation();
       var originalText = btnApplyWizard.textContent;
       btnApplyWizard.textContent = '✓ Applied (' + state.customMultiplier.toFixed(2) + '×)';
@@ -695,6 +721,10 @@ document.addEventListener('DOMContentLoaded', function() {
         renderTrackerTable(state.calibrationEntries);
       }
 
+      var entryCount = state.calibrationEntries ? state.calibrationEntries.length : 0;
+      tdeeTrack('calibration_run', {
+        entry_count_bucket: entryCount >= 14 ? '14+' : '7-13'
+      });
       var currentFormulaTdee = parseInt(displayTdee.textContent.replace(/,/g, '')) || 2450;
       var result = window.TDEECalibration.calibrateExpenditure(state.calibrationEntries, currentFormulaTdee);
 
