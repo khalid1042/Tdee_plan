@@ -328,10 +328,14 @@ assert(
   'GA4 config has anonymize_ip: true (privacy requirement)'
 );
 
-// 6.3 Placeholder ID present — warns user to replace it
+// 6.3 Real Measurement ID is set (not the placeholder)
 assert(
-  indexHtmlForGA4.includes('G-XXXXXXXXXX'),
-  'GA4 placeholder Measurement ID present (user must replace with real ID)'
+  indexHtmlForGA4.includes('G-ESZDYY7BEF'),
+  'GA4 real Measurement ID (G-ESZDYY7BEF) is present in index.html'
+);
+assert(
+  !indexHtmlForGA4.includes('G-XXXXXXXXXX'),
+  'GA4 placeholder G-XXXXXXXXXX has been replaced with real ID'
 );
 
 // 6.4 tdeeTrack() helper present in app.js
