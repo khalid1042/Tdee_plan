@@ -562,6 +562,20 @@ window.TDEEContent = {
           <p>EAT refers to energy burned during planned physical exercise. Running, cycling, swimming, strength training, sports, and structured workouts are common examples.</p>
         </div>
 
+        
+        <!-- High-Converting In-Content Calculator CTA Banner -->
+        <div class="calculator-cta-card" style="margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(168, 85, 247, 0.12)); border: 1.5px solid var(--accent-cyan); border-radius: 12px; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;" aria-hidden="true">🧮</span>
+            <strong style="font-size: 1.08rem; color: var(--text-primary);">Calculate Your Exact Daily Energy Expenditure</strong>
+          </div>
+          <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+            Ready to find your personal energy baseline? Enter your stats into our <a href="/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">TDEE Calculator</a> to see your BMR, activity multiplier breakdown, and explore custom <a href="/calorie-deficit-calculator/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">calorie deficit targets for fat loss</a>.
+          </p>
+          <div style="margin-top: 0.25rem;">
+            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 0.6rem 1.25rem; font-weight: 700; font-size: 0.9rem; text-decoration: none; border-radius: 6px;">Calculate Your TDEE Now &rarr;</a>
+          </div>
+        </div>
         <h2>How Is TDEE Calculated?</h2>
         <p>A common approach begins by estimating BMR and then accounting for daily physical activity. One widely used clinical equation is the <strong>Mifflin-St Jeor equation</strong>, which was developed from measured resting energy expenditure data in 498 healthy adults. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
@@ -786,6 +800,20 @@ window.TDEEContent = {
         <p>So, the estimated TDEE is approximately <strong>2,760 calories per day</strong>.</p>
         <p>That number represents an estimated maintenance level, not a guaranteed daily calorie burn.</p>
 
+        
+        <!-- High-Converting In-Content Calculator CTA Banner -->
+        <div class="calculator-cta-card" style="margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(168, 85, 247, 0.12)); border: 1.5px solid var(--accent-cyan); border-radius: 12px; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;" aria-hidden="true">🧮</span>
+            <strong style="font-size: 1.08rem; color: var(--text-primary);">Calculate Your TDEE Automatically in 30 Seconds</strong>
+          </div>
+          <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+            Prefer not to run the formulas manually? Our free <a href="/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">TDEE Calculator</a> uses the Mifflin-St Jeor equation, lets you choose an activity factor with our interactive 60-second wizard, and calculates daily <a href="/maintenance-calorie-calculator/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">maintenance calories</a>.
+          </p>
+          <div style="margin-top: 0.25rem;">
+            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 0.6rem 1.25rem; font-weight: 700; font-size: 0.9rem; text-decoration: none; border-radius: 6px;">Open Free TDEE Calculator &rarr;</a>
+          </div>
+        </div>
         <h2>TDEE Calculation Example for a Woman</h2>
         <p>Consider a 30-year-old woman who weighs <strong>65 kg</strong> and is <strong>165 cm</strong> tall.</p>
         <p>Using the Mifflin-St Jeor equation:</p>
@@ -1054,6 +1082,20 @@ window.TDEEContent = {
         <p>Your body uses energy for far more than basic resting functions. During the day, you walk, stand, exercise, work, clean, cook, and digest food.</p>
         <p>As a result, total daily expenditure is normally greater than resting expenditure. The exact difference varies because physical activity, body size, body composition, food intake, and other factors differ between people. (<a href="https://www.ncbi.nlm.nih.gov/books/NBK591031/" target="_blank" rel="noopener noreferrer">NCBI [1]</a>)</p>
 
+        
+        <!-- High-Converting In-Content Calculator CTA Banner -->
+        <div class="calculator-cta-card" style="margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(168, 85, 247, 0.12)); border: 1.5px solid var(--accent-cyan); border-radius: 12px; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;" aria-hidden="true">🧮</span>
+            <strong style="font-size: 1.08rem; color: var(--text-primary);">Find Both Your BMR and TDEE in One Place</strong>
+          </div>
+          <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+            Our dual-engine calculator calculates your <a href="/bmr-calculator/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">Basal Metabolic Rate (BMR)</a> and total daily calorie burn simultaneously, complete with rest vs training day calorie splits.
+          </p>
+          <div style="margin-top: 0.25rem;">
+            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 0.6rem 1.25rem; font-weight: 700; font-size: 0.9rem; text-decoration: none; border-radius: 6px;">Calculate BMR & TDEE &rarr;</a>
+          </div>
+        </div>
         <h2>TDEE vs BMR for Weight Loss</h2>
         <p>For calorie planning, TDEE is generally the far more useful starting point because it estimates your total daily expenditure.</p>
         <p>Suppose your estimated TDEE is 2,400 calories. A calorie intake below that estimate represents a theoretical energy deficit. By contrast, BMR describes resting energy needs and does not include your normal daily activity.</p>
@@ -1687,6 +1729,20 @@ window.TDEEContent = {
 
         <p>Importantly, neither number represents maintenance calories. Instead, both are resting estimates.</p>
 
+        
+        <!-- High-Converting In-Content Calculator CTA Banner -->
+        <div class="calculator-cta-card" style="margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(168, 85, 247, 0.12)); border: 1.5px solid var(--accent-cyan); border-radius: 12px; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.5rem;" aria-hidden="true">🧮</span>
+            <strong style="font-size: 1.08rem; color: var(--text-primary);">Skip the Manual Math — Calculate Your TDEE Instantly</strong>
+          </div>
+          <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+            Instead of multiplying regression weights by hand, use our free <a href="/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">TDEE Calculator</a>. It computes your exact Mifflin-St Jeor resting energy expenditure and custom <a href="/maintenance-calorie-calculator/" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">maintenance calorie targets</a> in under 30 seconds.
+          </p>
+          <div style="margin-top: 0.25rem;">
+            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 0.6rem 1.25rem; font-weight: 700; font-size: 0.9rem; text-decoration: none; border-radius: 6px;">Launch Free TDEE Calculator &rarr;</a>
+          </div>
+        </div>
         <h2>How Does It Become TDEE?</h2>
         <p>Your body uses energy for more than resting functions. Physical activity, exercise, and digestion also contribute to daily energy expenditure. Consequently, TDEE is higher than your resting estimate for most people.</p>
 
