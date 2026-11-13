@@ -119,10 +119,47 @@
             "description": "Discover what Total Daily Energy Expenditure (TDEE) means, its 4 energy components (BMR, NEAT, TEF, EAT), and how metabolism burns daily calories.",
             "mainEntityOfPage": "https://tdeecalculater.com/blog/what-is-tdee/",
             "datePublished": "2026-10-02",
-            "dateModified": "2026-10-18",
+            "dateModified": "2026-11-13",
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [
+                    ".quick-answer-card",
+                    ".takeaway-callout-box",
+                    ".equation-box"
+                ]
+            },
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Total Daily Energy Expenditure",
+                    "sameAs": "https://en.wikipedia.org/wiki/Energy_expenditure"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Basal Metabolic Rate",
+                    "sameAs": "https://en.wikipedia.org/wiki/Basal_metabolic_rate"
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "Mifflin-St Jeor Equation",
+                    "sameAs": "https://www.wikidata.org/wiki/Q809748"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Physical Activity Level",
+                    "sameAs": "https://en.wikipedia.org/wiki/Physical_activity_level"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Calorie",
+                    "sameAs": "https://en.wikipedia.org/wiki/Calorie"
+                }
+            ],
             "author": {
                 "@type": "Organization",
-                "name": "TDEE Calculator Clinical Editorial Staff",
+                "name": "TDEE Calculator Team",
                 "url": "https://tdeecalculater.com/about/"
             },
             "publisher": {
@@ -298,6 +335,46 @@
         <p>More specifically, your daily energy use changes with factors such as body size, age, biological sex, body composition, physical activity level, food intake, and lifestyle routines. Consequently, two people with similar height and weight can still have different daily energy needs.</p>
 
         <h2>The Four Components of TDEE</h2>
+
+        <!-- GEO & AEO Structured Comparison Table -->
+        <div class="table-responsive" style="margin: 1.25rem 0; overflow-x: auto;">
+          <table class="content-table" style="width:100%; border-collapse:collapse; font-size: 0.92rem; background: var(--bg-secondary); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background:var(--bg-tertiary); text-align:left; border-bottom: 2px solid var(--border-color);">
+                <th style="padding:0.75rem 1rem;">Component</th>
+                <th style="padding:0.75rem 1rem;">Full Name</th>
+                <th style="padding:0.75rem 1rem;">Typical % of TDEE</th>
+                <th style="padding:0.75rem 1rem;">Primary Biological Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-cyan);">BMR / REE</td>
+                <td style="padding:0.75rem 1rem;">Basal Metabolic Rate</td>
+                <td style="padding:0.75rem 1rem;">60% &ndash; 70%</td>
+                <td style="padding:0.75rem 1rem;">Cellular homeostasis, brain, liver, heart, and lung function at rest</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-purple);">NEAT</td>
+                <td style="padding:0.75rem 1rem;">Non-Exercise Activity Thermogenesis</td>
+                <td style="padding:0.75rem 1rem;">15% &ndash; 50%</td>
+                <td style="padding:0.75rem 1rem;">Spontaneous movement, daily steps, standing at work, fidgeting</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-emerald);">TEF</td>
+                <td style="padding:0.75rem 1rem;">Thermic Effect of Food</td>
+                <td style="padding:0.75rem 1rem;">8% &ndash; 12%</td>
+                <td style="padding:0.75rem 1rem;">Energy expended breaking down, absorbing, and storing dietary nutrients</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-amber);">EAT</td>
+                <td style="padding:0.75rem 1rem;">Exercise Activity Thermogenesis</td>
+                <td style="padding:0.75rem 1rem;">5% &ndash; 15%</td>
+                <td style="padding:0.75rem 1rem;">Planned sports, resistance training, running, and cardio sessions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="about-calculator-card">
           <h3>1. BMR — Basal Metabolic Rate (60% – 70% of TDEE)</h3>
           <p>BMR is the baseline energy your body needs to support basic physiological functions while at complete rest. These functions include breathing, circulation, brain signaling, cellular repair, and maintaining body temperature. Estimate your biological floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>

@@ -508,6 +508,46 @@ window.TDEEContent = {
         <p>More specifically, your daily energy use changes with factors such as body size, age, biological sex, body composition, physical activity level, food intake, and lifestyle routines. Consequently, two people with similar height and weight can still have different daily energy needs.</p>
 
         <h2>The Four Components of TDEE</h2>
+
+        <!-- GEO & AEO Structured Comparison Table -->
+        <div class="table-responsive" style="margin: 1.25rem 0; overflow-x: auto;">
+          <table class="content-table" style="width:100%; border-collapse:collapse; font-size: 0.92rem; background: var(--bg-secondary); border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background:var(--bg-tertiary); text-align:left; border-bottom: 2px solid var(--border-color);">
+                <th style="padding:0.75rem 1rem;">Component</th>
+                <th style="padding:0.75rem 1rem;">Full Name</th>
+                <th style="padding:0.75rem 1rem;">Typical % of TDEE</th>
+                <th style="padding:0.75rem 1rem;">Primary Biological Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-cyan);">BMR / REE</td>
+                <td style="padding:0.75rem 1rem;">Basal Metabolic Rate</td>
+                <td style="padding:0.75rem 1rem;">60% &ndash; 70%</td>
+                <td style="padding:0.75rem 1rem;">Cellular homeostasis, brain, liver, heart, and lung function at rest</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-purple);">NEAT</td>
+                <td style="padding:0.75rem 1rem;">Non-Exercise Activity Thermogenesis</td>
+                <td style="padding:0.75rem 1rem;">15% &ndash; 50%</td>
+                <td style="padding:0.75rem 1rem;">Spontaneous movement, daily steps, standing at work, fidgeting</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-emerald);">TEF</td>
+                <td style="padding:0.75rem 1rem;">Thermic Effect of Food</td>
+                <td style="padding:0.75rem 1rem;">8% &ndash; 12%</td>
+                <td style="padding:0.75rem 1rem;">Energy expended breaking down, absorbing, and storing dietary nutrients</td>
+              </tr>
+              <tr>
+                <td style="padding:0.75rem 1rem; font-weight:700; color:var(--accent-amber);">EAT</td>
+                <td style="padding:0.75rem 1rem;">Exercise Activity Thermogenesis</td>
+                <td style="padding:0.75rem 1rem;">5% &ndash; 15%</td>
+                <td style="padding:0.75rem 1rem;">Planned sports, resistance training, running, and cardio sessions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="about-calculator-card">
           <h3>1. BMR — Basal Metabolic Rate (60% – 70% of TDEE)</h3>
           <p>BMR is the baseline energy your body needs to support basic physiological functions while at complete rest. These functions include breathing, circulation, brain signaling, cellular repair, and maintaining body temperature. Estimate your biological floor with our <a href="/bmr-calculator/">BMR Calculator</a>.</p>
@@ -607,6 +647,16 @@ window.TDEEContent = {
         <p>Your daily energy needs depend on more than exercise. Resting energy expenditure, daily movement, exercise, digestion, body size, and lifestyle all play a role. Fortunately, learning <strong>how to calculate your TDEE</strong> is easier once you understand the formula and the activity factor.</p>
 
         <p>This guide explains the calculation step by step, shows real-world examples, and explains how to check whether your estimate makes sense.</p>
+
+        <!-- AEO Direct Answer: How to Calculate TDEE in 3 Steps -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ How to Calculate TDEE in 3 Steps:</strong></p>
+          <ol style="margin: 0.5rem 0 0 1.25rem; line-height: 1.6; font-size: 0.95rem;">
+            <li><strong>Step 1: Calculate BMR / REE</strong> using Mifflin-St Jeor (Men: <code>10×kg + 6.25×cm - 5×age + 5</code>; Women: <code>10×kg + 6.25×cm - 5×age - 161</code>).</li>
+            <li><strong>Step 2: Multiply by Activity Factor (PAL)</strong>: Sedentary (&times;1.2), Light (&times;1.375), Moderate (&times;1.55), Very Active (&times;1.725).</li>
+            <li><strong>Step 3: Calibrate with Real-World Weigh-Ins</strong>: Track daily intake and rolling morning weight over 14–28 days to reveal observed expenditure and neutralize water weight noise.</li>
+          </ol>
+        </div>
 
         <h2>What Is TDEE?</h2>
         <p>TDEE stands for <strong>Total Daily Energy Expenditure</strong>. It represents the estimated amount of energy your body uses throughout a typical 24-hour day.</p>
@@ -1559,6 +1609,16 @@ window.TDEEContent = {
         <p>The <strong>Mifflin-St Jeor Equation</strong> provides a useful starting point. It estimates resting energy expenditure (REE) from your weight, height, age, and sex. Then, that estimate can be used with an activity factor to estimate TDEE. However, it is a prediction, not a direct measurement of your metabolism. The original study was based on 498 healthy adults and used indirect calorimetry to measure REE. (<a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" title="A new predictive equation for resting energy expenditure in healthy individuals - PubMed">PubMed [1]</a>)</p>
 
         <h2>What Is the Mifflin-St Jeor Equation?</h2>
+
+        <!-- AEO & GEO Direct Answer Formula Card for Google Featured Snippets & AI Engines -->
+        <div class="takeaway-callout-box quick-answer-card">
+          <p><strong>⚡ Quick Definition &amp; Formula:</strong> The <strong>Mifflin-St Jeor Equation</strong> estimates Resting Energy Expenditure (REE / BMR in kcal/day) based on body weight in kilograms, height in centimeters, and age in years:</p>
+          <div class="equation-box" style="margin: 0.75rem 0; padding: 0.85rem; background: var(--bg-primary); border-radius: 6px; font-family: monospace; font-size: 0.95rem; line-height: 1.6;">
+            <div><strong>Men:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age in years) + 5</div>
+            <div style="margin-top: 0.35rem;"><strong>Women:</strong> REE = (10 &times; weight in kg) + (6.25 &times; height in cm) &minus; (5 &times; age in years) &minus; 161</div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Published in 1990 by Mifflin et al. in <em>The American Journal of Clinical Nutrition</em> (498 healthy subjects, measured via indirect calorimetry). Validated by the Academy of Nutrition and Dietetics as the most clinically accurate predictive equation for both normal-weight and obese adults.</p>
+        </div>
         <p>The Mifflin-St Jeor Equation is a mathematical formula developed to predict resting energy expenditure. In simple terms, REE estimates the energy your body uses while resting.</p>
         <p>The original 1990 study included 251 men and 247 women aged 19–78. Both normal-weight and obese adults were included. Therefore, the equation was developed from a broader adult sample than many older formulas.</p>
         <p>Although many websites call the result BMR, the original research specifically developed the equation for <strong>REE</strong>. BMR and RMR are related concepts, but they are not technically identical. Read more in our <a href="/blog/tdee-vs-bmr/">TDEE vs BMR Guide</a>.</p>
