@@ -379,6 +379,16 @@ assert(
   'GA4 script tag propagated to pre-rendered subpages (bmr-calculator/index.html)'
 );
 
+// 6.8 Google AdSense script tag and publisher ID verified
+assert(
+  indexHtmlForGA4.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2638057267027795'),
+  'Google AdSense verification snippet with publisher ID ca-pub-2638057267027795 present in index.html'
+);
+assert(
+  subpageHtml.includes('ca-pub-2638057267027795'),
+  'Google AdSense publisher ID propagated to pre-rendered subpages'
+);
+
 // -----------------------------------------------------------------------------
 // SUMMARY
 // -----------------------------------------------------------------------------
