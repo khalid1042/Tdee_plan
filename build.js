@@ -86,7 +86,7 @@ function updateHtmlForRoute(html, route, routeData) {
   updatedHtml = updatedHtml.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="https://tdeecalculater.com${route}">`);
 
   const author = window.TDEEContent.author || 'TDEE Calculator Team';
-  const lastUpdated = window.TDEEContent.lastUpdated || 'October 2026';
+  const lastUpdated = window.TDEEContent.lastUpdated || 'November 2026';
 
   const trustMetaHTML = `
       <div class="editorial-review-card trust-meta">
