@@ -2,6 +2,9 @@
   "buildCommand": "node build.js",
   "outputDirectory": ".",
   "trailingSlash": true,
+  "rewrites": [
+    { "source": "/c7e2b8a4f91043d8a56e1b2390f7a8b9.txt", "destination": "/c7e2b8a4f91043d8a56e1b2390f7a8b9.txt" }
+  ],
   "redirects": [
     { "source": "/blog/tdee-for-weight-gain/", "destination": "/tdee-for-weight-gain/", "permanent": true },
     { "source": "/weight-gain/", "destination": "/tdee-for-weight-gain/", "permanent": true },
