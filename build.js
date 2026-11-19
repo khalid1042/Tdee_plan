@@ -85,8 +85,8 @@ function updateHtmlForRoute(html, route, routeData) {
   updatedHtml = updatedHtml.replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://tdeecalculater.com${route}">`);
   updatedHtml = updatedHtml.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="https://tdeecalculater.com${route}">`);
 
-  const author = window.TDEEContent.author || 'TDEE Calculator Team';
-  const lastUpdated = window.TDEEContent.lastUpdated || 'November 2026';
+  const author = window.TDEEContent.author || 'By Khalid Rauf Khan, founder &amp; TDEE Calculator Team';
+  const lastUpdated = window.TDEEContent.lastUpdated || 'November 19, 2026';
 
   const trustMetaHTML = `
       <div class="editorial-review-card trust-meta">
@@ -118,7 +118,7 @@ function updateHtmlForRoute(html, route, routeData) {
             <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Peer-Reviewed Equations (Mifflin &amp; Katch)</a>
           </div>
           <div class="review-meta-item">
-            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-11">${lastUpdated}</time>
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-11-19">${lastUpdated}</time>
           </div>
           <div class="review-meta-item">
             <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
@@ -382,7 +382,10 @@ function updateHtmlForRoute(html, route, routeData) {
   <div id="silo-container" class="container content-section">
     <div class="article-body">
       <span id="silo-category" class="hero-badge">${routeData.category || 'Guide'}</span>
-      <h1 id="silo-title" style="margin: 1rem 0 1.5rem;">${routeData.h1 || routeData.title}</h1>
+      <h1 id="silo-title" style="margin: 1rem 0 0.5rem;">${routeData.h1 || routeData.title}</h1>
+      <div class="article-byline" style="margin: 0.5rem 0 1.25rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
+        By <a href="/about/" style="color: var(--text-primary); font-weight: 600; text-decoration: underline;">Khalid Rauf Khan</a>, founder of TDEE Calculator &mdash; formulas based on Mifflin-St Jeor (1990, PubMed) and peer-reviewed sources. Last reviewed <time datetime="2026-11-19">November 19, 2026</time>.
+      </div>
       ${trustMetaHTML}
       <div id="silo-calculator-mount">${preMountedCalcHTML}</div>
       <div id="silo-body" class="article-body">
@@ -527,8 +530,8 @@ ${routeData.content}
       "headline": pageTitle,
       "description": pageDesc,
       "mainEntityOfPage": fullUrl,
-      "datePublished": "2026-10-02",
-      "dateModified": "2026-11-13",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-11-19",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [".quick-answer-card", ".takeaway-callout-box", ".equation-box"]
@@ -562,11 +565,19 @@ ${routeData.content}
           "sameAs": "https://en.wikipedia.org/wiki/Calorie"
         }
       ],
-      "author": {
-        "@type": "Organization",
-        "name": "TDEE Calculator Team",
-        "url": "https://tdeecalculater.com/about/"
-      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Khalid Rauf Khan",
+          "jobTitle": "Founder",
+          "url": "https://tdeecalculater.com/about/"
+        },
+        {
+          "@type": "Organization",
+          "name": "TDEE Calculator Team",
+          "url": "https://tdeecalculater.com/about/"
+        }
+      ],
       "publisher": { "@id": "https://tdeecalculater.com/#organization" },
       "image": ogImageUrl
     });
@@ -636,6 +647,7 @@ for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
   <link rel="canonical" href="https://tdeecalculater.com${newPath}">
   <meta http-equiv="refresh" content="0; url=${newPath}">
   <script>window.location.replace('${newPath}');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2638057267027795" crossorigin="anonymous"></script>
 </head>
 <body>
   <p>Redirecting to <a href="${newPath}">${newPath}</a>...</p>
@@ -648,7 +660,7 @@ for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
 
 // Generate dynamic sitemap.xml synchronized with build
 function generateSitemapXml() {
-  const today = new Date().toISOString().split('T')[0];
+  const today = '2026-11-19';
   
   const sitemapConfig = {
     '/': { priority: '1.0', changefreq: 'daily' },
@@ -665,9 +677,9 @@ function generateSitemapXml() {
     '/blog/how-to-calculate-tdee/': { priority: '0.7', changefreq: 'monthly' },
     '/blog/tdee-vs-bmr/': { priority: '0.7', changefreq: 'monthly' },
     '/blog/tdee-for-weight-loss/': { priority: '0.7', changefreq: 'monthly' },
-    '/tdee-for-weight-gain/': { priority: '0.8', changefreq: 'monthly' },
-    '/tdee-for-muscle-building/': { priority: '0.8', changefreq: 'monthly' },
-    '/healthy-food-and-healthy-life/': { priority: '0.8', changefreq: 'monthly' },
+    '/tdee-for-weight-gain/': { priority: '0.7', changefreq: 'monthly' },
+    '/tdee-for-muscle-building/': { priority: '0.7', changefreq: 'monthly' },
+    '/healthy-food-and-healthy-life/': { priority: '0.7', changefreq: 'monthly' },
     '/blog/mifflin-st-jeor-equation/': { priority: '0.7', changefreq: 'monthly' },
     '/how-we-calculate/': { priority: '0.5', changefreq: 'monthly' },
     '/about/': { priority: '0.5', changefreq: 'monthly' },
