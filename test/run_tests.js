@@ -390,6 +390,87 @@ assert(
 );
 
 // -----------------------------------------------------------------------------
+// SUITE 7: 2026-11-23 AUDIT SPECIFICS (AEO, HOWTO, REDIRECTS, MIFFLIN PROTECTION)
+// -----------------------------------------------------------------------------
+console.log('\n--- Suite 7: 2026-11-23 Audit Specifics (AEO, HowTo, Redirects, Mifflin) ---');
+
+// 7.1 HowTo Schema on /blog/how-to-calculate-tdee/ ONLY
+const howToHtml = fs.readFileSync(path.join(ROOT_DIR, 'blog', 'how-to-calculate-tdee', 'index.html'), 'utf8');
+const howToScript = howToHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+const howToJson = JSON.parse(howToScript[1]);
+const howToNode = howToJson['@graph'].find(n => n['@type'] === 'HowTo');
+
+assert(
+  howToNode && howToNode.step && howToNode.step.length === 3,
+  'HowTo structured data schema present on /blog/how-to-calculate-tdee/ with exactly 3 steps'
+);
+assert(
+  howToNode && howToNode.step[0].name.includes('Step 1') && howToNode.step[1].name.includes('Step 2') && howToNode.step[2].name.includes('Step 3'),
+  'HowTo steps match visible 3-step process (Step 1 BMR, Step 2 PAL, Step 3 Multiply)'
+);
+
+// 7.2 Zero HowTo schema on all other 26 pages
+let otherPagesHaveHowTo = false;
+routes.forEach(r => {
+  if (r === '/blog/how-to-calculate-tdee/') return;
+  const p = r === '/' ? path.join(ROOT_DIR, 'index.html') : path.join(ROOT_DIR, r, 'index.html');
+  const h = fs.readFileSync(p, 'utf8');
+  if (h.includes('"@type":"HowTo"') || h.includes('"@type": "HowTo"')) {
+    otherPagesHaveHowTo = true;
+  }
+});
+assert(!otherPagesHaveHowTo, 'Zero HowTo schema present on any page other than /blog/how-to-calculate-tdee/');
+
+// 7.3 .htaccess has all 9 redirects matching vercel.json and legacyRedirects
+const htaccessContent = fs.readFileSync(path.join(ROOT_DIR, '.htaccess'), 'utf8');
+const expectedRedirects = [
+  { from: '/what-is-tdee/', to: '/blog/what-is-tdee/' },
+  { from: '/how-to-calculate-tdee/', to: '/blog/how-to-calculate-tdee/' },
+  { from: '/blog/tdee-for-muscle-building/', to: '/tdee-for-muscle-building/' },
+  { from: '/blog/tdee-for-weight-gain/', to: '/tdee-for-weight-gain/' },
+  { from: '/weight-gain/', to: '/tdee-for-weight-gain/' },
+  { from: '/tdee-calculator-for-women-to-gain-weight/', to: '/tdee-for-weight-gain/' },
+  { from: '/how-to-calibrate-tdee-with-weight-trends/', to: '/calibrate-tdee-weight-trends/' },
+  { from: '/activity-factor-questionnaire-for-lifting/', to: '/accurate-activity-factor-questionnaire/' },
+  { from: '/tdee-calculator-with-rest-and-training-day-macros/', to: '/tdee-calculator-rest-training-day-macros/' }
+];
+let allHtaccessRedirectsPresent = true;
+expectedRedirects.forEach(r => {
+  const linePattern = `Redirect 301 ${r.from} ${r.to}`;
+  if (!htaccessContent.includes(linePattern)) {
+    allHtaccessRedirectsPresent = false;
+    console.error(`Missing .htaccess redirect: ${linePattern}`);
+  }
+});
+assert(allHtaccessRedirectsPresent, 'All 9 permanent 301 redirects present in Hostinger .htaccess (resolves GSC redirect errors)');
+
+// 7.4 Mifflin Page Protection (71% impression asset)
+const mifflinHtml = fs.readFileSync(path.join(ROOT_DIR, 'blog', 'mifflin-st-jeor-equation', 'index.html'), 'utf8');
+assert(
+  mifflinHtml.includes('⚡ Quick Answer: What Is the Mifflin-St Jeor Formula?'),
+  'Mifflin page retains prominent AEO direct answer box'
+);
+assert(
+  mifflinHtml.includes('href="/blog/how-to-calculate-tdee/"') && mifflinHtml.includes('href="/bmr-calculator/"') && mifflinHtml.includes('href="/"'),
+  'Mifflin page retains internal link triangulation to /, /blog/how-to-calculate-tdee/, and /bmr-calculator/'
+);
+assert(
+  mifflinHtml.includes('1,780') && mifflinHtml.includes('2,759'),
+  'Mifflin page retains mathematically invariant worked example (1,780 BMR × 1.55 = 2,759 TDEE)'
+);
+
+// 7.5 Honest Date Synchronization (Only modified pages get bumped)
+assert(
+  sitemapContent.includes('<loc>https://tdeecalculater.com/blog/how-to-calculate-tdee/</loc>\n    <lastmod>2026-11-23</lastmod>'),
+  'Modified page /blog/how-to-calculate-tdee/ has lastmod 2026-11-23 in sitemap.xml'
+);
+assert(
+  sitemapContent.includes('<loc>https://tdeecalculater.com/blog/mifflin-st-jeor-equation/</loc>\n    <lastmod>2026-11-19</lastmod>') &&
+  sitemapContent.includes('<loc>https://tdeecalculater.com/</loc>\n    <lastmod>2026-11-19</lastmod>'),
+  'Untouched pages (/ and /blog/mifflin-st-jeor-equation/) retain 2026-11-19 in sitemap.xml'
+);
+
+// -----------------------------------------------------------------------------
 // SUMMARY
 // -----------------------------------------------------------------------------
 console.log('\n======================================================');

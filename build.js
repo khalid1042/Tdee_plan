@@ -86,7 +86,8 @@ function updateHtmlForRoute(html, route, routeData) {
   updatedHtml = updatedHtml.replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="https://tdeecalculater.com${route}">`);
 
   const author = window.TDEEContent.author || 'By Khalid Rauf Khan, founder &amp; TDEE Calculator Team';
-  const lastUpdated = window.TDEEContent.lastUpdated || 'November 19, 2026';
+  const pageDate = route === '/blog/how-to-calculate-tdee/' ? '2026-11-23' : '2026-11-19';
+  const pageDateFormatted = route === '/blog/how-to-calculate-tdee/' ? 'November 23, 2026' : (window.TDEEContent.lastUpdated || 'November 19, 2026');
 
   const trustMetaHTML = `
       <div class="editorial-review-card trust-meta">
@@ -118,7 +119,7 @@ function updateHtmlForRoute(html, route, routeData) {
             <strong>🔬 Methodology:</strong> <a href="/how-we-calculate/">Peer-Reviewed Equations (Mifflin &amp; Katch)</a>
           </div>
           <div class="review-meta-item">
-            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="2026-11-19">${lastUpdated}</time>
+            <strong>📅 Last Clinically Reviewed:</strong> <time datetime="${pageDate}">${pageDateFormatted}</time>
           </div>
           <div class="review-meta-item">
             <strong>📋 Standards &amp; Safety:</strong> <a href="/editorial-policy/">Editorial Standards</a> &bull; <a href="/disclaimer/">Disclaimer</a>
@@ -384,7 +385,7 @@ function updateHtmlForRoute(html, route, routeData) {
       <span id="silo-category" class="hero-badge">${routeData.category || 'Guide'}</span>
       <h1 id="silo-title" style="margin: 1rem 0 0.5rem;">${routeData.h1 || routeData.title}</h1>
       <div class="article-byline" style="margin: 0.5rem 0 1.25rem; font-size: 0.92rem; color: var(--text-muted); line-height: 1.5;">
-        By <a href="/about/" style="color: var(--text-primary); font-weight: 600; text-decoration: underline;">Khalid Rauf Khan</a>, founder of TDEE Calculator &mdash; formulas based on Mifflin-St Jeor (1990, PubMed) and peer-reviewed sources. Last reviewed <time datetime="2026-11-19">November 19, 2026</time>.
+        By <a href="/about/" style="color: var(--text-primary); font-weight: 600; text-decoration: underline;">Khalid Rauf Khan</a>, founder of TDEE Calculator &mdash; formulas based on Mifflin-St Jeor (1990, PubMed) and peer-reviewed sources. Last reviewed <time datetime="${pageDate}">${pageDateFormatted}</time>.
       </div>
       ${trustMetaHTML}
       <div id="silo-calculator-mount">${preMountedCalcHTML}</div>
@@ -531,7 +532,7 @@ ${routeData.content}
       "description": pageDesc,
       "mainEntityOfPage": fullUrl,
       "datePublished": "2026-09-01",
-      "dateModified": "2026-11-19",
+      "dateModified": pageDate,
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [".quick-answer-card", ".takeaway-callout-box", ".equation-box"]
@@ -580,6 +581,40 @@ ${routeData.content}
       ],
       "publisher": { "@id": "https://tdeecalculater.com/#organization" },
       "image": ogImageUrl
+    });
+  }
+
+  // Task 4: Add HowTo schema to /blog/how-to-calculate-tdee/ ONLY (matching visible 3 steps word-for-word)
+  if (route === '/blog/how-to-calculate-tdee/') {
+    graphNodes.push({
+      "@type": "HowTo",
+      "@id": `${fullUrl}#howto`,
+      "name": "How to Calculate Your TDEE (Total Daily Energy Expenditure)",
+      "description": "Calculate your Total Daily Energy Expenditure in three steps using the clinical Mifflin-St Jeor equation and physical activity multipliers.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Calculate Your BMR",
+          "text": "Calculate your Basal Metabolic Rate using the Mifflin-St Jeor equation: for men, BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5; for women, BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161.",
+          "url": `${fullUrl}#step-1`
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Choose Your Activity Factor",
+          "text": "Select the physical activity multiplier (PAL) matching your routine: Sedentary (1.200), Lightly Active (1.375), Moderately Active (1.550), Very Active (1.725), or Extra Active (1.900).",
+          "url": `${fullUrl}#step-2`
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Multiply BMR by Your Activity Factor",
+          "text": "Multiply your resting BMR by your chosen activity multiplier (e.g., 1,780 BMR × 1.55 = 2,759 calories/day) to calculate your estimated daily maintenance calories.",
+          "url": `${fullUrl}#step-3`
+        }
+      ]
     });
   }
 
@@ -660,36 +695,34 @@ for (const [oldPath, newPath] of Object.entries(legacyRedirects)) {
 
 // Generate dynamic sitemap.xml synchronized with build
 function generateSitemapXml() {
-  const today = '2026-11-19';
-  
   const sitemapConfig = {
-    '/': { priority: '1.0', changefreq: 'daily' },
-    '/bmr-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/maintenance-calorie-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/calorie-deficit-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/calorie-surplus-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/macro-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/calories-burned-calculator/': { priority: '0.8', changefreq: 'weekly' },
-    '/calibrate-tdee-weight-trends/': { priority: '0.8', changefreq: 'weekly' },
-    '/accurate-activity-factor-questionnaire/': { priority: '0.8', changefreq: 'weekly' },
-    '/tdee-calculator-rest-training-day-macros/': { priority: '0.8', changefreq: 'weekly' },
-    '/blog/what-is-tdee/': { priority: '0.7', changefreq: 'monthly' },
-    '/blog/how-to-calculate-tdee/': { priority: '0.7', changefreq: 'monthly' },
-    '/blog/tdee-vs-bmr/': { priority: '0.7', changefreq: 'monthly' },
-    '/blog/tdee-for-weight-loss/': { priority: '0.7', changefreq: 'monthly' },
-    '/tdee-for-weight-gain/': { priority: '0.7', changefreq: 'monthly' },
-    '/tdee-for-muscle-building/': { priority: '0.7', changefreq: 'monthly' },
-    '/healthy-food-and-healthy-life/': { priority: '0.7', changefreq: 'monthly' },
-    '/blog/mifflin-st-jeor-equation/': { priority: '0.7', changefreq: 'monthly' },
-    '/how-we-calculate/': { priority: '0.5', changefreq: 'monthly' },
-    '/about/': { priority: '0.5', changefreq: 'monthly' },
-    '/contact/': { priority: '0.5', changefreq: 'monthly' },
-    '/editorial-policy/': { priority: '0.3', changefreq: 'yearly' },
-    '/sources/': { priority: '0.3', changefreq: 'yearly' },
-    '/privacy-policy/': { priority: '0.3', changefreq: 'yearly' },
-    '/terms/': { priority: '0.3', changefreq: 'yearly' },
-    '/disclaimer/': { priority: '0.3', changefreq: 'yearly' },
-    '/cookie-policy/': { priority: '0.3', changefreq: 'yearly' }
+    '/': { priority: '1.0', changefreq: 'daily', lastmod: '2026-11-19' },
+    '/bmr-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/maintenance-calorie-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/calorie-deficit-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/calorie-surplus-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/macro-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/calories-burned-calculator/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/calibrate-tdee-weight-trends/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/accurate-activity-factor-questionnaire/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/tdee-calculator-rest-training-day-macros/': { priority: '0.8', changefreq: 'weekly', lastmod: '2026-11-19' },
+    '/blog/what-is-tdee/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/blog/how-to-calculate-tdee/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-23' },
+    '/blog/tdee-vs-bmr/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/blog/tdee-for-weight-loss/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/tdee-for-weight-gain/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/tdee-for-muscle-building/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/healthy-food-and-healthy-life/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/blog/mifflin-st-jeor-equation/': { priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/how-we-calculate/': { priority: '0.5', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/about/': { priority: '0.5', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/contact/': { priority: '0.5', changefreq: 'monthly', lastmod: '2026-11-19' },
+    '/editorial-policy/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' },
+    '/sources/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' },
+    '/privacy-policy/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' },
+    '/terms/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' },
+    '/disclaimer/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' },
+    '/cookie-policy/': { priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-19' }
   };
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -698,7 +731,7 @@ function generateSitemapXml() {
   for (const [route, conf] of Object.entries(sitemapConfig)) {
     xml += '  <url>\n';
     xml += `    <loc>https://tdeecalculater.com${route}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${conf.lastmod}</lastmod>\n`;
     xml += `    <changefreq>${conf.changefreq}</changefreq>\n`;
     xml += `    <priority>${conf.priority}</priority>\n`;
     xml += '  </url>\n';
@@ -707,7 +740,7 @@ function generateSitemapXml() {
   xml += '</urlset>\n';
 
   fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), xml, 'utf-8');
-  console.log(`Generated dynamic sitemap.xml with ${Object.keys(sitemapConfig).length} canonical URLs (lastmod: ${today})`);
+  console.log(`Generated dynamic sitemap.xml with ${Object.keys(sitemapConfig).length} canonical URLs (honest lastmod mapping)`);
 }
 
 generateSitemapXml();

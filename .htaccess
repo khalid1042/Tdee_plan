@@ -12,6 +12,9 @@ Redirect 301 /tdee-calculator-for-women-to-gain-weight/ /tdee-for-weight-gain/
 Redirect 301 /blog/tdee-for-muscle-building/ /tdee-for-muscle-building/
 Redirect 301 /what-is-tdee/ /blog/what-is-tdee/
 Redirect 301 /how-to-calculate-tdee/ /blog/how-to-calculate-tdee/
+Redirect 301 /how-to-calibrate-tdee-with-weight-trends/ /calibrate-tdee-weight-trends/
+Redirect 301 /activity-factor-questionnaire-for-lifting/ /accurate-activity-factor-questionnaire/
+Redirect 301 /tdee-calculator-with-rest-and-training-day-macros/ /tdee-calculator-rest-training-day-macros/
 
 # Add trailing slash if not present and if it's a directory (or exists as a directory)
 # This mimics Vercel's "trailingSlash": true behavior
